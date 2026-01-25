@@ -3,8 +3,13 @@
 // @import "plugins/numbered";
 
 body {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.35;
+}
+
+header {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 [saved-theme="dark"] {
