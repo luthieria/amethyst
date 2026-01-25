@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"829b0f0514e8e742","type":"file","file":"I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Standard violin diagram (Strobel H. A.).png","x":-300,"y":-140,"width":398,"height":111},
+		{"id":"f8c0a5d49e2fcf15","type":"file","file":"II. Personal/Trabajo/Laudería/Violino Michael (26.12.2025)/Violino Michael.md","x":-300,"y":-20,"width":400,"height":280}
+	],
+	"edges":[],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

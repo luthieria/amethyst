@@ -1,0 +1,5 @@
+PWD f:/Notas/I. Ciencia/7. Música/2. Laudería/Guitarras
+INPUT d:/Software/texlive/2025/texmf.cnf
+INPUT d:/Software/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT d:/Software/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT f:/Notas/I. Ciencia/7. Música/2. Laudería/Guitarras/main.tex

@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+% Code snippet styling
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0.1,0.1,0.9}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codeblue},
+    commentstyle=\color{codegray},
+    breaklines=true,
+    frame=single
+}
+
+\title{\textbf{Technical Reference: MIDI to Frequency Conversion}}
+\author{Technical Writing Portfolio | Audio Engineering}
+\date{2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In digital audio workstation (DAW) development, converting MIDI note numbers into Hertz (Hz) is a fundamental computational task. This document outlines the mathematical relationship between semitones and frequency, based on the Equal Temperament scale where the A4 reference pitch is set to 440 Hz.
+
+\section{Mathematical Principles}
+The relationship between frequencies in equal temperament is logarithmic. Every octave represents a doubling of frequency, divided into 12 semitones.
+
+\subsection{The Semitone Ratio}
+The constant used to calculate the interval between adjacent semitones is the twelfth root of two ($2^{1/12}$):
+\begin{equation}
+a = \sqrt[12]{2} \approx 1.059463094359
+\end{equation}
+
+\subsection{The Conversion Formula}
+To calculate the frequency $f$ for any MIDI note $n$, where MIDI note 69 corresponds to A4 (440 Hz), the formula is:
+\begin{equation}
+f(n) = 440 \cdot 2^{\frac{n-69}{12}}
+\end{equation}
+
+\section{Software Implementation (C)}
+The following C snippet demonstrates the practical implementation of this formula for use in a real-time audio oscillator.
+
+\begin{lstlisting}[caption={C implementation of MIDI to Frequency conversion}]
+#include <stdio.h>
+#include <math.h>
+
+double midiToFrequency(int midiNote) {
+    // Reference pitch for A4 is 440Hz, which is MIDI note 69
+    double referencePitch = 440.0;
+    int referenceNote = 69;
+
+    // Calculate frequency using the pow function
+    return referencePitch * pow(2.0, (midiNote - referenceNote) / 12.0);
+}
+\end{lstlisting}
+
+\section{Data Representation: 2's Complement}
+In 16-bit digital audio systems, the amplitude of the signal is stored using the \textbf{2's Complement} binary system. This allows for the representation of both positive and negative voltage values, essential for reproducing the sinusoidal oscillations of sound waves within a fixed bit-depth ($-32,768$ to $+32,767$).
+
+\end{document}
