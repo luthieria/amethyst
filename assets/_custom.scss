@@ -1,3 +1,40 @@
 /* You can add custom styles here. */
 
 // @import "plugins/numbered";
+
+body {
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+[saved-theme="dark"] {
+    h1 {
+        color: #bf616a;
+    }
+
+    h2 {
+        color: #d08770;
+    }
+
+    h3 {
+        color: #ebcb8b;
+    }
+
+    h4 {
+        color: #a3be8c;
+    }
+
+    h5 {
+        color: #81a1c1;
+    }
+
+    h6 {
+        color: #b48ead;
+    }
+
+    blockquote {
+        background-color: #303337;
+        border-left: 4px solid #43484c;
+        color: #9ba09d;
+    }
+}

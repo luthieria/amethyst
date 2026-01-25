@@ -23,15 +23,16 @@ menu:
   #   - name: "Sample"
   #     url: "https://google.com"
   #     weight: 10
-  after:
-    - name: "Github"
-      url: "https://github.com/64bitpandas/amethyst"
-      weight: 10
+  # after:
+  #   - name: "Github"
+  #     url: "https://github.com/64bitpandas/amethyst"
+  #     weight: 10
 
 params:
+  bookCollapseSection: true
 
-  name: Ben Cuan
-  title: 📓 Amethyst
+  name: Yakov Sverdlov
+  title: 📓 Notas
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -70,7 +71,7 @@ params:
   enableMermaid: true
 
   # Link to your Github repo
-  GitHubLink: https://github.com/64bitpandas/amethyst
+  # GitHubLink: https://github.com/64bitpandas/amethyst
 
   # Search (WIP)
   search:
@@ -79,16 +80,16 @@ params:
     operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 
   # Site description and title
-  description:
-    Notes, hosted by bencuan
+  # description:
+  #   Notes, hosted by bencuan
 
   
   # Footer links
-  links:
-    - link_name: Website
-      link: https://bencuan.me
-    - link_name: Blog
-      link: https://blog.bencuan.me
+  # links:
+  #   - link_name: Website
+  #     link: https://bencuan.me
+  #   - link_name: Blog
+  #     link: https://blog.bencuan.me
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
@@ -127,7 +128,7 @@ params:
   # Configure the date format used on the pages
   # - In git information
   # - In blog posts
-  BookDateFormat: "January 2, 2006"
+  BookDateFormat: "2 January 2006"
 
 
   # (Optional, default true) Enables comments template on pages
@@ -145,3 +146,4 @@ params:
   BookSearch: false
   BookServiceWorker: false
   BookPortableLinks: false
+
