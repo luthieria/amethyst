@@ -4,14 +4,16 @@
 -->
 {{ $title := "" }}
 
-{{ if .LinkTitle }}
-  {{ $title = .LinkTitle }}
-{{ else if .Title }}
-  {{ $title = .Title }}
+{{ if .Params.linkTitle }}
+{{ $title = .Params.linkTitle }}
+{{ else if .Params.title }}
+{{ $title = .Params.title }}
 {{ else if and .IsSection .File }}
-  {{ $title = path.Base .File.Dir | humanize | title }}
+{{ $title = path.Base .File.Dir | humanize | title }}
 {{ else if and .IsPage .File }}
-  {{ $title = .File.BaseFileName | humanize | title }}
+{{ $title = .File.BaseFileName | replaceRE "[-_]" " " }}
+{{ else }}
+{{ $title = .Title }}
 {{ end }}
 
 {{ return $title }}
