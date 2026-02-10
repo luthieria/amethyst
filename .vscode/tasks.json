@@ -40,10 +40,11 @@
             "command": "git add -A; git diff --cached --quiet; if ($LASTEXITCODE -ne 0) { git commit -m \"sync\" } else { Write-Host \"No changes to commit.\" }; git push",
             "problemMatcher": [],
             "presentation": {
-                "reveal": "always",
-                "echo": true,
+                "reveal": "silent",
+                "echo": false,
                 "focus": false,
-                "panel": "shared"
+                "panel": "shared",
+                "showReuseMessage": false
             }
         },
         {
