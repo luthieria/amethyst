@@ -1,67 +1,39 @@
 {
   "index": {
     "links": {
-      "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": [
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Материализм"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Исторический материализм"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Отчуждение"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Искусство"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Эрих Фромм"
-        }
-      ],
       "/Notas/II.-Personal/Trabajo/Lauder%C3%ADa/Violino-Michael-26.12.2025/Drawing-2025-12-26-22.14.51.excalidraw": [
         {
           "source": "/Notas/II.-Personal/Trabajo/Lauder%C3%ADa/Violino-Michael-26.12.2025/Drawing-2025-12-26-22.14.51.excalidraw",
           "target": "/Violino-Michael",
           "text": "Violino Michael"
         }
+      ],
+      "/test-link": [
+        {
+          "source": "/test-link",
+          "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
+          "text": "Música"
+        },
+        {
+          "source": "/test-link",
+          "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
+          "text": "Filosofia"
+        }
       ]
     },
     "backlinks": {
-      "/": [
+      "/../Notas/I.-Ciencia/1.-Filosofia/_index": [
         {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Материализм"
-        },
+          "source": "/test-link",
+          "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
+          "text": "Filosofia"
+        }
+      ],
+      "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index": [
         {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Исторический материализм"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Отчуждение"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Искусство"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "target": "/",
-          "text": "Эрих Фромм"
+          "source": "/test-link",
+          "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
+          "text": "Música"
         }
       ],
       "/Violino-Michael": [
@@ -75,34 +47,19 @@
   },
   "links": [
     {
-      "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "target": "/",
-      "text": "Материализм"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "target": "/",
-      "text": "Исторический материализм"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "target": "/",
-      "text": "Отчуждение"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "target": "/",
-      "text": "Искусство"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "target": "/",
-      "text": "Эрих Фромм"
-    },
-    {
       "source": "/Notas/II.-Personal/Trabajo/Lauder%C3%ADa/Violino-Michael-26.12.2025/Drawing-2025-12-26-22.14.51.excalidraw",
       "target": "/Violino-Michael",
       "text": "Violino Michael"
+    },
+    {
+      "source": "/test-link",
+      "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
+      "text": "Música"
+    },
+    {
+      "source": "/test-link",
+      "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
+      "text": "Filosofia"
     }
   ]
 }

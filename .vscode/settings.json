@@ -8,6 +8,15 @@
                 "text": "$(cloud-upload) Quick Push",
                 "tooltip": "Git: Quick Push"
             }
+        },
+        "Serve & Open": {
+            "command": "workbench.action.tasks.runTask",
+            "args": "Serve & Open",
+            "statusBar": {
+                "alignment": "left",
+                "text": "$(globe) Serve & Open",
+                "tooltip": "Run Hugo Server and Open in Browser"
+            }
         }
     }
 }

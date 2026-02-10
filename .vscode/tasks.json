@@ -82,6 +82,51 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Hugo Server Silent",
+            "type": "shell",
+            "command": "Write-Host 'Starting Hugo server...'; hugo-obsidian -input=content -output=assets/indices -index -root=. ; hugo server -D --disableFastRender --ignoreCache",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^.*$",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Starting Hugo server...",
+                    "endsPattern": "Web Server is available at http://localhost:1313/"
+                }
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Open Localhost",
+            "type": "shell",
+            "command": "start http://localhost:1313",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "echo": false,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Serve & Open",
+            "dependsOn": [
+                "Hugo Server Silent",
+                "Open Localhost"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
         }
     ],
     "inputs": [
