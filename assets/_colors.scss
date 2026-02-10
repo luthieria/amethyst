@@ -1,22 +1,4 @@
 :root {
-    --light: #faf8f8;
-    --dark: #141021;
-    --secondary: #7c00ce;
-    --tertiary: #ff38e4;
-    --visited: #afbfc9;
-    --primary: #f28482;
-    --gray: #3f3f3f;
-    --lightgray: #f0f0f0;
-    --outlinegray: #dadada;
-    --million-progress-bar-color: var(--secondary);
-    --highlighted: #8446ff88;
-    --header: #bca1ff;
-    --title: rgb(134, 42, 232);
-    --scrollbar: gray;
-    --scrollbar-track: #DDD;
-}
-
-[saved-theme="dark"] {
     --light: #1e1e1e !important;
     --dark: #dadada !important;
     --secondary: #b48ead !important;
@@ -28,9 +10,7 @@
     --outlinegray: #43484c !important;
     --highlighted: #574010;
     --header: #5e81ac;
-    /* Nord Blue */
     --title: #8fbcbb;
-    /* Nord Teal */
     --scrollbar: #4c566a;
     --scrollbar-track: #2e3440;
 }
