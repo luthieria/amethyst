@@ -35,6 +35,18 @@
             "problemMatcher": []
         },
         {
+            "label": "Git: Quick Push",
+            "type": "shell",
+            "command": "git add -A; git diff --cached --quiet; if ($LASTEXITCODE -ne 0) { git commit -m \"sync\" } else { Write-Host \"No changes to commit.\" }; git push",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "echo": true,
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
             "label": "Hugo Server",
             "type": "shell",
             "command": "hugo-obsidian -input=content -output=assets/indices -index -root=. ; hugo server -D --disableFastRender --ignoreCache",

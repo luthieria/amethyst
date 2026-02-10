@@ -1,2 +1,13 @@
 {
+    "commands.workspaceCommands": {
+        "Quick Push": {
+            "command": "workbench.action.tasks.runTask",
+            "args": "Git: Quick Push",
+            "statusBar": {
+                "alignment": "left",
+                "text": "$(cloud-upload) Quick Push",
+                "tooltip": "Git: Quick Push"
+            }
+        }
+    }
 }
