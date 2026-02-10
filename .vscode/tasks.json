@@ -1,0 +1,89 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Hugo: Split Editor Right",
+            "type": "shell",
+            "command": "echo ${input:splitEditorRight}",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Hugo: Open Preview",
+            "type": "shell",
+            "command": "echo ${input:openSimpleBrowser}",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "never",
+                "echo": false,
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Hugo: Preview Right",
+            "dependsOn": [
+                "Hugo: Split Editor Right",
+                "Hugo: Open Preview"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "Hugo Server",
+            "type": "shell",
+            "command": "hugo-obsidian -input=content -output=assets/indices -index -root=. ; hugo server -D --disableFastRender --ignoreCache",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^.*$",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Starting Hugo server...",
+                    "endsPattern": "Web Server is available at http://localhost:1313/"
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Hugo: Full Preview",
+            "dependsOn": [
+                "Hugo Server",
+                "Hugo: Split Editor Right",
+                "Hugo: Open Preview"
+            ],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "splitEditorRight",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
+        },
+        {
+            "id": "openSimpleBrowser",
+            "type": "command",
+            "command": "simpleBrowser.show",
+            "args": [
+                "http://localhost:1313"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+  const data = {
+    nodes: [...neighbours].map((id) => ({ id })),
+    links: copyLinks.filter((l) => neighbours.has(l.source) && neighbours.has(l.target)),
+  }
