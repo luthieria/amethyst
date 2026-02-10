@@ -33,20 +33,6 @@
     }
   }
 
-  // h4,
-  // h5,
-  // h6 {
-  //   font-weight: bolder;
-  // }
-
-  // h5 {
-  //   font-size: 0.875em;
-  // }
-
-  // h6 {
-  //   font-size: 0.75em;
-  // }
-
   b,
   optgroup,
   strong {
@@ -59,6 +45,7 @@
     &:hover {
       text-decoration: underline;
     }
+
     // &:visited {
     //   color: var(--color-visited-link);
     // }
@@ -89,7 +76,8 @@
   }
 
   p {
-    word-wrap:break-word;
+    word-wrap: break-word;
+    color: var(--dark);
   }
 
   // blockquote {
@@ -155,6 +143,7 @@
       margin: 0;
       padding-inline-end: 0;
     }
+
     td:nth-child(2) pre {
       margin: 0;
       padding-inline-start: 0;
@@ -184,6 +173,7 @@
 
   figure {
     margin: $padding-16 0;
+
     figcaption p {
       margin-top: 0;
     }
@@ -191,10 +181,12 @@
 }
 
 .markdown-inner {
+
   // Util class to remove extra margin in nested markdown content
   > :first-child {
     margin-top: 0;
   }
+
   > :last-child {
     margin-bottom: 0;
   }
