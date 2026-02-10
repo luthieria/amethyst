@@ -7,7 +7,7 @@
 </head>
 {{ partial "quartz/search" . }}
 {{partial "quartz/header" . }}
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}"{{ if .IsHome }} class="home"{{ end }}>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <main class="flex">
     <aside class="book-menu">

@@ -7,35 +7,9 @@
           "target": "/Violino-Michael",
           "text": "Violino Michael"
         }
-      ],
-      "/test-link": [
-        {
-          "source": "/test-link",
-          "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
-          "text": "Música"
-        },
-        {
-          "source": "/test-link",
-          "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
-          "text": "Filosofia"
-        }
       ]
     },
     "backlinks": {
-      "/../Notas/I.-Ciencia/1.-Filosofia/_index": [
-        {
-          "source": "/test-link",
-          "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
-          "text": "Filosofia"
-        }
-      ],
-      "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index": [
-        {
-          "source": "/test-link",
-          "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
-          "text": "Música"
-        }
-      ],
       "/Violino-Michael": [
         {
           "source": "/Notas/II.-Personal/Trabajo/Lauder%C3%ADa/Violino-Michael-26.12.2025/Drawing-2025-12-26-22.14.51.excalidraw",
@@ -50,16 +24,6 @@
       "source": "/Notas/II.-Personal/Trabajo/Lauder%C3%ADa/Violino-Michael-26.12.2025/Drawing-2025-12-26-22.14.51.excalidraw",
       "target": "/Violino-Michael",
       "text": "Violino Michael"
-    },
-    {
-      "source": "/test-link",
-      "target": "/../Notas/I.-Ciencia/7.-M%C3%BAsica/_index",
-      "text": "Música"
-    },
-    {
-      "source": "/test-link",
-      "target": "/../Notas/I.-Ciencia/1.-Filosofia/_index",
-      "text": "Filosofia"
     }
   ]
 }

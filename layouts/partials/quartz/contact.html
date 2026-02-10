@@ -8,9 +8,6 @@
         {{ $year := dateFormat "2006" now }}
 
         <ul>
-            {{ if not .IsHome }}
-            <li><a href="{{ $.Site.BaseURL}}">{{ i18n "home" }}</a></li>
-            {{end}}
             {{- range $data.links | default $.Site.Params.links -}}
             <li><a href="{{.link}}">{{.link_name}}</a></li>
             {{- end -}}
