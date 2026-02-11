@@ -5,6 +5,11 @@
 body {
     font-size: 24px;
     line-height: 1.35;
+    overflow-x: hidden !important;
+}
+
+body.home {
+    overflow: hidden !important;
 }
 
 body.home header {
