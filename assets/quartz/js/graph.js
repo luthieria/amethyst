@@ -42,7 +42,9 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
       }
     }
   } else {
+    // For global graph: include all linked nodes and all unlinked notes
     parseIdsFromLinks(copyLinks).forEach((id) => neighbours.add(id))
+    Object.keys(content).forEach((id) => neighbours.add(id))
   }
 
   const data = {

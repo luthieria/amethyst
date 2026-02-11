@@ -5,7 +5,7 @@ header {
     width: 100%;
     padding: 0px 80px;
     z-index: 9999;
-    background-color: var(--header);
+    background-color: transparent;
     margin: 0 !important;
     height: $header-height;
 }
@@ -107,12 +107,17 @@ body.home header #search-icon {
     }
 }
 
+body.home .book-menu {
+    margin-top: 0;
+}
+
 body.home .book-menu .book-menu-content {
     background: rgba(30, 30, 30, 0.7);
     background: color-mix(in srgb, var(--light) 75%, transparent);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-right: 1px solid var(--outlinegray);
+    margin-top: 0;
 }
 
 .book-toc-content::-webkit-scrollbar,
@@ -184,6 +189,7 @@ body.home .book-page {
     max-width: none;
     width: 100%;
     padding: 0;
+    margin-top: 0;
 }
 
 body.home .book-page.container {
@@ -192,8 +198,8 @@ body.home .book-page.container {
 
 body.home .home-graph {
     width: 100%;
-    height: calc(100vh - #{$header-height});
-    min-height: calc(100vh - #{$header-height});
+    height: 100vh;
+    min-height: 100vh;
 }
 
 body.home .home-graph h3 {

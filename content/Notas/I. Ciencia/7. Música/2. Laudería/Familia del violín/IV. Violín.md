@@ -1,3 +1,7 @@
+---
+title: IV. Violín
+---
+
 # I. BODY
 ## I.I. Plates
 ### I.I.I. Top
@@ -31,23 +35,23 @@
 	- **~ 50 mm from the root**: 20.5 mm;
 	- **~ 25 mm from the nut**: 18.5 mm.
 - The neck changes from a rounded shape at the root to oval at the nut.
-![alt text](<Imagenes/Pasted image 20251229165539.png>)
+![alt text](</Notas/I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Pasted image 20251229165539.png>)
 
 ## II.III. Nut[^4]
 
 ## Joining to the Body
-![alt text](<Imagenes/Correctly fitted neck.png>)
+![alt text](</Notas/I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Correctly fitted neck.png>)
 
-![alt text](<Imagenes/Pasted image 20260101225949.png>)
+![alt text](</Notas/I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Pasted image 20260101225949.png>)
 
 ### Neck Stop
-![alt text](<Imagenes/Neck Stop.png>)
+![alt text](</Notas/I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Neck Stop.png>)
 
 ### Projection
 - Fingerboard **projection** = **elevation** at bridge: 26.5–27 mm.
 - Humid climate: 26.5 mm.[^7]
 
-![alt text](<Imagenes/Standard violin diagram (Strobel H. A.).png>)
+![alt text](</Notas/I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Standard violin diagram (Strobel H. A.).png>)
 
 [^1]: [**Olaf**](https://youtu.be/KSTWk4jRC98?si=sGIyEflQpNh0uGEM)
 [^2]: [**Edgar Russ**](https://youtu.be/bsqR9V8Sd8o?si=ef_kQrWocRw-QIe6)
