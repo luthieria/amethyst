@@ -107,16 +107,24 @@ body.home header #search-icon {
     }
 }
 
+body.home main {
+    display: block;
+}
+
 body.home .book-menu {
     margin-top: 0;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: $menu-width;
+    flex: none;
 }
 
 body.home .book-menu .book-menu-content {
-    background: rgba(30, 30, 30, 0.7);
-    background: color-mix(in srgb, var(--light) 75%, transparent);
+    background: rgba(30, 30, 30, 0.3);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-right: 1px solid var(--outlinegray);
     margin-top: 0;
 }
 
@@ -197,9 +205,15 @@ body.home .book-page.container {
 }
 
 body.home .home-graph {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 body.home .home-graph h3 {

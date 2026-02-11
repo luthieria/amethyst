@@ -104,7 +104,7 @@ ul.pagination {
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
-    background: color-mix(in srgb, var(--light) 75%, transparent);
+    background: rgba(30, 30, 30, 0.3);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
