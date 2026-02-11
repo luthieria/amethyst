@@ -1,10 +1,53 @@
-{{$src := .Destination | safeURL }}
-{{$width := index (split .Text "|") 1 | default "auto" }}
-{{$external := strings.HasPrefix $src "http" }}
+{{$rawSrc := .Destination}}
+{{$alt := index (split .Text "|") 0 | default ""}}
+{{$width := index (split .Text "|") 1 | default "auto"}}
+{{$external := or
+  (strings.HasPrefix $rawSrc "http://")
+  (strings.HasPrefix $rawSrc "https://")
+  (strings.HasPrefix $rawSrc "//")
+  (strings.HasPrefix $rawSrc "data:")
+}}
 {{- if $external -}}
-<img src="{{ $src }}" width="{{ $width }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+<img src="{{ $rawSrc | safeURL }}" width="{{ $width }}" alt="{{ $alt }}" {{ with .Title }}title="{{ . }}" {{ end }} />
 {{- else -}}
-{{$fixedUrl := (cond (hasPrefix $src "/") $src (printf "%s%s" .Page.File.Dir $src))}}
-<img src="{{.Page.Site.BaseURL}}{{ $fixedUrl }}" width="{{ $width }}" alt="{{ .Text }}" {{ with .Title }}
-  title="{{ . }}" {{ end }} />
+{{$src := replace $rawSrc "\\" "/"}}
+{{$pageDir := replace .Page.File.Dir "\\" "/"}}
+{{$logical := cond (strings.HasPrefix $src "/") (path.Clean $src) (path.Clean (path.Join $pageDir $src))}}
+{{$logicalDir := path.Dir $logical}}
+{{$filename := path.Base $logical}}
+{{$targetDir := cond (or (eq $logicalDir ".") (eq $logicalDir "/")) "/" (printf "/%s" (strings.TrimPrefix "/" $logicalDir))}}
+{{$targetPage := .Page.Site.GetPage $targetDir}}
+{{$resolved := ""}}
+{{- if $targetPage -}}
+  {{$resolved = path.Join $targetPage.RelPermalink $filename}}
+{{- else -}}
+  {{$dirParts := split (strings.TrimPrefix "/" $logicalDir) "/"}}
+  {{$ancestorPermalink := ""}}
+  {{$ancestorDepth := 0}}
+  {{range $i := seq (len $dirParts)}}
+    {{$candidate := printf "/%s" (first $i $dirParts | path.Join)}}
+    {{$candidatePage := $.Page.Site.GetPage $candidate}}
+    {{if $candidatePage}}
+      {{$ancestorPermalink = $candidatePage.RelPermalink}}
+      {{$ancestorDepth = $i}}
+    {{end}}
+  {{end}}
+  {{- if ne $ancestorPermalink "" -}}
+    {{$tail := $filename}}
+    {{$remainderParts := after $ancestorDepth $dirParts}}
+    {{if gt (len $remainderParts) 0}}
+      {{$remainderDir := path.Join $remainderParts}}
+      {{$tail = path.Join $remainderDir $filename}}
+    {{end}}
+    {{$resolved = path.Join $ancestorPermalink $tail}}
+  {{- else if strings.HasPrefix $src "/" -}}
+    {{$resolved = path.Clean $src}}
+  {{- else -}}
+    {{$baseName := lower .Page.File.BaseFileName}}
+    {{$currentPermalink := strings.TrimSuffix "/" .Page.RelPermalink}}
+    {{$pageBase := cond (or (eq $baseName "index") (eq $baseName "_index")) $currentPermalink (path.Dir $currentPermalink)}}
+    {{$resolved = path.Clean (path.Join $pageBase $src)}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $resolved | relURL }}" width="{{ $width }}" alt="{{ $alt }}" {{ with .Title }}title="{{ . }}" {{ end }} />
 {{- end -}}
