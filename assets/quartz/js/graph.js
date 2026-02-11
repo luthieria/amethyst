@@ -24,6 +24,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
   // Links is mutated by d3. We want to use links later on, so we make a copy and pass that one to d3
   // Note: shallow cloning does not work because it copies over references from the original array
   const copyLinks = JSON.parse(JSON.stringify(links))
+  const isGlobalGraphNodeVisible = (id) => content[id]?.title !== "_index"
 
   const neighbours = new Set()
   const wl = [curPage || "/", "__SENTINEL"]
@@ -43,8 +44,12 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     }
   } else {
     // For global graph: include all linked nodes and all unlinked notes
-    parseIdsFromLinks(copyLinks).forEach((id) => neighbours.add(id))
-    Object.keys(content).forEach((id) => neighbours.add(id))
+    parseIdsFromLinks(copyLinks)
+      .filter((id) => isGlobalGraphNodeVisible(id))
+      .forEach((id) => neighbours.add(id))
+    Object.keys(content)
+      .filter((id) => isGlobalGraphNodeVisible(id))
+      .forEach((id) => neighbours.add(id))
   }
 
   const data = {
