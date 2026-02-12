@@ -90,3 +90,17 @@
   text-indent: 0 !important;
   text-align: right !important;
 }
+
+.vditor-preview .vditor-reset .footnotes-list > li,
+.vditor-preview .vditor-reset .footnotes ol > li,
+.vditor-wysiwyg .footnotes-list > li,
+.vditor-ir .footnotes-list > li {
+  margin-bottom: 0.5em !important;
+}
+
+.vditor-preview .vditor-reset .footnotes-list > li:last-child,
+.vditor-preview .vditor-reset .footnotes ol > li:last-child,
+.vditor-wysiwyg .footnotes-list > li:last-child,
+.vditor-ir .footnotes-list > li:last-child {
+  margin-bottom: 0 !important;
+}
