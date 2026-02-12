@@ -128,9 +128,59 @@
     background: var(--gray-200);
   }
 
-  ul,
-  ol {
+  ul {
     padding-inline-start: $padding-16 * 2;
+  }
+
+  // Render nested ordered lists as 1., 1.1., 1.2.1., etc.
+  ol:not(.footnotes-list) {
+    list-style-type: none;
+    counter-reset: item;
+    padding-inline-start: 2.2em;
+    margin-inline-start: 0;
+
+    > li {
+      display: block;
+      counter-increment: item;
+    }
+
+    > li::before {
+      content: counters(item, ".") ". ";
+      display: inline-block;
+      width: 2.2em;
+      margin-inline-start: -2.2em;
+      text-align: end;
+      padding-inline-end: $padding-8;
+      box-sizing: border-box;
+      vertical-align: baseline;
+    }
+
+    ol {
+      counter-reset: item;
+      padding-inline-start: 1.5em;
+    }
+  }
+
+  // Keep Hugo footnotes on regular decimal markers.
+  .footnotes ol {
+    list-style-type: decimal;
+    counter-reset: none;
+    padding-inline-start: $padding-16 * 2;
+    margin-inline-start: initial;
+
+    > li {
+      display: list-item;
+      counter-increment: none;
+    }
+
+    > li::before {
+      content: none;
+    }
+
+    ol {
+      counter-reset: none;
+      padding-inline-start: $padding-16 * 2;
+    }
   }
 
   dl {
