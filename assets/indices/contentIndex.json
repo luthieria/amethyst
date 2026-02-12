@@ -119,48 +119,6 @@
     "lastmodified": "2026-01-25T17:14:54.3139608-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Guitarra": {
-    "title": "Guitarra",
-    "content": "\u003c!-- Volume I --\u003e\n\n\u003cp class=\"volume\"\u003eI. MATERIALS\u003c/p\u003e\n\n@import \"Volumes/I. Materials/I.I. Wood.md\"\n\n***\n***\n\n\u003c!-- Volume II --\u003e\n\n\u003cp class=\"volume\"\u003eII. TOOLS\u003c/p\u003e\n\n@import \"Volumes/II. Tools/II. Tools.md\"\n\n***\n***\n\n\u003c!-- Volume III --\u003e\n\n\u003cp class=\"volume\"\u003eIII. INSTRUMENTS\u003c/p\u003e\n\n\u003cp class=\"part\"\u003eIII.I. Clásica\u003c/p\u003e\n\n@import \"Volumes/III. Instruments/III.I. Clásica.md\"\n@import \"Volumes/III. Instruments/III.II. Acoustic.md\"\n@import \"Volumes/III. Instruments/III.III. Electric.md\"\n\n***\n***\n\n\u003c!-- Volume IV --\u003e\n\n\u003cp class=\"volume\"\u003eIV. REPAIRS\u003c/p\u003e\n\n@import \"Volumes/IV. Repairs/IV. Repairs.md\"",
-    "lastmodified": "2026-01-25T14:02:23.6559926-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/I.-Materials/I.I.-Wood": {
-    "title": "I.I. Wood",
-    "content": "# WOOD\n## Characteristics\n### Grain\n- **Wood grain** = **tree rings**.[^Kert]\n\n\n[^Kert]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)",
-    "lastmodified": "2026-01-24T13:23:49.8042755-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/II.-Tools/II.-Tools": {
-    "title": "II. Tools",
-    "content": "",
-    "lastmodified": "2026-01-24T11:52:12.9351576-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/III.-Instruments/III.I.-Cl%C3%A1sica": {
-    "title": "III.I. Clásica",
-    "content": "# I. Body\r\n- The wood must be dried for at least 30 years at 50±3% humidity.[^Bruné1] [^Bruné2] [^Bloomberg]\r\n- Wax protects wood from excessive cracking: e.g., ends of Brazilian rosewood (← it’s prone to checking). Scrap it off before using the wood.[^Bruné1]\r\n\r\n\u003c!-- 1 break --\u003e\r\n- When harvesting a tree, luthiers look for ≥8–12” of usable wood.[^Bruné2]\r\n- [^Bruné2] A single-piece plate requires an exceptionally thick tree, which would be:\r\n  - old, → have lots of stresses, cracks; grain lines looking awkward;\r\n  - rare;\r\n  - expensive to ship;\r\n  - untraditional.\r\n\r\n## I.I. Plates\r\n- \r\n\r\n\r\n\r\n\u003c!-- FOOTNOTES--\u003e\r\n[^Bruné1]: [Bruné M. E. *I've Built Guitar as a Professional Luthier | Day 1*](https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk)\r\n[^Bruné2]: [Bruné M. E. *Guitar Tonewoods Explained by a Master Luthier | Q\u0026A*](https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW)\r\n[^Bloomberg]:[Bloomberg (flamenco)](https://youtu.be/fpfyF4gx3jw?si=_G84UBCpwE-u2nhO)",
-    "lastmodified": "2026-01-24T13:52:25.5077567-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/III.-Instruments/III.II.-Acoustic": {
-    "title": "III.II. Acoustic",
-    "content": "",
-    "lastmodified": "2026-01-24T13:21:42.5642072-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/III.-Instruments/III.III.-Electric": {
-    "title": "III.III. Electric",
-    "content": "",
-    "lastmodified": "2026-01-24T13:22:02.3112659-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/Volumes/IV.-Repairs/IV.-Repairs": {
-    "title": "IV. Repairs",
-    "content": "",
-    "lastmodified": "2026-01-24T13:22:32.0292425-04:00",
-    "tags": []
-  },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/3.-Instrumentos/": {
     "title": "_index",
     "content": "﻿---\r\ntitle: \"3. Instrumentos\"\r\nweight: 60\r\nbookCollapseSection: true\r\n---\r\n",
