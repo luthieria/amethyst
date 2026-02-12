@@ -287,6 +287,17 @@ html body blockquote> :last-child {
   margin-bottom: 0;
 }
 
+html body blockquote.no-indent-right,
+.markdown-preview blockquote.no-indent-right {
+  text-align: right !important;
+}
+
+html body blockquote.no-indent-right p,
+.markdown-preview blockquote.no-indent-right p {
+  text-indent: 0 !important;
+  text-align: right !important;
+}
+
 /* --- Lists --- */
 
 html body>ol,

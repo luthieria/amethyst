@@ -75,3 +75,18 @@
 .vditor-wysiwyg pre {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
 }
+
+.vditor-reset blockquote.no-indent-right,
+.vditor-ir blockquote.no-indent-right,
+.vditor-wysiwyg blockquote.no-indent-right,
+.vditor-preview .vditor-reset blockquote.no-indent-right {
+  text-align: right !important;
+}
+
+.vditor-reset blockquote.no-indent-right p,
+.vditor-ir blockquote.no-indent-right p,
+.vditor-wysiwyg blockquote.no-indent-right p,
+.vditor-preview .vditor-reset blockquote.no-indent-right p {
+  text-indent: 0 !important;
+  text-align: right !important;
+}
