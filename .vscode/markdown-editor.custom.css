@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+.vditor,
+.vditor-reset,
+.vditor-ir pre.vditor-reset,
+.vditor-wysiwyg,
+.vditor-preview .vditor-reset {
+  font-family: "Ibarra Real Nova", Literaturnaya, serif !important;
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+.vditor-reset h1,
+.vditor-reset h2,
+.vditor-reset h3,
+.vditor-reset h4,
+.vditor-reset h5,
+.vditor-reset h6,
+.vditor-ir h1,
+.vditor-ir h2,
+.vditor-ir h3,
+.vditor-ir h4,
+.vditor-ir h5,
+.vditor-ir h6,
+.vditor-wysiwyg h1,
+.vditor-wysiwyg h2,
+.vditor-wysiwyg h3,
+.vditor-wysiwyg h4,
+.vditor-wysiwyg h5,
+.vditor-wysiwyg h6 {
+  font-family: "Alegreya SC", serif !important;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.vditor-reset h1,
+.vditor-ir h1,
+.vditor-wysiwyg h1 {
+  font-size: 2.25em !important;
+}
+
+.vditor-reset h2,
+.vditor-ir h2,
+.vditor-wysiwyg h2 {
+  font-size: 1.75em !important;
+}
+
+.vditor-reset h3,
+.vditor-ir h3,
+.vditor-wysiwyg h3 {
+  font-size: 1.5em !important;
+}
+
+.vditor-reset h4,
+.vditor-ir h4,
+.vditor-wysiwyg h4 {
+  font-size: 1.25em !important;
+}
+
+.vditor-reset h5,
+.vditor-ir h5,
+.vditor-wysiwyg h5,
+.vditor-reset h6,
+.vditor-ir h6,
+.vditor-wysiwyg h6 {
+  font-size: 1em !important;
+}
+
+.vditor-reset code,
+.vditor-reset pre,
+.vditor-ir code,
+.vditor-ir pre,
+.vditor-wysiwyg code,
+.vditor-wysiwyg pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
