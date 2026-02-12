@@ -129,7 +129,62 @@
   {{ $content = $content | replaceRE "blockquote class=callout" "blockquote" }}
 {{end}}
 
+<!-- Text Highlight Colors -->
 {{/* Make ==text== into <mark>text</mark> */}}
+{{$greenMark := findRE "g==([^=\\n]+)==" $content}}
+{{range $greenMark}}
+  {{$fixed := printf "<span class=\"highlight-green\">%s</span>" (replaceRE "^g==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$redMark := findRE "r==([^=\\n]+)==" $content}}
+{{range $redMark}}
+  {{$fixed := printf "<span class=\"highlight-red\">%s</span>" (replaceRE "^r==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$pinkMark := findRE "pk==([^=\\n]+)==" $content}}
+{{range $pinkMark}}
+  {{$fixed := printf "<span class=\"highlight-pink\">%s</span>" (replaceRE "^pk==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$peachMark := findRE "pe==([^=\\n]+)==" $content}}
+{{range $peachMark}}
+  {{$fixed := printf "<span class=\"highlight-peach\">%s</span>" (replaceRE "^pe==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$tealMark := findRE "t==([^=\\n]+)==" $content}}
+{{range $tealMark}}
+  {{$fixed := printf "<span class=\"highlight-teal\">%s</span>" (replaceRE "^t==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$blueMark := findRE "b==([^=\\n]+)==" $content}}
+{{range $blueMark}}
+  {{$fixed := printf "<span class=\"highlight-blue\">%s</span>" (replaceRE "^b==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$periwinkleMark := findRE "pw==([^=\\n]+)==" $content}}
+{{range $periwinkleMark}}
+  {{$fixed := printf "<span class=\"highlight-periwinkle\">%s</span>" (replaceRE "^pw==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$purpleMark := findRE "p==([^=\\n]+)==" $content}}
+{{range $purpleMark}}
+  {{$fixed := printf "<span class=\"highlight-purple\">%s</span>" (replaceRE "^p==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
+{{$mauveMark := findRE "m==([^=\\n]+)==" $content}}
+{{range $mauveMark}}
+  {{$fixed := printf "<span class=\"highlight-mauve\">%s</span>" (replaceRE "^m==|==$" "" .)}}
+  {{$content = replace $content . $fixed}}
+{{end}}
+
 {{$mark := findRE "==([^=\n]+)==" $content}}
 {{range $mark}}
   {{$fixed := printf "<mark>%s</mark>" (replace . "==" "")}}
