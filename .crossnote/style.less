@@ -256,6 +256,11 @@ html body ul {
 
 html body>p {
   word-wrap: break-word;
+  text-indent: 2em;
+}
+
+html body .no-indent p {
+  text-indent: 0;
 }
 
 html body hr {
@@ -296,6 +301,21 @@ html body blockquote.no-indent-right p,
 .markdown-preview blockquote.no-indent-right p {
   text-indent: 0 !important;
   text-align: right !important;
+}
+
+html body blockquote:has(.book-comment-marker),
+.markdown-preview blockquote:has(.book-comment-marker) {
+  border-left-color: #d08770;
+  background-color: #2a2d30;
+}
+
+html body .book-comment-marker,
+.markdown-preview .book-comment-marker {
+  display: inline-block;
+  font-family: 'Alegreya SC', serif;
+  letter-spacing: 0.04em;
+  font-size: 0.85em;
+  opacity: 0.9;
 }
 
 /* --- Lists --- */

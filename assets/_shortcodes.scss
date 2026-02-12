@@ -110,4 +110,22 @@
       }
     }
   }
+
+  // {{< comment >}}
+  .book-comment {
+    margin-top: $padding-16;
+    margin-bottom: $padding-16;
+    padding: $padding-8 $padding-16;
+    border-inline-start: $padding-4 solid var(--secondary);
+    border-radius: $border-radius;
+    background: var(--lightgray);
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
 }

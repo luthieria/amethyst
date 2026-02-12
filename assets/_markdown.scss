@@ -82,6 +82,16 @@
     margin-bottom: 0;
   }
 
+  // Preserve visible blank lines between markdown paragraphs.
+  p + p {
+    margin-top: 1em;
+  }
+
+  // Collapse extra empty paragraphs so 2+ blank lines render like 1.
+  p:empty {
+    display: none;
+  }
+
   > p {
     text-indent: 2em;
   }
