@@ -78,6 +78,9 @@
   p {
     word-wrap: break-word;
     color: var(--dark);
+  }
+
+  > p {
     text-indent: 2em;
   }
 
