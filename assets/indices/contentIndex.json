@@ -1,14 +1,14 @@
 {
   "/Notas/": {
     "title": "Overview",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Ciencia]]\r\n\r\n[[II. Personal]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.6339406-04:00",
+    "content": "",
+    "lastmodified": "2026-02-13T17:03:27.1951605-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/": {
     "title": "I. Ciencia",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Filosofia]]\r\n\r\n[[2. Antropologia]]\r\n\r\n[[3. Economia]]\r\n\r\n[[4. História]]\r\n\r\n[[5. Línguas]]\r\n\r\n[[6. Religiones]]\r\n\r\n[[7. Música]]\r\n\r\n[[8. Marxismo — política]]\r\n\r\n[[9. Computer Science]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.6559401-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Filosofia]]\r\n\r\n[[2. Antropologia]]\r\n\r\n[[3. Economia]]\r\n\r\n[[4. História]]\r\n\r\n[[5. Línguas]]\r\n\r\n[[6. Religiones]]\r\n\r\n[[7. Música]]\r\n\r\n[[8. Marxismo — política]]\r\n\r\n[[9. Computer Science]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e",
+    "lastmodified": "2026-02-13T17:04:29.2481934-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosofia/": {
@@ -61,86 +61,92 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/": {
     "title": "7. Música",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Etnomusicología]]\r\n\r\n[[2. Laudería]]\r\n\r\n[[3. Instrumentos]]\r\n\r\n[[4. Teoria musical]]\r\n\r\n[[5. Audio Engineering]]\r\n\r\n[[6. DSP]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7164644-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Etnomusicología]]\r\n\r\n[[2. Laudería]]\r\n\r\n[[3. Instrumentos]]\r\n\r\n[[4. Teoria musical]]\r\n\r\n[[5. Audio Engineering]]\r\n\r\n[[6. DSP]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e",
+    "lastmodified": "2026-02-13T17:05:13.6810712-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/": {
     "title": "1. Etnomusicología",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[2. Hispanoamérica]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7194619-04:00",
+    "content": "\r\n[[1. África]]\r\n[[2. Mediterráneo]]\r\n[[3. América]]\r\n    [América Latina](\u003c3. América/1. América Latina\u003e)\r\n        [Hispanoamérica](\u003c3. América/1. América Latina/Hispanoamérica\u003e)\r\n        [Brasil](\u003c3. América/1. América Latina/Música brasileira.md\u003e)\r\n    [Anglo-América](\u003c3. América/2. Anglo-América\u003e)\r\n",
+    "lastmodified": "2026-02-13T17:15:59.2312651-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/": {
+    "title": "1. América Latina",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Cuba]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e",
+    "lastmodified": "2026-02-13T17:16:02.662821-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/": {
     "title": "2. Hispanoamérica",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Cuba]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
     "lastmodified": "2026-02-13T16:49:39.7264617-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/": {
     "title": "Cuba",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[La música cubana]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
     "lastmodified": "2026-02-13T16:49:39.7324627-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": {
     "title": "La música cubana",
-    "content": "\r\n[[Предисловие]]\r\n\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Imagenes]]\r\n\r\n[[Notas]]\r\n\r\n[[Предисловие]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7494661-04:00",
+    "content": "\r\n[[Предисловие]]\r\n\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]",
+    "lastmodified": "2026-02-13T17:06:02.6559272-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": {
     "title": "Предисловие",
     "content": "﻿---\r\ntitle: \"Предисловие\"\r\nweight: 8\r\nBookHiddenTitle: true\r\n---\r\n\r\n\u003cblockquote class=\"no-indent-right\"\u003e\r\n  \u003cp\u003e\u003cem\u003e«В науке нет широкой столбовой дороги, и только тот может достигнуть её сияющих вершин, кто, не страшась усталости, карабкается по её каменистым тропам.»\u003c/em\u003e \u003cbr\u003e\r\n  — Карл Маркс\u003c/p\u003e\r\n\u003c/blockquote\u003e\r\n\r\n# Предисловие\r\n\r\nВ это пособие я не внёс практически ничего своего — в основном обобщающие закономерности, которые я вывел из отдельных фактов. В остальном это лишь упорядоченная компиляция всех знаний, которые я смог обнаружить, для упрощённого освоения музыки Кубы из одного источника. Одновременно это справочник, к которому удобно обращаться при создании такой музыки.\r\n\r\nПособие составлено по принципам «от простого к сложному» и «от общего к частному».\r\n\r\nПервое означает, что весь материал представлен в хронологической последовательности, так как «с чего начинает история, с того же должен начинаться и ход мыслей, и его дальнейшее движение будет представлять собой не что иное, как отражение исторического процесса в абстрактной и теоретически последовательной форме»[^Энгельс].\r\n\r\n\u003c!-- Footnotes [ --\u003e\r\n  [^Энгельс]: **Фридрих Энгельс**, *«Карл Маркс. “К критике политической экономии”»*\r\n\u003c!-- ] Footnotes --\u003e\r\n\r\nВторое означает, что, по возможности, сначала объяснено общее, чтобы далее легче понять частное.\r\n\r\nИскусство, включая музыку, заключается в отыскании красоты в мире. Соответственно, приводимые инструменты и партии — это лучшие достижения в области красоты, достигнутые народом.\r\n\r\n## Причины\r\n\r\nПочему именно эти достижения были сделаны именно этим, кубинским, народом?\r\n\r\nТакой успех создан стечением многих обстоятельств, корень которых — география и следующая из неё экономика.\r\n\r\n### Америка\r\n\r\nЦентральная часть американского континента климатически благоприятна для сельского хозяйства, в котором было выгодно использовать рабов. Восток центральной части наиболее близок и к Европе и к Западной Африке. Поэтому европейцы в первую очередь освоили восток Америк. Поэтому же наиболее просто и выгодно было порабощать и возить именно западных африканцев именно в этот регион.\r\n\r\nИз всего мира Западно-центральная Африка достигла r==высшей== сложности ритма, а Европа — высшей сложности гармонии. В северо-восточной части Латинской Америки[^Латинская] эти достижения встретились и объединились. Это *основная* причина, почему музыка Ибероамерики[^Ибероамерика] такая выдающаяся и примечательная.\r\n\r\n\u003c!-- Footnotes [ --\u003e\r\n  [^Латинская]: **Латинская Америка** — латино-(испано-, португало-, франко-)язычные страны Америки.\r\n  Латинская Америка = испанская Америка + португальская Америка + французская Америка.\r\n\r\n  [^Ибероамерика]: **Ибероамерика** — Латинская Америка за исключением французских колоний = испанская, португальская Америка.\r\n  Латинская Америка – французская Америка = Ибероамерика.\r\n\u003c!-- ] Footnotes --\u003e\r\n\r\nНо эти же две культуры встретились и в Америке французской и не-Латинской[^Не-Латинская]; почему мы не видим подобного феномена там?\r\n\r\n\u003c!-- Footnotes [ --\u003e\r\n  [^Не-Латинская]: **Не-Латинская Америка** = германская (= английская, голландская) Америка.\r\n\u003c!-- ] Footnotes --\u003e\r\n\r\nФранцузские колонии сохранили африканскую музыку, но европейцам пришлось покинуть Гаити в начале XIX века, а r==французские Антиллы и Гвиана в отличие от Ибероамерики были скорее задворками и не имели такой развитой экономики и потока разнообразных культур==.\r\n\r\nНе-латиноязычные колонии с африканским населением (кроме США) не были поселенческими — европейцы не селились там массово, чтобы принести и укоренить свою музыку; при этом музыку африканскую запрещали. В США же гармоническая сложность (европейская черта) отчётливо присутствует, но ритмическая (африканская черта) — нет. На это есть две причины.\r\n1. В США r==*преобладали*== рабы из западных Сахеля[^Сахель] r==и Судана==, где:\r\n   1. мало деревьев для производства барабанов, что r==побуждало сахельцев больше развивать игру на мелодических инструментах==;\r\n   2. соседство с арабами распространило моноритмическую музыку, приоритизировавшую мелодию над ритмом, но содержащую то, что привезли в США и назвали “blue notes” (мелодия) и “swing” (ритм).\r\n2. В Ибероамерике преобладали рабы из Гвинеи[^Гвинея] и Конго[^Конго], удалённых от арабского влияния. Эти народы создали и привезли в Америку сложные полиритмы.\r\n![alt text](Imagenes/Mapas/Sahel.png)\r\n![alt text](Imagenes/Mapas/Sudan.png)\r\n3. Не-Латинскую Америку колонизировали североевропейские протестанты; Латинскую же колонизировали средиземноморские католики:\r\n   1. в силу географии Средиземноморье издревле было площадкой взаимодействия совершенно разных культур (в том числе европейских и африканских), что сделало сознание его жителей более «космополитичным» в сравнении с более изолированным североевропейским; поэтому средиземноморцы не брезговали смешиваться с африканцами и, неизбежно, смешивать музыку друг друга;\r\n   2. в силу католичества «космополитичного» Средиземноморья r==и наложившегося на это экономического отставания католических стран от протестантских== католицизм был терпимее к иноверцам и не столь жёстко давил африканскую культуру, как это делал протестантизм: в отличие от США, в Латинской Америке африканские инструменты и ритмы не только сохранились, но и развились в новые[^США].\r\n\r\n\u003c!-- Footnotes [ --\u003e\r\n  [^Сахель]: **Сахель** — регион Африки.\r\n\r\n  [^Гвинея]: **Гвинея** — южное побережье Западной Африки.\r\n\r\n  [^Конго]: **Конго** — бассейн реки Конго.\r\n\r\n  [^США]: Хотя из африканского наследия в США сохранились и развились минимум 1 инструмент (banjo) и некоторые музыкальные особенности (указанные далее). Тем не менее это не сделало музыку США сильно «африканизированной» подобно музыке Латинской Америки и оставило её, по большому счёту, европейской с лёгким влиянием Африки.\r\n\u003c!-- ] Footnotes --\u003e\r\n\r\nТо есть мало того, что сахельцы не имели такого сложного ритма, так их музыку ещё и запрещали. А гвинейцы и конголезцы имели сложный ритм, и ему дали выжить и развиться дальше.\r\n\r\nВыходит, что ритмически и гармонически сложная музыка возникла на Кубе, Puerto Rico, Santo Domingo, в Бразилии. \r\n{{\u003c expand \"Comment\"\u003e}}\r\nХотя на Puerto Rico неоафриканские ритмы не столь сложны и не смешаны с гармонией — видимо, это как-то вызвано экономической вторичностью Puerto Rico и малочисленностью африканцев на нём. Почему столь сложная музыка не возникла также в Гондурасе, Панаме, Колумбии, Венесуэле — мне тоже предстоит выяснить.\r\n{{\u003c /expand \u003e}}\r\n\r\n#### Куба\r\n\r\nНо почему из всей Латинской Америки такой утончённости и мировой известности достигла музыка именно Кубы? Очевидно, это объясняют следующие геоэкономические обстоятельства.\r\n1. Благоприятные площадь и климат для широкомасштабного сельского хозяйства:\r\n   1. до XIX века основой экономики был табак, выращиваемый свободными мелкими крестьянами, что делало рабство малозначимым;\r\n   2. в 1804–1805 Гаитянская революция разрушила сахарную индустрию Гаити, в которой тот лидировал, → и Куба поспешила занять освободившуюся нишу; → выращивание сахарного тростника требовало коллективного труда, → огромное количество африканцев было завезено на Кубу в XIX веке.\r\n2. Расположение Кубы делало её перевалочным пунктом евро-американской торговли в Карибском бассейне («американском Средиземноморье»), что дополнительно развивало экономику и привлекало европейские, американские, африканские культуры, которые, взаимодействуя, обогащали друг друга.\r\n3. Близость к развитым США и привлекающий эти самые США экономический потенциал Кубы делали её инфраструктурно самой современной латиноамериканской страной, попутно порождая культурный обмен — то есть североамериканцы узнавали музыку Кубы, а что знаменито в США — знаменито и в мире.\r\n   1. То же касается и Бразилии: возникшая вражда Кубы и США в начале 1960-х и установление проамериканского режима в Бразилии в 1964 вызвали распространение в США бразильской bossa nova заместо кубинского son; то есть возникновение в конце 1950-х bossa nova (также сочетающей r==сложные африканский ритм== и европейскую гармонию) совпало с благоприятными политическими условиями для распространения её по миру.\r\n4. Прибыльность рабовладения и угроза его отмены Британией заставляло Кубу ради защиты оставаться в составе Испании дольше других американских колоний (кроме Puerto Rico), что влекло:\r\n   1. r==бóльшие инвестиции Испании на Кубу как на одну из своих последних прибыльных колоний;==\r\n   2. r==более долгий тесный контакт и приток европейцев== — до конца XIX века, как раз до времени возникновения son — той самой кульминационной кубинской музыки, которая в высшей степени объединила Африку с Европой и приобрела наибольшую мировую известность.\r\n\r\nr==Таким образом Куба экономически превосходила соседей==, а потому была ключевой испанской колонией. Развитая же экономика (материальная основа) создаёт развитую культуру (духовную надстройку).\r\n\r\n### Вывод\r\n\r\n1. География побуждает людей осуществлять *определённую* экономическую деятельность в *определённых* локациях, побочно создавая *соответствующую* культуру в этих локациях.\r\n2. География Европы и география Африки наложились на географию Америки, создав современную (= modern) музыку Америки.\r\n3. География сделала Кубу экономической жемчужиной Латинской Америки, что создало у Кубы наиболее продвинутую музыку региона.\r\n\r\n{{\u003c expand \u003e}}\r\n\r\nНо это лишь общие предположения. Этот вопрос мне ещё предстоит исследовать вглубь.\r\n\r\nВопросы.\r\n1. Почему католицизм гуманнее протестантизма? Разобрать связь капитализма и протестантизма.\r\n2. Запрещали ли голландцы африканскую музыку?\r\n3. Французские Антиллы — поселенческие колонии? Если да, как там обстоят дела с европейской гармонией? Видимо, африканские ритмы не соединились с гармонией в нечто сложное (как и в Puerto Rico).\r\n4. Была ли bossa nova популярной в Бразилии до популярности в США?\r\n5. Действительно ли ритм bossa nova сложен? Bossa nova полиритмична?\r\n6. Почему столь сложная музыка не возникла в Puerto Rico, Гондурасе, Панаме, Колумбии, Венесуэле?\r\n7. Создать карту по типу [этой](https://commons.wikimedia.org/wiki/File:Sahel-Sudan.png).\r\n{{\u003c /expand \u003e}}\r\n\r\n## * * *\r\n\r\nО разных вещах я говорю лучше на разных языках. → Пособие написано на 3-х языках одновременно. → Я комбинировал их правила, выбирая, как мне кажется, самые уместные и доходчивые.",
     "lastmodified": "2026-02-13T13:58:10.9546198-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/": {
     "title": "I. Становление",
-    "content": "\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7554635-04:00",
+    "content": "\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]",
+    "lastmodified": "2026-02-13T17:06:26.4652388-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/I.I.-G%C3%A9nesis": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/I.I.-G%C3%A9nesis": {
     "title": "I.I. Génesis",
     "content": "\r\n![alt text](../Imagenes/Mapas/Cuba.png)\r\n\r\n# I.I. Génesis\r\n\r\n- Most cubanos descend from:\r\n  1. **españoles**: andaluces, canarios;\r\n  2. **africanos**: yoruba, bantú.\r\n- Small Cuban populations descend from:\r\n  1. other **Caribbeans**;\r\n  2. **French**;\r\n  3. **Chinese**.\r\n\r\n## 1. Amerindios\r\n\r\n- **Arawak** = **taíno** — the most economically and socially developed Amerindians in Cuba.\r\n\r\n\u003cbr\u003e\r\n\r\n- **Areíto** = **areyto** — \r\n  1. the main social event of Cuba, Quisqueya, Borinquen;\r\n     - music, poetry, dance;\r\n     - instruments:\r\n       - mayohuacán;\r\n       - güiro;\r\n       - maracas;\r\n       - (sometimes) flutes;\r\n       - (sometimes) seashell trumpets;\r\n      - varied depending on region and social occasion;\r\n      - could last for days;\r\n      - tequina (vocal / dance leader) + chorus of ~300 men and women, singing responsorially: the chorus repeated the tequina’s every line at a lower / higher pitch, while the tequina kept dancing in silence; the soloist could change; the narrative song could last uninterruptedly from one day to the next;\r\n      - occasions:\r\n        - making a petition (for e.g., crop fertility, protection from hurricanes);\r\n        - rendering homage (e.g., Princess Anacaona’s areíto for the Hispaniola governor);\r\n        - celebrating an important wedding / war victory;\r\n        - solemnizing a funerary memorial;\r\n        fostering recreation;\r\n     - text: commemorating the past, the ancestors and their deeds, sometimes mentioning how each had died;\r\n  2. (later) a religious celebration of music, dance, theater; dancers played maracas and may have worn rattles tied to their ankles.\r\n\r\n- Voices:\r\n  - elderly — low;\r\n  - young — upper;\r\n  - women — tenór, alto, soprano.\r\n\r\n- Taíno singing was not harsh to European ears.\r\n- It is unknown what taíno music sounded like, but historians have recorded some instruments. Apparently, there is no Amerindian influence in la música cubana.\r\n\r\n- Taínos and Africans lived together as cimarrones. → Africans might have absorbed taíno musical elements:\r\n  - drums, other instruments;\r\n  - antiphonal singing;\r\n  - ecstatic mass singing and dancing.\r\n\r\n- **By the 1600s** — the Amerindians died out of:\r\nexogenous diseases;\r\n  - forced labor in the quest for nonexistent gold and silver;\r\n  - mass suicide in response to the forced labor.\r\n\r\n## 2. Españoles\r\n\r\n- **27 October 1492** — Columbus discovered Cuba.\r\n- Were arriving even in the early XX c.\r\n\r\n- European influences:\r\n  - chordal harmony;\r\n  - sectional formal structures (rather than the reliance on cellular ostinatos);\r\n  ensemble orchestration and arrangement;\r\n  notation;\r\n  - lots of written and orally transmitted music;\r\n  - instruments;\r\n    - guitarra is portable, → sailors brought it on ships to pass the time singing villancicos (— short song forms), romances (= corrido — Castillian narratives);\r\n  - poetry;\r\n    - the romance formed a basic layer of poetic sentiment and technique pervading the entire Hispanic world.\r\n\r\n\u003cbr\u003e\r\n\r\n- Spanish culture was influenced by:\r\n  - Africans;\r\n  - Arabs (Syrians, Yemenites);\r\n  - Berbers;\r\n  - Jews;\r\n  - Phonecians;\r\n  - Greeks;\r\n  - Gypsies;\r\n  - Romans;\r\n  - French;\r\n  - Occitanians;\r\n  - Celts;\r\n  - Visigoths.\r\n\r\n- The urban Caribbean music was influenced directly by the music of the Spanish court, theater, military, church.\r\n- Música campesina throughout América Latina is almost entirely of Spanish origin.\r\n- Sacred traditions (e.g., medieval choral and organ music) were brought to the Americas. The music of Spanish religious festivals (e.g., Corpus Christi) became a part of Cuban folklore.\r\n- The military bands that came over with Spanish troops played an important role in musical life.\r\n- The cultural interchange between Africans and working-class Spanish made African dances a part of the popular Cuban culture, slowly moving up towards upper-class acceptance.\r\n- European instruments (piano, guitarra, flauta, violin, etc.) were incorporated into Cuban music in their original organological forms.\r\n- The triple meter persists in some Hispanic-derived folk musics.\r\n- Flamenco.\r\n  - Version 1: there is no evidence that flamenco was transmitted to the Caribbean in the colonial period.\r\n  - Version 2: XVI c. — flamenco was introduced to Cuba. Through flamenco, Middle Eastern and Indian rhythms, scales, instruments influenced e.g.:\r\n    - Cuba: habanera, rumba;\r\n    - Venezuela: joropo;\r\n    - Mexico: jarabe.",
     "lastmodified": "2026-02-13T13:21:33.2711616-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/I.II.-Cronolog%C3%ADa": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/I.II.-Cronolog%C3%ADa": {
     "title": "I.II. Cronología",
     "content": "",
     "lastmodified": "2026-02-13T13:21:47.7943119-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/II.-%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/II.-%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0/": {
     "title": "II. Материальная основа",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
     "lastmodified": "2026-02-13T16:49:39.7584661-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/": {
     "title": "III. Идеальная надстройка",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[III.I. Rhythm]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
     "lastmodified": "2026-02-13T16:49:39.7624646-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/III.I.-Rhythm": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/III.I.-Rhythm": {
     "title": "III.I. Rhythm",
     "content": "\r\n# III.I. Rhythm\r\n\r\n- **Clave-based music** — music explicitly / implicitly expressing the 4-part rhythmic counterpoint.",
     "lastmodified": "2026-02-13T16:16:46.8573805-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/Imagenes/": {
-    "title": "Imagenes",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7694629-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/Notas": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/Notas": {
     "title": "Notas",
     "content": "",
     "lastmodified": "2026-02-13T12:34:21.2005051-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira": {
+    "title": "Música brasileira",
+    "content": "",
+    "lastmodified": "2026-02-13T17:11:35.2292746-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/": {
