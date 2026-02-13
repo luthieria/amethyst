@@ -71,6 +71,9 @@
 
 {{ define "main" }}
   <article class="markdown">
+    {{ if not .Params.BookHiddenTitle }}
+    <h1>{{ partial "docs/title" . }}</h1>
+    {{ end }}
     {{partial "quartz/textprocessing" . }}
     {{ partial "quartz/footer" .}}
     {{/*  {{- .Content -}}  */}}
