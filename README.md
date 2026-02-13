@@ -55,8 +55,9 @@ The server will need to be restarted to preview changes to navigation (internal 
 When adding/removing notes, regenerate indices first, then restart Hugo so new hashed assets are served:
 
 1. `hugo-obsidian -input=content -output=assets/indices -index -root=.`
-2. Start/restart Hugo (`make serve`, `serve.bat`, or `hugo server ...`).
-3. If the browser still shows stale graph/search data, hard refresh (for example `Ctrl+F5`) to bypass cached hashed JS/JSON assets.
+2. `python scripts/rebuild_graph_indices.py`
+3. Start/restart Hugo (`make serve`, `serve.bat`, or `hugo server ...`).
+4. If the browser still shows stale graph/search data, hard refresh (for example `Ctrl+F5`) to bypass cached hashed JS/JSON assets.
 
 ## Configuration
 

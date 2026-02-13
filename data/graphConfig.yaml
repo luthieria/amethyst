@@ -1,4 +1,4 @@
-# if true, a Global Graph will be shown on home page with full width, no backlink.
+﻿# if true, a Global Graph will be shown on home page with full width, no backlink.
 # A different set of Local Graphs will be shown on sub pages.
 # if false, Local Graph will be default on every page as usual
 enableGlobalGraph: true
@@ -34,4 +34,19 @@ globalGraph:
 ### For all graphs ###
 
 paths:
-  - /moc: "#4388cc"
+  - /Notas/I.-Ciencia/1.-Filosofia: "#e8b8c6"
+  - /Notas/I.-Ciencia/2.-Antropologia: "#c7d8ef"
+  - /Notas/I.-Ciencia/3.-Economia: "#d6c3e6"
+  - /Notas/I.-Ciencia/4.-Hist%C3%B3ria: "#bcdfe0"
+  - /Notas/I.-Ciencia/5.-L%C3%ADnguas: "#e7d7b1"
+  - /Notas/I.-Ciencia/6.-Religiones: "#c5d7b9"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica: "#a9d8e6"
+  - /Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica: "#e7c7a8"
+  - /Notas/I.-Ciencia/9.-Computer-Science: "#c3cfe8"
+  - /Notas/II.-Personal/Tareas: "#f0cbbf"
+  - /Notas/II.-Personal/Trabajo: "#b9d6c4"
+
+  - /Notas/I.-Ciencia: "#b8cad8"
+  - /Notas/II.-Personal: "#c7d2c0"
+
+  - /moc: "#9bb7d4"

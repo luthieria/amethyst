@@ -3,22 +3,28 @@
   {{$url := urls.Parse .Site.BaseURL }}
   {{$host := strings.TrimRight "/" $url.Path }}
   {{$curPage := strings.TrimPrefix $host (strings.TrimRight "/" .Page.RelPermalink)}}
+  {{$curPage = strings.TrimRight "/" $curPage}}
   {{$linkIndex := getJSON "/assets/indices/linkIndex.json"}}
   {{$inbound := index $linkIndex.index.backlinks $curPage}}
+  {{if not $inbound}}
+    {{$legacyCurPage := printf "%s/" $curPage}}
+    {{$inbound = index $linkIndex.index.backlinks $legacyCurPage}}
+  {{end}}
   {{$contentTable := getJSON "/assets/indices/contentIndex.json"}}
   {{if $inbound}}
   {{$backlinks := dict "SENTINEL" "SENTINEL"}}
   {{range $k, $v := $inbound}}
-  {{$cleanedInbound := replace $v.source " " "-"}}
+  {{$cleanedInbound := strings.TrimRight "/" (replace $v.source " " "-")}}
   {{$ctx := $v.text}}
   {{$backlinks = merge $backlinks (dict $cleanedInbound $ctx)}}
   {{end}}
   {{- range $lnk, $ctx := $backlinks -}}
-  {{$l := printf "%s%s/" $host $lnk}}
+  {{$normalizedLink := strings.TrimRight "/" $lnk}}
+  {{$l := printf "%s%s/" $host $normalizedLink}}
   {{$l = cond (eq $l "//") "/" $l}}
-  {{with (index $contentTable $lnk)}}
+  {{with or (index $contentTable $normalizedLink) (index $contentTable (printf "%s/" $normalizedLink))}}
   <li>
-    <a href="{{$l}}" data-ctx="{{$ctx}}" data-src="{{$lnk}}" class="internal-link">{{index (index . "title")}}</a>
+    <a href="{{$l}}" data-ctx="{{$ctx}}" data-src="{{$normalizedLink}}" class="internal-link">{{index (index . "title")}}</a>
   </li>
   {{end}}
   {{- end -}}
