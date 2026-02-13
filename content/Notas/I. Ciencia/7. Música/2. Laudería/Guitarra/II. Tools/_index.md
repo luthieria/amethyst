@@ -1,9 +1,7 @@
 ---
-title: "I.II. Glue"
-weight: 6
-bookCollapseSection: true
+title: "II. Tools"
 ---
 
 <!-- AUTO-CHILD-LINKS:START -->
-
+[[II. Tools]]
 <!-- AUTO-CHILD-LINKS:END -->

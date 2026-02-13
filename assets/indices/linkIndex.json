@@ -1,6 +1,27 @@
 {
   "index": {
     "links": {
+      "/Notas/I.-Ciencia/1.-Filosofia/": [
+        {
+          "source": "/Notas/I.-Ciencia/1.-Filosofia/",
+          "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
+          "text": "Заметки по марксизму"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/",
+          "target": "/Cuba",
+          "text": "Cuba"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
@@ -11,15 +32,172 @@
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/Imagenes",
+          "text": "Imagenes"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/Notas",
+          "text": "Notas"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
+          "text": "Предисловие"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+          "target": "/Familia-del-viol%C3%ADn",
+          "text": "Familia del violín"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+          "target": "/Guitarra",
+          "text": "Guitarra"
+        }
+      ],
+      "/Notas/I.-Ciencia/9.-Computer-Science/": [
+        {
+          "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
+          "target": "/LaTeX",
+          "text": "LaTeX"
+        }
+      ],
+      "/Notas/II.-Personal/": [
+        {
+          "source": "/Notas/II.-Personal/",
+          "target": "/Tareas",
+          "text": "Tareas"
+        },
+        {
+          "source": "/Notas/II.-Personal/",
+          "target": "/Trabajo",
+          "text": "Trabajo"
+        }
+      ],
+      "/Notas/II.-Personal/Tareas/": [
+        {
+          "source": "/Notas/II.-Personal/Tareas/",
+          "target": "/Portfolio-ideas",
+          "text": "Portfolio ideas"
+        },
+        {
+          "source": "/Notas/II.-Personal/Tareas/",
+          "target": "/To-do",
+          "text": "To do"
+        }
+      ],
+      "/Notas/II.-Personal/Trabajo/": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/",
+          "target": "/Technical-Writing",
+          "text": "Technical Writing"
+        }
+      ],
+      "/Notas/II.-Personal/Trabajo/Technical-Writing/": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/AI_Audio_Plugin_Dev_Guide",
+          "text": "AI_Audio_Plugin_Dev_Guide"
+        },
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/Audio_Engineering_Standard_Operating_Procedures",
+          "text": "Audio_Engineering_Standard_Operating_Procedures"
+        },
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/Generative-Form-and-Abstracted-Cross-Rhythm",
+          "text": "Generative Form and Abstracted Cross-Rhythm"
         }
       ]
     },
     "backlinks": {
+      "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": [
+        {
+          "source": "/Notas/I.-Ciencia/1.-Filosofia/",
+          "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
+          "text": "Заметки по марксизму"
+        }
+      ],
       "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
+          "text": "Предисловие"
+        }
+      ],
+      "/AI_Audio_Plugin_Dev_Guide": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/AI_Audio_Plugin_Dev_Guide",
+          "text": "AI_Audio_Plugin_Dev_Guide"
+        }
+      ],
+      "/Audio_Engineering_Standard_Operating_Procedures": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/Audio_Engineering_Standard_Operating_Procedures",
+          "text": "Audio_Engineering_Standard_Operating_Procedures"
+        }
+      ],
+      "/Cuba": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/",
+          "target": "/Cuba",
+          "text": "Cuba"
+        }
+      ],
+      "/Familia-del-viol%C3%ADn": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+          "target": "/Familia-del-viol%C3%ADn",
+          "text": "Familia del violín"
+        }
+      ],
+      "/Generative-Form-and-Abstracted-Cross-Rhythm": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+          "target": "/Generative-Form-and-Abstracted-Cross-Rhythm",
+          "text": "Generative Form and Abstracted Cross-Rhythm"
+        }
+      ],
+      "/Guitarra": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+          "target": "/Guitarra",
+          "text": "Guitarra"
+        }
+      ],
+      "/Imagenes": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/Imagenes",
+          "text": "Imagenes"
+        }
+      ],
+      "/La-m%C3%BAsica-cubana": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
+      "/LaTeX": [
+        {
+          "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
+          "target": "/LaTeX",
+          "text": "LaTeX"
         }
       ],
       "/Notas": [
@@ -27,11 +205,56 @@
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "target": "/Notas",
+          "text": "Notas"
+        }
+      ],
+      "/Portfolio-ideas": [
+        {
+          "source": "/Notas/II.-Personal/Tareas/",
+          "target": "/Portfolio-ideas",
+          "text": "Portfolio ideas"
+        }
+      ],
+      "/Tareas": [
+        {
+          "source": "/Notas/II.-Personal/",
+          "target": "/Tareas",
+          "text": "Tareas"
+        }
+      ],
+      "/Technical-Writing": [
+        {
+          "source": "/Notas/II.-Personal/Trabajo/",
+          "target": "/Technical-Writing",
+          "text": "Technical Writing"
+        }
+      ],
+      "/To-do": [
+        {
+          "source": "/Notas/II.-Personal/Tareas/",
+          "target": "/To-do",
+          "text": "To do"
+        }
+      ],
+      "/Trabajo": [
+        {
+          "source": "/Notas/II.-Personal/",
+          "target": "/Trabajo",
+          "text": "Trabajo"
         }
       ]
     }
   },
   "links": [
+    {
+      "source": "/Notas/I.-Ciencia/1.-Filosofia/",
+      "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
+      "text": "Заметки по марксизму"
+    },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
@@ -41,6 +264,86 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/Notas",
       "text": "Notas"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "target": "/Imagenes",
+      "text": "Imagenes"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "target": "/Notas",
+      "text": "Notas"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
+      "text": "Предисловие"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/",
+      "target": "/La-m%C3%BAsica-cubana",
+      "text": "La música cubana"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/",
+      "target": "/Cuba",
+      "text": "Cuba"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+      "target": "/Familia-del-viol%C3%ADn",
+      "text": "Familia del violín"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",
+      "target": "/Guitarra",
+      "text": "Guitarra"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
+      "target": "/LaTeX",
+      "text": "LaTeX"
+    },
+    {
+      "source": "/Notas/II.-Personal/Tareas/",
+      "target": "/Portfolio-ideas",
+      "text": "Portfolio ideas"
+    },
+    {
+      "source": "/Notas/II.-Personal/Tareas/",
+      "target": "/To-do",
+      "text": "To do"
+    },
+    {
+      "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+      "target": "/AI_Audio_Plugin_Dev_Guide",
+      "text": "AI_Audio_Plugin_Dev_Guide"
+    },
+    {
+      "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+      "target": "/Audio_Engineering_Standard_Operating_Procedures",
+      "text": "Audio_Engineering_Standard_Operating_Procedures"
+    },
+    {
+      "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
+      "target": "/Generative-Form-and-Abstracted-Cross-Rhythm",
+      "text": "Generative Form and Abstracted Cross-Rhythm"
+    },
+    {
+      "source": "/Notas/II.-Personal/Trabajo/",
+      "target": "/Technical-Writing",
+      "text": "Technical Writing"
+    },
+    {
+      "source": "/Notas/II.-Personal/",
+      "target": "/Tareas",
+      "text": "Tareas"
+    },
+    {
+      "source": "/Notas/II.-Personal/",
+      "target": "/Trabajo",
+      "text": "Trabajo"
     }
   ]
 }

@@ -1,20 +1,20 @@
 {
   "/Notas/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: Overview\r\nenableToc: true\r\n\r\nlayout: \"book\"\r\n#bookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:35:44.4581013-04:00",
+    "title": "Overview",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Ciencia]]\r\n\r\n[[II. Personal]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6339406-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/": {
     "title": "I. Ciencia",
-    "content": "",
-    "lastmodified": "2026-02-13T11:39:15.4735091-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Filosofia]]\r\n\r\n[[2. Antropologia]]\r\n\r\n[[3. Economia]]\r\n\r\n[[4. História]]\r\n\r\n[[5. Línguas]]\r\n\r\n[[6. Religiones]]\r\n\r\n[[7. Música]]\r\n\r\n[[8. Marxismo — política]]\r\n\r\n[[9. Computer Science]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6559401-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosofia/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"1. Filosofia\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T13:20:31.2118541-04:00",
+    "title": "1. Filosofia",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Заметки по марксизму]]\r\n\r\n[[Попов М. В.]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6669416-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": {
@@ -30,63 +30,63 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/2.-Antropologia/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"2. Antropologia\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-02-13T11:39:36.3542218-04:00",
+    "title": "2. Antropologia",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6709399-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/3.-Economia/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"3. Economia\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-02-13T11:39:39.6956342-04:00",
+    "title": "3. Economia",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6749436-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/4.-Hist%C3%B3ria/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"4. História\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-02-13T11:39:42.4736683-04:00",
+    "title": "4. História",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6779501-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/5.-L%C3%ADnguas/": {
     "title": "5. Línguas",
-    "content": "",
-    "lastmodified": "2026-02-13T11:39:45.2411753-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.6829488-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/6.-Religiones/": {
     "title": "6. Religiones",
-    "content": "",
-    "lastmodified": "2026-02-13T11:39:49.5307501-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7044614-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/": {
     "title": "7. Música",
-    "content": "",
-    "lastmodified": "2026-02-13T11:41:21.1615552-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Etnomusicología]]\r\n\r\n[[2. Laudería]]\r\n\r\n[[3. Instrumentos]]\r\n\r\n[[4. Teoria musical]]\r\n\r\n[[5. Audio Engineering]]\r\n\r\n[[6. DSP]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7164644-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"1. Etnomusicología\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:05.1817613-04:00",
+    "title": "1. Etnomusicología",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[2. Hispanoamérica]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7194619-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/": {
     "title": "2. Hispanoamérica",
-    "content": "",
-    "lastmodified": "2026-02-13T11:45:26.4592597-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Cuba]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7264617-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/": {
     "title": "Cuba",
-    "content": "",
-    "lastmodified": "2026-02-13T12:23:38.5849444-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[La música cubana]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7324627-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"La música cubana\"\r\nweight: 6\r\nbookHideChildren: true\r\nbookBreadcrumbStart: true\r\n---\r\n\r\n[[Предисловие]]\r\n\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]",
-    "lastmodified": "2026-02-13T16:22:26.0982038-04:00",
+    "title": "La música cubana",
+    "content": "\r\n[[Предисловие]]\r\n\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Становление]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Imagenes]]\r\n\r\n[[Notas]]\r\n\r\n[[Предисловие]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7494661-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": {
@@ -97,8 +97,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/": {
     "title": "I. Становление",
-    "content": "\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]",
-    "lastmodified": "2026-02-13T13:59:20.5054876-04:00",
+    "content": "\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Génesis]]\r\n\r\n[[I.II. Cronología]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7554635-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/I.-%D0%A1%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5/I.I.-G%C3%A9nesis": {
@@ -115,20 +115,26 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/II.-%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0/": {
     "title": "II. Материальная основа",
-    "content": "",
-    "lastmodified": "2026-02-13T12:08:13.9963359-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7584661-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/": {
     "title": "III. Идеальная надстройка",
-    "content": "",
-    "lastmodified": "2026-02-13T12:09:16.7067985-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[III.I. Rhythm]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7624646-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/III.-%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/III.I.-Rhythm": {
     "title": "III.I. Rhythm",
     "content": "\r\n# III.I. Rhythm\r\n\r\n- **Clave-based music** — music explicitly / implicitly expressing the 4-part rhythmic counterpoint.",
     "lastmodified": "2026-02-13T16:16:46.8573805-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/Imagenes/": {
+    "title": "Imagenes",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7694629-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/Notas": {
@@ -138,15 +144,15 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"2. Laudería\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:10.8441365-04:00",
+    "title": "2. Laudería",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Familia del violín]]\r\n\r\n[[Guitarra]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.774462-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Familia-del-viol%C3%ADn/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"Familia del violín\"\r\nweight: 50\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-01-25T17:28:39.2219213-04:00",
+    "title": "Familia del violín",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Tools]]\r\n\r\n[[IV. Violín]]\r\n\r\n[[V. Bow]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7814686-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Familia-del-viol%C3%ADn/I.-Tools": {
@@ -168,21 +174,21 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"Guitarra\"\r\nweight: 4\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:47:05.0542298-04:00",
+    "title": "Guitarra",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I. Materials]]\r\n\r\n[[II. Tools]]\r\n\r\n[[III. Instruments]]\r\n\r\n[[IV. Repairs]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7864689-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"I. Materials\"\r\nweight: 5\r\nbook: \"Guitarra\"\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:49:52.2687925-04:00",
+    "title": "I. Materials",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Wood]]\r\n\r\n[[I.II. Glue]]\r\n\r\n[[I.III. Finish]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7929848-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"I.I. Wood\"\r\nweight: 6\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:50:28.0233842-04:00",
+    "title": "I.I. Wood",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Wood]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.7979823-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/I.I.-Wood": {
@@ -192,21 +198,33 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.II.-Glue/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"I.II. Glue\"\r\nweight: 6\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:51:18.2283547-04:00",
+    "title": "I.II. Glue",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8009834-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.III.-Finish/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"I.III. Finish\"\r\nweight: 6\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:51:30.1415622-04:00",
+    "title": "I.III. Finish",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8059824-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/II.-Tools/": {
+    "title": "II. Tools",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[II. Tools]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8109832-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/II.-Tools/II.-Tools": {
     "title": "II. Tools",
     "content": "",
     "lastmodified": "2026-01-24T11:52:12.9351576-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/III.-Instruments/": {
+    "title": "III. Instruments",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[III.I. Clásica]]\r\n\r\n[[III.II. Acoustic]]\r\n\r\n[[III.III. Electric]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8169833-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/III.-Instruments/III.I.-Cl%C3%A1sica": {
@@ -227,6 +245,12 @@
     "lastmodified": "2026-01-24T13:22:02.3112659-04:00",
     "tags": []
   },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/IV.-Repairs/": {
+    "title": "IV. Repairs",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[IV. Repairs]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8209806-04:00",
+    "tags": []
+  },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/IV.-Repairs/IV.-Repairs": {
     "title": "IV. Repairs",
     "content": "",
@@ -240,63 +264,63 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/3.-Instrumentos/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"3. Instrumentos\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:44.9491973-04:00",
+    "title": "3. Instrumentos",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8249873-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/4.-Teoria-musical/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"4. Teoria musical\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:42.1012856-04:00",
+    "title": "4. Teoria musical",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8279877-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/5.-Audio-Engineering/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"5. Audio Engineering\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:35.8873401-04:00",
+    "title": "5. Audio Engineering",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.830994-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/6.-DSP/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"6. DSP\"\r\nweight: 3\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:42:41.0801594-04:00",
+    "title": "6. DSP",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8349833-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"8. Marxismo — política\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-02-13T11:39:59.8493483-04:00",
+    "title": "8. Marxismo — política",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8379813-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/9.-Computer-Science/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"9. Computer Science\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:40:48.8790414-04:00",
+    "title": "9. Computer Science",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[LaTeX]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8429833-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/": {
     "title": "II. Personal",
-    "content": "",
-    "lastmodified": "2026-02-13T11:39:19.827232-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Tareas]]\r\n\r\n[[Trabajo]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8509829-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Tareas/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"Tareas\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:40:56.674144-04:00",
+    "title": "Tareas",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Portfolio ideas]]\r\n\r\n[[To do]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8589837-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Trabajo/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"Trabajo\"\r\nweight: 2\r\nbookCollapseSection: true\r\n---",
-    "lastmodified": "2026-02-13T11:41:02.0480574-04:00",
+    "title": "Trabajo",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Technical Writing]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.870984-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Trabajo/Technical-Writing/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: \"Technical Writing\"\r\nweight: 60\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-01-25T17:14:54.3836505-04:00",
+    "title": "Technical Writing",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[1. Signal Flow in a Digital Audio Production System]]\r\n\r\n[[AI_Audio_Plugin_Dev_Guide]]\r\n\r\n[[Audio_Engineering_Standard_Operating_Procedures]]\r\n\r\n[[Generative Form and Abstracted Cross-Rhythm]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T16:49:39.8789931-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Trabajo/Technical-Writing/1.-Signal-Flow-in-a-Digital-Audio-Production-System": {
