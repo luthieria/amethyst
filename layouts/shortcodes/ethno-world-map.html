@@ -1,0 +1,74 @@
+{{- $data := index site.Data "ethno-world-map" -}}
+{{- $entries := slice -}}
+{{- $mapID := printf "ethno-world-map-%d" .Ordinal -}}
+{{- with $data -}}
+  {{- with .entries -}}
+    {{- $entries = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $items := slice -}}
+{{- range $index, $entry := $entries -}}
+  {{- $path := default "" $entry.path -}}
+  {{- $target := $.Page.GetPage $path -}}
+  {{- if $target -}}
+    {{- $depth := int (default 1 $entry.depth) -}}
+    {{- $lat := default 0.0 $entry.lat -}}
+    {{- $lon := default 0.0 $entry.lon -}}
+    {{- $dx := default 10.0 $entry.dx -}}
+    {{- $dy := default -8.0 $entry.dy -}}
+    {{- $x := mul (div (add $lon 180.0) 360.0) 1000.0 -}}
+    {{- $y := mul (div (sub 90.0 $lat) 180.0) 500.0 -}}
+    {{- $labelX := add $x $dx -}}
+    {{- $labelY := add $y $dy -}}
+    {{- $radius := cond (eq $depth 1) 7.0 (cond (eq $depth 2) 6.0 (cond (eq $depth 3) 5.0 4.0)) -}}
+    {{- $title := default $target.Title $entry.title -}}
+    {{- $items = $items | append (dict
+      "id" (default (printf "entry-%d" $index) $entry.id)
+      "depth" $depth
+      "title" $title
+      "target" $target
+      "x" $x
+      "y" $y
+      "labelX" $labelX
+      "labelY" $labelY
+      "radius" $radius
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $items) 0 -}}
+<div class="ethno-map-layout">
+  <div class="ethno-map-canvas">
+    <svg class="ethno-map-svg" viewBox="0 0 1000 500" role="img" aria-labelledby="{{ $mapID }}-title {{ $mapID }}-desc">
+      <title id="{{ $mapID }}-title">Mapa interactivo de etnomusicología</title>
+      <desc id="{{ $mapID }}-desc">Mapa mundial con enlaces a secciones geográficas de etnomusicología.</desc>
+      <image href="{{ "svg/world-stylized.svg" | relURL }}" x="0" y="0" width="1000" height="500" preserveAspectRatio="xMidYMid meet"></image>
+      <g class="ethno-map-pins">
+        {{- range $items -}}
+        <a class="ethno-map-pin depth-{{ .depth }}" href="{{ .target.RelPermalink }}" aria-label="{{ printf "Abrir %s" .title }}" tabindex="0">
+          <title>{{ .title }}</title>
+          <circle cx="{{ printf "%.2f" .x }}" cy="{{ printf "%.2f" .y }}" r="{{ printf "%.2f" .radius }}"></circle>
+          <text class="ethno-map-label depth-{{ .depth }}" x="{{ printf "%.2f" .labelX }}" y="{{ printf "%.2f" .labelY }}">{{ .title }}</text>
+        </a>
+        {{- end -}}
+      </g>
+    </svg>
+  </div>
+
+  <aside class="ethno-map-panel" aria-label="Navegación geográfica">
+    <div class="ethno-map-panel-title">Índice geográfico</div>
+    <nav aria-label="Índice geográfico de etnomusicología">
+      <ol class="ethno-map-list">
+        {{- range $items -}}
+        <li class="depth-{{ .depth }}">
+          <a href="{{ .target.RelPermalink }}">{{ .title }}</a>
+        </li>
+        {{- end -}}
+      </ol>
+    </nav>
+  </aside>
+</div>
+{{- else -}}
+<p class="ethno-map-empty">No hay secciones geográficas configuradas para este mapa.</p>
+{{- end -}}

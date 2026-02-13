@@ -6,7 +6,7 @@ bookCollapseSection: true
 ---
 
 <!-- AUTO-CHILD-LINKS:START -->
-[[I.I. Wood]]
+[[Characteristics]]
 
 [[I.II. Glue]]
 

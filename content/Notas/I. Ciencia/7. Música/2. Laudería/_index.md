@@ -1,11 +1,9 @@
 ---
-title: "2. Laudería"
+title: "Laudería"
 weight: 3
 bookCollapseSection: true
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
 [[Familia del violín]]
 
 [[Guitarra]]
-<!-- AUTO-CHILD-LINKS:END -->

@@ -1,5 +1,5 @@
 ---
-title: "1. Filosofia"
+title: "Filosofia"
 weight: 2
 bookCollapseSection: true
 ---

@@ -5,5 +5,5 @@ bookCollapseSection: true
 ---
 
 <!-- AUTO-CHILD-LINKS:START -->
-[[I.I. Wood]]
+[[Characteristics]]
 <!-- AUTO-CHILD-LINKS:END -->

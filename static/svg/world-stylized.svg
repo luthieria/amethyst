@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="Stylized world map">
+  <defs>
+    <linearGradient id="ocean" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2b31"/>
+      <stop offset="100%" stop-color="#172026"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e6159"/>
+      <stop offset="100%" stop-color="#36453f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="500" fill="url(#ocean)"/>
+
+  <g stroke="#687a73" stroke-width="0.8" stroke-opacity="0.28" fill="none">
+    <path d="M0 100H1000"/>
+    <path d="M0 200H1000"/>
+    <path d="M0 300H1000"/>
+    <path d="M0 400H1000"/>
+    <path d="M200 0V500"/>
+    <path d="M400 0V500"/>
+    <path d="M600 0V500"/>
+    <path d="M800 0V500"/>
+  </g>
+
+  <g fill="url(#land)" stroke="#73867e" stroke-width="1.4" stroke-linejoin="round">
+    <path d="M95 124L140 90L222 78L282 112L302 152L284 212L244 236L210 262L168 250L130 220L100 180Z"/>
+    <path d="M260 56L306 44L340 66L330 95L282 99L250 80Z"/>
+    <path d="M236 228L270 236L292 255L281 276L252 271L230 250Z"/>
+    <path d="M282 276L324 292L350 332L346 392L320 450L286 436L274 382L261 334Z"/>
+
+    <path d="M430 110L470 95L521 104L545 130L520 156L476 152L446 130Z"/>
+    <path d="M470 160L521 170L560 222L556 302L521 356L470 341L446 272L456 212Z"/>
+    <path d="M540 120L632 96L742 112L824 166L816 236L752 276L680 282L622 246L590 206L556 156Z"/>
+    <path d="M650 252L688 254L724 274L710 312L664 316L640 286Z"/>
+    <path d="M780 188L796 204L789 224L772 214Z"/>
+    <path d="M770 320L834 330L880 370L860 420L800 432L754 392Z"/>
+    <path d="M570 314L590 332L580 360L560 350Z"/>
+    <path d="M438 90L450 80L462 86L456 99L442 101Z"/>
+    <path d="M60 454L940 454L900 490L90 490Z"/>
+  </g>
+</svg>

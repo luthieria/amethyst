@@ -1,0 +1,108 @@
+entries:
+  - id: africa
+    title: "África"
+    path: "1. África"
+    depth: 1
+    lat: 12.0
+    lon: 20.0
+    dx: 12
+    dy: -10
+
+  - id: oriente-medio
+    title: "Oriente Medio"
+    path: "2. Oriente Medio"
+    depth: 1
+    lat: 30.0
+    lon: 45.0
+    dx: 12
+    dy: -10
+
+  - id: iran
+    title: "Irán"
+    path: "2. Oriente Medio/Irán"
+    depth: 2
+    lat: 32.0
+    lon: 53.0
+    dx: 10
+    dy: -8
+
+  - id: magreb
+    title: "Magreb"
+    path: "2. Oriente Medio/Magreb"
+    depth: 2
+    lat: 31.0
+    lon: -6.0
+    dx: -62
+    dy: -10
+
+  - id: arabe
+    title: "Árabe"
+    path: "2. Oriente Medio/Árabe"
+    depth: 2
+    lat: 24.0
+    lon: 45.0
+    dx: 10
+    dy: 14
+
+  - id: mediterraneo
+    title: "Mediterráneo"
+    path: "3. Mediterráneo"
+    depth: 1
+    lat: 38.0
+    lon: 15.0
+    dx: 12
+    dy: -10
+
+  - id: espana
+    title: "España"
+    path: "3. Mediterráneo/España"
+    depth: 2
+    lat: 40.0
+    lon: -4.0
+    dx: -58
+    dy: -8
+
+  - id: portugal
+    title: "Portugal"
+    path: "3. Mediterráneo/Portugal"
+    depth: 2
+    lat: 39.0
+    lon: -8.0
+    dx: -64
+    dy: 12
+
+  - id: america
+    title: "América"
+    path: "4. América"
+    depth: 1
+    lat: 15.0
+    lon: -75.0
+    dx: 12
+    dy: -10
+
+  - id: america-latina
+    title: "América Latina"
+    path: "4. América/1. América Latina"
+    depth: 2
+    lat: -15.0
+    lon: -60.0
+    dx: 12
+    dy: 20
+
+  - id: hispanoamerica
+    title: "Hispanoamérica"
+    path: "4. América/1. América Latina/Hispanoamérica"
+    depth: 3
+    lat: 9.0
+    lon: -75.0
+    dx: 12
+    dy: -10
+
+  - id: cuba
+    title: "Cuba"
+    path: "4. América/1. América Latina/Hispanoamérica/Cuba"
+    depth: 4
+    lat: 21.5
+    lon: -79.5
+    dx: 10
+    dy: -14
