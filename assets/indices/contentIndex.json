@@ -1,14 +1,8 @@
 {
-  "/": {
-    "title": "_index",
-    "content": "﻿---\r\ntitle: 1\r\nenableToc: true\r\n\r\nlayout: \"book\"\r\n#bookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-01-25T17:17:02.0330278-04:00",
-    "tags": []
-  },
   "/Notas/": {
     "title": "_index",
-    "content": "﻿---\r\ntitle: \"Notas\"\r\nweight: 90\r\n\r\nlayout: \"book\"\r\n# bookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-01-25T17:17:22.6927068-04:00",
+    "content": "﻿---\r\ntitle: Overview\r\nenableToc: true\r\n\r\nlayout: \"book\"\r\n#bookCollapseSection: true\r\n---",
+    "lastmodified": "2026-02-13T11:35:44.4581013-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/": {
@@ -92,7 +86,7 @@
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/M%C3%BAsica-cubana/I.-%D0%A1%D0%A2%D0%90%D0%9D%D0%9E%D0%92%D0%9B%D0%95%D0%9D%D0%98%D0%95": {
     "title": "I. СТАНОВЛЕНИЕ",
     "content": "\r\n![alt text](Imagenes/Mapas/Cuba.png)\r\n\r\n# I.I. Génesis\r\n\r\n- Most cubanos descend from:\r\n  1. **españoles**: andaluces, canarios;\r\n  2. **africanos**: yoruba, bantú.\r\n- Small Cuban populations descend from:\r\n  1. other **Caribbeans**;\r\n  2. **French**;\r\n  3. **Chinese**.\r\n\r\n## 1. Amerindios\r\n\r\n- **Arawak** = **taíno** — the most economically and socially developed Amerindians in Cuba.\r\n\r\n\u003cbr\u003e\r\n\r\n- **Areíto** = **areyto** — \r\n  1. the main social event of Cuba, Quisqueya, Borinquen;\r\n     - music, poetry, dance;\r\n     - instruments:\r\n       - mayohuacán;\r\n       - güiro;\r\n       - maracas;\r\n       - (sometimes) flutes;\r\n       - (sometimes) seashell trumpets;\r\n      - varied depending on region and social occasion;\r\n      - could last for days;\r\n      - tequina (vocal / dance leader) + chorus of ~300 men and women, singing responsorially: the chorus repeated the tequina’s every line at a lower / higher pitch, while the tequina kept dancing in silence; the soloist could change; the narrative song could last uninterruptedly from one day to the next;\r\n      - occasions:\r\n        - making a petition (for e.g., crop fertility, protection from hurricanes);\r\n        - rendering homage (e.g., Princess Anacaona’s areíto for the Hispaniola governor);\r\n        - celebrating an important wedding / war victory;\r\n        - solemnizing a funerary memorial;\r\n        fostering recreation;\r\n     - text: commemorating the past, the ancestors and their deeds, sometimes mentioning how each had died;\r\n  2. (later) a religious celebration of music, dance, theater; dancers played maracas and may have worn rattles tied to their ankles.\r\n\r\n- Voices:\r\n  - elderly — low;\r\n  - young — upper;\r\n  - women — tenór, alto, soprano.\r\n\r\n- Taíno singing was not harsh to European ears.\r\n- It is unknown what taíno music sounded like, but historians have recorded some instruments. Apparently, there is no Amerindian influence in la música cubana.\r\n\r\n- Taínos and Africans lived together as cimarrones. → Africans might have absorbed taíno musical elements:\r\n  - drums, other instruments;\r\n  - antiphonal singing;\r\n  - ecstatic mass singing and dancing.\r\n\r\n- **By the 1600s** — the Amerindians died out of:\r\nexogenous diseases;\r\n  - forced labor in the quest for nonexistent gold and silver;\r\n  - mass suicide in response to the forced labor.\r\n\r\n## 2. Españoles\r\n\r\n- **27 October 1492** — Columbus discovered Cuba.\r\n- Were arriving even in the early XX c.\r\n\r\n- European influences:\r\n  - chordal harmony;\r\n  - sectional formal structures (rather than the reliance on cellular ostinatos);\r\n  ensemble orchestration and arrangement;\r\n  notation;\r\n  - lots of written and orally transmitted music;\r\n  - instruments;\r\n    - guitarra is portable, → sailors brought it on ships to pass the time singing villancicos (— short song forms), romances (= corrido — Castillian narratives);\r\n  - poetry;\r\n    - the romance formed a basic layer of poetic sentiment and technique pervading the entire Hispanic world.\r\n\r\n\u003cbr\u003e\r\n\r\n- Spanish culture was influenced by:\r\n  - Africans;\r\n  - Arabs (Syrians, Yemenites);\r\n  - Berbers;\r\n  - Jews;\r\n  - Phonecians;\r\n  - Greeks;\r\n  - Gypsies;\r\n  - Romans;\r\n  - French;\r\n  - Occitanians;\r\n  - Celts;\r\n  - Visigoths.\r\n\r\n- The urban Caribbean music was influenced directly by the music of the Spanish court, theater, military, church.\r\n- Música campesina throughout América Latina is almost entirely of Spanish origin.\r\n- Sacred traditions (e.g., medieval choral and organ music) were brought to the Americas. The music of Spanish religious festivals (e.g., Corpus Christi) became a part of Cuban folklore.\r\n- The military bands that came over with Spanish troops played an important role in musical life.\r\n- The cultural interchange between Africans and working-class Spanish made African dances a part of the popular Cuban culture, slowly moving up towards upper-class acceptance.\r\n- European instruments (piano, guitarra, flauta, violin, etc.) were incorporated into Cuban music in their original organological forms.\r\n- The triple meter persists in some Hispanic-derived folk musics.\r\n- Flamenco.\r\n  - Version 1: there is no evidence that flamenco was transmitted to the Caribbean in the colonial period.\r\n  - Version 2: XVI c. — flamenco was introduced to Cuba. Through flamenco, Middle Eastern and Indian rhythms, scales, instruments influenced e.g.:\r\n    - Cuba: habanera, rumba;\r\n    - Venezuela: joropo;\r\n    - Mexico: jarabe.",
-    "lastmodified": "2026-02-13T10:25:44.4117832-04:00",
+    "lastmodified": "2026-02-13T11:12:51.6871522-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/M%C3%BAsica-cubana/II.-%D0%9C%D0%90%D0%A2%D0%95%D0%A0%D0%98%D0%90%D0%9B%D0%AC%D0%9D%D0%90%D0%AF-%D0%9E%D0%A1%D0%9D%D0%9E%D0%92%D0%90": {
@@ -143,10 +137,52 @@
     "lastmodified": "2026-01-15T23:46:10.7997318-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarras/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/": {
     "title": "_index",
     "content": "﻿---\r\ntitle: \"Guitarras\"\r\nweight: 50\r\nbookCollapseSection: true\r\n---\r\n",
     "lastmodified": "2026-01-25T17:14:54.3139608-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/": {
+    "title": "_index",
+    "content": "﻿---\r\ntitle: \"I. Materials\"\r\nweight: 40\r\nbookCollapseSection: true\r\n---\r\n",
+    "lastmodified": "2026-02-13T11:33:45.417285-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/I.I.-Wood": {
+    "title": "I.I. Wood",
+    "content": "# WOOD\n## Characteristics\n### Grain\n- **Wood grain** = **tree rings**.[^Kert]\n\n\n[^Kert]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)",
+    "lastmodified": "2026-01-24T13:23:49.8042755-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/II.-Tools/II.-Tools": {
+    "title": "II. Tools",
+    "content": "",
+    "lastmodified": "2026-01-24T11:52:12.9351576-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/III.-Instruments/III.I.-Cl%C3%A1sica": {
+    "title": "III.I. Clásica",
+    "content": "# I. Body\r\n- The wood must be dried for at least 30 years at 50±3% humidity.[^Bruné1] [^Bruné2] [^Bloomberg]\r\n- Wax protects wood from excessive cracking: e.g., ends of Brazilian rosewood (← it’s prone to checking). Scrap it off before using the wood.[^Bruné1]\r\n\r\n\u003c!-- 1 break --\u003e\r\n- When harvesting a tree, luthiers look for ≥8–12” of usable wood.[^Bruné2]\r\n- [^Bruné2] A single-piece plate requires an exceptionally thick tree, which would be:\r\n  - old, → have lots of stresses, cracks; grain lines looking awkward;\r\n  - rare;\r\n  - expensive to ship;\r\n  - untraditional.\r\n\r\n## I.I. Plates\r\n- \r\n\r\n\r\n\r\n\u003c!-- FOOTNOTES--\u003e\r\n[^Bruné1]: [Bruné M. E. *I've Built Guitar as a Professional Luthier | Day 1*](https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk)\r\n[^Bruné2]: [Bruné M. E. *Guitar Tonewoods Explained by a Master Luthier | Q\u0026A*](https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW)\r\n[^Bloomberg]:[Bloomberg (flamenco)](https://youtu.be/fpfyF4gx3jw?si=_G84UBCpwE-u2nhO)",
+    "lastmodified": "2026-01-24T13:52:25.5077567-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/III.-Instruments/III.II.-Acoustic": {
+    "title": "III.II. Acoustic",
+    "content": "",
+    "lastmodified": "2026-01-24T13:21:42.5642072-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/III.-Instruments/III.III.-Electric": {
+    "title": "III.III. Electric",
+    "content": "",
+    "lastmodified": "2026-01-24T13:22:02.3112659-04:00",
+    "tags": []
+  },
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/IV.-Repairs/IV.-Repairs": {
+    "title": "IV. Repairs",
+    "content": "",
+    "lastmodified": "2026-01-24T13:22:32.0292425-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/3.-Instrumentos/": {
