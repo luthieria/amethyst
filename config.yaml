@@ -110,6 +110,10 @@ params:
   # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
   BookSection: "/Notas"
 
+  # (Optional, default true) Enables breadcrumb navigation on book pages.
+  # Can be overwritten by `bookBreadcrumbs` in page front matter.
+  BookBreadcrumbs: true
+
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
   # BookRepo: https://github.com/64bitpandas/amethyst

@@ -1,4 +1,4 @@
-![alt text](Imagenes/Mapas/Cuba.png)
+![alt text](../Imagenes/Mapas/Cuba.png)
 
 # I.I. Génesis
 

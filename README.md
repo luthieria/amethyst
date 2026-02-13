@@ -94,6 +94,9 @@ bookHidden = false
 # (Optional) Set 'false' to hide ToC from page
 bookToC = true
 
+# (Optional) Set 'false' to hide breadcrumbs from page.
+bookBreadcrumbs = true
+
 # (Optional) If you have enabled BookComments for the site, you can disable it for specific pages.
 bookComments = true
 
@@ -103,6 +106,8 @@ bookSearchExclude = true
 # (Optional) Set explicit href attribute for this page in a menu (if BookMenuBundle not set)
 bookHref = ''
 ```
+
+Breadcrumbs can be enabled or disabled site-wide with `params.BookBreadcrumbs` in `config.yaml`.
 
 ### Partials
 

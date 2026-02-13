@@ -1,0 +1,49 @@
+{{ $bookSection := default "/docs" .Site.Params.BookSection }}
+{{ if eq $bookSection "*" }}
+  {{ $bookSection = "/" }}
+{{ end }}
+
+{{ $bookRoot := .Site.GetPage $bookSection }}
+
+{{ $siteEnabled := true }}
+{{ if isset .Site.Params "bookbreadcrumbs" }}
+  {{ $siteEnabled = .Site.Params.bookbreadcrumbs }}
+{{ else if isset .Site.Params "BookBreadcrumbs" }}
+  {{ $siteEnabled = index .Site.Params "BookBreadcrumbs" }}
+{{ end }}
+
+{{ $enabled := $siteEnabled }}
+{{ if isset .Params "bookbreadcrumbs" }}
+  {{ $enabled = .Params.bookbreadcrumbs }}
+{{ else if isset .Params "BookBreadcrumbs" }}
+  {{ $enabled = index .Params "BookBreadcrumbs" }}
+{{ end }}
+
+{{ $inBookScope := and $bookRoot (or (eq . $bookRoot) ($bookRoot.IsAncestor .)) }}
+
+{{ if and $enabled (not .IsHome) $inBookScope }}
+  {{ $crumbs := slice }}
+  {{ range .Ancestors.Reverse }}
+    {{ if not .IsHome }}
+      {{ $crumbs = $crumbs | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $crumbs = $crumbs | append . }}
+
+  {{ if gt (len $crumbs) 0 }}
+    <nav class="book-breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        {{ $last := sub (len $crumbs) 1 }}
+        {{ range $i, $p := $crumbs }}
+          <li>
+            {{ if eq $i $last }}
+              <span aria-current="page">{{ partial "docs/title" $p }}</span>
+            {{ else }}
+              <a href="{{ $p.RelPermalink }}">{{ partial "docs/title" $p }}</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    </nav>
+  {{ end }}
+{{ end }}
