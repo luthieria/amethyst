@@ -90,3 +90,17 @@ exogenous diseases;
   - Occitanians;
   - Celts;
   - Visigoths.
+
+- The urban Caribbean music was influenced directly by the music of the Spanish court, theater, military, church.
+- Música campesina throughout América Latina is almost entirely of Spanish origin.
+- Sacred traditions (e.g., medieval choral and organ music) were brought to the Americas. The music of Spanish religious festivals (e.g., Corpus Christi) became a part of Cuban folklore.
+- The military bands that came over with Spanish troops played an important role in musical life.
+- The cultural interchange between Africans and working-class Spanish made African dances a part of the popular Cuban culture, slowly moving up towards upper-class acceptance.
+- European instruments (piano, guitarra, flauta, violin, etc.) were incorporated into Cuban music in their original organological forms.
+- The triple meter persists in some Hispanic-derived folk musics.
+- Flamenco.
+  - Version 1: there is no evidence that flamenco was transmitted to the Caribbean in the colonial period.
+  - Version 2: XVI c. — flamenco was introduced to Cuba. Through flamenco, Middle Eastern and Indian rhythms, scales, instruments influenced e.g.:
+    - Cuba: habanera, rumba;
+    - Venezuela: joropo;
+    - Mexico: jarabe.

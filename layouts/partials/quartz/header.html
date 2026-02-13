@@ -1,8 +1,10 @@
 <header class="book-header">
   {{/* <input type="checkbox" class="toggle" id="menu-control" /> */}}
+  {{ if not .IsHome }}
   <a class="book-home-link" href="{{ $.Site.BaseURL }}" aria-label="{{ i18n "home" }}" title="{{ i18n "home" }}">
     <span class="book-home-icon material-symbols-outlined" aria-hidden="true">network_node</span>
   </a>
+  {{ end }}
   <!-- <label for="menu-control">
     <img src="{{ " svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
   </label> -->

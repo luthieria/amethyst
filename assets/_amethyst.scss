@@ -52,6 +52,9 @@ header {
 
 .book-header #search-icon {
     order: 2;
+    background-color: var(--light);
+    border: 1px solid var(--outlinegray);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 #page-title a {
@@ -123,12 +126,6 @@ body.home header .spacer {
     body.home header .spacer {
         display: block;
     }
-}
-
-body.home header #search-icon {
-    background-color: var(--light);
-    border: 1px solid var(--outlinegray);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: $mobile-breakpoint) {
