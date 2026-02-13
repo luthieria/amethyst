@@ -35,6 +35,20 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     ),
   ]
 
+  const decodePathSegments = (path) => {
+    if (typeof path !== "string") return ""
+    return path
+      .split("/")
+      .map((segment) => {
+        try {
+          return decodeURIComponent(segment)
+        } catch (_) {
+          return segment
+        }
+      })
+      .join("/")
+  }
+
   // Links is mutated by d3. We want to use links later on, so we make a copy and pass that one to d3
   // Note: shallow cloning does not work because it copies over references from the original array
   const copyLinks = JSON.parse(JSON.stringify(links))
@@ -87,6 +101,14 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     }
 
     return "var(--g-node)"
+  }
+
+  const makeNavigationPath = (id) => `${baseUrl}${decodePathSegments(id).replace(/\s+/g, "-")}/`
+
+  const nodeLabel = (d) => {
+    const title = content[d.id]?.title
+    if (title && title !== "_index") return title
+    return decodePathSegments(d.id).replaceAll("-", " ")
   }
 
   const drag = (simulation) => {
@@ -190,7 +212,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     .style("cursor", "pointer")
     .on("click", (_, d) => {
       // SPA navigation
-      window.Million.navigate(new URL(`${baseUrl}${decodeURI(d.id).replace(/\s+/g, "-")}/`), ".singlePage")
+      window.Million.navigate(new URL(makeNavigationPath(d.id)), ".singlePage")
     })
     .on("mouseover", function (_, d) {
       d3.selectAll(".node").transition().duration(100).attr("fill", "var(--g-node-inactive)")
@@ -203,7 +225,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
       ])
       const neighbourNodes = d3.selectAll(".node").filter((d) => neighbours.includes(d.id))
       const currentId = d.id
-      window.Million.prefetch(new URL(`${baseUrl}${decodeURI(d.id).replace(/\s+/g, "-")}/`))
+      window.Million.prefetch(new URL(makeNavigationPath(d.id)))
       const linkNodes = d3
         .selectAll(".link")
         .filter((d) => d.source.id === currentId || d.target.id === currentId)
@@ -253,7 +275,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     .attr("dx", 0)
     .attr("dy", (d) => nodeRadius(d) + 8 + "px")
     .attr("text-anchor", "middle")
-    .text((d) => content[d.id]?.title || d.id.replace("-", " "))
+    .text(nodeLabel)
     .style('opacity', (opacityScale - 1) / 3.75)
     .style("pointer-events", "none")
     .style('font-size', fontSize+'em')
