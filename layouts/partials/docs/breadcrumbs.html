@@ -22,30 +22,49 @@
 {{ $inBookScope := and $bookRoot (or (eq . $bookRoot) ($bookRoot.IsAncestor .)) }}
 
 {{ if and $enabled (not .IsHome) $inBookScope }}
-  {{ $crumbs := slice }}
+  {{ $start := . }}
+  {{ $hasStart := false }}
   {{ range .Ancestors.Reverse }}
-    {{ if and (not .IsHome) (ne . $bookRoot) }}
-      {{ $crumbs = $crumbs | append . }}
+    {{ if and .IsSection .Params.bookBreadcrumbStart }}
+      {{ $start = . }}
+      {{ $hasStart = true }}
     {{ end }}
   {{ end }}
-  {{ if ne . $bookRoot }}
-    {{ $crumbs = $crumbs | append . }}
+  {{ if and .IsSection .Params.bookBreadcrumbStart }}
+    {{ $start = . }}
+    {{ $hasStart = true }}
   {{ end }}
 
-  {{ if gt (len $crumbs) 0 }}
-    <nav class="book-breadcrumbs" aria-label="Breadcrumb">
-      <ol>
-        {{ $last := sub (len $crumbs) 1 }}
-        {{ range $i, $p := $crumbs }}
-          <li>
-            {{ if eq $i $last }}
-              <span aria-current="page">{{ partial "docs/title" $p }}</span>
-            {{ else }}
-              <a href="{{ $p.RelPermalink }}">{{ partial "docs/title" $p }}</a>
-            {{ end }}
-          </li>
-        {{ end }}
-      </ol>
-    </nav>
+  {{ if $hasStart }}
+    {{ $crumbs := slice }}
+    {{ $include := false }}
+    {{ range .Ancestors.Reverse }}
+      {{ if eq . $start }}
+        {{ $include = true }}
+      {{ end }}
+      {{ if and $include (not .IsHome) (ne . $bookRoot) }}
+        {{ $crumbs = $crumbs | append . }}
+      {{ end }}
+    {{ end }}
+    {{ if and (ne . $bookRoot) (or (eq . $start) ($start.IsAncestor .)) }}
+      {{ $crumbs = $crumbs | append . }}
+    {{ end }}
+
+    {{ if gt (len $crumbs) 0 }}
+      <nav class="book-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          {{ $last := sub (len $crumbs) 1 }}
+          {{ range $i, $p := $crumbs }}
+            <li>
+              {{ if eq $i $last }}
+                <span aria-current="page">{{ partial "docs/title" $p }}</span>
+              {{ else }}
+                <a href="{{ $p.RelPermalink }}">{{ partial "docs/title" $p }}</a>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      </nav>
+    {{ end }}
   {{ end }}
 {{ end }}
