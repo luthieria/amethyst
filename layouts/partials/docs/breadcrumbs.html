@@ -24,11 +24,13 @@
 {{ if and $enabled (not .IsHome) $inBookScope }}
   {{ $crumbs := slice }}
   {{ range .Ancestors.Reverse }}
-    {{ if not .IsHome }}
+    {{ if and (not .IsHome) (ne . $bookRoot) }}
       {{ $crumbs = $crumbs | append . }}
     {{ end }}
   {{ end }}
-  {{ $crumbs = $crumbs | append . }}
+  {{ if ne . $bookRoot }}
+    {{ $crumbs = $crumbs | append . }}
+  {{ end }}
 
   {{ if gt (len $crumbs) 0 }}
     <nav class="book-breadcrumbs" aria-label="Breadcrumb">
