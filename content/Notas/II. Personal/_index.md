@@ -1,5 +1,5 @@
 ---
 title: "II. Personal"
-weight: 80
+weight: 2
 bookCollapseSection: true
 ---

@@ -1,5 +1,6 @@
 ﻿---
 title: "I. Materials"
-weight: 40
+weight: 5
+book: "Guitarra"
 bookCollapseSection: true
 ---

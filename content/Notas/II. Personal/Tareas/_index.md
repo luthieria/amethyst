@@ -1,5 +1,5 @@
 ﻿---
 title: "Tareas"
-weight: 70
+weight: 2
 bookCollapseSection: true
 ---

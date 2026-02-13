@@ -1,5 +1,5 @@
 ﻿---
 title: "2. Laudería"
-weight: 60
+weight: 3
 bookCollapseSection: true
 ---

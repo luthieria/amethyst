@@ -1,6 +1,6 @@
 ﻿---
 title: "Música cubana"
-weight: 50
+weight: 6
 bookCollapseSection: true
 ---
 

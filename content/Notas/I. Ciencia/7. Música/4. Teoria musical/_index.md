@@ -1,5 +1,5 @@
 ﻿---
 title: "4. Teoria musical"
-weight: 60
+weight: 3
 bookCollapseSection: true
 ---

@@ -1,5 +1,5 @@
 ﻿---
 title: "1. Etnomusicología"
-weight: 60
+weight: 3
 bookCollapseSection: true
 ---

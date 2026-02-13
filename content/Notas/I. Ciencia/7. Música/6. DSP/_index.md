@@ -1,5 +1,5 @@
 ﻿---
 title: "6. DSP"
-weight: 60
+weight: 3
 bookCollapseSection: true
 ---

@@ -1,5 +1,5 @@
 ---
 title: "6. Religiones"
-weight: 70
+weight: 2
 bookCollapseSection: true
 ---
