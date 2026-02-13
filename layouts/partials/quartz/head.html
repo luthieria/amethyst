@@ -89,12 +89,19 @@ resources.Minify }}
   const fetchData = Promise.all([
     fetch("{{ $linkIndex.Permalink }}")
       .then(data => data.json())
-      .then(data => ({
-        index: data.index,
-        links: data.links,
-      })),
+      .then(data => {
+        const rawIndex = data && typeof data.index === "object" ? data.index : {}
+        return {
+          index: {
+            links: rawIndex && typeof rawIndex.links === "object" ? rawIndex.links : {},
+            backlinks: rawIndex && typeof rawIndex.backlinks === "object" ? rawIndex.backlinks : {},
+          },
+          links: Array.isArray(data && data.links) ? data.links : [],
+        }
+      }),
     fetch("{{ $contentIndex.Permalink }}")
-      .then(data => data.json()),
+      .then(data => data.json())
+      .then(data => (data && typeof data === "object" ? data : {})),
   ])
     .then(([{ index, links }, content]) => ({
       index,

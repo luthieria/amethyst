@@ -50,6 +50,14 @@ Start the live server using `make serve`. Content will be served to `localhost:1
 
 The server will need to be restarted to preview changes to navigation (internal links and sidebar menu).
 
+### Refreshing Graph/Search Indices
+
+When adding/removing notes, regenerate indices first, then restart Hugo so new hashed assets are served:
+
+1. `hugo-obsidian -input=content -output=assets/indices -index -root=.`
+2. Start/restart Hugo (`make serve`, `serve.bat`, or `hugo server ...`).
+3. If the browser still shows stale graph/search data, hard refresh (for example `Ctrl+F5`) to bypass cached hashed JS/JSON assets.
+
 ## Configuration
 
 ### Site Configuration

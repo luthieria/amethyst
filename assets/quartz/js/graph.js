@@ -10,21 +10,34 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
   fontSize} = graphConfig;
 
   const container = document.getElementById("graph-container")
-  const { index, links, content } = await fetchData
+  const fetched = (await fetchData) || {}
+  const rawIndex = fetched.index && typeof fetched.index === "object" ? fetched.index : {}
+  const index = {
+    links: rawIndex.links && typeof rawIndex.links === "object" ? rawIndex.links : {},
+    backlinks: rawIndex.backlinks && typeof rawIndex.backlinks === "object" ? rawIndex.backlinks : {},
+  }
+  const links = Array.isArray(fetched.links) ? fetched.links : []
+  const content = fetched.content && typeof fetched.content === "object" ? fetched.content : {}
 
   // Use .pathname to remove hashes / searchParams / text fragments
   const cleanUrl = window.location.origin + window.location.pathname
 
   const curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
 
-  const parseIdsFromLinks = (links) => [
-    ...new Set(links.flatMap((link) => [link.source, link.target])),
+  const parseIdsFromLinks = (graphLinks) => [
+    ...new Set(
+      (Array.isArray(graphLinks) ? graphLinks : [])
+        .flatMap((link) => [
+          link && typeof link.source === "string" ? link.source : null,
+          link && typeof link.target === "string" ? link.target : null,
+        ])
+        .filter((id) => id),
+    ),
   ]
 
   // Links is mutated by d3. We want to use links later on, so we make a copy and pass that one to d3
   // Note: shallow cloning does not work because it copies over references from the original array
   const copyLinks = JSON.parse(JSON.stringify(links))
-  const isGlobalGraphNodeVisible = (id) => content[id]?.title !== "_index"
 
   const neighbours = new Set()
   const wl = [curPage || "/", "__SENTINEL"]
@@ -37,24 +50,27 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
         wl.push("__SENTINEL")
       } else {
         neighbours.add(cur)
-        const outgoing = index.links[cur] || []
-        const incoming = index.backlinks[cur] || []
+        const outgoing = Array.isArray(index.links[cur]) ? index.links[cur] : []
+        const incoming = Array.isArray(index.backlinks[cur]) ? index.backlinks[cur] : []
         wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
       }
     }
   } else {
     // For global graph: include all linked nodes and all unlinked notes
-    parseIdsFromLinks(copyLinks)
-      .filter((id) => isGlobalGraphNodeVisible(id))
-      .forEach((id) => neighbours.add(id))
-    Object.keys(content)
-      .filter((id) => isGlobalGraphNodeVisible(id))
-      .forEach((id) => neighbours.add(id))
+    parseIdsFromLinks(copyLinks).forEach((id) => neighbours.add(id))
+    Object.keys(content).forEach((id) => neighbours.add(id))
   }
 
   const data = {
     nodes: [...neighbours].map((id) => ({ id })),
-    links: copyLinks.filter((l) => neighbours.has(l.source) && neighbours.has(l.target)),
+    links: copyLinks.filter(
+      (l) =>
+        l &&
+        typeof l.source === "string" &&
+        typeof l.target === "string" &&
+        neighbours.has(l.source) &&
+        neighbours.has(l.target),
+    ),
   }
 
   const color = (d) => {
@@ -179,9 +195,11 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     .on("mouseover", function (_, d) {
       d3.selectAll(".node").transition().duration(100).attr("fill", "var(--g-node-inactive)")
 
+      const outgoing = Array.isArray(index.links[d.id]) ? index.links[d.id] : []
+      const incoming = Array.isArray(index.backlinks[d.id]) ? index.backlinks[d.id] : []
       const neighbours = parseIdsFromLinks([
-        ...(index.links[d.id] || []),
-        ...(index.backlinks[d.id] || []),
+        ...outgoing,
+        ...incoming,
       ])
       const neighbourNodes = d3.selectAll(".node").filter((d) => neighbours.includes(d.id))
       const currentId = d.id
