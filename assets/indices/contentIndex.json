@@ -80,13 +80,13 @@
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/": {
     "title": "Cuba",
     "content": "",
-    "lastmodified": "2026-02-13T12:21:20.9856349-04:00",
+    "lastmodified": "2026-02-13T12:23:38.5849444-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": {
     "title": "_index",
-    "content": "﻿---\r\ntitle: \"La música cubana\"\r\nweight: 6\r\n---\r\n\r\n[[Предисловие]]\r\n\r\n[[I.I. Génesis]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]",
-    "lastmodified": "2026-02-13T12:21:15.675361-04:00",
+    "content": "﻿---\r\ntitle: \"La música cubana\"\nweight: 6\nbookHideChildren: true\n---\n\r\n[[Предисловие]]\r\n\r\n[[I.I. Génesis]]\r\n\r\n[[II. Материальная основа]]\r\n\r\n[[III. Идеальная надстройка]]\r\n\r\n[[Notas]]\n",
+    "lastmodified": "2026-02-13T12:26:11.228141-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": {

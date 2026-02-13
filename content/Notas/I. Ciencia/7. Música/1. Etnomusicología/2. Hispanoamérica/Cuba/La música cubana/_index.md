@@ -1,11 +1,7 @@
 ﻿---
 title: "La música cubana"
 weight: 6
-
-
-cascade:
-  _build:
-    list: never
+bookHideChildren: true
 ---
 
 [[Предисловие]]
