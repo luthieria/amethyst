@@ -35,7 +35,9 @@
     {{ $hasStart = true }}
   {{ end }}
 
-  {{ if $hasStart }}
+  {{ $shouldRender := and $hasStart (ne . $start) ($start.IsAncestor .) }}
+
+  {{ if $shouldRender }}
     {{ $crumbs := slice }}
     {{ $include := false }}
     {{ range .Ancestors.Reverse }}

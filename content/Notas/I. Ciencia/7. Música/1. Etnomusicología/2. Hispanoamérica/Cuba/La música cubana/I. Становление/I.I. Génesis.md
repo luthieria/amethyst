@@ -1,3 +1,7 @@
+---
+title: "I.I. Génesis"
+---
+
 ![alt text](../Imagenes/Mapas/Cuba.png)
 
 # I.I. Génesis
