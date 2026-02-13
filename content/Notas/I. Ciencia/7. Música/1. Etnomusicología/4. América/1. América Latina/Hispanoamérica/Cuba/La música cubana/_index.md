@@ -1,6 +1,6 @@
 ---
 title: "La música cubana"
-weight: 6
+weight: 8
 bookHideChildren: true
 bookBreadcrumbStart: true
 ---

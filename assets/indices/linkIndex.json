@@ -20,35 +20,52 @@
           "text": "Brasil"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica",
+          "text": "Hispanoamérica"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira",
+          "text": "Brasil"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "target": "/Hispanoam%C3%A9rica",
+          "text": "text"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "target": "/M%C3%BAsica-brasileira",
+          "text": "text"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
           "target": "/Cuba",
           "text": "Cuba"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
-          "target": "/Cuba",
-          "text": "Cuba"
-        }
-      ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
           "target": "/La-m%C3%BAsica-cubana",
           "text": "La música cubana"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         },
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
         }
@@ -131,12 +148,17 @@
       ],
       "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         }
       ],
       "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica",
+          "text": "Hispanoamérica"
+        },
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/",
           "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica",
@@ -144,6 +166,11 @@
         }
       ],
       "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira",
+          "text": "Brasil"
+        },
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/",
           "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira",
@@ -166,12 +193,7 @@
       ],
       "/Cuba": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
-          "target": "/Cuba",
-          "text": "Cuba"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
           "target": "/Cuba",
           "text": "Cuba"
         }
@@ -197,9 +219,16 @@
           "text": "Guitarra"
         }
       ],
+      "/Hispanoam%C3%A9rica": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "target": "/Hispanoam%C3%A9rica",
+          "text": "text"
+        }
+      ],
       "/La-m%C3%BAsica-cubana": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
           "target": "/La-m%C3%BAsica-cubana",
           "text": "La música cubana"
         }
@@ -211,9 +240,16 @@
           "text": "LaTeX"
         }
       ],
+      "/M%C3%BAsica-brasileira": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+          "target": "/M%C3%BAsica-brasileira",
+          "text": "text"
+        }
+      ],
       "/Notas": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
         }
@@ -262,29 +298,44 @@
       "text": "Заметки по марксизму"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
       "text": "Предисловие"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/Notas",
       "text": "Notas"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/",
       "target": "/La-m%C3%BAsica-cubana",
       "text": "La música cubana"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/",
       "target": "/Cuba",
       "text": "Cuba"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
-      "target": "/Cuba",
-      "text": "Cuba"
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+      "target": "/Hispanoam%C3%A9rica",
+      "text": "text"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/",
+      "target": "/M%C3%BAsica-brasileira",
+      "text": "text"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+      "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica",
+      "text": "Hispanoamérica"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+      "target": "/3.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira",
+      "text": "Brasil"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/",

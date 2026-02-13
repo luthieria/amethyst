@@ -1,5 +1,5 @@
 ---
-title: "3. América"
+title: "América"
 weight: 4
 bookCollapseSection: true
 ---

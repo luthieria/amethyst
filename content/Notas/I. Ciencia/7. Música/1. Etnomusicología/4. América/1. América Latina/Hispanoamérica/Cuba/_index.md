@@ -1,9 +1,9 @@
 ---
-title: "2. Hispanoamérica"
-weight: 4
+title: "Cuba"
+weight: 7
 bookCollapseSection: true
 ---
 
 <!-- AUTO-CHILD-LINKS:START -->
-[[Cuba]]
+[[La música cubana]]
 <!-- AUTO-CHILD-LINKS:END -->
