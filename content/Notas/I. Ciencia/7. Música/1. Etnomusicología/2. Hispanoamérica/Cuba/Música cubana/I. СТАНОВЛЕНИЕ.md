@@ -53,3 +53,40 @@ weight: 2
   - drums, other instruments;
   - antiphonal singing;
   - ecstatic mass singing and dancing.
+
+- **By the 1600s** — the Amerindians died out of:
+exogenous diseases;
+  - forced labor in the quest for nonexistent gold and silver;
+  - mass suicide in response to the forced labor.
+
+## 2. Españoles
+
+- **27 October 1492** — Columbus discovered Cuba.
+- Were arriving even in the early XX c.
+
+- European influences:
+  - chordal harmony;
+  - sectional formal structures (rather than the reliance on cellular ostinatos);
+  ensemble orchestration and arrangement;
+  notation;
+  - lots of written and orally transmitted music;
+  - instruments;
+    - guitarra is portable, → sailors brought it on ships to pass the time singing villancicos (— short song forms), romances (= corrido — Castillian narratives);
+  - poetry;
+    - the romance formed a basic layer of poetic sentiment and technique pervading the entire Hispanic world.
+
+<br>
+
+- Spanish culture was influenced by:
+  - Africans;
+  - Arabs (Syrians, Yemenites);
+  - Berbers;
+  - Jews;
+  - Phonecians;
+  - Greeks;
+  - Gypsies;
+  - Romans;
+  - French;
+  - Occitanians;
+  - Celts;
+  - Visigoths.
