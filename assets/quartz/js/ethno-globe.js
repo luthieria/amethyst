@@ -6,8 +6,26 @@
     "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
   ]
   const WORLD_OBJECT_KEY = "countries"
+  const ETHNO_ACTIVE_CLASS = "page-ethno-map-full-active"
+  const ETHNO_STATIC_CLASS = "page-ethno-map-full"
+  const ETHNO_ROOT_SELECTOR = "[data-ethno-globe]"
+  const REGION_PALETTE = [
+    { h: 198, s: 58, l: 56 },
+    { h: 16, s: 56, l: 57 },
+    { h: 274, s: 48, l: 59 },
+    { h: 136, s: 48, l: 55 },
+    { h: 44, s: 58, l: 58 },
+    { h: 332, s: 50, l: 58 },
+    { h: 224, s: 56, l: 58 },
+    { h: 178, s: 48, l: 54 },
+    { h: 86, s: 44, l: 56 },
+    { h: 256, s: 50, l: 58 },
+    { h: 12, s: 58, l: 58 },
+    { h: 206, s: 62, l: 56 },
+  ]
+  const DEFAULT_REGION_COLOR = { h: 208, s: 52, l: 56 }
 
-  const rootState = new WeakMap()
+  const rootStates = new Map()
   let dependencyPromise = null
   let worldDataPromise = null
 
@@ -16,6 +34,21 @@
     const parsed = Number(value)
     return Number.isFinite(parsed) ? parsed : fallback
   }
+
+  const stripAccents = (value) => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  const isEthnoOverlayPage = () =>
+    !!(
+      document.body &&
+      (document.body.classList.contains(ETHNO_ACTIVE_CLASS) || document.body.classList.contains(ETHNO_STATIC_CLASS))
+    )
+
+  const normalizePath = (value) =>
+    stripAccents(value)
+      .replace(/\\/g, "/")
+      .split("/")
+      .map((segment) => segment.trim().toLowerCase())
+      .filter(Boolean)
+      .join("/")
 
   const loadScript = (src, checkLoaded) => {
     if (checkLoaded()) return Promise.resolve()
@@ -89,6 +122,7 @@
         .map((entry) => ({
           id: typeof entry.id === "string" ? entry.id : "",
           title: typeof entry.title === "string" ? entry.title : "",
+          path: typeof entry.path === "string" ? entry.path : "",
           url: typeof entry.url === "string" ? entry.url : "",
           kind: entry.kind === "country" ? "country" : "region",
           iso2: typeof entry.iso2 === "string" ? entry.iso2.toUpperCase() : "",
@@ -151,6 +185,77 @@
     return nearest
   }
 
+  const toHsla = (color, alpha) => `hsla(${color.h}, ${color.s}%, ${color.l}%, ${alpha})`
+
+  const adjustColor = (color, saturationDelta, lightnessDelta) => ({
+    h: color.h,
+    s: clamp(color.s + saturationDelta, 20, 90),
+    l: clamp(color.l + lightnessDelta, 20, 84),
+  })
+
+  const wrapHue = (value) => {
+    const normalized = value % 360
+    return normalized < 0 ? normalized + 360 : normalized
+  }
+
+  const hashString = (value) => {
+    let hash = 2166136261
+    const source = String(value || "")
+    for (let i = 0; i < source.length; i += 1) {
+      hash ^= source.charCodeAt(i)
+      hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24)
+    }
+    return hash >>> 0
+  }
+
+  const signedHashUnit = (value) => (hashString(value) % 2001) / 1000 - 1
+
+  const deriveCountryColor = (regionColor, countryId, indexWithinRegion, regionCountryCount) => {
+    const count = Math.max(1, regionCountryCount)
+    const normalizedIndex = count === 1 ? 0 : (indexWithinRegion / (count - 1)) * 2 - 1
+    const jitter = signedHashUnit(`${countryId}:${count}`)
+    const hueSpread = Math.min(22, 42 / Math.sqrt(count))
+    const hueShift = normalizedIndex * hueSpread + jitter * 9
+    const saturationBoost = 18 + Math.abs(normalizedIndex) * 6 + (jitter + 1) * 4
+    const lightnessShift = -8 + normalizedIndex * 5 + jitter * 4
+
+    return {
+      h: wrapHue(regionColor.h + hueShift),
+      s: clamp(regionColor.s + saturationBoost, 38, 92),
+      l: clamp(regionColor.l + lightnessShift, 22, 78),
+    }
+  }
+
+  const resolveCountryRegion = (countryEntry, regions) => {
+    const countryPath = normalizePath(countryEntry.path)
+    let best = null
+
+    for (const region of regions) {
+      if (!region.normalizedPath) continue
+      if (countryPath === region.normalizedPath || countryPath.startsWith(`${region.normalizedPath}/`)) {
+        if (!best || region.normalizedPath.length > best.normalizedPath.length) {
+          best = region
+        }
+      }
+    }
+
+    if (best) return best
+
+    let nearest = null
+    let nearestScore = Number.POSITIVE_INFINITY
+    for (const region of regions) {
+      const latDiff = countryEntry.lat - region.lat
+      const lonDiff = countryEntry.lon - region.lon
+      const score = latDiff * latDiff + lonDiff * lonDiff
+      if (score < nearestScore) {
+        nearestScore = score
+        nearest = region
+      }
+    }
+
+    return nearest
+  }
+
   const navigateTo = (event, url) => {
     if (!url) return
     if (event.defaultPrevented) return
@@ -183,6 +288,23 @@
     stage.appendChild(error)
   }
 
+  const teardownRoot = (root) => {
+    const state = rootStates.get(root)
+    if (!state) return
+
+    if (state.resizeObserver) {
+      state.resizeObserver.disconnect()
+    }
+    if (typeof state.onWindowResize === "function") {
+      window.removeEventListener("resize", state.onWindowResize)
+    }
+
+    rootStates.delete(root)
+    if (root instanceof HTMLElement && root.dataset.ethnoGlobeReady === "true") {
+      root.dataset.ethnoGlobeReady = ""
+    }
+  }
+
   const initRoot = async (root) => {
     if (!(root instanceof HTMLElement)) return
     if (root.dataset.ethnoGlobeReady === "true" || root.dataset.ethnoGlobeReady === "pending") return
@@ -206,9 +328,33 @@
       stage.innerHTML = ""
 
       const d3 = window.d3
-      const svg = d3.select(stage).append("svg").attr("class", "ethno-globe-svg").attr("role", "img")
-      svg.append("title").text("Interactive ethnomusicology globe")
+      const svg = d3
+        .select(stage)
+        .append("svg")
+        .attr("class", "ethno-globe-svg")
+        .attr("role", "img")
+        .attr("aria-label", "Interactive ethnomusicology globe")
       svg.append("rect").attr("class", "ethno-globe-backdrop")
+
+      const hint = document.createElement("div")
+      hint.className = "ethno-globe-hint"
+      hint.setAttribute("aria-live", "polite")
+      hint.setAttribute("aria-atomic", "true")
+      stage.appendChild(hint)
+
+      const setHint = (text) => {
+        const message = typeof text === "string" ? text.trim() : ""
+        if (!message) {
+          hint.textContent = ""
+          hint.classList.remove("is-visible")
+          return
+        }
+
+        hint.textContent = message
+        hint.classList.add("is-visible")
+      }
+
+      stage.addEventListener("mouseleave", () => setHint(""))
 
       const viewport = svg.append("g").attr("class", "ethno-globe-viewport")
       const spherePath = viewport.append("path").attr("class", "ethno-globe-sphere")
@@ -235,29 +381,69 @@
       const path = d3.geoPath(projection)
       const sphere = { type: "Sphere" }
 
-      const countryEntries = entries
-        .filter((entry) => entry.kind === "country")
-        .map((entry) => {
-          if (worldData) {
-            const feature = findCountryFeatureForEntry(entry, worldData.features)
-            if (feature) {
-              return { ...entry, shape: feature }
-            }
-          }
+      const seededRegions = entries
+        .filter((entry) => entry.kind === "region")
+        .map((entry, index) => ({
+          ...entry,
+          normalizedPath: normalizePath(entry.path),
+          color: REGION_PALETTE[index % REGION_PALETTE.length] || DEFAULT_REGION_COLOR,
+        }))
 
-          // Fallback hotspot when country polygon data is unavailable.
+      const regionEntries = seededRegions.map((entry) => ({
+        ...entry,
+        geometry: d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))(),
+      }))
+
+      const countryFeatureColors = new Map()
+      const seededCountries = entries
+        .filter((entry) => entry.kind === "country")
+        .map((entry, index) => {
+          const parentRegion = resolveCountryRegion(entry, seededRegions)
+          const regionColor =
+            parentRegion?.color || REGION_PALETTE[(seededRegions.length + index) % REGION_PALETTE.length] || DEFAULT_REGION_COLOR
           return {
             ...entry,
-            shape: d3.geoCircle().center([entry.lon, entry.lat]).radius(4.5)(),
+            regionId: parentRegion?.id || "",
+            regionColor,
           }
         })
 
-      const regionEntries = entries
-        .filter((entry) => entry.kind === "region")
-        .map((entry) => ({
+      const countriesByRegion = new Map()
+      seededCountries.forEach((entry) => {
+        const key = entry.regionId || "__fallback__"
+        if (!countriesByRegion.has(key)) {
+          countriesByRegion.set(key, [])
+        }
+        countriesByRegion.get(key).push(entry)
+      })
+
+      const coloredCountries = []
+      countriesByRegion.forEach((bucket) => {
+        const sorted = bucket.slice().sort((a, b) => a.id.localeCompare(b.id))
+        const count = sorted.length
+        sorted.forEach((entry, index) => {
+          coloredCountries.push({
+            ...entry,
+            color: deriveCountryColor(entry.regionColor, entry.id, index, count),
+          })
+        })
+      })
+
+      const countryEntries = coloredCountries.map((entry) => {
+        if (worldData) {
+          const feature = findCountryFeatureForEntry(entry, worldData.features)
+          if (feature) {
+            countryFeatureColors.set(feature, entry.color)
+            return { ...entry, shape: feature }
+          }
+        }
+
+        // Fallback hotspot when country polygon data is unavailable.
+        return {
           ...entry,
-          geometry: d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))(),
-        }))
+          shape: d3.geoCircle().center([entry.lon, entry.lat]).radius(4.5)(),
+        }
+      })
 
       const regionLinks = regionGroup
         .selectAll("a")
@@ -268,9 +454,16 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
+        .style("--ethno-region-fill", (entry) => toHsla(entry.color, 0.03))
+        .style("--ethno-region-stroke", (entry) => toHsla(adjustColor(entry.color, 8, 16), 0.14))
+        .style("--ethno-region-fill-hover", (entry) => toHsla(adjustColor(entry.color, 8, 8), 0.08))
+        .style("--ethno-region-stroke-hover", (entry) => toHsla(adjustColor(entry.color, 20, 20), 0.32))
         .on("click", (event, entry) => navigateTo(event, entry.url))
+        .on("pointerenter", (_, entry) => setHint(entry.title))
+        .on("pointerleave", () => setHint(""))
+        .on("focus", (_, entry) => setHint(entry.title))
+        .on("blur", () => setHint(""))
 
-      regionLinks.append("title").text((entry) => entry.title)
       regionLinks.append("path")
 
       const countryLinks = countryGroup
@@ -282,9 +475,16 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
+        .style("--ethno-country-fill", (entry) => toHsla(entry.color, 0.18))
+        .style("--ethno-country-stroke", (entry) => toHsla(adjustColor(entry.color, 8, 14), 0.5))
+        .style("--ethno-country-fill-hover", (entry) => toHsla(adjustColor(entry.color, 14, 6), 0.36))
+        .style("--ethno-country-stroke-hover", (entry) => toHsla(adjustColor(entry.color, 24, 22), 0.86))
         .on("click", (event, entry) => navigateTo(event, entry.url))
+        .on("pointerenter", (_, entry) => setHint(entry.title))
+        .on("pointerleave", () => setHint(""))
+        .on("focus", (_, entry) => setHint(entry.title))
+        .on("blur", () => setHint(""))
 
-      countryLinks.append("title").text((entry) => entry.title)
       countryLinks.append("path")
 
       const labelEntries = [...regionEntries, ...countryEntries]
@@ -292,6 +492,8 @@
       let height = 0
       let baseScale = 1
       let zoomScale = 1
+      let dragOrigin = null
+      let dragRotate = null
       const minScale = 0.72
       const maxScale = 2.45
 
@@ -299,10 +501,32 @@
         projection.scale(baseScale * zoomScale)
       }
 
+      const syncStageHeight = () => {
+        if (isEthnoOverlayPage()) {
+          stage.style.height = `${Math.max(320, window.innerHeight)}px`
+          return
+        }
+
+        const rect = stage.getBoundingClientRect()
+        const available = Math.floor(window.innerHeight - rect.top)
+        if (available > 320) {
+          stage.style.height = `${available}px`
+        }
+      }
+
       const redraw = () => {
         spherePath.attr("d", path(sphere))
         if (countryPaths) {
-          countryPaths.attr("d", (feature) => path(feature))
+          countryPaths
+            .attr("d", (feature) => path(feature))
+            .attr("fill", (feature) => {
+              const color = countryFeatureColors.get(feature)
+              return color ? toHsla(color, 0.48) : "rgba(13, 19, 29, 0.76)"
+            })
+            .attr("stroke", (feature) => {
+              const color = countryFeatureColors.get(feature)
+              return color ? toHsla(adjustColor(color, 12, 16), 0.82) : "rgba(246, 250, 255, 0.32)"
+            })
         }
         if (bordersPath && worldData) {
           bordersPath.attr("d", path(worldData.borders))
@@ -346,9 +570,10 @@
       }
 
       const resize = () => {
+        syncStageHeight()
         width = Math.max(320, Math.floor(stage.clientWidth || 320))
         height = Math.max(320, Math.floor(stage.clientHeight || 320))
-        baseScale = Math.max(120, Math.min(width, height) * 0.47)
+        baseScale = Math.max(120, Math.min(width, height) * 0.5 - 8)
 
         svg.attr("viewBox", `0 0 ${width} ${height}`)
         svg.select(".ethno-globe-backdrop").attr("width", width).attr("height", height)
@@ -361,31 +586,24 @@
         .drag()
         .on("start", (event) => {
           stage.classList.add("is-dragging")
-          rootState.set(root, {
-            ...rootState.get(root),
-            dragOrigin: [event.x, event.y],
-            dragRotate: projection.rotate(),
-          })
+          dragOrigin = [event.x, event.y]
+          dragRotate = projection.rotate()
         })
         .on("drag", (event) => {
-          const state = rootState.get(root)
-          if (!state || !state.dragOrigin || !state.dragRotate) return
+          if (!dragOrigin || !dragRotate) return
 
           const sensitivity = 0.24 / zoomScale
-          const dx = event.x - state.dragOrigin[0]
-          const dy = event.y - state.dragOrigin[1]
-          const lambda = state.dragRotate[0] + dx * sensitivity
-          const phi = clamp(state.dragRotate[1] - dy * sensitivity, -85, 85)
-          projection.rotate([lambda, phi, state.dragRotate[2] || 0])
+          const dx = event.x - dragOrigin[0]
+          const dy = event.y - dragOrigin[1]
+          const lambda = dragRotate[0] + dx * sensitivity
+          const phi = clamp(dragRotate[1] - dy * sensitivity, -85, 85)
+          projection.rotate([lambda, phi, dragRotate[2] || 0])
           redraw()
         })
         .on("end", () => {
           stage.classList.remove("is-dragging")
-          const state = rootState.get(root)
-          if (!state) return
-          state.dragOrigin = null
-          state.dragRotate = null
-          rootState.set(root, state)
+          dragOrigin = null
+          dragRotate = null
         })
 
       svg.call(dragBehavior)
@@ -404,11 +622,12 @@
 
       const resizeObserver = new ResizeObserver(() => resize())
       resizeObserver.observe(stage)
+      const onWindowResize = () => resize()
+      window.addEventListener("resize", onWindowResize, { passive: true })
 
-      rootState.set(root, {
+      rootStates.set(root, {
         resizeObserver,
-        dragOrigin: null,
-        dragRotate: null,
+        onWindowResize,
       })
 
       resize()
@@ -421,7 +640,22 @@
   }
 
   const initAll = () => {
-    document.querySelectorAll("[data-ethno-globe]").forEach((root) => {
+    const roots = Array.from(document.querySelectorAll(ETHNO_ROOT_SELECTOR))
+    const activeRoots = new Set(roots)
+    const hasGlobeRoot = roots.length > 0
+
+    if (document.body) {
+      document.body.classList.toggle(ETHNO_ACTIVE_CLASS, hasGlobeRoot)
+      document.body.classList.toggle(ETHNO_STATIC_CLASS, hasGlobeRoot)
+    }
+
+    for (const knownRoot of rootStates.keys()) {
+      if (!activeRoots.has(knownRoot) || !knownRoot.isConnected) {
+        teardownRoot(knownRoot)
+      }
+    }
+
+    roots.forEach((root) => {
       initRoot(root)
     })
   }

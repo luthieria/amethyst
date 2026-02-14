@@ -153,26 +153,54 @@ body.home header {
     cursor: grabbing;
 }
 
+.ethno-globe-hint {
+    position: absolute;
+    top: 0.35rem;
+    left: 50%;
+    transform: translate(-50%, -0.55rem);
+    opacity: 0;
+    pointer-events: none;
+    padding: 0.38rem 0.72rem;
+    border-radius: 999px;
+    border: 1px solid rgba(250, 252, 255, 0.22);
+    background: rgba(8, 12, 19, 0.72);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.32);
+    color: rgba(245, 249, 255, 0.94);
+    font-size: 0.58em;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    white-space: nowrap;
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    z-index: 3;
+}
+
+.ethno-globe-hint.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
 .ethno-globe-backdrop {
-    fill: var(--light);
+    fill: transparent;
 }
 
 .ethno-globe-sphere {
     fill: #0b1118;
-    stroke: rgba(246, 250, 255, 0.58);
+    stroke: rgba(246, 250, 255, 0.62);
     stroke-width: 1.15;
 }
 
 .ethno-globe-country {
-    fill: #111925;
-    stroke: rgba(246, 250, 255, 0.38);
-    stroke-width: 0.56;
+    fill: rgba(13, 19, 29, 0.78);
+    stroke: rgba(246, 250, 255, 0.34);
+    stroke-width: 0.58;
     vector-effect: non-scaling-stroke;
 }
 
 .ethno-globe-borders {
     fill: none;
-    stroke: rgba(255, 255, 255, 0.5);
+    stroke: rgba(255, 255, 255, 0.52);
     stroke-width: 0.66;
     vector-effect: non-scaling-stroke;
     pointer-events: none;
@@ -189,36 +217,37 @@ body.home header {
 }
 
 .ethno-globe-link.country path {
-    fill: rgba(255, 255, 255, 0.02);
-    stroke: transparent;
+    fill: var(--ethno-country-fill, rgba(255, 255, 255, 0.02));
+    stroke: var(--ethno-country-stroke, rgba(255, 255, 255, 0.45));
     stroke-width: 1.16;
 }
 
 .ethno-globe-link.country:hover path,
 .ethno-globe-link.country:focus path {
-    fill: rgba(191, 97, 106, 0.34);
-    stroke: rgba(248, 252, 255, 0.87);
+    fill: var(--ethno-country-fill-hover, rgba(191, 97, 106, 0.34));
+    stroke: var(--ethno-country-stroke-hover, rgba(248, 252, 255, 0.87));
 }
 
 .ethno-globe-link.region path {
-    fill: rgba(255, 255, 255, 0.006);
-    stroke: rgba(255, 255, 255, 0.02);
+    fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.004));
+    stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.01));
     stroke-width: 1.2;
 }
 
 .ethno-globe-link.region:hover path,
 .ethno-globe-link.region:focus path {
-    fill: rgba(248, 252, 255, 0.08);
-    stroke: rgba(248, 252, 255, 0.44);
+    fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.07));
+    stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.32));
 }
 
 .ethno-globe-link:focus-visible path {
-    filter: drop-shadow(0 0 0.24rem rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0 0.28rem rgba(246, 251, 255, 0.82));
 }
 
 .ethno-globe-labels text {
     fill: rgba(246, 250, 255, 0.96);
-    font-size: 16px;
+    font-family: var(--font-body);
+    font-size: 18px;
     font-weight: 600;
     paint-order: stroke;
     stroke: rgba(8, 12, 16, 0.96);
@@ -230,15 +259,15 @@ body.home header {
 }
 
 .ethno-globe-labels .depth-2 {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .ethno-globe-labels .depth-3 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .ethno-globe-labels .depth-4 {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .ethno-map-empty {
@@ -246,35 +275,17 @@ body.home header {
     color: var(--gray);
 }
 
-.page-ethno-map-full .book-page.container {
-    max-width: none;
-    width: 100%;
-    padding: $padding-16;
-}
-
-.page-ethno-map-full .markdown {
-    height: calc(100dvh - #{$header-height} - #{$padding-16} * 2);
-    margin: 0;
-    display: block;
-    overflow: hidden;
-}
-
-.page-ethno-map-full .ethno-globe-layout {
-    height: 100%;
-}
-
 @media screen and (max-width: $mobile-breakpoint) {
-    .page-ethno-map-full .book-page.container {
-        padding: $padding-8;
-    }
-
-    .page-ethno-map-full .markdown {
-        height: calc(100dvh - #{$header-height} - #{$padding-8} * 2);
-        min-height: 24rem;
+    .ethno-globe-hint {
+        top: 0.2rem;
+        font-size: 0.54em;
+        max-width: calc(100% - 2rem);
+        white-space: normal;
+        text-align: center;
     }
 
     .ethno-globe-labels text {
-        font-size: 13px;
+        font-size: 14px;
         stroke-width: 2.8px;
     }
 }

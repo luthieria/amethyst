@@ -4,7 +4,6 @@ weight: 4
 bookCollapseSection: true
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
 [[I. Materials]]
 
 [[II. Tools]]
@@ -12,4 +11,3 @@ bookCollapseSection: true
 [[III. Instruments]]
 
 [[IV. Repairs]]
-<!-- AUTO-CHILD-LINKS:END -->

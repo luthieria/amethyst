@@ -21,6 +21,7 @@
     {{- $entries = $entries | append (dict
       "id" .id
       "title" .title
+      "path" $entryPath
       "url" $target.RelPermalink
       "depth" (.depth | default 1)
       "kind" (.kind | default "region")

@@ -1,1 +1,135 @@
-// Add your own CSS here!
+/* Ethnomusicology globe page overrides loaded in Quartz stylesheet order. */
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) {
+  overflow: hidden !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .singlePage {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100dvh !important;
+  min-height: 100dvh !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) main.flex {
+  position: relative;
+  height: 100dvh !important;
+  min-height: 100dvh !important;
+  overflow: hidden !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-toc {
+  display: none !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  z-index: 20 !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container .markdown {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container .markdown > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 120 !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu .book-menu-content {
+  margin-top: 0 !important;
+  height: 100dvh !important;
+  background: rgba(30, 30, 30, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-layout,
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-stage,
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint {
+  top: 0.16rem !important;
+  transform: translate(-50%, -0.7rem);
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint.is-visible {
+  transform: translate(-50%, 0);
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels text {
+  font-family: var(--font-body) !important;
+  font-size: 18px !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+  paint-order: normal !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-2 {
+  font-size: 17px !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-3 {
+  font-size: 16px !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-4 {
+  font-size: 15px !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region path {
+  fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.003)) !important;
+  stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.008)) !important;
+}
+
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region:hover path,
+body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region:focus path {
+  fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.06)) !important;
+  stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.28)) !important;
+}
+
+@media screen and (max-width: 56rem) {
+  body:is(.page-ethno-map-full, .page-ethno-map-full-active) main.flex,
+  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+  }
+
+  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu .book-menu-content {
+    height: 100dvh !important;
+  }
+
+  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint {
+    top: 0.08rem !important;
+    font-size: 0.56em !important;
+    max-width: calc(100% - 1.5rem);
+    text-align: center;
+    white-space: normal;
+  }
+
+  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels text {
+    font-size: 14px !important;
+  }
+}

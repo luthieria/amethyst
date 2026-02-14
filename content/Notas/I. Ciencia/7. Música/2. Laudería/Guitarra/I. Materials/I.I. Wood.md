@@ -1,6 +1,6 @@
 ---
 title: Wood
-weight: 7
+weight: 6
 ---
 
 # Characteristics

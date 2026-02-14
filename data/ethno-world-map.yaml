@@ -146,3 +146,80 @@ entries:
     lon: -79.5
     dx: 10
     dy: -14
+
+  - id: brasil
+    title: "Brasil"
+    path: "4. América/1. América Latina/Brasil"
+    kind: country
+    iso2: "BR"
+    depth: 3
+    lat: -14.2
+    lon: -51.9
+    dx: 10
+    dy: -10
+
+  - id: mexico
+    title: "México"
+    path: "4. América/1. América Latina/Hispanoamérica/México"
+    kind: country
+    iso2: "MX"
+    depth: 4
+    lat: 23.6
+    lon: -102.5
+    dx: -10
+    dy: -12
+
+  - id: colombia
+    title: "Colombia"
+    path: "4. América/1. América Latina/Hispanoamérica/Colombia"
+    kind: country
+    iso2: "CO"
+    depth: 4
+    lat: 4.6
+    lon: -74.1
+    dx: 10
+    dy: -10
+
+  - id: ecuador
+    title: "Ecuador"
+    path: "4. América/1. América Latina/Hispanoamérica/Ecuador"
+    kind: country
+    iso2: "EC"
+    depth: 4
+    lat: -1.8
+    lon: -78.2
+    dx: -10
+    dy: 14
+
+  - id: peru
+    title: "Perú"
+    path: "4. América/1. América Latina/Hispanoamérica/Perú"
+    kind: country
+    iso2: "PE"
+    depth: 4
+    lat: -9.2
+    lon: -75.0
+    dx: 10
+    dy: 16
+
+  - id: puerto-rico
+    title: "Puerto Rico"
+    path: "4. América/1. América Latina/Hispanoamérica/Puerto Rico"
+    kind: country
+    iso2: "PR"
+    depth: 4
+    lat: 18.2
+    lon: -66.5
+    dx: 12
+    dy: -12
+
+  - id: santo-domingo
+    title: "Santo Domingo"
+    path: "4. América/1. América Latina/Hispanoamérica/Santo Domingo"
+    kind: country
+    iso2: "DO"
+    depth: 4
+    lat: 18.9
+    lon: -70.4
+    dx: 12
+    dy: 14
