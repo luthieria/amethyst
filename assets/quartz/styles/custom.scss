@@ -153,7 +153,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 #{$ethno-page-scope} .ethno-globe-coastline {
   fill: none;
   stroke: rgba(236, 244, 255, 0.816);
-  stroke-width: 0.82;
+  stroke-width: 0.5;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
   filter: drop-shadow(0 0 2px rgba(198, 218, 255, 0.14));
