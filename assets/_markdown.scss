@@ -129,6 +129,13 @@
     margin-top: $padding-16;
     margin-bottom: $padding-16;
 
+    tr th:not([align]),
+    tr td:not([align]) {
+      padding: $padding-8 $padding-16;
+      border: $padding-1 solid var(--gray-200);
+      text-align: center;
+    }
+
     tr th,
     tr td {
       padding: $padding-8 $padding-16;

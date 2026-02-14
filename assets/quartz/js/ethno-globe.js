@@ -24,17 +24,19 @@
     },
     motion: {
       dragLerp: 0.34,
+      dragLerpActive: 0.8,
       zoomLerp: 0.28,
+      zoomLerpActive: 0.38,
       maxDtMs: 40,
-      settleEpsilonDeg: 0.02,
+      settleEpsilonDeg: 0.014,
       settleEpsilonZoom: 0.0012,
     },
     inertia: {
-      enabled: false,
-      decayPer60fps: 0.91,
-      minVelocityDegPerMs: 0.0024,
-      maxVelocityDegPerMs: 0.22,
-      sampleWindowMs: 130,
+      enabled: true,
+      decayPer60fps: 0.978,
+      minVelocityDegPerMs: 0.0012,
+      maxVelocityDegPerMs: 0.18,
+      sampleWindowMs: 170,
       clickSuppressDistancePx: 6,
       clickSuppressMs: 120,
     },
@@ -47,7 +49,8 @@
     zoom: {
       min: 0.72,
       max: 2.45,
-      wheelSensitivity: 0.0015,
+      wheelSensitivity: 0.0012,
+      maxWheelStepPx: 110,
     },
     drag: {
       sensitivity: 0.24,
@@ -1452,7 +1455,8 @@
             }
           }
 
-          const dragLerp = isDragging ? 1 : clamp(TUNING.motion.dragLerp * frameRatio, 0, 1)
+          const dragLerpBase = isDragging ? TUNING.motion.dragLerpActive : TUNING.motion.dragLerp
+          const dragLerp = clamp(dragLerpBase * frameRatio, 0, 1)
           const lambdaDelta = shortestAngularDelta(rotationCurrent[0], rotationTarget[0])
           const phiDelta = rotationTarget[1] - rotationCurrent[1]
 
@@ -1478,7 +1482,8 @@
 
           const zoomDelta = zoomTarget - zoomScale
           if (Math.abs(zoomDelta) > TUNING.motion.settleEpsilonZoom) {
-            const zoomLerp = isInteracting ? 1 : clamp(TUNING.motion.zoomLerp * frameRatio, 0, 1)
+            const zoomLerpBase = isInteracting ? TUNING.motion.zoomLerpActive : TUNING.motion.zoomLerp
+            const zoomLerp = clamp(zoomLerpBase * frameRatio, 0, 1)
             zoomScale = clamp(zoomScale + zoomDelta * zoomLerp, TUNING.zoom.min, TUNING.zoom.max)
             changed = true
           } else if (zoomScale !== zoomTarget) {
@@ -1539,13 +1544,21 @@
           const phi = clamp(dragRotateStart[1] - dy * sensitivity, TUNING.drag.minLatitude, TUNING.drag.maxLatitude)
           rotationTarget[0] = lambda
           rotationTarget[1] = phi
-          // Keep drag response immediate; smoothing is reserved for release inertia.
-          rotationCurrent[0] = lambda
-          rotationCurrent[1] = phi
+          // Apply light drag-time damping for a smoother, globe-like feel.
+          const dragBlend = clamp(TUNING.motion.dragLerpActive, 0, 1)
+          rotationCurrent[0] = normalizeLongitude(
+            rotationCurrent[0] + shortestAngularDelta(rotationCurrent[0], lambda) * dragBlend,
+          )
+          rotationCurrent[1] = clamp(
+            rotationCurrent[1] + (phi - rotationCurrent[1]) * dragBlend,
+            TUNING.drag.minLatitude,
+            TUNING.drag.maxLatitude,
+          )
           projection.rotate([rotationCurrent[0], rotationCurrent[1], rotationCurrent[2] || 0])
           requestRedraw()
           dragDistancePx = Math.max(dragDistancePx, Math.hypot(dx, dy))
           pushDragSample(performance.now())
+          startMotionLoop()
         })
         .on("end", () => {
           stage.classList.remove("is-dragging")
@@ -1585,10 +1598,16 @@
         event.preventDefault()
         enterInteraction()
         stopInertia()
-        const nextScale = zoomTarget * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
+        const deltaModeScale = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1
+        const wheelDeltaPx = clamp(
+          event.deltaY * deltaModeScale,
+          -TUNING.zoom.maxWheelStepPx,
+          TUNING.zoom.maxWheelStepPx,
+        )
+        const nextScale = zoomTarget * Math.exp(-wheelDeltaPx * TUNING.zoom.wheelSensitivity)
         zoomTarget = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
-        // Keep wheel response immediate while interacting.
-        zoomScale = zoomTarget
+        const zoomBlend = clamp(TUNING.motion.zoomLerpActive, 0, 1)
+        zoomScale = clamp(zoomScale + (zoomTarget - zoomScale) * zoomBlend, TUNING.zoom.min, TUNING.zoom.max)
         applyScale()
         requestRedraw()
         startMotionLoop()

@@ -27,15 +27,15 @@ weight: 6
 - **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity <1.0 means that the wood floats.
 - Important for, e.g., boats.
 
-<br>
-
-1. Poplar — 0.42.
-2. Cherry — 0.50.
-3. Walnut — 0.55.
-4. Yellow pine — 0.59.
-5. Hard maple — 0.63.
-6. White oak — 0.68.
-7. Ebony — 1.0. → Sinks.
+| Wood        | Specific Gravity |
+|-------------:|------------------|
+| Poplar      | 0.42             |
+| Cherry      | 0.50             |
+| Walnut      | 0.55             |
+| Yellow pine | 0.59             |
+| Hard maple  | 0.63             |
+| White oak   | 0.68             |
+| Ebony       | 1.0 (sinks)      |
 
 #### Compressive Strength
 
