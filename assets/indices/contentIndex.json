@@ -12,9 +12,9 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosofia/": {
-    "title": "1. Filosofia",
+    "title": "Filosofia",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Заметки по марксизму]]\r\n\r\n[[Попов М. В.]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.6669416-04:00",
+    "lastmodified": "2026-02-13T17:54:35.9287615-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosofia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": {
@@ -67,8 +67,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/": {
     "title": "1. Etnomusicología",
-    "content": "\r\n1. [[1. África |África]]\r\n2. [[2. Mediterráneo |Mediterráneo]]\r\n3. [[3. América |América]]\r\n   1. [América Latina](\u003c3. América/1. América Latina\u003e)\r\n      1. [Hispanoamérica](\u003c3. América/1. América Latina/Hispanoamérica\u003e)\r\n      2. [Brasil](\u003c3. América/1. América Latina/Música brasileira.md\u003e)\r\n   2. [Anglo-América](\u003c3. América/2. Anglo-América\u003e)",
-    "lastmodified": "2026-02-13T17:21:02.5101989-04:00",
+    "content": "\n{{\u003c ethno-world-map \u003e}}\n",
+    "lastmodified": "2026-02-13T19:51:06.2203938-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/1.-%C3%81frica/": {
@@ -121,8 +121,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/": {
     "title": "América",
-    "content": "\r\n1. [América Latina](\u003c3. América/1. América Latina\u003e)\r\n   1. [Hispanoamérica](\u003c3. América/1. América Latina/Hispanoamérica\u003e)\r\n   2. [Brasil](\u003c3. América/1. América Latina/Música brasileira.md\u003e)\r\n2. [Anglo-América](\u003c3. América/2. Anglo-América\u003e)",
-    "lastmodified": "2026-02-13T17:46:20.3151187-04:00",
+    "content": "\r\n1. [América Latina](\u003c1. América Latina\u003e)\n   1. [Hispanoamérica](\u003c1. América Latina/Hispanoamérica\u003e)\n   2. [Brasil](\u003c1. América Latina/Música brasileira.md\u003e)\n2. [Anglo-América](\u003c2. Anglo-América\u003e)\n",
+    "lastmodified": "2026-02-13T18:13:42.597692-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/": {
@@ -222,9 +222,9 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/": {
-    "title": "2. Laudería",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Familia del violín]]\r\n\r\n[[Guitarra]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.774462-04:00",
+    "title": "Laudería",
+    "content": "\r\n[[Familia del violín]]\r\n\r\n[[Guitarra]]",
+    "lastmodified": "2026-02-13T18:01:20.3620742-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Familia-del-viol%C3%ADn/": {
@@ -259,20 +259,20 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/": {
     "title": "I. Materials",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Wood]]\r\n\r\n[[I.II. Glue]]\r\n\r\n[[I.III. Finish]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7929848-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Characteristics]]\r\n\r\n[[I.II. Glue]]\r\n\r\n[[I.III. Finish]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T18:06:16.6103309-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/": {
     "title": "I.I. Wood",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[I.I. Wood]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-13T16:49:39.7979823-04:00",
+    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Characteristics]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
+    "lastmodified": "2026-02-13T18:06:16.6323579-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/I.I.-Wood": {
-    "title": "I.I. Wood",
-    "content": "# WOOD\n## Characteristics\n### Grain\n- **Wood grain** = **tree rings**.[^Kert]\n\n\n[^Kert]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)",
-    "lastmodified": "2026-01-24T13:23:49.8042755-04:00",
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/Characteristics": {
+    "title": "Characteristics",
+    "content": "\n# Characteristics\n## Grain\n\n- **Wood grain** = **tree rings**.[^Kert]\n\n\u003c!-- Footnotes [ --\u003e\n[^Kert]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)\n\u003c!-- ] Footnotes --\u003e\n\n- Rings alternate between:\n  - light, wide — grown at spring (trees grow faster);\n  - dark, narrow, dense — grown in autumn (trees grow slower).\n\n![alt text](Imagenes/Cuts.png)\n\n### Strength[^Workshop]\n\n\u003c!-- Footnotes [ --\u003e\n[^Workshop]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)\n\u003c!-- ] Footnotes --\u003e\n\n- Wood consists of long cellulose fibers bound together by a glue-like lignin. Splitting cellulose is harder than lignin. → Wood is stronger along the grain.\n\n\u003cbr\u003e\n\n- All strength measurements are averages.\n\n#### Specific Gravity\n\n- **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity \u003c1.0 means that the wood floats.\n- Important for, e.g., boats.\n\n1. Poplar — 0.42.\n2. Cherry — 0.50.\n3. Walnut — 0.55.\n4. Yellow pine — 0.59.\n5. Hard maple — 0.63.\n6. White oak — 0.68.\n7. Ebony — 1.0. → Sinks.\n\n#### Compressive Strength\n\n- **Compressive strength** — resistance to pressure applied along the grain.\n- Important for, e.g., table legs.\n\n1. Poplar — 5540 psi.\n2. Cherry — 7110 psi.\n3. White oak — 7440 psi.\n4. Walnut — 7580 psi.\n5. Hard maple — 7830 psi.\n6. Yellow pine — 8470 psi.\n\n#### Bending Strength\n\n- **Bending strength** = **modulus of rupture** — resistance to pressure applied perpendicular to the grain.\n- Important for, e.g., table tops, canoe paddles.\n\n1. Poplar — 10 100 psi.\n2. Cherry — 12 300 psi.\n3. Yellow pine — 14 500 psi.\n4. Walnut — 14 600 psi.\n5. White oak — 15 200 psi.\n6. Hard maple — 15 800 psi.\n\n#### Stiffness\n\n- **Stiffness** = **modulus of elasticity** — resistance to bowing.\n- Important for, e.g., shelves, archery bow, fishing pole.\n\n1. Cherry — 1.49 Mpsi.\n2. Poplar — 1.58 Mpsi.\n3. Walnut — 1.68 Mpsi.\n4. White oak — 1.78 Mpsi.\n5. Hard maple — 1.83 Mpsi.\n6. Yellow pine — 1.98 Mpsi.\n\n#### Hardness\n\n- **Hardness** — resistance to abuse.\n- Important for, e.g., desktop, workbench top, baseball bat.\n\n1. Poplar — 540 lbs.\n2. Yellow pine — 870 lbs.\n3. Cherry — 950 lbs.\n4. Walnut — 1010 lbs.\n5. White oak — 1360 lbs.\n6. Hard maple — 1450 lbs.\n\n## Moisture[^Workshop]\n\n- ",
+    "lastmodified": "2026-02-13T18:37:39.5488769-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.II.-Glue/": {
@@ -333,12 +333,6 @@
     "title": "IV. Repairs",
     "content": "",
     "lastmodified": "2026-01-24T13:22:32.0292425-04:00",
-    "tags": []
-  },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/_index-copy": {
-    "title": "_index copy",
-    "content": "﻿---\r\ntitle: \"2. Laudería\"\r\nweight: 60\r\nbookCollapseSection: true\r\n---\r\n",
-    "lastmodified": "2026-02-13T12:19:21.3572628-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/3.-Instrumentos/": {

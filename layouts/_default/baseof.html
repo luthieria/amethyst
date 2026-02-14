@@ -7,7 +7,14 @@
 </head>
 {{ partial "quartz/search" . }}
 {{partial "quartz/header" . }}
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}"{{ if .IsHome }} class="home"{{ end }}>
+{{- $bodyClasses := slice -}}
+{{- if .IsHome -}}
+  {{- $bodyClasses = $bodyClasses | append "home" -}}
+{{- end -}}
+{{- with .Params.bodyClass -}}
+  {{- $bodyClasses = $bodyClasses | append . -}}
+{{- end -}}
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }} class="{{ delimit $bodyClasses " " }}"{{ end }}>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <main class="flex">
     <aside class="book-menu">
@@ -75,7 +82,9 @@
     <h1>{{ partial "docs/title" . }}</h1>
     {{ end }}
     {{partial "quartz/textprocessing" . }}
+    {{ if not .Params.quartzHideFooter }}
     {{ partial "quartz/footer" .}}
+    {{ end }}
     {{/*  {{- .Content -}}  */}}
   </article>
 {{ end }}

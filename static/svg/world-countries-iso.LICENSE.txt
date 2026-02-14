@@ -1,0 +1,9 @@
+Source: world-map-country-shapes
+Repository: git+https://github.com/sirlisko/world-map-country-shapes.git
+Version: 1.0.0
+Commit: 1917831e84cb5d0fc585606201b5e0f6c6927906
+Source URL: https://raw.githubusercontent.com/sirlisko/world-map-country-shapes/1917831e84cb5d0fc585606201b5e0f6c6927906/world-map.svg
+License: MIT
+Asset: world-map.svg (vendored locally as world-countries-iso.svg)
+
+Original package: https://www.npmjs.com/package/world-map-country-shapes

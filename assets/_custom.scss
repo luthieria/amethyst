@@ -100,143 +100,113 @@ body.home header {
 }
 
 .ethno-map-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(14rem, 16rem);
-    gap: $padding-16;
-    align-items: start;
-    margin: $padding-16 0 ($padding-16 * 2);
-}
-
-.ethno-map-canvas {
-    min-width: 0;
-}
-
-.ethno-map-svg {
-    display: block;
+    margin: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.ethno-map-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--outlinegray);
     border-radius: $border-radius;
-    background: #1f2428;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: #0e1217;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.ethno-map-svg image {
-    pointer-events: none;
+.ethno-map-base,
+.ethno-map-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.ethno-map-pin {
+.ethno-map-base svg,
+.ethno-map-overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ethno-map-base svg {
+    background: #0e1217;
+}
+
+.ethno-map-base path,
+.ethno-map-base polygon {
+    fill: #141b23 !important;
+    stroke: rgba(240, 245, 255, 0.62) !important;
+    stroke-width: 1.05 !important;
+    vector-effect: non-scaling-stroke;
+    transition: fill 0.16s ease, stroke 0.16s ease;
+}
+
+.ethno-map-hits .ethno-map-hit {
     cursor: pointer;
 }
 
-.ethno-map-pin circle {
-    fill: var(--secondary);
-    stroke: var(--dark);
-    stroke-width: 1.2;
-    opacity: 0.95;
-    transition: transform 0.15s ease, fill 0.15s ease, stroke 0.15s ease;
-    transform-origin: center;
+.ethno-map-hits .ethno-map-hit:focus {
+    outline: none;
 }
 
-.ethno-map-pin text {
-    fill: var(--dark);
-    font-size: 14px;
+.ethno-map-hit.country use {
+    fill: rgba(255, 255, 255, 0.02);
+    stroke: transparent;
+    stroke-width: 1.4;
+    vector-effect: non-scaling-stroke;
+    transition: fill 0.16s ease, stroke 0.16s ease;
+}
+
+.ethno-map-hit.country:hover use,
+.ethno-map-hit.country:focus use {
+    fill: rgba(191, 97, 106, 0.28);
+    stroke: rgba(248, 252, 255, 0.78);
+}
+
+.ethno-map-hit.region ellipse {
+    fill: rgba(255, 255, 255, 0.01);
+    stroke: rgba(255, 255, 255, 0.0);
+    stroke-width: 1.4;
+    vector-effect: non-scaling-stroke;
+    transition: fill 0.16s ease, stroke 0.16s ease;
+}
+
+.ethno-map-hit.region:hover ellipse,
+.ethno-map-hit.region:focus ellipse {
+    fill: rgba(255, 255, 255, 0.08);
+    stroke: rgba(248, 252, 255, 0.38);
+}
+
+.ethno-map-hit:focus-visible use,
+.ethno-map-hit:focus-visible ellipse {
+    filter: drop-shadow(0 0 0.22rem rgba(255, 255, 255, 0.75));
+}
+
+.ethno-map-labels text {
+    fill: rgba(246, 250, 255, 0.95);
+    font-size: 22px;
     font-weight: 600;
     paint-order: stroke;
-    stroke: rgba(30, 30, 30, 0.85);
-    stroke-width: 3px;
+    stroke: rgba(14, 18, 23, 0.95);
+    stroke-width: 4px;
     stroke-linejoin: round;
     pointer-events: none;
     user-select: none;
 }
 
-.ethno-map-pin.depth-1 text {
+.ethno-map-labels .depth-2 {
+    font-size: 20px;
+}
+
+.ethno-map-labels .depth-3 {
+    font-size: 18px;
+}
+
+.ethno-map-labels .depth-4 {
     font-size: 16px;
-}
-
-.ethno-map-pin.depth-3 text {
-    font-size: 13px;
-}
-
-.ethno-map-pin.depth-4 text {
-    font-size: 12px;
-}
-
-.ethno-map-pin:hover circle,
-.ethno-map-pin:focus circle {
-    fill: var(--tertiary);
-    stroke: var(--title);
-    transform: scale(1.18);
-}
-
-.ethno-map-pin:focus {
-    outline: none;
-}
-
-.ethno-map-pin:focus circle {
-    filter: drop-shadow(0 0 0.2rem rgba(247, 230, 174, 0.9));
-}
-
-.ethno-map-panel {
-    padding: $padding-16;
-    border: 1px solid var(--outlinegray);
-    border-radius: $border-radius;
-    background: rgba(30, 30, 30, 0.35);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    font-size: $font-size-14;
-    position: sticky;
-    top: calc(#{$header-height} + #{$padding-16});
-    max-height: calc(100vh - #{$header-height} - #{$padding-16} * 2);
-    overflow-y: auto;
-}
-
-.ethno-map-panel-title {
-    margin-bottom: $padding-8;
-    font-size: $font-size-16;
-    color: var(--title);
-    font-weight: 700;
-}
-
-.ethno-map-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.ethno-map-list li {
-    margin: 0.45rem 0;
-    line-height: 1.35;
-}
-
-.ethno-map-list a {
-    color: var(--dark);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-}
-
-.ethno-map-list a:hover,
-.ethno-map-list a:focus {
-    color: var(--secondary);
-    border-bottom-color: currentColor;
-}
-
-.ethno-map-list .depth-1 {
-    margin-left: 0;
-    font-weight: 700;
-}
-
-.ethno-map-list .depth-2 {
-    margin-left: 0.75rem;
-}
-
-.ethno-map-list .depth-3 {
-    margin-left: 1.5rem;
-}
-
-.ethno-map-list .depth-4 {
-    margin-left: 2.25rem;
-    font-size: 0.95em;
 }
 
 .ethno-map-empty {
@@ -244,13 +214,34 @@ body.home header {
     color: var(--gray);
 }
 
+.page-ethno-map-full .book-page.container {
+    max-width: none;
+    width: 100%;
+    padding: $padding-16;
+}
+
+.page-ethno-map-full .markdown {
+    height: calc(100dvh - #{$header-height} - #{$padding-16} * 2);
+    margin: 0;
+    display: block;
+}
+
+.page-ethno-map-full .ethno-map-layout {
+    height: 100%;
+}
+
 @media screen and (max-width: $mobile-breakpoint) {
-    .ethno-map-layout {
-        grid-template-columns: 1fr;
+    .page-ethno-map-full .book-page.container {
+        padding: $padding-8;
     }
 
-    .ethno-map-panel {
-        position: static;
-        max-height: none;
+    .page-ethno-map-full .markdown {
+        height: calc(100dvh - #{$header-height} - #{$padding-8} * 2);
+        min-height: 24rem;
+    }
+
+    .ethno-map-labels text {
+        font-size: 16px;
+        stroke-width: 3px;
     }
 }

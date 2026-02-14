@@ -2,24 +2,34 @@ entries:
   - id: africa
     title: "África"
     path: "1. África"
+    kind: region
     depth: 1
     lat: 12.0
     lon: 20.0
+    halo_rx: 420
+    halo_ry: 260
+    halo_rotate: -5
     dx: 12
     dy: -10
 
   - id: oriente-medio
     title: "Oriente Medio"
     path: "2. Oriente Medio"
+    kind: region
     depth: 1
     lat: 30.0
     lon: 45.0
+    halo_rx: 220
+    halo_ry: 120
+    halo_rotate: 8
     dx: 12
     dy: -10
 
   - id: iran
     title: "Irán"
     path: "2. Oriente Medio/Irán"
+    kind: country
+    iso2: "IR"
     depth: 2
     lat: 32.0
     lon: 53.0
@@ -29,33 +39,47 @@ entries:
   - id: magreb
     title: "Magreb"
     path: "2. Oriente Medio/Magreb"
+    kind: region
     depth: 2
     lat: 31.0
     lon: -6.0
+    halo_rx: 190
+    halo_ry: 95
+    halo_rotate: -10
     dx: -62
     dy: -10
 
   - id: arabe
     title: "Árabe"
     path: "2. Oriente Medio/Árabe"
+    kind: region
     depth: 2
     lat: 24.0
     lon: 45.0
+    halo_rx: 180
+    halo_ry: 100
+    halo_rotate: 12
     dx: 10
     dy: 14
 
   - id: mediterraneo
     title: "Mediterráneo"
     path: "3. Mediterráneo"
+    kind: region
     depth: 1
     lat: 38.0
     lon: 15.0
+    halo_rx: 300
+    halo_ry: 95
+    halo_rotate: -2
     dx: 12
     dy: -10
 
   - id: espana
     title: "España"
     path: "3. Mediterráneo/España"
+    kind: country
+    iso2: "ES"
     depth: 2
     lat: 40.0
     lon: -4.0
@@ -65,6 +89,8 @@ entries:
   - id: portugal
     title: "Portugal"
     path: "3. Mediterráneo/Portugal"
+    kind: country
+    iso2: "PT"
     depth: 2
     lat: 39.0
     lon: -8.0
@@ -74,33 +100,47 @@ entries:
   - id: america
     title: "América"
     path: "4. América"
+    kind: region
     depth: 1
     lat: 15.0
     lon: -75.0
+    halo_rx: 420
+    halo_ry: 270
+    halo_rotate: -15
     dx: 12
     dy: -10
 
   - id: america-latina
     title: "América Latina"
     path: "4. América/1. América Latina"
+    kind: region
     depth: 2
     lat: -15.0
     lon: -60.0
+    halo_rx: 360
+    halo_ry: 260
+    halo_rotate: -22
     dx: 12
     dy: 20
 
   - id: hispanoamerica
     title: "Hispanoamérica"
     path: "4. América/1. América Latina/Hispanoamérica"
+    kind: region
     depth: 3
     lat: 9.0
     lon: -75.0
+    halo_rx: 260
+    halo_ry: 130
+    halo_rotate: -12
     dx: 12
     dy: -10
 
   - id: cuba
     title: "Cuba"
     path: "4. América/1. América Latina/Hispanoamérica/Cuba"
+    kind: country
+    iso2: "CU"
     depth: 4
     lat: 21.5
     lon: -79.5
