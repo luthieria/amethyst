@@ -93,7 +93,7 @@ weight: 6
 5. White oak — 1360 lbs.
 6. Hard maple — 1450 lbs.
 
-## Moisture[^Workshop]
+## Moisture[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]
 
 - Generally: 5% RH translates into 1% wood moisture content.
   - RH = relative humidity — ambient.
@@ -115,9 +115,9 @@ weight: 6
 
 - Temperate climate: tight in the summer, loose in the winter.
 
-- M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^Bruné_Bracing]
+- M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
 
-# Oiliness[^Bruné_BracingPattern]
+# Oiliness[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]
 
 - Some woods are oily (rosewood, cocobolo, etc.).
 - Can be wiped with Naphtha / alcohol / acetone.
@@ -144,8 +144,8 @@ weight: 6
 <!-- Footnotes -->
 [^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
 
-[^Workshop]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)
+[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)
 
-[^Bruné_Bracing]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
+[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
 
-[^Bruné_BracingPattern]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)
+[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)

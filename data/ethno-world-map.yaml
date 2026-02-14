@@ -260,6 +260,35 @@ entries:
         dx: 12
         dy: 20
         children:
+          - id: antilles-franceses
+            title: "Antilles françaises"
+            path: "4. América/1. América Latina/Antilles françaises"
+            kind: region
+            halo_countries:
+              - "Haiti"
+              - "Martinique"
+              - "Guadeloupe"
+              - "St-Martin"
+              - "St-Barthélemy"
+            depth: 3
+            lat: 16.4
+            lon: -61.4
+            halo_rx: 140
+            halo_ry: 85
+            halo_rotate: -8
+            dx: 12
+            dy: -12
+            children:
+              - id: martinique
+                title: "Martinique"
+                path: "4. América/1. América Latina/Antilles françaises/Martinique"
+                kind: country
+                depth: 4
+                lat: 14.64
+                lon: -61.02
+                dx: 10
+                dy: -10
+
           - id: hispanoamerica
             title: "Hispanoamérica"
             path: "4. América/1. América Latina/Hispanoamérica"
