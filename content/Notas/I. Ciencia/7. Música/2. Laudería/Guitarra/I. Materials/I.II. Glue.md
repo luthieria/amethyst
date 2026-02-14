@@ -65,6 +65,8 @@ weight: 7
 [^StewMac_HideGlueBuy]: [**StewMac**](https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/stewmac-ground-hide-glue/)
 <!-- ]-->
 
+### Description
+
 {{< expand >}}
 
 Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQfLrQPo?si=OxXlBS8mJTT1EFqV)
@@ -81,26 +83,21 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 [^Brune_Glue1]: [**Bruné M. E.**](https://youtu.be/iYoLUvZ9SH8?si=ezupJB3IHDzvo71_)
 <!-- ]-->
 
-<br>
+#### Advantages
+1. **Repairability**:undoable cleanly an infinite number of times (with heat, moisture, hot knife), → makes an instrument repairable (as opposed to synthetic glues which may ruin the instrument).
+2. For the **strongest** joints.
+3. **No creep** under pressure (as opposed to PVA, which creates plastic joints that creep over time under heavy loads[^Wikipedia_AnimalGlue]).
+4. **Cleans easily** with heat / steam / hot water.
+5. Creates a somewhat brittle joint, → **cleanly breaks along the joint** (as opposed to PVA, which damages the glued surfaces[^Wikipedia_AnimalGlue]).
+6. **Bonds to itself**, reactivates older hide glue.
+7. **Functions as its own clamp**: once it begins to gel, it pulls the joint together.
+8. **No glue starvation**.
+9. **Good vibration** (→ tone) **transfer**.
+10. **Very short working time**.
+11. **Transparent**, → makes cracks invisible.
 
-- Advantages:
-  1. **repairability**:undoable cleanly an infinite number of times (with heat, moisture, hot knife), → makes an instrument repairable (as opposed to synthetic glues which may ruin the instrument);
-  2. for the **strongest** joints;
-  3. **no creep** under pressure (as opposed to PVA, which creates plastic joints that creep over time under heavy loads[^Wikipedia_AnimalGlue]);
-  4. **cleans easily** with heat / steam / hot water;
-  5. creates a somewhat brittle joint, → **cleanly breaks along the joint** (as opposed to PVA, which damages the glued surfaces[^Wikipedia_AnimalGlue]);
-  6. **bonds to itself**, reactivates older hide glue;
-  7. **functions as its own clamp**: once it begins to gel, it pulls the joint together;
-  8. **no glue starvation**;
-  9. **good vibration** (→ tone) **transfer**;
-  10. **very short working time**;
-  11. **transparent**, → makes cracks invisible.
-
-<br>
-
-- Disadvantages:
-  1. short open time;
-  2. working time (before gelling up) — 2–3 minutes;
-  3. thermal limitations;
-  4. vulnerability to micro-organisms.
-
+#### Disadvantages
+1. Short open time.
+2. Working time (before gelling up) — 2–3 minutes.
+3. Thermal limitations.
+4. Vulnerability to micro-organisms.

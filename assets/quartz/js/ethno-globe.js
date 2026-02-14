@@ -28,6 +28,8 @@
       minDegrees: 10,
       maxDegrees: 76,
       fallbackCountryDegrees: 4.5,
+      visualScale: 1.08,
+      visualScaleHover: 1.12,
     },
     color: {
       regionFillAlpha: 0.03,
@@ -92,6 +94,10 @@
     { h: 206, s: 62, l: 56 },
   ]
   const DEFAULT_REGION_COLOR = { h: 208, s: 52, l: 56 }
+  const COUNTRY_NAME_ALIASES = {
+    lybia: "libya",
+    mauretania: "mauritania",
+  }
 
   // === Shared State ===
   const rootStates = new Map()
@@ -120,6 +126,18 @@
       .map((segment) => segment.trim().toLowerCase())
       .filter(Boolean)
       .join("/")
+
+  const normalizeCountryName = (value) =>
+    stripAccents(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim()
+      .replace(/\s+/g, " ")
+
+  const canonicalCountryName = (value) => {
+    const normalized = normalizeCountryName(value)
+    return COUNTRY_NAME_ALIASES[normalized] || normalized
+  }
 
   // === Data & Resource Loading ===
   const loadScript = (src, checkLoaded) => {
@@ -192,20 +210,29 @@
       if (!Array.isArray(raw)) return []
 
       return raw
-        .map((entry) => ({
-          id: typeof entry.id === "string" ? entry.id : "",
-          title: typeof entry.title === "string" ? entry.title : "",
-          path: typeof entry.path === "string" ? entry.path : "",
-          url: typeof entry.url === "string" ? entry.url : "",
-          kind: entry.kind === "country" ? "country" : "region",
-          depth: clamp(toNumber(entry.depth, 1), 1, 8),
-          lat: clamp(toNumber(entry.lat, 0), -89.999, 89.999),
-          lon: clamp(toNumber(entry.lon, 0), -180, 180),
-          dx: toNumber(entry.dx, 0),
-          dy: toNumber(entry.dy, 0),
-          haloRx: Math.max(0, toNumber(entry.halo_rx, 0)),
-          haloRy: Math.max(0, toNumber(entry.halo_ry, 0)),
-        }))
+        .map((entry) => {
+          const rawHaloCountries = Array.isArray(entry.halo_countries)
+            ? entry.halo_countries
+            : typeof entry.halo_countries === "string"
+              ? [entry.halo_countries]
+              : []
+
+          return {
+            id: typeof entry.id === "string" ? entry.id : "",
+            title: typeof entry.title === "string" ? entry.title : "",
+            path: typeof entry.path === "string" ? entry.path : "",
+            url: typeof entry.url === "string" ? entry.url : "",
+            kind: entry.kind === "country" ? "country" : "region",
+            depth: clamp(toNumber(entry.depth, 1), 1, 8),
+            lat: clamp(toNumber(entry.lat, 0), -89.999, 89.999),
+            lon: clamp(toNumber(entry.lon, 0), -180, 180),
+            dx: toNumber(entry.dx, 0),
+            dy: toNumber(entry.dy, 0),
+            haloRx: Math.max(0, toNumber(entry.halo_rx, 0)),
+            haloRy: Math.max(0, toNumber(entry.halo_ry, 0)),
+            haloCountries: rawHaloCountries.map((value) => String(value || "").trim()).filter(Boolean),
+          }
+        })
         .filter((entry) => entry.id && entry.title && entry.url)
     } catch (_) {
       return []
@@ -256,6 +283,60 @@
     }
 
     return nearest
+  }
+
+  const buildWorldFeatureIndex = (features) => {
+    const byId = new Map()
+    const byName = new Map()
+
+    features.forEach((feature) => {
+      const id = String(feature?.id || "").trim()
+      const rawName = feature?.properties?.name
+      const name = canonicalCountryName(rawName)
+
+      if (id) byId.set(id, feature)
+      if (name) byName.set(name, feature)
+    })
+
+    return { byId, byName }
+  }
+
+  const resolveRegionHaloFeatures = (regionEntry, countryEntries, worldFeatureIndex) => {
+    const features = []
+    const seen = new Set()
+
+    const pushFeature = (feature) => {
+      if (!feature) return
+      const key = String(feature.id || feature?.properties?.name || "")
+      if (!key || seen.has(key)) return
+      seen.add(key)
+      features.push(feature)
+    }
+
+    if (regionEntry.haloCountries.length > 0) {
+      regionEntry.haloCountries.forEach((country) => {
+        const idMatch = worldFeatureIndex.byId.get(String(country).trim())
+        if (idMatch) {
+          pushFeature(idMatch)
+          return
+        }
+
+        const nameMatch = worldFeatureIndex.byName.get(canonicalCountryName(country))
+        if (nameMatch) pushFeature(nameMatch)
+      })
+      return features
+    }
+
+    const prefix = regionEntry.normalizedPath ? `${regionEntry.normalizedPath}/` : ""
+    countryEntries.forEach((entry) => {
+      if (!entry.hasWorldShape) return
+      if (!regionEntry.normalizedPath) return
+      if (entry.normalizedPath === regionEntry.normalizedPath || entry.normalizedPath.startsWith(prefix)) {
+        pushFeature(entry.shape)
+      }
+    })
+
+    return features
   }
 
   // === Color Assignment ===
@@ -474,11 +555,6 @@
           color: REGION_PALETTE[index % REGION_PALETTE.length] || DEFAULT_REGION_COLOR,
         }))
 
-      const regionEntries = seededRegions.map((entry) => ({
-        ...entry,
-        geometry: d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))(),
-      }))
-
       const countryFeatureColors = new Map()
       const seededCountries = entries
         .filter((entry) => entry.kind === "country")
@@ -488,6 +564,7 @@
             parentRegion?.color || REGION_PALETTE[(seededRegions.length + index) % REGION_PALETTE.length] || DEFAULT_REGION_COLOR
           return {
             ...entry,
+            normalizedPath: normalizePath(entry.path),
             regionId: parentRegion?.id || "",
             regionColor,
           }
@@ -519,7 +596,7 @@
           const feature = findCountryFeatureForEntry(entry, worldData.features)
           if (feature) {
             countryFeatureColors.set(feature, entry.color)
-            return { ...entry, shape: feature }
+            return { ...entry, shape: feature, hasWorldShape: true }
           }
         }
 
@@ -527,7 +604,22 @@
         return {
           ...entry,
           shape: d3.geoCircle().center([entry.lon, entry.lat]).radius(TUNING.halo.fallbackCountryDegrees)(),
+          hasWorldShape: false,
         }
+      })
+
+      const worldFeatureIndex = worldData ? buildWorldFeatureIndex(worldData.features) : null
+      const regionEntries = seededRegions.map((entry) => {
+        let geometry = d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))()
+
+        if (worldFeatureIndex) {
+          const regionFeatures = resolveRegionHaloFeatures(entry, countryEntries, worldFeatureIndex)
+          if (regionFeatures.length > 0) {
+            geometry = { type: "FeatureCollection", features: regionFeatures }
+          }
+        }
+
+        return { ...entry, geometry }
       })
 
       const regionLinks = regionGroup
@@ -539,6 +631,8 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
+        .style("--ethno-region-halo-scale", TUNING.halo.visualScale)
+        .style("--ethno-region-halo-scale-hover", TUNING.halo.visualScaleHover)
         .style("--ethno-region-fill", (entry) => toHsla(entry.color, TUNING.color.regionFillAlpha))
         .style("--ethno-region-stroke", (entry) =>
           toHsla(
@@ -558,13 +652,22 @@
             TUNING.color.regionStrokeHoverAlpha,
           ),
         )
+        .style("--ethno-region-hit-fill", (entry) => toHsla(entry.color, Math.max(0.005, TUNING.color.regionFillAlpha * 0.3)))
+        .style("--ethno-region-hit-fill-hover", (entry) => toHsla(entry.color, Math.max(0.01, TUNING.color.regionFillHoverAlpha * 0.42)))
+        .style("--ethno-region-glow", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.regionStrokeHoverAdjust.s, TUNING.color.regionStrokeHoverAdjust.l),
+            Math.min(0.28, TUNING.color.regionStrokeHoverAlpha),
+          ),
+        )
         .on("click", (event, entry) => navigateTo(event, entry.url))
         .on("pointerenter", (_, entry) => setHint(entry.title))
         .on("pointerleave", () => setHint(""))
         .on("focus", (_, entry) => setHint(entry.title))
         .on("blur", () => setHint(""))
 
-      regionLinks.append("path")
+      regionLinks.append("path").attr("class", "ethno-globe-region-halo")
+      regionLinks.append("path").attr("class", "ethno-globe-region-hit")
 
       const countryLinks = countryGroup
         .selectAll("a")
@@ -646,7 +749,8 @@
         if (bordersPath && worldData) {
           bordersPath.attr("d", path(worldData.borders))
         }
-        regionLinks.select("path").attr("d", (entry) => path(entry.geometry))
+        regionLinks.selectAll(".ethno-globe-region-halo").attr("d", (entry) => path(entry.geometry))
+        regionLinks.selectAll(".ethno-globe-region-hit").attr("d", (entry) => path(entry.geometry))
         countryLinks.select("path").attr("d", (entry) => path(entry.shape))
 
         const visibleLabels = labelEntries

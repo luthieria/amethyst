@@ -210,7 +210,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-link path {
   vector-effect: non-scaling-stroke;
-  transition: fill 0.16s ease, stroke 0.16s ease, opacity 0.16s ease;
+  transition: fill 0.16s ease, stroke 0.16s ease, opacity 0.16s ease, filter 0.16s ease, transform 0.16s ease;
 }
 
 #{$ethno-page-scope} .ethno-globe-link.country path {
@@ -225,19 +225,43 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   stroke: var(--ethno-country-stroke-hover, rgba(248, 252, 255, 0.87));
 }
 
-#{$ethno-page-scope} .ethno-globe-link.region path {
-  fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.003)) !important;
-  stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.008)) !important;
-  stroke-width: 1.2;
+#{$ethno-page-scope} .ethno-globe-link.region .ethno-globe-region-halo {
+  fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.03));
+  stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.12));
+  stroke-width: 3.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.92;
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  //transform: scale(var(--ethno-region-halo-scale, 1.08));
+  filter: blur(7px) drop-shadow(0 0 8px var(--ethno-region-glow, rgba(248, 252, 255, 0.18)));
 }
 
-#{$ethno-page-scope} .ethno-globe-link.region:hover path,
-#{$ethno-page-scope} .ethno-globe-link.region:focus path {
-  fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.06)) !important;
-  stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.28)) !important;
+#{$ethno-page-scope} .ethno-globe-link.region .ethno-globe-region-hit {
+  fill: var(--ethno-region-hit-fill, rgba(255, 255, 255, 0.01));
+  stroke: transparent;
+  stroke-width: 0.6;
 }
 
-#{$ethno-page-scope} .ethno-globe-link:focus-visible path {
+#{$ethno-page-scope} .ethno-globe-link.region:hover .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-link.region:focus .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-halo {
+  fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.08));
+  stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.32));
+  transform: scale(var(--ethno-region-halo-scale-hover, 1.12));
+  filter: blur(9px) drop-shadow(0 0 13px var(--ethno-region-glow, rgba(248, 252, 255, 0.2)));
+}
+
+#{$ethno-page-scope} .ethno-globe-link.region:hover .ethno-globe-region-hit,
+#{$ethno-page-scope} .ethno-globe-link.region:focus .ethno-globe-region-hit,
+#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-hit {
+  fill: var(--ethno-region-hit-fill-hover, rgba(255, 255, 255, 0.03));
+}
+
+#{$ethno-page-scope} .ethno-globe-link.country:focus-visible path,
+#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-hit {
   filter: drop-shadow(0 0 0.28rem rgba(246, 251, 255, 0.82));
 }
 

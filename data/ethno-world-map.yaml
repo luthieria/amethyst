@@ -3,6 +3,48 @@ entries:
     title: "África"
     path: "1. África"
     kind: region
+    halo_countries:
+      - "South Africa"
+      - "Lesotho"
+      - "Eswatini"
+      - "Namibia"
+      - "Botswana"
+      - "Zimbabwe"
+      - "Mozambique"
+      - "Zambia"
+      - "Angola"
+      - "Congo"
+      - "DRC"
+      - "Gabon"
+      - "Cameroon"
+      - "CAR"
+      - "Chad"
+      - "Sudan"
+      - "South Sudan"
+      - "Eritrea"
+      - "Ethiopia"
+      - "Djibouti"
+      - "Somalia"
+      - "Kenya"
+      - "Tanzania"
+      - "Uganda"
+      - "Rwanda"
+      - "Burundi"
+      - "Ghana"
+      - "Togo"
+      - "Benin"
+      - "Nigeria"
+      - "Côte d'Ivoire"
+      - "Liberia"
+      - "Sierra Leone"
+      - "Guinea"
+      - "Guinea-Bissau"
+      - "Senegal"
+      - "Gambia"
+      - "Mali"
+      - "Niger"
+      - "Burkina Faso"
+      - "Madagascar"
     depth: 1
     lat: 12.0
     lon: 20.0
@@ -15,6 +57,20 @@ entries:
   - id: oriente-medio
     title: "Oriente Medio"
     path: "2. Oriente Medio"
+    halo_countries:
+      - "Iran"
+      - "Syria"
+      - "Iraq"
+      - "Lebanon"
+      - "Israel"
+      - "Jordan"
+      - "Saudi Arabia"
+      - "Yemen"
+      - "Oman"
+      - "United Arab Emirates"
+      - "Qatar"
+      - "Bahrain"
+      - "Egypt"
     kind: region
     depth: 1
     lat: 30.0
@@ -36,23 +92,23 @@ entries:
     dx: 10
     dy: -8
 
-  - id: magreb
-    title: "Magreb"
-    path: "2. Oriente Medio/Magreb"
-    kind: region
-    depth: 2
-    lat: 31.0
-    lon: -6.0
-    halo_rx: 190
-    halo_ry: 95
-    halo_rotate: -10
-    dx: -62
-    dy: -10
-
   - id: arabe
     title: "Árabe"
     path: "2. Oriente Medio/Árabe"
     kind: region
+    halo_countries:
+      - "Saudi Arabia"
+      - "Yemen"
+      - "Oman"
+      - "United Arab Emirates"
+      - "Qatar"
+      - "Bahrain"
+      - "Egypt"
+      - "Jordan"
+      - "Iraq"
+      - "Syria"
+      - "Lebanon"
+      - "Kuwait"
     depth: 2
     lat: 24.0
     lon: 45.0
@@ -62,10 +118,38 @@ entries:
     dx: 10
     dy: 14
 
+  - id: magreb
+    title: "Magreb"
+    path: "2. Oriente Medio/Magreb"
+    kind: region
+    halo_countries:
+      - "Mauritania"
+      - "Western Sahara"
+      - "Morocco"
+      - "Algeria"
+      - "Tunisia"
+      - "Libya"
+    depth: 2
+    lat: 31.0
+    lon: -6.0
+    halo_rx: 190
+    halo_ry: 95
+    halo_rotate: -10
+    dx: -62
+    dy: -10
+
   - id: mediterraneo
     title: "Mediterráneo"
     path: "3. Mediterráneo"
     kind: region
+    halo_countries:
+      - "Spain"
+      - "Portugal"
+      - "France"
+      - "Italy"
+      - "Greece"
+      - "Turkey"
+      - "Cyprus"
     depth: 1
     lat: 38.0
     lon: 15.0
@@ -101,6 +185,31 @@ entries:
     title: "América"
     path: "4. América"
     kind: region
+    halo_countries:
+      - "United States"
+      - "Canada"
+      - "Mexico"
+      - "Guatemala"
+      - "Belize"
+      - "El Salvador"
+      - "Honduras"
+      - "Nicaragua"
+      - "Costa Rica"
+      - "Panama"
+      - "Cuba"
+      - "Haiti"
+      - "Dominican Republic"
+      - "Jamaica"
+      - "Trinidad and Tobago"
+      - "Colombia"
+      - "Venezuela"
+      - "Ecuador"
+      - "Peru"
+      - "Bolivia"
+      - "Paraguay"
+      - "Chile"
+      - "Argentina"
+      - "Uruguay"
     depth: 1
     lat: 15.0
     lon: -75.0
@@ -114,6 +223,27 @@ entries:
     title: "América Latina"
     path: "4. América/1. América Latina"
     kind: region
+    halo_countries:
+      - "Mexico"
+      - "Guatemala"
+      - "El Salvador"
+      - "Honduras"
+      - "Nicaragua"
+      - "Costa Rica"
+      - "Panama"
+      - "Cuba"
+      - "Haiti"
+      - "Dominican Republic"
+      - "Trinidad and Tobago"
+      - "Colombia"
+      - "Venezuela"
+      - "Ecuador"
+      - "Peru"
+      - "Bolivia"
+      - "Paraguay"
+      - "Chile"
+      - "Argentina"
+      - "Uruguay"
     depth: 2
     lat: -15.0
     lon: -60.0
@@ -127,6 +257,25 @@ entries:
     title: "Hispanoamérica"
     path: "4. América/1. América Latina/Hispanoamérica"
     kind: region
+    halo_countries:
+      - "Mexico"
+      - "Guatemala"
+      - "El Salvador"
+      - "Honduras"
+      - "Nicaragua"
+      - "Costa Rica"
+      - "Panama"
+      - "Cuba"
+      - "Dominican Republic"
+      - "Colombia"
+      - "Venezuela"
+      - "Ecuador"
+      - "Peru"
+      - "Bolivia"
+      - "Paraguay"
+      - "Chile"
+      - "Argentina"
+      - "Uruguay"
     depth: 3
     lat: 9.0
     lon: -75.0
