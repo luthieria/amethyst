@@ -1,7 +1,7 @@
 entries:
-  - id: africa
-    title: "África"
-    path: "1. África"
+  - id: africa-subsahariana
+    title: "África subsahariana"
+    path: "1. África subsahariana"
     kind: region
     halo_countries:
       - "South Africa"
