@@ -20,7 +20,13 @@
       showMicrostates: false,
       microstatesDuringInteraction: false,
       microstatesMinZoom: 0.9,
-      maxMicrostateMarkers: 120,
+      maxMicrostateMarkers: 160,
+    },
+    territoryIslands: {
+      enabled: true,
+      deferMs: 24,
+      idleTimeoutMs: 900,
+      maxRenderedFeatures: 140,
     },
     zoom: {
       min: 0.72,
@@ -92,6 +98,11 @@
     high: ["/data/countries-50m.json", "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"],
     low: ["/data/countries-110m.json", "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"],
   }
+  const TERRITORY_MAP_UNITS_URLS = [
+    "/data/territories-map-units-10m.geojson",
+    "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_map_units.geojson",
+  ]
+  const TERRITORY_NAME_FIELDS = ["NAME", "NAME_LONG", "BRK_NAME", "ADMIN", "GEOUNIT", "SUBUNIT", "FORMAL_EN", "ABBREV"]
   const WORLD_OBJECT_KEY = "countries"
   const ETHNO_ACTIVE_CLASS = "page-ethno-map-full-active"
   const ETHNO_STATIC_CLASS = "page-ethno-map-full"
@@ -129,6 +140,12 @@
     "ivory coast": "cote divoire",
     "cabo verde": "cape verde",
     "sao tome and principe": "sao tome and principe",
+    "dominican republic": "dominican rep",
+    "united states": "united states of america",
+    "saint vincent and the grenadines": "st vin and gren",
+    "st vincent and the grenadines": "st vin and gren",
+    "st vin and the grenadines": "st vin and gren",
+    "saint kitts and nevis": "st kitts and nevis",
   }
 
   // === Shared State ===
@@ -138,6 +155,7 @@
     high: null,
     low: null,
   }
+  let territoryDataPromise = null
 
   // === Utility Functions ===
 
@@ -313,6 +331,149 @@
     return worldDataPromises[key]
   }
 
+  const featureNameCandidates = (feature) => {
+    const properties = feature?.properties || {}
+    return [
+      properties.name,
+      ...TERRITORY_NAME_FIELDS.map((field) => properties[field]),
+      properties.NAME_EN,
+      properties.NAME_SORT,
+      properties.WIKIDATAID,
+    ]
+      .filter((value) => typeof value === "string" && value.trim())
+      .map((value) => value.trim())
+  }
+
+  const buildFeatureKey = (feature, fallback = "") => {
+    const id = String(feature?.id || "").trim()
+    if (id) return id
+    const firstName = featureNameCandidates(feature)[0]
+    if (firstName) return canonicalCountryName(firstName)
+    return fallback
+  }
+
+  const buildWorldFeatureIndex = (features) => {
+    const byId = new Map()
+    const byName = new Map()
+    const byNameAll = new Map()
+
+    const addByName = (name, feature) => {
+      if (!name) return
+      if (!byName.has(name)) {
+        byName.set(name, feature)
+      }
+      const bucket = byNameAll.get(name) || []
+      const key = buildFeatureKey(feature)
+      if (!bucket.some((item) => buildFeatureKey(item) === key)) {
+        bucket.push(feature)
+        byNameAll.set(name, bucket)
+      }
+    }
+
+    features.forEach((feature, index) => {
+      const featureKey = buildFeatureKey(feature, `feature-${index}`)
+      if (featureKey && !byId.has(featureKey)) {
+        byId.set(featureKey, feature)
+      }
+
+      const names = featureNameCandidates(feature).map((name) => canonicalCountryName(name)).filter(Boolean)
+      names.forEach((name) => addByName(name, feature))
+    })
+
+    return { byId, byName, byNameAll }
+  }
+
+  const mergeFeatureIndexes = (...indexes) => {
+    const byId = new Map()
+    const byName = new Map()
+    const byNameAll = new Map()
+
+    const addFeature = (feature) => {
+      const featureKey = buildFeatureKey(feature)
+      if (featureKey && !byId.has(featureKey)) {
+        byId.set(featureKey, feature)
+      }
+    }
+
+    const addByName = (name, feature) => {
+      if (!name) return
+      if (!byName.has(name)) {
+        byName.set(name, feature)
+      }
+      const bucket = byNameAll.get(name) || []
+      const key = buildFeatureKey(feature)
+      if (!bucket.some((item) => buildFeatureKey(item) === key)) {
+        bucket.push(feature)
+        byNameAll.set(name, bucket)
+      }
+    }
+
+    indexes.forEach((index) => {
+      if (!index) return
+      ;(index.byId || new Map()).forEach((feature) => addFeature(feature))
+      ;(index.byNameAll || new Map()).forEach((features, name) => {
+        features.forEach((feature) => addByName(name, feature))
+      })
+      ;(index.byName || new Map()).forEach((feature, name) => addByName(name, feature))
+    })
+
+    return { byId, byName, byNameAll }
+  }
+
+  const loadTerritoryData = async () => {
+    if (!territoryDataPromise) {
+      territoryDataPromise = (async () => {
+        try {
+          const geojson = await fetchFirstJson(TERRITORY_MAP_UNITS_URLS)
+          const rawFeatures = Array.isArray(geojson?.features) ? geojson.features : []
+          const usedIds = new Set()
+
+          const features = rawFeatures
+            .map((feature, index) => {
+              if (!feature || !feature.geometry) return null
+              const properties = feature.properties || {}
+              const seed =
+                String(
+                  feature.id ||
+                    properties.GU_A3 ||
+                    properties.SU_A3 ||
+                    properties.BRK_A3 ||
+                    properties.ADM0_A3 ||
+                    properties.NAME ||
+                    `territory-${index}`,
+                ).trim() || `territory-${index}`
+
+              let id = seed
+              let suffix = 1
+              while (usedIds.has(id)) {
+                id = `${seed}-${suffix}`
+                suffix += 1
+              }
+              usedIds.add(id)
+
+              return {
+                ...feature,
+                id,
+                __ethnoSupplemental: true,
+              }
+            })
+            .filter(Boolean)
+
+          return {
+            features,
+            featureIndex: buildWorldFeatureIndex(features),
+          }
+        } catch (error) {
+          console.warn("[ethno-globe] Territory map-units unavailable; continuing without supplemental islands.", error)
+          const emptyIndex = buildWorldFeatureIndex([])
+          return { features: [], featureIndex: emptyIndex }
+        }
+      })()
+    }
+
+    return territoryDataPromise
+  }
+
   const findCountryFeatureForEntry = (entry, features) => {
     // Use containment first, then nearest feature centroid as robust fallback.
     const d3 = window.d3
@@ -335,29 +496,13 @@
     return nearest
   }
 
-  const buildWorldFeatureIndex = (features) => {
-    const byId = new Map()
-    const byName = new Map()
-
-    features.forEach((feature) => {
-      const id = String(feature?.id || "").trim()
-      const rawName = feature?.properties?.name
-      const name = canonicalCountryName(rawName)
-
-      if (id) byId.set(id, feature)
-      if (name) byName.set(name, feature)
-    })
-
-    return { byId, byName }
-  }
-
   const resolveRegionHaloGeometry = (regionEntry, countryEntries, worldFeatureIndex, worldData) => {
     const features = []
     const seen = new Set()
 
     const pushFeature = (feature) => {
       if (!feature) return
-      const key = String(feature.id || feature?.properties?.name || "")
+      const key = buildFeatureKey(feature)
       if (!key || seen.has(key)) return
       seen.add(key)
       features.push(feature)
@@ -371,8 +516,17 @@
           return
         }
 
-        const nameMatch = worldFeatureIndex.byName.get(canonicalCountryName(country))
-        if (nameMatch) pushFeature(nameMatch)
+        const canonicalName = canonicalCountryName(country)
+        const nameMatches = worldFeatureIndex.byNameAll?.get(canonicalName)
+        if (Array.isArray(nameMatches) && nameMatches.length > 0) {
+          nameMatches.forEach((feature) => pushFeature(feature))
+          return
+        }
+
+        const nameMatch = worldFeatureIndex.byName.get(canonicalName)
+        if (nameMatch) {
+          pushFeature(nameMatch)
+        }
       })
       // Continue into merge/fallback path.
     }
@@ -402,17 +556,26 @@
     if (canMerge) {
       const geometries = []
       const seenGeometries = new Set()
+      let containsSupplementalFeature = false
 
       features.forEach((feature) => {
+        if (feature?.__ethnoSupplemental) {
+          containsSupplementalFeature = true
+          return
+        }
+
         const id = String(feature?.id || "").trim()
         if (!id || seenGeometries.has(id)) return
         const geometry = worldData.geometryById.get(id)
-        if (!geometry) return
+        if (!geometry) {
+          containsSupplementalFeature = true
+          return
+        }
         seenGeometries.add(id)
         geometries.push(geometry)
       })
 
-      if (geometries.length > 0) {
+      if (!containsSupplementalFeature && geometries.length > 0) {
         const merged = window.topojson.merge(worldData.topology, geometries)
         if (merged) return merged
       }
@@ -554,6 +717,9 @@
     if (typeof state.cancelQueuedRedraw === "function") {
       state.cancelQueuedRedraw()
     }
+    if (typeof state.cancelTerritoryLoad === "function") {
+      state.cancelTerritoryLoad()
+    }
     if (state.stage) {
       state.stage.classList.remove("is-dragging", "is-interacting")
     }
@@ -581,9 +747,13 @@
 
     try {
       await ensureDependencies()
-      const lowWorldData = await loadWorldData("low")
-      const highWorldData = await loadWorldData("high")
-      const overlayWorldData = lowWorldData || highWorldData
+      let overlayWorldData = await loadWorldData("low")
+      if (!overlayWorldData) {
+        overlayWorldData = await loadWorldData("high")
+      }
+      if (!overlayWorldData) {
+        throw new Error("No world topology could be loaded.")
+      }
 
       if (!root.isConnected) return
 
@@ -625,6 +795,9 @@
       let countryPaths = null
       const bordersPath = viewport.append("path").attr("class", "ethno-globe-borders")
       const coastlinePath = viewport.append("path").attr("class", "ethno-globe-coastline")
+      const territoryIslandsGroup = viewport.append("g").attr("class", "ethno-globe-territory-islands")
+      let territoryIslandPaths = null
+      let territoryIslandFeatures = []
       const microstateGroup = viewport.append("g").attr("class", "ethno-globe-microstates")
       microstateGroup
         .style("--ethno-micro-fill", toHsla(TUNING.microstates.color, TUNING.microstates.fillAlpha))
@@ -707,37 +880,55 @@
         }
       })
 
-      const microstateSource = highWorldData || overlayWorldData
-      const microstateCandidates = microstateSource
-        ? microstateSource.features
-            .map((feature, index) => ({
-              id: String(feature?.id || feature?.properties?.name || `micro-${index}`),
-              centroid: d3.geoCentroid(feature),
-              area: d3.geoArea(feature),
-            }))
-            .filter(
-              (entry) =>
-                entry.area <= TUNING.microstates.geoAreaThreshold &&
-                Array.isArray(entry.centroid) &&
-                entry.centroid.length === 2 &&
-                Number.isFinite(entry.centroid[0]) &&
-                Number.isFinite(entry.centroid[1]),
-             )
-            .sort((a, b) => a.area - b.area || String(a.id).localeCompare(String(b.id)))
-        : []
+      const microstateSource = overlayWorldData
+      const microstateCandidates =
+        TUNING.performance.showMicrostates && microstateSource
+          ? microstateSource.features
+              .map((feature, index) => ({
+                id: String(feature?.id || feature?.properties?.name || `micro-${index}`),
+                centroid: d3.geoCentroid(feature),
+                area: d3.geoArea(feature),
+              }))
+              .filter(
+                (entry) =>
+                  entry.area <= TUNING.microstates.geoAreaThreshold &&
+                  Array.isArray(entry.centroid) &&
+                  entry.centroid.length === 2 &&
+                  Number.isFinite(entry.centroid[0]) &&
+                  Number.isFinite(entry.centroid[1]),
+              )
+              .sort((a, b) => a.area - b.area || String(a.id).localeCompare(String(b.id)))
+          : []
 
-      const worldFeatureIndex = overlayWorldData ? overlayWorldData.featureIndex || buildWorldFeatureIndex(overlayWorldData.features) : null
-      const regionEntries = seededRegions.map((entry) => {
-        let geometry = d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))()
+      const baseWorldFeatureIndex = overlayWorldData.featureIndex || buildWorldFeatureIndex(overlayWorldData.features)
+      let combinedWorldFeatureIndex = baseWorldFeatureIndex
+      const regionEntries = seededRegions.map((entry) => ({
+        ...entry,
+        geometry: d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))(),
+      }))
 
-        if (worldFeatureIndex) {
-          const regionGeometry = resolveRegionHaloGeometry(entry, countryEntries, worldFeatureIndex, overlayWorldData)
-          if (regionGeometry) {
-            geometry = regionGeometry
+      const recomputeRegionGeometries = () => {
+        regionEntries.forEach((entry) => {
+          let geometry = d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))()
+          if (combinedWorldFeatureIndex) {
+            const resolvedGeometry = resolveRegionHaloGeometry(entry, countryEntries, combinedWorldFeatureIndex, overlayWorldData)
+            if (resolvedGeometry) {
+              geometry = resolvedGeometry
+            }
           }
-        }
+          entry.geometry = geometry
+        })
+      }
 
-        return { ...entry, geometry }
+      recomputeRegionGeometries()
+      const referencedHaloNames = new Set()
+      seededRegions.forEach((entry) => {
+        ;(entry.haloCountries || []).forEach((countryName) => {
+          const canonicalName = canonicalCountryName(countryName)
+          if (canonicalName) {
+            referencedHaloNames.add(canonicalName)
+          }
+        })
       })
 
       const regionLinks = regionGroup
@@ -880,11 +1071,73 @@
           .attr("stroke", (feature) => strokeForFeature(feature))
       }
 
+      const bindTerritoryIslandFeatures = () => {
+        territoryIslandPaths = territoryIslandsGroup
+          .selectAll("path")
+          .data(territoryIslandFeatures, (feature, index) => buildFeatureKey(feature, `territory-${index}`))
+          .join(
+            (enter) => enter.append("path").attr("class", "ethno-globe-territory-island"),
+            (update) => update,
+            (exit) => exit.remove(),
+          )
+      }
+
       const setActiveWorldData = (nextWorldData) => {
         const normalizedNext = nextWorldData || null
         if (activeWorldData === normalizedNext) return
         activeWorldData = normalizedNext
         bindActiveWorldData()
+      }
+
+      const loadReferencedTerritoryIslands = async () => {
+        if (!TUNING.territoryIslands.enabled) return
+        if (referencedHaloNames.size === 0) return
+
+        const territoryData = await loadTerritoryData()
+        if (!root.isConnected) return
+        if (!territoryData || !Array.isArray(territoryData.features) || territoryData.features.length === 0) return
+
+        const matchedFeatures = territoryData.features.filter((feature) => {
+          const matchedNames = featureNameCandidates(feature)
+            .map((value) => canonicalCountryName(value))
+            .filter((name) => referencedHaloNames.has(name))
+          if (matchedNames.length === 0) return false
+
+          return matchedNames.some((name) => !baseWorldFeatureIndex.byName.has(name))
+        })
+
+        if (matchedFeatures.length === 0) return
+
+        const maxRenderedFeatures = Math.max(0, Math.floor(TUNING.territoryIslands.maxRenderedFeatures || 0))
+        territoryIslandFeatures =
+          maxRenderedFeatures > 0 ? matchedFeatures.slice(0, maxRenderedFeatures) : matchedFeatures.slice()
+
+        bindTerritoryIslandFeatures()
+
+        const supplementalIndex = buildWorldFeatureIndex(territoryIslandFeatures)
+        combinedWorldFeatureIndex = mergeFeatureIndexes(baseWorldFeatureIndex, supplementalIndex)
+
+        let countryShapesUpdated = false
+        countryEntries.forEach((entry) => {
+          if (entry.hasWorldShape) return
+          const match = findCountryFeatureForEntry(entry, territoryIslandFeatures)
+          if (!match) return
+
+          entry.shape = match
+          entry.hasWorldShape = true
+          const featureId = String(match?.id || "").trim()
+          if (featureId) {
+            countryColorById.set(featureId, entry.color)
+          }
+          countryShapesUpdated = true
+        })
+
+        if (countryShapesUpdated) {
+          countryLinks.select("path").attr("d", (entry) => path(entry.shape))
+        }
+
+        recomputeRegionGeometries()
+        requestRedraw()
       }
 
       const syncStageHeight = () => {
@@ -913,6 +1166,9 @@
         spherePath.attr("d", path(sphere))
         if (countryPaths) {
           countryPaths.attr("d", (feature) => path(feature))
+        }
+        if (territoryIslandPaths) {
+          territoryIslandPaths.attr("d", (feature) => path(feature))
         }
         if (bordersPath && activeWorldData?.borders) {
           bordersPath.attr("d", path(activeWorldData.borders))
@@ -1099,8 +1355,41 @@
       const onWindowResize = () => resize()
       window.addEventListener("resize", onWindowResize, { passive: true })
 
+      let territoryLoadTimer = null
+      let territoryLoadIdleHandle = null
+      const cancelTerritoryLoad = () => {
+        if (territoryLoadTimer !== null) {
+          window.clearTimeout(territoryLoadTimer)
+          territoryLoadTimer = null
+        }
+        if (territoryLoadIdleHandle !== null && typeof window.cancelIdleCallback === "function") {
+          window.cancelIdleCallback(territoryLoadIdleHandle)
+          territoryLoadIdleHandle = null
+        }
+      }
+
+      const scheduleTerritoryLoad = () => {
+        if (!TUNING.territoryIslands.enabled) return
+        cancelTerritoryLoad()
+
+        const runLoad = () => {
+          territoryLoadTimer = null
+          territoryLoadIdleHandle = null
+          void loadReferencedTerritoryIslands()
+        }
+
+        if (typeof window.requestIdleCallback === "function") {
+          territoryLoadIdleHandle = window.requestIdleCallback(runLoad, {
+            timeout: TUNING.territoryIslands.idleTimeoutMs,
+          })
+        } else {
+          territoryLoadTimer = window.setTimeout(runLoad, TUNING.territoryIslands.deferMs)
+        }
+      }
+
       bindActiveWorldData()
       applyInteractionMode()
+      scheduleTerritoryLoad()
 
       rootStates.set(root, {
         stage,
@@ -1108,6 +1397,7 @@
         onStageMouseLeave,
         clearIdleTimer,
         cancelQueuedRedraw,
+        cancelTerritoryLoad,
         resizeObserver,
         onWindowResize,
       })

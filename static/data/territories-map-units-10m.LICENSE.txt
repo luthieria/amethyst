@@ -1,0 +1,5 @@
+Source: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_map_units.geojson
+Dataset: Natural Earth Admin 0 - Map Units (1:10m)
+Vendored file: territories-map-units-10m.geojson
+License: Public Domain (Natural Earth)
+Notes: This dataset is used as a supplemental tiny-island/territory polygon source for the ethnomusicology globe.

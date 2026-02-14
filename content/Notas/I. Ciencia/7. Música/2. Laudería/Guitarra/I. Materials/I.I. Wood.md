@@ -6,11 +6,7 @@ weight: 6
 # Characteristics
 ## Grain
 
-- **Wood grain** = **tree rings**.[^Kert]
-
-<!-- Footnotes [ -->
-[^Kert]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
-<!-- ] Footnotes -->
+- **Wood grain** = **tree rings**.[^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]
 
 - Rings alternate between:
   - light, wide — grown at spring (trees grow faster);
@@ -19,10 +15,6 @@ weight: 6
 ![alt text](Imagenes/Cuts.png)
 
 ### Strength[^Workshop]
-
-<!-- Footnotes [ -->
-[^Workshop]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)
-<!-- ] Footnotes -->
 
 - Wood consists of long cellulose fibers bound together by a glue-like lignin. Splitting cellulose is harder than lignin. → Wood is stronger along the grain.
 
@@ -125,15 +117,7 @@ weight: 6
 
 - M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^Bruné_Bracing]
 
-<!-- Footnotes [ -->
-[^Bruné_Bracing]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
-<!-- ] Footnotes -->
-
 # Oiliness[^Bruné_BracingPattern]
-
-<!-- Footnotes [ -->
-[^Bruné_BracingPattern]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)
-<!-- ] Footnotes -->
 
 - Some woods are oily (rosewood, cocobolo, etc.).
 - Can be wiped with Naphtha / alcohol / acetone.
@@ -153,3 +137,15 @@ weight: 6
 - Very resonant: very high tap tone, long sustain.
 - Heavier.
 - For braces.
+
+
+
+
+<!-- Footnotes -->
+[^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
+
+[^Workshop]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)
+
+[^Bruné_Bracing]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
+
+[^Bruné_BracingPattern]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)

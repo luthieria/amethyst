@@ -60,18 +60,7 @@ entries:
     halo_rotate: -5
     dx: 12
     dy: -10
-    children:
-      - id: sao-tome-principe
-        title: "São Tomé e Príncipe"
-        path: "1. África subsahariana/Sao Tome and Principe"
-        kind: country
-        iso2: "ST"
-        depth: 2
-        lat: 0.2
-        lon: 6.7
-        dx: 12
-        dy: -12
-
+    
   - id: oriente-medio
     title: "Oriente Medio"
     path: "2. Oriente Medio"
@@ -271,17 +260,6 @@ entries:
         dx: 12
         dy: 20
         children:
-          - id: martinique
-            title: "Martinique"
-            path: "4. América/1. América Latina/Franco-Caribienne/Martinique"
-            kind: country
-            iso2: "MQ"
-            depth: 4
-            lat: 14.64
-            lon: -61.02
-            dx: 12
-            dy: -12
-
           - id: hispanoamerica
             title: "Hispanoamérica"
             path: "4. América/1. América Latina/Hispanoamérica"

@@ -108,6 +108,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-country,
 #{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-borders,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-territory-island,
 #{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link path,
 #{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-microstate {
   transition: none !important;
@@ -159,17 +160,29 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   filter: drop-shadow(0 0 2px rgba(198, 218, 255, 0.14));
 }
 
+#{$ethno-page-scope} .ethno-globe-territory-islands {
+  pointer-events: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-territory-island {
+  fill: rgba(17, 25, 37, 0.72);
+  stroke: rgba(240, 248, 255, 0.22);
+  stroke-width: 0.44;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
 #{$ethno-page-scope} .ethno-globe-microstates {
   pointer-events: none;
 }
 
 #{$ethno-page-scope} .ethno-globe-microstate {
-  fill: var(--ethno-micro-fill, rgba(246, 250, 255, 0.6));
-  stroke: var(--ethno-micro-stroke, rgba(246, 250, 255, 0.9));
-  stroke-width: 0.55;
+  fill: var(--ethno-micro-fill, rgba(246, 250, 255, 0.32));
+  stroke: var(--ethno-micro-stroke, rgba(246, 250, 255, 0.44));
+  stroke-width: 0.35;
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 0 5px var(--ethno-micro-glow, rgba(246, 250, 255, 0.42)));
-  opacity: 0.95;
+  filter: none;
+  opacity: 0.72;
 }
 
 /* Sidebar Overlay Layer */
