@@ -137,17 +137,26 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-country {
   fill: rgba(13, 19, 29, 0.78);
-  stroke: rgba(246, 250, 255, 0.34);
-  stroke-width: 0.58;
+  stroke: rgba(246, 250, 255, 0.12);
+  stroke-width: 0.4;
   vector-effect: non-scaling-stroke;
 }
 
 #{$ethno-page-scope} .ethno-globe-borders {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.52);
-  stroke-width: 0.66;
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 0.36;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-coastline {
+  fill: none;
+  stroke: rgba(236, 244, 255, 0.816);
+  stroke-width: 0.82;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px rgba(198, 218, 255, 0.14));
 }
 
 #{$ethno-page-scope} .ethno-globe-microstates {

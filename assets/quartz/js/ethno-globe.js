@@ -17,6 +17,7 @@
       interactionPrecision: 0.55,
       idlePrecision: 0.2,
       useLowResDuringInteraction: true,
+      showMicrostates: false,
       microstatesDuringInteraction: false,
       microstatesMinZoom: 0.9,
       maxMicrostateMarkers: 120,
@@ -286,9 +287,13 @@
         .filter(([id]) => id),
     )
     const borders = window.topojson.mesh(topology, countriesObject, (a, b) => a !== b)
+    const coastline = window.topojson.merge(
+      topology,
+      Array.isArray(countriesObject.geometries) ? countriesObject.geometries : [],
+    )
     const featureIndex = buildWorldFeatureIndex(features)
 
-    return { topology, features, borders, geometryById, featureIndex }
+    return { topology, features, borders, coastline, geometryById, featureIndex }
   }
 
   const loadWorldData = async (resolution = "high") => {
@@ -619,6 +624,7 @@
       const countriesGroup = viewport.append("g").attr("class", "ethno-globe-countries")
       let countryPaths = null
       const bordersPath = viewport.append("path").attr("class", "ethno-globe-borders")
+      const coastlinePath = viewport.append("path").attr("class", "ethno-globe-coastline")
       const microstateGroup = viewport.append("g").attr("class", "ethno-globe-microstates")
       microstateGroup
         .style("--ethno-micro-fill", toHsla(TUNING.microstates.color, TUNING.microstates.fillAlpha))
@@ -913,11 +919,17 @@
         } else if (bordersPath) {
           bordersPath.attr("d", null)
         }
+        if (coastlinePath && activeWorldData?.coastline) {
+          coastlinePath.attr("d", path(activeWorldData.coastline))
+        } else if (coastlinePath) {
+          coastlinePath.attr("d", null)
+        }
         regionLinks.selectAll(".ethno-globe-region-halo").attr("d", (entry) => path(entry.geometry))
         regionLinks.selectAll(".ethno-globe-region-hit").attr("d", (entry) => path(entry.geometry))
         countryLinks.select("path").attr("d", (entry) => path(entry.shape))
 
         const shouldRenderMicrostates =
+          TUNING.performance.showMicrostates &&
           microstateCandidates.length > 0 &&
           (TUNING.performance.microstatesDuringInteraction || !isInteracting) &&
           zoomScale >= TUNING.performance.microstatesMinZoom
