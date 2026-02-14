@@ -207,6 +207,27 @@
     }
   }
 
+  .footnotes {
+    margin-top: $padding-16 * 2;
+    padding-top: $padding-16;
+    border-top: 1px solid var(--lightgray);
+
+    > hr {
+      display: none;
+    }
+
+    &::before {
+      content: "Footnotes";
+      display: block;
+      font-family: var(--font-body);
+      margin-bottom: $padding-8;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--gray);
+    }
+  }
+
   dl {
     dt {
       font-weight: bolder;

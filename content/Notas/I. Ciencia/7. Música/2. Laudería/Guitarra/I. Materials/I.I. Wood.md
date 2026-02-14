@@ -14,7 +14,7 @@ weight: 6
 
 ![alt text](Imagenes/Cuts.png)
 
-### Strength[^Workshop]
+### Strength[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]
 
 - Wood consists of long cellulose fibers bound together by a glue-like lignin. Splitting cellulose is harder than lignin. → Wood is stronger along the grain.
 

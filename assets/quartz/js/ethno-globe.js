@@ -22,6 +22,22 @@
       microstatesMinZoom: 0.9,
       maxMicrostateMarkers: 160,
     },
+    motion: {
+      dragLerp: 0.34,
+      zoomLerp: 0.28,
+      maxDtMs: 40,
+      settleEpsilonDeg: 0.02,
+      settleEpsilonZoom: 0.0012,
+    },
+    inertia: {
+      enabled: false,
+      decayPer60fps: 0.91,
+      minVelocityDegPerMs: 0.0024,
+      maxVelocityDegPerMs: 0.22,
+      sampleWindowMs: 130,
+      clickSuppressDistancePx: 6,
+      clickSuppressMs: 120,
+    },
     territoryIslands: {
       enabled: true,
       deferMs: 24,
@@ -717,6 +733,9 @@
     if (typeof state.cancelQueuedRedraw === "function") {
       state.cancelQueuedRedraw()
     }
+    if (typeof state.cancelMotionFrame === "function") {
+      state.cancelMotionFrame()
+    }
     if (typeof state.cancelTerritoryLoad === "function") {
       state.cancelTerritoryLoad()
     }
@@ -788,6 +807,8 @@
 
       const onStageMouseLeave = () => setHint("")
       stage.addEventListener("mouseleave", onStageMouseLeave)
+      let suppressClickUntil = 0
+      const shouldSuppressClickNavigation = () => Date.now() < suppressClickUntil
 
       const viewport = svg.append("g").attr("class", "ethno-globe-viewport")
       const spherePath = viewport.append("path").attr("class", "ethno-globe-sphere")
@@ -967,7 +988,14 @@
             Math.min(0.28, TUNING.color.regionStrokeHoverAlpha),
           ),
         )
-        .on("click", (event, entry) => navigateTo(event, entry.url))
+        .on("click", (event, entry) => {
+          if (shouldSuppressClickNavigation()) {
+            event.preventDefault()
+            event.stopPropagation()
+            return
+          }
+          navigateTo(event, entry.url)
+        })
         .on("pointerenter", (_, entry) => setHint(entry.title))
         .on("pointerleave", () => setHint(""))
         .on("focus", (_, entry) => setHint(entry.title))
@@ -1004,7 +1032,14 @@
             TUNING.color.countryStrokeHoverAlpha,
           ),
         )
-        .on("click", (event, entry) => navigateTo(event, entry.url))
+        .on("click", (event, entry) => {
+          if (shouldSuppressClickNavigation()) {
+            event.preventDefault()
+            event.stopPropagation()
+            return
+          }
+          navigateTo(event, entry.url)
+        })
         .on("pointerenter", (_, entry) => setHint(entry.title))
         .on("pointerleave", () => setHint(""))
         .on("focus", (_, entry) => setHint(entry.title))
@@ -1017,13 +1052,28 @@
       let height = 0
       let baseScale = 1
       let zoomScale = 1
+      let zoomTarget = 1
       let isInteracting = false
       let idleTimer = null
       let redrawFrame = 0
+      let motionFrame = 0
+      let lastMotionTs = 0
       let microstatesVisible = false
       let activeWorldData = overlayWorldData
       let dragOrigin = null
-      let dragRotate = null
+      let dragRotateStart = null
+      let dragDistancePx = 0
+      let isDragging = false
+      let isInertiaActive = false
+      let angularVelocity = { lambda: 0, phi: 0 }
+      const dragSamples = []
+      const initialRotate = projection.rotate()
+      let rotationCurrent = [
+        initialRotate[0] || 0,
+        clamp(initialRotate[1] || 0, TUNING.drag.minLatitude, TUNING.drag.maxLatitude),
+        initialRotate[2] || 0,
+      ]
+      let rotationTarget = rotationCurrent.slice()
       const applyScale = () => {
         projection.scale(baseScale * zoomScale)
       }
@@ -1038,6 +1088,65 @@
         if (!redrawFrame) return
         window.cancelAnimationFrame(redrawFrame)
         redrawFrame = 0
+      }
+
+      const cancelMotionFrame = () => {
+        if (!motionFrame) return
+        window.cancelAnimationFrame(motionFrame)
+        motionFrame = 0
+      }
+
+      const normalizeLongitude = (value) => {
+        const normalized = ((value + 180) % 360 + 360) % 360 - 180
+        return normalized === -180 ? 180 : normalized
+      }
+
+      const shortestAngularDelta = (from, to) => {
+        let delta = to - from
+        while (delta > 180) delta -= 360
+        while (delta < -180) delta += 360
+        return delta
+      }
+
+      const clearDragSamples = () => {
+        dragSamples.length = 0
+      }
+
+      const pushDragSample = (timestamp) => {
+        dragSamples.push({
+          t: timestamp,
+          lambda: rotationTarget[0],
+          phi: rotationTarget[1],
+        })
+        const windowStart = timestamp - Math.max(40, TUNING.inertia.sampleWindowMs * 2)
+        while (dragSamples.length > 0 && dragSamples[0].t < windowStart) {
+          dragSamples.shift()
+        }
+      }
+
+      const stopInertia = () => {
+        isInertiaActive = false
+        angularVelocity = { lambda: 0, phi: 0 }
+      }
+
+      const computeReleaseVelocityFromSamples = () => {
+        if (dragSamples.length < 2) return { lambda: 0, phi: 0 }
+        const latest = dragSamples[dragSamples.length - 1]
+        const cutoff = latest.t - Math.max(20, TUNING.inertia.sampleWindowMs)
+        const windowed = dragSamples.filter((sample) => sample.t >= cutoff)
+        if (windowed.length < 2) return { lambda: 0, phi: 0 }
+
+        const first = windowed[0]
+        const last = windowed[windowed.length - 1]
+        const dt = Math.max(1, last.t - first.t)
+        const lambdaPerMs = shortestAngularDelta(first.lambda, last.lambda) / dt
+        const phiPerMs = (last.phi - first.phi) / dt
+        const maxVelocity = Math.max(TUNING.inertia.minVelocityDegPerMs, TUNING.inertia.maxVelocityDegPerMs)
+
+        return {
+          lambda: clamp(lambdaPerMs, -maxVelocity, maxVelocity),
+          phi: clamp(phiPerMs, -maxVelocity, maxVelocity),
+        }
       }
 
       const fillForFeature = (feature) => {
@@ -1295,6 +1404,103 @@
         }, TUNING.performance.idleRestoreDelayMs)
       }
 
+      const hasPendingRotation = () =>
+        Math.abs(shortestAngularDelta(rotationCurrent[0], rotationTarget[0])) > TUNING.motion.settleEpsilonDeg ||
+        Math.abs(rotationTarget[1] - rotationCurrent[1]) > TUNING.motion.settleEpsilonDeg
+
+      const hasPendingZoom = () => Math.abs(zoomTarget - zoomScale) > TUNING.motion.settleEpsilonZoom
+
+      const hasMotionWork = () => isDragging || isInertiaActive || hasPendingRotation() || hasPendingZoom()
+
+      const stopMotionLoopIfIdle = () => {
+        if (hasMotionWork()) return
+        cancelMotionFrame()
+        if (isInteracting) {
+          scheduleIdleRestore()
+        }
+      }
+
+      const startMotionLoop = () => {
+        if (motionFrame) return
+        lastMotionTs = performance.now()
+        motionFrame = window.requestAnimationFrame(function stepMotion(now) {
+          motionFrame = 0
+          const rawDt = now - lastMotionTs
+          const dt = Math.max(1, Math.min(TUNING.motion.maxDtMs, Number.isFinite(rawDt) ? rawDt : 16))
+          const frameRatio = dt / (1000 / 60)
+          lastMotionTs = now
+
+          let changed = false
+
+          if (isInertiaActive && !isDragging) {
+            rotationTarget[0] = normalizeLongitude(rotationTarget[0] + angularVelocity.lambda * dt)
+            rotationTarget[1] = clamp(
+              rotationTarget[1] + angularVelocity.phi * dt,
+              TUNING.drag.minLatitude,
+              TUNING.drag.maxLatitude,
+            )
+
+            const decay = Math.pow(TUNING.inertia.decayPer60fps, frameRatio)
+            angularVelocity.lambda *= decay
+            angularVelocity.phi *= decay
+
+            if (
+              Math.abs(angularVelocity.lambda) < TUNING.inertia.minVelocityDegPerMs &&
+              Math.abs(angularVelocity.phi) < TUNING.inertia.minVelocityDegPerMs
+            ) {
+              stopInertia()
+            }
+          }
+
+          const dragLerp = isDragging ? 1 : clamp(TUNING.motion.dragLerp * frameRatio, 0, 1)
+          const lambdaDelta = shortestAngularDelta(rotationCurrent[0], rotationTarget[0])
+          const phiDelta = rotationTarget[1] - rotationCurrent[1]
+
+          if (Math.abs(lambdaDelta) > TUNING.motion.settleEpsilonDeg) {
+            rotationCurrent[0] = normalizeLongitude(rotationCurrent[0] + lambdaDelta * dragLerp)
+            changed = true
+          } else if (rotationCurrent[0] !== rotationTarget[0]) {
+            rotationCurrent[0] = normalizeLongitude(rotationTarget[0])
+            changed = true
+          }
+
+          if (Math.abs(phiDelta) > TUNING.motion.settleEpsilonDeg) {
+            rotationCurrent[1] = clamp(
+              rotationCurrent[1] + phiDelta * dragLerp,
+              TUNING.drag.minLatitude,
+              TUNING.drag.maxLatitude,
+            )
+            changed = true
+          } else if (rotationCurrent[1] !== rotationTarget[1]) {
+            rotationCurrent[1] = rotationTarget[1]
+            changed = true
+          }
+
+          const zoomDelta = zoomTarget - zoomScale
+          if (Math.abs(zoomDelta) > TUNING.motion.settleEpsilonZoom) {
+            const zoomLerp = isInteracting ? 1 : clamp(TUNING.motion.zoomLerp * frameRatio, 0, 1)
+            zoomScale = clamp(zoomScale + zoomDelta * zoomLerp, TUNING.zoom.min, TUNING.zoom.max)
+            changed = true
+          } else if (zoomScale !== zoomTarget) {
+            zoomScale = zoomTarget
+            changed = true
+          }
+
+          if (changed) {
+            projection.rotate([rotationCurrent[0], rotationCurrent[1], rotationCurrent[2] || 0])
+            applyScale()
+            requestRedraw()
+          }
+
+          if (hasMotionWork()) {
+            startMotionLoop()
+            return
+          }
+
+          stopMotionLoopIfIdle()
+        })
+      }
+
       const resize = () => {
         syncStageHeight()
         width = Math.max(TUNING.stage.minSizePx, Math.floor(stage.clientWidth || TUNING.stage.minSizePx))
@@ -1316,25 +1522,61 @@
         .on("start", (event) => {
           stage.classList.add("is-dragging")
           enterInteraction()
+          stopInertia()
+          isDragging = true
           dragOrigin = [event.x, event.y]
-          dragRotate = projection.rotate()
+          dragRotateStart = rotationTarget.slice()
+          dragDistancePx = 0
+          clearDragSamples()
+          pushDragSample(performance.now())
         })
         .on("drag", (event) => {
-          if (!dragOrigin || !dragRotate) return
-
-          const sensitivity = TUNING.drag.sensitivity / zoomScale
+          if (!dragOrigin || !dragRotateStart) return
+          const sensitivity = TUNING.drag.sensitivity / Math.max(TUNING.zoom.min, zoomTarget || zoomScale)
           const dx = event.x - dragOrigin[0]
           const dy = event.y - dragOrigin[1]
-          const lambda = dragRotate[0] + dx * sensitivity
-          const phi = clamp(dragRotate[1] - dy * sensitivity, TUNING.drag.minLatitude, TUNING.drag.maxLatitude)
-          projection.rotate([lambda, phi, dragRotate[2] || 0])
+          const lambda = normalizeLongitude(dragRotateStart[0] + dx * sensitivity)
+          const phi = clamp(dragRotateStart[1] - dy * sensitivity, TUNING.drag.minLatitude, TUNING.drag.maxLatitude)
+          rotationTarget[0] = lambda
+          rotationTarget[1] = phi
+          // Keep drag response immediate; smoothing is reserved for release inertia.
+          rotationCurrent[0] = lambda
+          rotationCurrent[1] = phi
+          projection.rotate([rotationCurrent[0], rotationCurrent[1], rotationCurrent[2] || 0])
           requestRedraw()
+          dragDistancePx = Math.max(dragDistancePx, Math.hypot(dx, dy))
+          pushDragSample(performance.now())
         })
         .on("end", () => {
           stage.classList.remove("is-dragging")
+          isDragging = false
+          if (dragDistancePx >= TUNING.inertia.clickSuppressDistancePx) {
+            suppressClickUntil = Date.now() + TUNING.inertia.clickSuppressMs
+          }
+
+          if (TUNING.inertia.enabled) {
+            const releaseVelocity = computeReleaseVelocityFromSamples()
+            const minVelocity = TUNING.inertia.minVelocityDegPerMs
+            const hasVelocity =
+              Math.abs(releaseVelocity.lambda) >= minVelocity || Math.abs(releaseVelocity.phi) >= minVelocity
+            if (hasVelocity) {
+              angularVelocity = releaseVelocity
+              isInertiaActive = true
+            } else {
+              stopInertia()
+            }
+          } else {
+            stopInertia()
+          }
+
+          clearDragSamples()
           dragOrigin = null
-          dragRotate = null
-          scheduleIdleRestore()
+          dragRotateStart = null
+          if (isInertiaActive) {
+            startMotionLoop()
+          } else {
+            stopMotionLoopIfIdle()
+          }
         })
 
       svg.call(dragBehavior)
@@ -1342,11 +1584,14 @@
       const onWheel = (event) => {
         event.preventDefault()
         enterInteraction()
-        const nextScale = zoomScale * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
-        zoomScale = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
+        stopInertia()
+        const nextScale = zoomTarget * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
+        zoomTarget = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
+        // Keep wheel response immediate while interacting.
+        zoomScale = zoomTarget
         applyScale()
         requestRedraw()
-        scheduleIdleRestore()
+        startMotionLoop()
       }
       stage.addEventListener("wheel", onWheel, { passive: false })
 
@@ -1397,6 +1642,7 @@
         onStageMouseLeave,
         clearIdleTimer,
         cancelQueuedRedraw,
+        cancelMotionFrame,
         cancelTerritoryLoad,
         resizeObserver,
         onWindowResize,
