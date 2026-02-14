@@ -95,6 +95,16 @@
   const COUNTRY_NAME_ALIASES = {
     lybia: "libya",
     mauretania: "mauritania",
+    drc: "dem rep congo",
+    "democratic republic of the congo": "dem rep congo",
+    "central african republic": "central african rep",
+    car: "central african rep",
+    "south sudan": "s sudan",
+    "equatorial guinea": "eq guinea",
+    "cote d ivoire": "cote divoire",
+    "ivory coast": "cote divoire",
+    "cabo verde": "cape verde",
+    "sao tome and principe": "sao tome and principe",
   }
 
   // === Shared State ===
