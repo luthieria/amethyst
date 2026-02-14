@@ -12,6 +12,15 @@
       baseScaleOffset: -8,
       minBaseScalePx: 120,
     },
+    performance: {
+      idleRestoreDelayMs: 220,
+      interactionPrecision: 0.55,
+      idlePrecision: 0.2,
+      useLowResDuringInteraction: true,
+      microstatesDuringInteraction: false,
+      microstatesMinZoom: 0.9,
+      maxMicrostateMarkers: 120,
+    },
     zoom: {
       min: 0.72,
       max: 2.45,
@@ -28,6 +37,15 @@
       minDegrees: 10,
       maxDegrees: 76,
       fallbackCountryDegrees: 4.5,
+    },
+    microstates: {
+      geoAreaThreshold: 0.00022,
+      markerRadiusPx: 1.95,
+      markerRadiusHoverPx: 2.4,
+      fillAlpha: 0.62,
+      strokeAlpha: 0.9,
+      glowAlpha: 0.44,
+      color: { h: 204, s: 38, l: 92 },
     },
     color: {
       regionFillAlpha: 0.03,
@@ -69,10 +87,10 @@
   // === Constants & Runtime Flags ===
   const D3_URL = "https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
   const TOPOJSON_URL = "https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
-  const WORLD_TOPO_URLS = [
-    "/data/countries-110m.json",
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-  ]
+  const WORLD_TOPO_URLS = {
+    high: ["/data/countries-50m.json", "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"],
+    low: ["/data/countries-110m.json", "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"],
+  }
   const WORLD_OBJECT_KEY = "countries"
   const ETHNO_ACTIVE_CLASS = "page-ethno-map-full-active"
   const ETHNO_STATIC_CLASS = "page-ethno-map-full"
@@ -96,11 +114,16 @@
     lybia: "libya",
     mauretania: "mauritania",
     drc: "dem rep congo",
+    "dem rep congo": "dem rep congo",
     "democratic republic of the congo": "dem rep congo",
     "central african republic": "central african rep",
+    "central african rep": "central african rep",
     car: "central african rep",
     "south sudan": "s sudan",
+    "s sudan": "s sudan",
     "equatorial guinea": "eq guinea",
+    "eq guinea": "eq guinea",
+    swaziland: "eswatini",
     "cote d ivoire": "cote divoire",
     "ivory coast": "cote divoire",
     "cabo verde": "cape verde",
@@ -110,7 +133,10 @@
   // === Shared State ===
   const rootStates = new Map()
   let dependencyPromise = null
-  let worldDataPromise = null
+  const worldDataPromises = {
+    high: null,
+    low: null,
+  }
 
   // === Utility Functions ===
 
@@ -247,33 +273,39 @@
     }
   }
 
-  const loadWorldData = async () => {
-    if (!worldDataPromise) {
-      worldDataPromise = (async () => {
+  const buildWorldData = (topology) => {
+    const countriesObject = topology?.objects?.[WORLD_OBJECT_KEY]
+    if (!countriesObject) {
+      throw new Error("Missing countries object in world topology")
+    }
+
+    const features = window.topojson.feature(topology, countriesObject).features || []
+    const geometryById = new Map(
+      (Array.isArray(countriesObject.geometries) ? countriesObject.geometries : [])
+        .map((geometry) => [String(geometry?.id || "").trim(), geometry])
+        .filter(([id]) => id),
+    )
+    const borders = window.topojson.mesh(topology, countriesObject, (a, b) => a !== b)
+    const featureIndex = buildWorldFeatureIndex(features)
+
+    return { topology, features, borders, geometryById, featureIndex }
+  }
+
+  const loadWorldData = async (resolution = "high") => {
+    const key = resolution === "low" ? "low" : "high"
+    if (!worldDataPromises[key]) {
+      worldDataPromises[key] = (async () => {
         try {
-          const topology = await fetchFirstJson(WORLD_TOPO_URLS)
-
-          const countriesObject = topology?.objects?.[WORLD_OBJECT_KEY]
-          if (!countriesObject) {
-            throw new Error("Missing countries object in world topology")
-          }
-
-          const features = window.topojson.feature(topology, countriesObject).features || []
-          const geometryById = new Map(
-            (Array.isArray(countriesObject.geometries) ? countriesObject.geometries : [])
-              .map((geometry) => [String(geometry?.id || "").trim(), geometry])
-              .filter(([id]) => id),
-          )
-          const borders = window.topojson.mesh(topology, countriesObject, (a, b) => a !== b)
-          return { topology, features, borders, geometryById }
+          const topology = await fetchFirstJson(WORLD_TOPO_URLS[key] || WORLD_TOPO_URLS.high)
+          return buildWorldData(topology)
         } catch (error) {
-          console.warn("[ethno-globe] Country geometry unavailable; using hotspot fallback.", error)
+          console.warn(`[ethno-globe] ${key} country geometry unavailable; using fallback.`, error)
           return null
         }
       })()
     }
 
-    return worldDataPromise
+    return worldDataPromises[key]
   }
 
   const findCountryFeatureForEntry = (entry, features) => {
@@ -499,11 +531,26 @@
     const state = rootStates.get(root)
     if (!state) return
 
+    if (state.stage && typeof state.onWheel === "function") {
+      state.stage.removeEventListener("wheel", state.onWheel)
+    }
+    if (state.stage && typeof state.onStageMouseLeave === "function") {
+      state.stage.removeEventListener("mouseleave", state.onStageMouseLeave)
+    }
     if (state.resizeObserver) {
       state.resizeObserver.disconnect()
     }
     if (typeof state.onWindowResize === "function") {
       window.removeEventListener("resize", state.onWindowResize)
+    }
+    if (typeof state.clearIdleTimer === "function") {
+      state.clearIdleTimer()
+    }
+    if (typeof state.cancelQueuedRedraw === "function") {
+      state.cancelQueuedRedraw()
+    }
+    if (state.stage) {
+      state.stage.classList.remove("is-dragging", "is-interacting")
     }
 
     rootStates.delete(root)
@@ -529,7 +576,10 @@
 
     try {
       await ensureDependencies()
-      const worldData = await loadWorldData()
+      const lowWorldData = await loadWorldData("low")
+      const highWorldData = await loadWorldData("high")
+      const overlayWorldData = lowWorldData || highWorldData
+
       if (!root.isConnected) return
 
       stage.innerHTML = ""
@@ -561,24 +611,19 @@
         hint.classList.add("is-visible")
       }
 
-      stage.addEventListener("mouseleave", () => setHint(""))
+      const onStageMouseLeave = () => setHint("")
+      stage.addEventListener("mouseleave", onStageMouseLeave)
 
       const viewport = svg.append("g").attr("class", "ethno-globe-viewport")
       const spherePath = viewport.append("path").attr("class", "ethno-globe-sphere")
+      const countriesGroup = viewport.append("g").attr("class", "ethno-globe-countries")
       let countryPaths = null
-      let bordersPath = null
-
-      if (worldData) {
-        const countriesGroup = viewport.append("g").attr("class", "ethno-globe-countries")
-        countryPaths = countriesGroup
-          .selectAll("path")
-          .data(worldData.features)
-          .enter()
-          .append("path")
-          .attr("class", "ethno-globe-country")
-
-        bordersPath = viewport.append("path").attr("class", "ethno-globe-borders")
-      }
+      const bordersPath = viewport.append("path").attr("class", "ethno-globe-borders")
+      const microstateGroup = viewport.append("g").attr("class", "ethno-globe-microstates")
+      microstateGroup
+        .style("--ethno-micro-fill", toHsla(TUNING.microstates.color, TUNING.microstates.fillAlpha))
+        .style("--ethno-micro-stroke", toHsla(TUNING.microstates.color, TUNING.microstates.strokeAlpha))
+        .style("--ethno-micro-glow", toHsla(TUNING.microstates.color, TUNING.microstates.glowAlpha))
       const interactionGroup = viewport.append("g").attr("class", "ethno-globe-interactions")
       const regionGroup = interactionGroup.append("g").attr("class", "ethno-globe-region-links")
       const countryGroup = interactionGroup.append("g").attr("class", "ethno-globe-country-links")
@@ -586,7 +631,7 @@
 
       const projection = d3
         .geoOrthographic()
-        .precision(TUNING.projection.precision)
+        .precision(TUNING.performance.idlePrecision || TUNING.projection.precision)
         .clipAngle(TUNING.projection.clipAngle)
         .rotate(TUNING.projection.rotate)
       const path = d3.geoPath(projection)
@@ -600,7 +645,7 @@
           color: REGION_PALETTE[index % REGION_PALETTE.length] || DEFAULT_REGION_COLOR,
         }))
 
-      const countryFeatureColors = new Map()
+      const countryColorById = new Map()
       const seededCountries = entries
         .filter((entry) => entry.kind === "country")
         .map((entry, index) => {
@@ -637,10 +682,13 @@
       })
 
       const countryEntries = coloredCountries.map((entry) => {
-        if (worldData) {
-          const feature = findCountryFeatureForEntry(entry, worldData.features)
+        if (overlayWorldData) {
+          const feature = findCountryFeatureForEntry(entry, overlayWorldData.features)
           if (feature) {
-            countryFeatureColors.set(feature, entry.color)
+            const featureId = String(feature?.id || "").trim()
+            if (featureId) {
+              countryColorById.set(featureId, entry.color)
+            }
             return { ...entry, shape: feature, hasWorldShape: true }
           }
         }
@@ -653,12 +701,31 @@
         }
       })
 
-      const worldFeatureIndex = worldData ? buildWorldFeatureIndex(worldData.features) : null
+      const microstateSource = highWorldData || overlayWorldData
+      const microstateCandidates = microstateSource
+        ? microstateSource.features
+            .map((feature, index) => ({
+              id: String(feature?.id || feature?.properties?.name || `micro-${index}`),
+              centroid: d3.geoCentroid(feature),
+              area: d3.geoArea(feature),
+            }))
+            .filter(
+              (entry) =>
+                entry.area <= TUNING.microstates.geoAreaThreshold &&
+                Array.isArray(entry.centroid) &&
+                entry.centroid.length === 2 &&
+                Number.isFinite(entry.centroid[0]) &&
+                Number.isFinite(entry.centroid[1]),
+             )
+            .sort((a, b) => a.area - b.area || String(a.id).localeCompare(String(b.id)))
+        : []
+
+      const worldFeatureIndex = overlayWorldData ? overlayWorldData.featureIndex || buildWorldFeatureIndex(overlayWorldData.features) : null
       const regionEntries = seededRegions.map((entry) => {
         let geometry = d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))()
 
         if (worldFeatureIndex) {
-          const regionGeometry = resolveRegionHaloGeometry(entry, countryEntries, worldFeatureIndex, worldData)
+          const regionGeometry = resolveRegionHaloGeometry(entry, countryEntries, worldFeatureIndex, overlayWorldData)
           if (regionGeometry) {
             geometry = regionGeometry
           }
@@ -753,10 +820,65 @@
       let height = 0
       let baseScale = 1
       let zoomScale = 1
+      let isInteracting = false
+      let idleTimer = null
+      let redrawFrame = 0
+      let microstatesVisible = false
+      let activeWorldData = overlayWorldData
       let dragOrigin = null
       let dragRotate = null
       const applyScale = () => {
         projection.scale(baseScale * zoomScale)
+      }
+
+      const clearIdleTimer = () => {
+        if (!idleTimer) return
+        window.clearTimeout(idleTimer)
+        idleTimer = null
+      }
+
+      const cancelQueuedRedraw = () => {
+        if (!redrawFrame) return
+        window.cancelAnimationFrame(redrawFrame)
+        redrawFrame = 0
+      }
+
+      const fillForFeature = (feature) => {
+        const featureId = String(feature?.id || "").trim()
+        const color = featureId ? countryColorById.get(featureId) : null
+        return color ? toHsla(color, TUNING.color.mapCountryFillAlpha) : TUNING.color.fallbackMapCountryFill
+      }
+
+      const strokeForFeature = (feature) => {
+        const featureId = String(feature?.id || "").trim()
+        const color = featureId ? countryColorById.get(featureId) : null
+        return color
+          ? toHsla(adjustColor(color, 12, 16), TUNING.color.mapCountryStrokeAlpha)
+          : TUNING.color.fallbackMapCountryStroke
+      }
+
+      const bindActiveWorldData = () => {
+        const features = activeWorldData?.features || []
+        countryPaths = countriesGroup
+          .selectAll("path")
+          .data(features, (feature, index) => {
+            const id = String(feature?.id || "").trim()
+            return id || `feature-${index}`
+          })
+          .join(
+            (enter) => enter.append("path").attr("class", "ethno-globe-country"),
+            (update) => update,
+            (exit) => exit.remove(),
+          )
+          .attr("fill", (feature) => fillForFeature(feature))
+          .attr("stroke", (feature) => strokeForFeature(feature))
+      }
+
+      const setActiveWorldData = (nextWorldData) => {
+        const normalizedNext = nextWorldData || null
+        if (activeWorldData === normalizedNext) return
+        activeWorldData = normalizedNext
+        bindActiveWorldData()
       }
 
       const syncStageHeight = () => {
@@ -773,28 +895,75 @@
         }
       }
 
+      const requestRedraw = () => {
+        if (redrawFrame) return
+        redrawFrame = window.requestAnimationFrame(() => {
+          redrawFrame = 0
+          redraw()
+        })
+      }
+
       const redraw = () => {
         spherePath.attr("d", path(sphere))
         if (countryPaths) {
-          countryPaths
-            .attr("d", (feature) => path(feature))
-            .attr("fill", (feature) => {
-              const color = countryFeatureColors.get(feature)
-              return color ? toHsla(color, TUNING.color.mapCountryFillAlpha) : TUNING.color.fallbackMapCountryFill
-            })
-            .attr("stroke", (feature) => {
-              const color = countryFeatureColors.get(feature)
-              return color
-                ? toHsla(adjustColor(color, 12, 16), TUNING.color.mapCountryStrokeAlpha)
-                : TUNING.color.fallbackMapCountryStroke
-            })
+          countryPaths.attr("d", (feature) => path(feature))
         }
-        if (bordersPath && worldData) {
-          bordersPath.attr("d", path(worldData.borders))
+        if (bordersPath && activeWorldData?.borders) {
+          bordersPath.attr("d", path(activeWorldData.borders))
+        } else if (bordersPath) {
+          bordersPath.attr("d", null)
         }
         regionLinks.selectAll(".ethno-globe-region-halo").attr("d", (entry) => path(entry.geometry))
         regionLinks.selectAll(".ethno-globe-region-hit").attr("d", (entry) => path(entry.geometry))
         countryLinks.select("path").attr("d", (entry) => path(entry.shape))
+
+        const shouldRenderMicrostates =
+          microstateCandidates.length > 0 &&
+          (TUNING.performance.microstatesDuringInteraction || !isInteracting) &&
+          zoomScale >= TUNING.performance.microstatesMinZoom
+
+        if (!shouldRenderMicrostates) {
+          if (microstatesVisible) {
+            microstateGroup.style("display", "none")
+            microstateGroup.selectAll("circle").remove()
+            microstatesVisible = false
+          }
+        } else {
+          microstateGroup.style("display", null)
+          let visibleMicrostates = microstateCandidates
+            .map((entry) => {
+              if (!isPointVisible(projection, entry.centroid[0], entry.centroid[1])) return null
+              const projected = projection(entry.centroid)
+              if (!projected) return null
+
+              return {
+                id: entry.id,
+                x: projected[0],
+                y: projected[1],
+              }
+            })
+            .filter(Boolean)
+
+          const maxMicrostateMarkers = Math.max(0, Math.floor(TUNING.performance.maxMicrostateMarkers || 0))
+          if (maxMicrostateMarkers > 0 && visibleMicrostates.length > maxMicrostateMarkers) {
+            const stride = Math.ceil(visibleMicrostates.length / maxMicrostateMarkers)
+            visibleMicrostates = visibleMicrostates.filter((_, index) => index % stride === 0).slice(0, maxMicrostateMarkers)
+          }
+
+          microstateGroup
+            .selectAll("circle")
+            .data(visibleMicrostates, (entry) => entry.id)
+            .join(
+              (enter) => enter.append("circle").attr("class", "ethno-globe-microstate"),
+              (update) => update,
+              (exit) => exit.remove(),
+            )
+            .attr("cx", (entry) => entry.x)
+            .attr("cy", (entry) => entry.y)
+            .attr("r", TUNING.microstates.markerRadiusPx)
+
+          microstatesVisible = true
+        }
 
         const visibleLabels = labelEntries
           .map((entry) => {
@@ -831,6 +1000,33 @@
           .attr("y", (entry) => entry.y)
       }
 
+      const applyInteractionMode = () => {
+        projection.precision(isInteracting ? TUNING.performance.interactionPrecision : TUNING.performance.idlePrecision)
+        stage.classList.toggle("is-interacting", isInteracting)
+        // Keep original fast base globe (110m) in both idle and interaction.
+        setActiveWorldData(overlayWorldData)
+        requestRedraw()
+      }
+
+      const enterInteraction = () => {
+        clearIdleTimer()
+        if (!isInteracting) {
+          isInteracting = true
+          applyInteractionMode()
+        } else {
+          stage.classList.add("is-interacting")
+        }
+      }
+
+      const scheduleIdleRestore = () => {
+        clearIdleTimer()
+        idleTimer = window.setTimeout(() => {
+          idleTimer = null
+          isInteracting = false
+          applyInteractionMode()
+        }, TUNING.performance.idleRestoreDelayMs)
+      }
+
       const resize = () => {
         syncStageHeight()
         width = Math.max(TUNING.stage.minSizePx, Math.floor(stage.clientWidth || TUNING.stage.minSizePx))
@@ -844,13 +1040,14 @@
         svg.select(".ethno-globe-backdrop").attr("width", width).attr("height", height)
         projection.translate([width / 2, height / 2])
         applyScale()
-        redraw()
+        requestRedraw()
       }
 
       const dragBehavior = d3
         .drag()
         .on("start", (event) => {
           stage.classList.add("is-dragging")
+          enterInteraction()
           dragOrigin = [event.x, event.y]
           dragRotate = projection.rotate()
         })
@@ -863,34 +1060,42 @@
           const lambda = dragRotate[0] + dx * sensitivity
           const phi = clamp(dragRotate[1] - dy * sensitivity, TUNING.drag.minLatitude, TUNING.drag.maxLatitude)
           projection.rotate([lambda, phi, dragRotate[2] || 0])
-          redraw()
+          requestRedraw()
         })
         .on("end", () => {
           stage.classList.remove("is-dragging")
           dragOrigin = null
           dragRotate = null
+          scheduleIdleRestore()
         })
 
       svg.call(dragBehavior)
 
-      stage.addEventListener(
-        "wheel",
-        (event) => {
-          event.preventDefault()
-          const nextScale = zoomScale * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
-          zoomScale = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
-          applyScale()
-          redraw()
-        },
-        { passive: false },
-      )
+      const onWheel = (event) => {
+        event.preventDefault()
+        enterInteraction()
+        const nextScale = zoomScale * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
+        zoomScale = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
+        applyScale()
+        requestRedraw()
+        scheduleIdleRestore()
+      }
+      stage.addEventListener("wheel", onWheel, { passive: false })
 
       const resizeObserver = new ResizeObserver(() => resize())
       resizeObserver.observe(stage)
       const onWindowResize = () => resize()
       window.addEventListener("resize", onWindowResize, { passive: true })
 
+      bindActiveWorldData()
+      applyInteractionMode()
+
       rootStates.set(root, {
+        stage,
+        onWheel,
+        onStageMouseLeave,
+        clearIdleTimer,
+        cancelQueuedRedraw,
         resizeObserver,
         onWindowResize,
       })

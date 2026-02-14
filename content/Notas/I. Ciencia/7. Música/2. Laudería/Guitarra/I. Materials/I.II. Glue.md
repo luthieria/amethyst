@@ -3,10 +3,13 @@ title: I.II. Glue
 weight: 7
 ---
 
+# * * *[^StewMac1][^StewMac2]
+
 <!-- Footnotes [-->
 [^StewMac1]: [**StewMac**](https://www.stewmac.com/video-and-ideas/online-resources/learn-about-repair-tools-and-repair-techniques/using-three-different-glues-where-and-why/)
 [^StewMac2]: [**StewMac**](https://youtu.be/wZExe86TxLs?si=x0yJxoPDb8kh_RP4)
 <!-- ]-->
+
 
 - Wood is basically cellulose microfibrils bonded together by a “natural glue” lignin. → Glueing the broken wood back together is quite “natural”.[^Kert_Table]
 

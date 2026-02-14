@@ -106,6 +106,25 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   cursor: grabbing;
 }
 
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-country,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-borders,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link path,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-microstate {
+  transition: none !important;
+}
+
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link.region .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link.region:hover .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link.region:focus .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-link.region:focus-visible .ethno-globe-region-halo {
+  filter: none !important;
+}
+
+#{$ethno-page-scope} .ethno-globe-stage.is-interacting .ethno-globe-microstate {
+  filter: none !important;
+  opacity: 0.78;
+}
+
 #{$ethno-page-scope} .ethno-globe-backdrop {
   fill: transparent;
 }
@@ -129,6 +148,19 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   stroke-width: 0.66;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-microstates {
+  pointer-events: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-microstate {
+  fill: var(--ethno-micro-fill, rgba(246, 250, 255, 0.6));
+  stroke: var(--ethno-micro-stroke, rgba(246, 250, 255, 0.9));
+  stroke-width: 0.55;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 5px var(--ethno-micro-glow, rgba(246, 250, 255, 0.42)));
+  opacity: 0.95;
 }
 
 /* Sidebar Overlay Layer */
