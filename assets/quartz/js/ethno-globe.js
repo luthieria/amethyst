@@ -251,8 +251,13 @@
           }
 
           const features = window.topojson.feature(topology, countriesObject).features || []
+          const geometryById = new Map(
+            (Array.isArray(countriesObject.geometries) ? countriesObject.geometries : [])
+              .map((geometry) => [String(geometry?.id || "").trim(), geometry])
+              .filter(([id]) => id),
+          )
           const borders = window.topojson.mesh(topology, countriesObject, (a, b) => a !== b)
-          return { features, borders }
+          return { topology, features, borders, geometryById }
         } catch (error) {
           console.warn("[ethno-globe] Country geometry unavailable; using hotspot fallback.", error)
           return null
@@ -301,7 +306,7 @@
     return { byId, byName }
   }
 
-  const resolveRegionHaloFeatures = (regionEntry, countryEntries, worldFeatureIndex) => {
+  const resolveRegionHaloGeometry = (regionEntry, countryEntries, worldFeatureIndex, worldData) => {
     const features = []
     const seen = new Set()
 
@@ -324,19 +329,51 @@
         const nameMatch = worldFeatureIndex.byName.get(canonicalCountryName(country))
         if (nameMatch) pushFeature(nameMatch)
       })
-      return features
+      // Continue into merge/fallback path.
     }
 
-    const prefix = regionEntry.normalizedPath ? `${regionEntry.normalizedPath}/` : ""
-    countryEntries.forEach((entry) => {
-      if (!entry.hasWorldShape) return
-      if (!regionEntry.normalizedPath) return
-      if (entry.normalizedPath === regionEntry.normalizedPath || entry.normalizedPath.startsWith(prefix)) {
-        pushFeature(entry.shape)
-      }
-    })
+    if (features.length === 0) {
+      const prefix = regionEntry.normalizedPath ? `${regionEntry.normalizedPath}/` : ""
+      countryEntries.forEach((entry) => {
+        if (!entry.hasWorldShape) return
+        if (!regionEntry.normalizedPath) return
+        if (entry.normalizedPath === regionEntry.normalizedPath || entry.normalizedPath.startsWith(prefix)) {
+          pushFeature(entry.shape)
+        }
+      })
+    }
 
-    return features
+    if (features.length === 0) return null
+
+    const canMerge =
+      !!(
+        worldData &&
+        worldData.topology &&
+        worldData.geometryById &&
+        window.topojson &&
+        typeof window.topojson.merge === "function"
+      )
+
+    if (canMerge) {
+      const geometries = []
+      const seenGeometries = new Set()
+
+      features.forEach((feature) => {
+        const id = String(feature?.id || "").trim()
+        if (!id || seenGeometries.has(id)) return
+        const geometry = worldData.geometryById.get(id)
+        if (!geometry) return
+        seenGeometries.add(id)
+        geometries.push(geometry)
+      })
+
+      if (geometries.length > 0) {
+        const merged = window.topojson.merge(worldData.topology, geometries)
+        if (merged) return merged
+      }
+    }
+
+    return { type: "FeatureCollection", features }
   }
 
   // === Color Assignment ===
@@ -613,9 +650,9 @@
         let geometry = d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))()
 
         if (worldFeatureIndex) {
-          const regionFeatures = resolveRegionHaloFeatures(entry, countryEntries, worldFeatureIndex)
-          if (regionFeatures.length > 0) {
-            geometry = { type: "FeatureCollection", features: regionFeatures }
+          const regionGeometry = resolveRegionHaloGeometry(entry, countryEntries, worldFeatureIndex, worldData)
+          if (regionGeometry) {
+            geometry = regionGeometry
           }
         }
 
