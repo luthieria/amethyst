@@ -1,5 +1,5 @@
 ---
-title: Characteristics
+title: Wood
 weight: 7
 ---
 
@@ -93,4 +93,53 @@ weight: 7
 
 ## Moisture[^Workshop]
 
-- 
+- Generally: 5% RH translates into 1% wood moisture content.
+  - RH = relative humidity — ambient.
+- Wood moves (relative to its dimension):
+  - along the grain — 0.1%;
+  - across flat (= plain) grain — 8%;
+  - across quarter grain — 4%.
+
+![alt text](Imagenes/Movement.png)
+
+- → Mixed-grain lumber warps.
+- → Quarter-sawn lumber is more stable than plain-sawn, mixed-grain.
+- Always allow for wood movement; across a 12” = 30 mm lumber:
+  - plain-sawn — ±¼” = 6 mm;
+  - quarter-sawn — ±1/8” = 3 mm.
+- Glue elasticity allows for some movement when joining lumbers of opposite grain. Generally, keep the joint < 3” = 7.5 cm.
+
+<br>
+
+- Temperate climate: tight in the summer, loose in the winter.
+
+- M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^Bruné_Bracing]
+
+<!-- Footnotes [ -->
+[^Bruné_Bracing]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
+<!-- ] Footnotes -->
+
+# Oiliness[^Bruné_BracingPattern]
+
+<!-- Footnotes [ -->
+[^Bruné_BracingPattern]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)
+<!-- ] Footnotes -->
+
+- Some woods are oily (rosewood, cocobolo, etc.).
+- Can be wiped with Naphtha / alcohol / acetone.
+- After wiping, the new oil comes up from the depth quicker than PVA cures, → weakens the bond with it.
+- Hot hide glue acts on cellular level and cures faster, → less affected by the oils.
+- Ultra-thin CA penetrates all crevices and cures fast, → good for oily woods.
+
+<br>
+
+- Synthetic glues key into the wood imperfections.
+
+# Species
+
+## Western Larch
+
+- Like cedar, but a lot stiffer: cedar’s warm sound, spruce’s resilience.
+- Very resonant: very high tap tone, long sustain.
+- Heavier.
+- For braces.

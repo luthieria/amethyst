@@ -78,6 +78,15 @@ resources.Minify }}
 <script defer src="{{$callouts.Permalink}}"></script>
 {{ end }}
 
+{{ $d3Local := resources.Get "quartz/js/d3.js" | resources.Fingerprint "md5" | resources.Minify }}
+<script defer src="{{$d3Local.Permalink}}"></script>
+
+{{ $topojsonLocal := resources.Get "quartz/js/topojson-client.min.js" | resources.Fingerprint "md5" | resources.Minify }}
+<script defer src="{{$topojsonLocal.Permalink}}"></script>
+
+{{ $ethnoGlobe := resources.Get "quartz/js/ethno-globe.js" | resources.Fingerprint "md5" | resources.Minify }}
+<script defer src="{{$ethnoGlobe.Permalink}}"></script>
+
 <!--  Preload page vars  -->
 {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify }}
 {{$contentIndex := resources.Get "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify}}
@@ -167,6 +176,10 @@ resources.Minify }}
     )
   }
   {{end}}
+
+  if (typeof window.initEthnoWorldGlobe === "function") {
+    window.initEthnoWorldGlobe()
+  }
   }
 
   const init = (doc = document) => {

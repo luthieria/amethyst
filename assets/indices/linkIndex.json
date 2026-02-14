@@ -70,20 +70,6 @@
           "text": "Guitarra"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/",
-          "target": "/Characteristics",
-          "text": "Characteristics"
-        }
-      ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/",
-          "target": "/Characteristics",
-          "text": "Characteristics"
-        }
-      ],
       "/Notas/I.-Ciencia/9.-Computer-Science/": [
         {
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
@@ -181,18 +167,6 @@
           "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
           "target": "/Audio_Engineering_Standard_Operating_Procedures",
           "text": "Audio_Engineering_Standard_Operating_Procedures"
-        }
-      ],
-      "/Characteristics": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/",
-          "target": "/Characteristics",
-          "text": "Characteristics"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/",
-          "target": "/Characteristics",
-          "text": "Characteristics"
         }
       ],
       "/Cuba": [
@@ -340,16 +314,6 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
       "target": "/1.-Am%C3%A9rica-Latina/M%C3%BAsica-brasileira",
       "text": "Brasil"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/I.I.-Wood/",
-      "target": "/Characteristics",
-      "text": "Characteristics"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra/I.-Materials/",
-      "target": "/Characteristics",
-      "text": "Characteristics"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/",

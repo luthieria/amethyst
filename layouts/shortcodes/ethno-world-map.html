@@ -1,101 +1,62 @@
-{{- $data := index site.Data "ethno-world-map" -}}
 {{- $entries := slice -}}
-{{- $mapID := printf "ethno-world-map-%d" .Ordinal -}}
-{{- with $data -}}
-  {{- with .entries -}}
-    {{- $entries = . -}}
+{{- $mapData := index site.Data "ethno-world-map" -}}
+{{- $rawEntries := index $mapData "entries" | default (slice) -}}
+{{- range $rawEntries -}}
+  {{- $entryPath := trim (default "" .path) " " -}}
+  {{- $target := $.Page.GetPage $entryPath -}}
+  {{- if and (not $target) $entryPath -}}
+    {{- $target = $.Page.GetPage (printf "./%s" $entryPath) -}}
   {{- end -}}
-{{- end -}}
-
-{{- $items := slice -}}
-{{- range $index, $entry := $entries -}}
-  {{- $path := default "" $entry.path -}}
-  {{- $target := $.Page.GetPage $path -}}
+  {{- if and (not $target) $entryPath $.Page.File -}}
+    {{- $baseDir := strings.TrimSuffix "/" $.Page.File.Dir -}}
+    {{- $absRef := printf "/%s" (path.Join $baseDir $entryPath) -}}
+    {{- $target = site.GetPage $absRef -}}
+  {{- end -}}
+  {{- if and (not $target) $entryPath $.Page.File -}}
+    {{- $baseDir := strings.TrimSuffix "/" $.Page.File.Dir -}}
+    {{- $fileRef := path.Join $baseDir $entryPath "_index.md" -}}
+    {{- $target = site.GetPage $fileRef -}}
+  {{- end -}}
   {{- if $target -}}
-    {{- $depth := int (default 1 $entry.depth) -}}
-    {{- $lat := default 0.0 $entry.lat -}}
-    {{- $lon := default 0.0 $entry.lon -}}
-    {{- $dx := default 16.0 $entry.dx -}}
-    {{- $dy := default -12.0 $entry.dy -}}
-    {{- $kind := lower (default "region" $entry.kind) -}}
-    {{- $iso2 := upper (default "" $entry.iso2) -}}
-    {{- $x := mul (div (add $lon 180.0) 360.0) 2000.0 -}}
-    {{- $y := mul (div (sub 90.0 $lat) 180.0) 1001.0 -}}
-    {{- $labelX := add $x $dx -}}
-    {{- $labelY := add $y $dy -}}
-    {{- $radius := cond (eq $depth 1) 9.0 (cond (eq $depth 2) 8.0 (cond (eq $depth 3) 7.0 6.0)) -}}
-    {{- $haloRx := default 220.0 $entry.halo_rx -}}
-    {{- $haloRy := default 140.0 $entry.halo_ry -}}
-    {{- $haloRotate := default 0.0 $entry.halo_rotate -}}
-    {{- $title := default $target.Title $entry.title -}}
-    {{- $items = $items | append (dict
-      "id" (default (printf "entry-%d" $index) $entry.id)
-      "depth" $depth
-      "kind" $kind
-      "iso2" $iso2
-      "title" $title
-      "target" $target
-      "x" $x
-      "y" $y
-      "labelX" $labelX
-      "labelY" $labelY
-      "radius" $radius
-      "haloRx" $haloRx
-      "haloRy" $haloRy
-      "haloRotate" $haloRotate
+    {{- $entries = $entries | append (dict
+      "id" .id
+      "title" .title
+      "url" $target.RelPermalink
+      "depth" (.depth | default 1)
+      "kind" (.kind | default "region")
+      "iso2" (upper (.iso2 | default ""))
+      "lat" (.lat | default 0)
+      "lon" (.lon | default 0)
+      "dx" (.dx | default 0)
+      "dy" (.dy | default 0)
+      "halo_rx" (.halo_rx | default 0)
+      "halo_ry" (.halo_ry | default 0)
+      "halo_rotate" (.halo_rotate | default 0)
     ) -}}
   {{- end -}}
 {{- end -}}
 
-{{- if gt (len $items) 0 -}}
-{{- $baseMap := readFile "static/svg/world-countries-iso.svg" -}}
-{{- $baseMap = replaceRE `(?s)^\s*<\?xml[^>]*>\s*` "" $baseMap -}}
-<div class="ethno-map-layout">
-  <div class="ethno-map-stage" role="img" aria-labelledby="{{ $mapID }}-title {{ $mapID }}-desc">
-    <div class="ethno-map-base" aria-hidden="true">
-      {{- $baseMap | safeHTML -}}
-    </div>
-    <svg class="ethno-map-overlay" viewBox="0 0 2000 1001" aria-labelledby="{{ $mapID }}-title {{ $mapID }}-desc">
-      <title id="{{ $mapID }}-title">Mapa interactivo de etnomusicología</title>
-      <desc id="{{ $mapID }}-desc">Mapa mundial con fronteras nacionales y regiones clicables para navegar notas de etnomusicología.</desc>
-      <g class="ethno-map-hits">
-        {{- range $items -}}
-        {{- if and (eq .kind "country") (ne .iso2 "") -}}
-        <a class="ethno-map-hit country depth-{{ .depth }}" href="{{ .target.RelPermalink }}" aria-label="{{ printf "Abrir %s" .title }}" tabindex="0">
-          <title>{{ .title }}</title>
-          <use href="#{{ .iso2 }}"></use>
-          <use href="#{{ lower .iso2 }}"></use>
-        </a>
-        {{- else -}}
-        <a class="ethno-map-hit region depth-{{ .depth }}" href="{{ .target.RelPermalink }}" aria-label="{{ printf "Abrir %s" .title }}" tabindex="0">
-          <title>{{ .title }}</title>
-          <ellipse
-            cx="{{ printf "%.2f" .x }}"
-            cy="{{ printf "%.2f" .y }}"
-            rx="{{ printf "%.2f" .haloRx }}"
-            ry="{{ printf "%.2f" .haloRy }}"
-            transform="rotate({{ printf "%.2f" .haloRotate }} {{ printf "%.2f" .x }} {{ printf "%.2f" .y }})"></ellipse>
-        </a>
-        {{- end -}}
-        {{- end -}}
-      </g>
-      <g class="ethno-map-labels">
-        {{- range $items -}}
-        <text class="ethno-map-label depth-{{ .depth }}" x="{{ printf "%.2f" .labelX }}" y="{{ printf "%.2f" .labelY }}">{{ .title }}</text>
-        {{- end -}}
-      </g>
-    </svg>
+{{- if gt (len $entries) 0 -}}
+<div class="ethno-globe-layout" data-ethno-globe>
+  <div class="ethno-globe-stage" role="region" aria-label="Interactive ethnomusicology globe">
+    <div class="ethno-globe-loading">Loading globe...</div>
   </div>
+  <script class="ethno-globe-data" type="application/json">{{ $entries | jsonify }}</script>
 
-  {{/*
-  <aside class="ethno-map-panel" aria-label="Navegación geográfica">
-    <div class="ethno-map-panel-title">Índice geográfico</div>
-    <nav aria-label="Índice geográfico de etnomusicología">
-      <ol class="ethno-map-list">
-        {{- range $items -}}
-        <li class="depth-{{ .depth }}">
-          <a href="{{ .target.RelPermalink }}">{{ .title }}</a>
-        </li>
+  {{/* Legacy 2D map renderer intentionally disabled for now.
+  <div class="ethno-map-layout">
+    ... previous flat SVG map markup ...
+  </div>
+  */}}
+
+  {{/* Legacy in-page links list intentionally disabled for now.
+  <aside class="ethno-map-panel">
+    <nav class="ethno-map-list" aria-label="Ethnomusicology sections">
+      <ol>
+        {{- range $entries -}}
+          <li class="depth-{{ .depth }}">
+            <a href="{{ .url }}">{{ .title }}</a>
+          </li>
         {{- end -}}
       </ol>
     </nav>
@@ -103,5 +64,5 @@
   */}}
 </div>
 {{- else -}}
-<p class="ethno-map-empty">No hay secciones geográficas configuradas para este mapa.</p>
+<p class="ethno-map-empty">No map entries resolve on this page.</p>
 {{- end -}}

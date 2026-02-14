@@ -1,0 +1,4 @@
+Source: https://www.npmjs.com/package/topojson-client/v/3.1.0
+File: dist/topojson-client.min.js
+Package: topojson-client 3.1.0
+License: ISC
