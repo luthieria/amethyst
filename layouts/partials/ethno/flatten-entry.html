@@ -1,0 +1,9 @@
+{{- $entry := .entry -}}
+{{- $scratch := .scratch -}}
+{{- $flat := $scratch.Get "ethnoFlatEntries" | default (slice) -}}
+{{- $flat = $flat | append $entry -}}
+{{- $scratch.Set "ethnoFlatEntries" $flat -}}
+{{- $children := $entry.children | default (slice) -}}
+{{- range $children -}}
+  {{- partial "ethno/flatten-entry.html" (dict "entry" . "scratch" $scratch) -}}
+{{- end -}}

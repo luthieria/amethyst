@@ -101,3 +101,11 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 2. Working time (before gelling up) — 2–3 minutes.
 3. Thermal limitations.
 4. Vulnerability to micro-organisms.
+
+#### * * *
+
+- Hide glue is just a liquid, → flows properly, → doesn’t need to be applied onto both surfaces (it will only produce more squeeze).[^Bruné_Tonewoods]
+
+<!-- Footnotes [-->
+[^Bruné_Tonewoods]: [**Bruné M. E.**](https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW)
+<!-- ]-->

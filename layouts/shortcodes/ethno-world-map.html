@@ -1,7 +1,13 @@
 {{- $entries := slice -}}
 {{- $mapData := index site.Data "ethno-world-map" -}}
 {{- $rawEntries := index $mapData "entries" | default (slice) -}}
+{{- $scratch := newScratch -}}
+{{- $scratch.Set "ethnoFlatEntries" (slice) -}}
 {{- range $rawEntries -}}
+  {{- partial "ethno/flatten-entry.html" (dict "entry" . "scratch" $scratch) -}}
+{{- end -}}
+{{- $flatEntries := $scratch.Get "ethnoFlatEntries" | default (slice) -}}
+{{- range $flatEntries -}}
   {{- $entryPath := trim (default "" .path) " " -}}
   {{- $target := $.Page.GetPage $entryPath -}}
   {{- /* Fallback 1: resolve as page-relative path. */ -}}

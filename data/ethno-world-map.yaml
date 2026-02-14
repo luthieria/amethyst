@@ -57,6 +57,7 @@ entries:
   - id: oriente-medio
     title: "Oriente Medio"
     path: "2. Oriente Medio"
+    kind: region
     halo_countries:
       - "Iran"
       - "Syria"
@@ -71,7 +72,6 @@ entries:
       - "Qatar"
       - "Bahrain"
       - "Egypt"
-    kind: region
     depth: 1
     lat: 30.0
     lon: 45.0
@@ -80,63 +80,63 @@ entries:
     halo_rotate: 8
     dx: 12
     dy: -10
+    children:
+      - id: iran
+        title: "Irán"
+        path: "2. Oriente Medio/Irán"
+        kind: country
+        iso2: "IR"
+        depth: 2
+        lat: 32.0
+        lon: 53.0
+        dx: 10
+        dy: -8
 
-  - id: iran
-    title: "Irán"
-    path: "2. Oriente Medio/Irán"
-    kind: country
-    iso2: "IR"
-    depth: 2
-    lat: 32.0
-    lon: 53.0
-    dx: 10
-    dy: -8
+      - id: arabe
+        title: "Árabe"
+        path: "2. Oriente Medio/Árabe"
+        kind: region
+        halo_countries:
+          - "Saudi Arabia"
+          - "Yemen"
+          - "Oman"
+          - "United Arab Emirates"
+          - "Qatar"
+          - "Bahrain"
+          - "Egypt"
+          - "Jordan"
+          - "Iraq"
+          - "Syria"
+          - "Lebanon"
+          - "Kuwait"
+        depth: 2
+        lat: 24.0
+        lon: 45.0
+        halo_rx: 180
+        halo_ry: 100
+        halo_rotate: 12
+        dx: 10
+        dy: 14
 
-  - id: arabe
-    title: "Árabe"
-    path: "2. Oriente Medio/Árabe"
-    kind: region
-    halo_countries:
-      - "Saudi Arabia"
-      - "Yemen"
-      - "Oman"
-      - "United Arab Emirates"
-      - "Qatar"
-      - "Bahrain"
-      - "Egypt"
-      - "Jordan"
-      - "Iraq"
-      - "Syria"
-      - "Lebanon"
-      - "Kuwait"
-    depth: 2
-    lat: 24.0
-    lon: 45.0
-    halo_rx: 180
-    halo_ry: 100
-    halo_rotate: 12
-    dx: 10
-    dy: 14
-
-  - id: magreb
-    title: "Magreb"
-    path: "2. Oriente Medio/Magreb"
-    kind: region
-    halo_countries:
-      - "Mauritania"
-      - "Western Sahara"
-      - "Morocco"
-      - "Algeria"
-      - "Tunisia"
-      - "Libya"
-    depth: 2
-    lat: 31.0
-    lon: -6.0
-    halo_rx: 190
-    halo_ry: 95
-    halo_rotate: -10
-    dx: -62
-    dy: -10
+      - id: magreb
+        title: "Magreb"
+        path: "2. Oriente Medio/Magreb"
+        kind: region
+        halo_countries:
+          - "Mauritania"
+          - "Western Sahara"
+          - "Morocco"
+          - "Algeria"
+          - "Tunisia"
+          - "Libya"
+        depth: 2
+        lat: 31.0
+        lon: -6.0
+        halo_rx: 190
+        halo_ry: 95
+        halo_rotate: -10
+        dx: -62
+        dy: -10
 
   - id: mediterraneo
     title: "Mediterráneo"
@@ -158,28 +158,28 @@ entries:
     halo_rotate: -2
     dx: 12
     dy: -10
+    children:
+      - id: espana
+        title: "España"
+        path: "3. Mediterráneo/España"
+        kind: country
+        iso2: "ES"
+        depth: 2
+        lat: 40.0
+        lon: -4.0
+        dx: -58
+        dy: -8
 
-  - id: espana
-    title: "España"
-    path: "3. Mediterráneo/España"
-    kind: country
-    iso2: "ES"
-    depth: 2
-    lat: 40.0
-    lon: -4.0
-    dx: -58
-    dy: -8
-
-  - id: portugal
-    title: "Portugal"
-    path: "3. Mediterráneo/Portugal"
-    kind: country
-    iso2: "PT"
-    depth: 2
-    lat: 39.0
-    lon: -8.0
-    dx: -64
-    dy: 12
+      - id: portugal
+        title: "Portugal"
+        path: "3. Mediterráneo/Portugal"
+        kind: country
+        iso2: "PT"
+        depth: 2
+        lat: 39.0
+        lon: -8.0
+        dx: -64
+        dy: 12
 
   - id: america
     title: "América"
@@ -218,157 +218,157 @@ entries:
     halo_rotate: -15
     dx: 12
     dy: -10
+    children:
+      - id: america-latina
+        title: "América Latina"
+        path: "4. América/1. América Latina"
+        kind: region
+        halo_countries:
+          - "Mexico"
+          - "Guatemala"
+          - "El Salvador"
+          - "Honduras"
+          - "Nicaragua"
+          - "Costa Rica"
+          - "Panama"
+          - "Cuba"
+          - "Haiti"
+          - "Dominican Republic"
+          - "Trinidad and Tobago"
+          - "Colombia"
+          - "Venezuela"
+          - "Ecuador"
+          - "Peru"
+          - "Bolivia"
+          - "Paraguay"
+          - "Chile"
+          - "Argentina"
+          - "Uruguay"
+        depth: 2
+        lat: -15.0
+        lon: -60.0
+        halo_rx: 360
+        halo_ry: 260
+        halo_rotate: -22
+        dx: 12
+        dy: 20
+        children:
+          - id: hispanoamerica
+            title: "Hispanoamérica"
+            path: "4. América/1. América Latina/Hispanoamérica"
+            kind: region
+            halo_countries:
+              - "Mexico"
+              - "Guatemala"
+              - "El Salvador"
+              - "Honduras"
+              - "Nicaragua"
+              - "Costa Rica"
+              - "Panama"
+              - "Cuba"
+              - "Dominican Republic"
+              - "Colombia"
+              - "Venezuela"
+              - "Ecuador"
+              - "Peru"
+              - "Bolivia"
+              - "Paraguay"
+              - "Chile"
+              - "Argentina"
+              - "Uruguay"
+            depth: 3
+            lat: 9.0
+            lon: -75.0
+            halo_rx: 260
+            halo_ry: 130
+            halo_rotate: -12
+            dx: 12
+            dy: -10
+            children:
+              - id: cuba
+                title: "Cuba"
+                path: "4. América/1. América Latina/Hispanoamérica/Cuba"
+                kind: country
+                iso2: "CU"
+                depth: 4
+                lat: 21.5
+                lon: -79.5
+                dx: 10
+                dy: -14
 
-  - id: america-latina
-    title: "América Latina"
-    path: "4. América/1. América Latina"
-    kind: region
-    halo_countries:
-      - "Mexico"
-      - "Guatemala"
-      - "El Salvador"
-      - "Honduras"
-      - "Nicaragua"
-      - "Costa Rica"
-      - "Panama"
-      - "Cuba"
-      - "Haiti"
-      - "Dominican Republic"
-      - "Trinidad and Tobago"
-      - "Colombia"
-      - "Venezuela"
-      - "Ecuador"
-      - "Peru"
-      - "Bolivia"
-      - "Paraguay"
-      - "Chile"
-      - "Argentina"
-      - "Uruguay"
-    depth: 2
-    lat: -15.0
-    lon: -60.0
-    halo_rx: 360
-    halo_ry: 260
-    halo_rotate: -22
-    dx: 12
-    dy: 20
+              - id: brasil
+                title: "Brasil"
+                path: "4. América/1. América Latina/Brasil"
+                kind: country
+                iso2: "BR"
+                depth: 3
+                lat: -14.2
+                lon: -51.9
+                dx: 10
+                dy: -10
 
-  - id: hispanoamerica
-    title: "Hispanoamérica"
-    path: "4. América/1. América Latina/Hispanoamérica"
-    kind: region
-    halo_countries:
-      - "Mexico"
-      - "Guatemala"
-      - "El Salvador"
-      - "Honduras"
-      - "Nicaragua"
-      - "Costa Rica"
-      - "Panama"
-      - "Cuba"
-      - "Dominican Republic"
-      - "Colombia"
-      - "Venezuela"
-      - "Ecuador"
-      - "Peru"
-      - "Bolivia"
-      - "Paraguay"
-      - "Chile"
-      - "Argentina"
-      - "Uruguay"
-    depth: 3
-    lat: 9.0
-    lon: -75.0
-    halo_rx: 260
-    halo_ry: 130
-    halo_rotate: -12
-    dx: 12
-    dy: -10
+              - id: mexico
+                title: "México"
+                path: "4. América/1. América Latina/Hispanoamérica/México"
+                kind: country
+                iso2: "MX"
+                depth: 4
+                lat: 23.6
+                lon: -102.5
+                dx: -10
+                dy: -12
 
-  - id: cuba
-    title: "Cuba"
-    path: "4. América/1. América Latina/Hispanoamérica/Cuba"
-    kind: country
-    iso2: "CU"
-    depth: 4
-    lat: 21.5
-    lon: -79.5
-    dx: 10
-    dy: -14
+              - id: colombia
+                title: "Colombia"
+                path: "4. América/1. América Latina/Hispanoamérica/Colombia"
+                kind: country
+                iso2: "CO"
+                depth: 4
+                lat: 4.6
+                lon: -74.1
+                dx: 10
+                dy: -10
 
-  - id: brasil
-    title: "Brasil"
-    path: "4. América/1. América Latina/Brasil"
-    kind: country
-    iso2: "BR"
-    depth: 3
-    lat: -14.2
-    lon: -51.9
-    dx: 10
-    dy: -10
+              - id: ecuador
+                title: "Ecuador"
+                path: "4. América/1. América Latina/Hispanoamérica/Ecuador"
+                kind: country
+                iso2: "EC"
+                depth: 4
+                lat: -1.8
+                lon: -78.2
+                dx: -10
+                dy: 14
 
-  - id: mexico
-    title: "México"
-    path: "4. América/1. América Latina/Hispanoamérica/México"
-    kind: country
-    iso2: "MX"
-    depth: 4
-    lat: 23.6
-    lon: -102.5
-    dx: -10
-    dy: -12
+              - id: peru
+                title: "Perú"
+                path: "4. América/1. América Latina/Hispanoamérica/Perú"
+                kind: country
+                iso2: "PE"
+                depth: 4
+                lat: -9.2
+                lon: -75.0
+                dx: 10
+                dy: 16
 
-  - id: colombia
-    title: "Colombia"
-    path: "4. América/1. América Latina/Hispanoamérica/Colombia"
-    kind: country
-    iso2: "CO"
-    depth: 4
-    lat: 4.6
-    lon: -74.1
-    dx: 10
-    dy: -10
+              - id: puerto-rico
+                title: "Puerto Rico"
+                path: "4. América/1. América Latina/Hispanoamérica/Puerto Rico"
+                kind: country
+                iso2: "PR"
+                depth: 4
+                lat: 18.2
+                lon: -66.5
+                dx: 12
+                dy: -12
 
-  - id: ecuador
-    title: "Ecuador"
-    path: "4. América/1. América Latina/Hispanoamérica/Ecuador"
-    kind: country
-    iso2: "EC"
-    depth: 4
-    lat: -1.8
-    lon: -78.2
-    dx: -10
-    dy: 14
-
-  - id: peru
-    title: "Perú"
-    path: "4. América/1. América Latina/Hispanoamérica/Perú"
-    kind: country
-    iso2: "PE"
-    depth: 4
-    lat: -9.2
-    lon: -75.0
-    dx: 10
-    dy: 16
-
-  - id: puerto-rico
-    title: "Puerto Rico"
-    path: "4. América/1. América Latina/Hispanoamérica/Puerto Rico"
-    kind: country
-    iso2: "PR"
-    depth: 4
-    lat: 18.2
-    lon: -66.5
-    dx: 12
-    dy: -12
-
-  - id: santo-domingo
-    title: "Santo Domingo"
-    path: "4. América/1. América Latina/Hispanoamérica/Santo Domingo"
-    kind: country
-    iso2: "DO"
-    depth: 4
-    lat: 18.9
-    lon: -70.4
-    dx: 12
-    dy: 14
+              - id: santo-domingo
+                title: "Santo Domingo"
+                path: "4. América/1. América Latina/Hispanoamérica/Santo Domingo"
+                kind: country
+                iso2: "DO"
+                depth: 4
+                lat: 18.9
+                lon: -70.4
+                dx: 12
+                dy: 14

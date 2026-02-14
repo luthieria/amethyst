@@ -28,8 +28,6 @@
       minDegrees: 10,
       maxDegrees: 76,
       fallbackCountryDegrees: 4.5,
-      visualScale: 1.08,
-      visualScaleHover: 1.12,
     },
     color: {
       regionFillAlpha: 0.03,
@@ -668,8 +666,6 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
-        .style("--ethno-region-halo-scale", TUNING.halo.visualScale)
-        .style("--ethno-region-halo-scale-hover", TUNING.halo.visualScaleHover)
         .style("--ethno-region-fill", (entry) => toHsla(entry.color, TUNING.color.regionFillAlpha))
         .style("--ethno-region-stroke", (entry) =>
           toHsla(

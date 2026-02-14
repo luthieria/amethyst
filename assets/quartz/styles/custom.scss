@@ -235,7 +235,6 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   pointer-events: none;
   transform-box: fill-box;
   transform-origin: center;
-  //transform: scale(var(--ethno-region-halo-scale, 1.08));
   filter: blur(7px) drop-shadow(0 0 8px var(--ethno-region-glow, rgba(248, 252, 255, 0.18)));
 }
 
@@ -250,7 +249,6 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 #{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-halo {
   fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.08));
   stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.32));
-  transform: scale(var(--ethno-region-halo-scale-hover, 1.12));
   filter: blur(9px) drop-shadow(0 0 13px var(--ethno-region-glow, rgba(248, 252, 255, 0.2)));
 }
 
