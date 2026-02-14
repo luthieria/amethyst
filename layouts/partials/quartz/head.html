@@ -84,6 +84,7 @@ resources.Minify }}
 {{ $topojsonLocal := resources.Get "quartz/js/topojson-client.min.js" | resources.Fingerprint "md5" | resources.Minify }}
 <script defer src="{{$topojsonLocal.Permalink}}"></script>
 
+<!-- Manual globe tuning lives in assets/quartz/js/ethno-globe.js and assets/quartz/styles/custom.scss -->
 {{ $ethnoGlobe := resources.Get "quartz/js/ethno-globe.js" | resources.Fingerprint "md5" | resources.Minify }}
 <script defer src="{{$ethnoGlobe.Permalink}}"></script>
 

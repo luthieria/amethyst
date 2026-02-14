@@ -4,14 +4,17 @@
 {{- range $rawEntries -}}
   {{- $entryPath := trim (default "" .path) " " -}}
   {{- $target := $.Page.GetPage $entryPath -}}
+  {{- /* Fallback 1: resolve as page-relative path. */ -}}
   {{- if and (not $target) $entryPath -}}
     {{- $target = $.Page.GetPage (printf "./%s" $entryPath) -}}
   {{- end -}}
+  {{- /* Fallback 2: resolve as absolute section path from current dir. */ -}}
   {{- if and (not $target) $entryPath $.Page.File -}}
     {{- $baseDir := strings.TrimSuffix "/" $.Page.File.Dir -}}
     {{- $absRef := printf "/%s" (path.Join $baseDir $entryPath) -}}
     {{- $target = site.GetPage $absRef -}}
   {{- end -}}
+  {{- /* Fallback 3: resolve by explicit _index.md file path. */ -}}
   {{- if and (not $target) $entryPath $.Page.File -}}
     {{- $baseDir := strings.TrimSuffix "/" $.Page.File.Dir -}}
     {{- $fileRef := path.Join $baseDir $entryPath "_index.md" -}}
@@ -25,44 +28,21 @@
       "url" $target.RelPermalink
       "depth" (.depth | default 1)
       "kind" (.kind | default "region")
-      "iso2" (upper (.iso2 | default ""))
       "lat" (.lat | default 0)
       "lon" (.lon | default 0)
       "dx" (.dx | default 0)
       "dy" (.dy | default 0)
       "halo_rx" (.halo_rx | default 0)
       "halo_ry" (.halo_ry | default 0)
-      "halo_rotate" (.halo_rotate | default 0)
     ) -}}
   {{- end -}}
 {{- end -}}
-
 {{- if gt (len $entries) 0 -}}
 <div class="ethno-globe-layout" data-ethno-globe>
   <div class="ethno-globe-stage" role="region" aria-label="Interactive ethnomusicology globe">
     <div class="ethno-globe-loading">Loading globe...</div>
   </div>
   <script class="ethno-globe-data" type="application/json">{{ $entries | jsonify }}</script>
-
-  {{/* Legacy 2D map renderer intentionally disabled for now.
-  <div class="ethno-map-layout">
-    ... previous flat SVG map markup ...
-  </div>
-  */}}
-
-  {{/* Legacy in-page links list intentionally disabled for now.
-  <aside class="ethno-map-panel">
-    <nav class="ethno-map-list" aria-label="Ethnomusicology sections">
-      <ol>
-        {{- range $entries -}}
-          <li class="depth-{{ .depth }}">
-            <a href="{{ .url }}">{{ .title }}</a>
-          </li>
-        {{- end -}}
-      </ol>
-    </nav>
-  </aside>
-  */}}
 </div>
 {{- else -}}
 <p class="ethno-map-empty">No map entries resolve on this page.</p>

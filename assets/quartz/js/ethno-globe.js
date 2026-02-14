@@ -1,4 +1,72 @@
 ;(function () {
+  // === Config: Manual Tuning ===
+  const TUNING = {
+    stage: {
+      minSizePx: 320,
+    },
+    projection: {
+      precision: 0.2,
+      clipAngle: 90,
+      rotate: [-12, -15, 0],
+      baseScaleFactor: 0.5,
+      baseScaleOffset: -8,
+      minBaseScalePx: 120,
+    },
+    zoom: {
+      min: 0.72,
+      max: 2.45,
+      wheelSensitivity: 0.0015,
+    },
+    drag: {
+      sensitivity: 0.24,
+      minLatitude: -85,
+      maxLatitude: 85,
+    },
+    halo: {
+      sourceMapWidth: 2000,
+      fallbackDegrees: 18,
+      minDegrees: 10,
+      maxDegrees: 76,
+      fallbackCountryDegrees: 4.5,
+    },
+    color: {
+      regionFillAlpha: 0.03,
+      regionStrokeAlpha: 0.14,
+      regionFillHoverAlpha: 0.08,
+      regionStrokeHoverAlpha: 0.32,
+      countryFillAlpha: 0.18,
+      countryStrokeAlpha: 0.5,
+      countryFillHoverAlpha: 0.36,
+      countryStrokeHoverAlpha: 0.86,
+      mapCountryFillAlpha: 0.48,
+      mapCountryStrokeAlpha: 0.82,
+      fallbackMapCountryFill: "rgba(13, 19, 29, 0.76)",
+      fallbackMapCountryStroke: "rgba(246, 250, 255, 0.32)",
+      regionStrokeAdjust: { s: 8, l: 16 },
+      regionFillHoverAdjust: { s: 8, l: 8 },
+      regionStrokeHoverAdjust: { s: 20, l: 20 },
+      countryStrokeAdjust: { s: 8, l: 14 },
+      countryFillHoverAdjust: { s: 14, l: 6 },
+      countryStrokeHoverAdjust: { s: 24, l: 22 },
+      countryVariation: {
+        hueSpreadCap: 22,
+        hueSpreadBase: 42,
+        hueJitter: 9,
+        saturationBaseBoost: 18,
+        saturationEdgeBoost: 6,
+        saturationJitterBoost: 4,
+        saturationMin: 38,
+        saturationMax: 92,
+        lightnessBaseShift: -8,
+        lightnessIndexShift: 5,
+        lightnessJitterShift: 4,
+        lightnessMin: 22,
+        lightnessMax: 78,
+      },
+    },
+  }
+
+  // === Constants & Runtime Flags ===
   const D3_URL = "https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
   const TOPOJSON_URL = "https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
   const WORLD_TOPO_URLS = [
@@ -25,9 +93,12 @@
   ]
   const DEFAULT_REGION_COLOR = { h: 208, s: 52, l: 56 }
 
+  // === Shared State ===
   const rootStates = new Map()
   let dependencyPromise = null
   let worldDataPromise = null
+
+  // === Utility Functions ===
 
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value))
   const toNumber = (value, fallback = 0) => {
@@ -50,6 +121,7 @@
       .filter(Boolean)
       .join("/")
 
+  // === Data & Resource Loading ===
   const loadScript = (src, checkLoaded) => {
     if (checkLoaded()) return Promise.resolve()
 
@@ -107,6 +179,7 @@
     throw new Error("Failed to load world topology from local and remote sources.")
   }
 
+  // Parse and normalize entry payload emitted by the shortcode.
   const parseEntries = (root) => {
     const script = root.querySelector(".ethno-globe-data")
     if (!script) return []
@@ -125,7 +198,6 @@
           path: typeof entry.path === "string" ? entry.path : "",
           url: typeof entry.url === "string" ? entry.url : "",
           kind: entry.kind === "country" ? "country" : "region",
-          iso2: typeof entry.iso2 === "string" ? entry.iso2.toUpperCase() : "",
           depth: clamp(toNumber(entry.depth, 1), 1, 8),
           lat: clamp(toNumber(entry.lat, 0), -89.999, 89.999),
           lon: clamp(toNumber(entry.lon, 0), -180, 180),
@@ -165,6 +237,7 @@
   }
 
   const findCountryFeatureForEntry = (entry, features) => {
+    // Use containment first, then nearest feature centroid as robust fallback.
     const d3 = window.d3
     const point = [entry.lon, entry.lat]
     const containing = features.find((feature) => d3.geoContains(feature, point))
@@ -185,6 +258,7 @@
     return nearest
   }
 
+  // === Color Assignment ===
   const toHsla = (color, alpha) => `hsla(${color.h}, ${color.s}%, ${color.l}%, ${alpha})`
 
   const adjustColor = (color, saturationDelta, lightnessDelta) => ({
@@ -211,18 +285,24 @@
   const signedHashUnit = (value) => (hashString(value) % 2001) / 1000 - 1
 
   const deriveCountryColor = (regionColor, countryId, indexWithinRegion, regionCountryCount) => {
+    // Keep each country unique while remaining close to its parent region hue family.
+    const variation = TUNING.color.countryVariation
     const count = Math.max(1, regionCountryCount)
     const normalizedIndex = count === 1 ? 0 : (indexWithinRegion / (count - 1)) * 2 - 1
     const jitter = signedHashUnit(`${countryId}:${count}`)
-    const hueSpread = Math.min(22, 42 / Math.sqrt(count))
-    const hueShift = normalizedIndex * hueSpread + jitter * 9
-    const saturationBoost = 18 + Math.abs(normalizedIndex) * 6 + (jitter + 1) * 4
-    const lightnessShift = -8 + normalizedIndex * 5 + jitter * 4
+    const hueSpread = Math.min(variation.hueSpreadCap, variation.hueSpreadBase / Math.sqrt(count))
+    const hueShift = normalizedIndex * hueSpread + jitter * variation.hueJitter
+    const saturationBoost =
+      variation.saturationBaseBoost +
+      Math.abs(normalizedIndex) * variation.saturationEdgeBoost +
+      (jitter + 1) * variation.saturationJitterBoost
+    const lightnessShift =
+      variation.lightnessBaseShift + normalizedIndex * variation.lightnessIndexShift + jitter * variation.lightnessJitterShift
 
     return {
       h: wrapHue(regionColor.h + hueShift),
-      s: clamp(regionColor.s + saturationBoost, 38, 92),
-      l: clamp(regionColor.l + lightnessShift, 22, 78),
+      s: clamp(regionColor.s + saturationBoost, variation.saturationMin, variation.saturationMax),
+      l: clamp(regionColor.l + lightnessShift, variation.lightnessMin, variation.lightnessMax),
     }
   }
 
@@ -270,8 +350,8 @@
 
   const regionRadiusDegrees = (entry) => {
     const avgRadius = (entry.haloRx + entry.haloRy) / 2
-    const converted = (avgRadius / 2000) * 360
-    return clamp(converted || 18, 10, 76)
+    const converted = (avgRadius / TUNING.halo.sourceMapWidth) * 360
+    return clamp(converted || TUNING.halo.fallbackDegrees, TUNING.halo.minDegrees, TUNING.halo.maxDegrees)
   }
 
   const isPointVisible = (projection, lon, lat) => {
@@ -288,6 +368,7 @@
     stage.appendChild(error)
   }
 
+  // === Root Lifecycle ===
   const teardownRoot = (root) => {
     const state = rootStates.get(root)
     if (!state) return
@@ -377,7 +458,11 @@
       const countryGroup = interactionGroup.append("g").attr("class", "ethno-globe-country-links")
       const labelsGroup = viewport.append("g").attr("class", "ethno-globe-labels")
 
-      const projection = d3.geoOrthographic().precision(0.2).clipAngle(90).rotate([-12, -15, 0])
+      const projection = d3
+        .geoOrthographic()
+        .precision(TUNING.projection.precision)
+        .clipAngle(TUNING.projection.clipAngle)
+        .rotate(TUNING.projection.rotate)
       const path = d3.geoPath(projection)
       const sphere = { type: "Sphere" }
 
@@ -441,7 +526,7 @@
         // Fallback hotspot when country polygon data is unavailable.
         return {
           ...entry,
-          shape: d3.geoCircle().center([entry.lon, entry.lat]).radius(4.5)(),
+          shape: d3.geoCircle().center([entry.lon, entry.lat]).radius(TUNING.halo.fallbackCountryDegrees)(),
         }
       })
 
@@ -454,10 +539,25 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
-        .style("--ethno-region-fill", (entry) => toHsla(entry.color, 0.03))
-        .style("--ethno-region-stroke", (entry) => toHsla(adjustColor(entry.color, 8, 16), 0.14))
-        .style("--ethno-region-fill-hover", (entry) => toHsla(adjustColor(entry.color, 8, 8), 0.08))
-        .style("--ethno-region-stroke-hover", (entry) => toHsla(adjustColor(entry.color, 20, 20), 0.32))
+        .style("--ethno-region-fill", (entry) => toHsla(entry.color, TUNING.color.regionFillAlpha))
+        .style("--ethno-region-stroke", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.regionStrokeAdjust.s, TUNING.color.regionStrokeAdjust.l),
+            TUNING.color.regionStrokeAlpha,
+          ),
+        )
+        .style("--ethno-region-fill-hover", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.regionFillHoverAdjust.s, TUNING.color.regionFillHoverAdjust.l),
+            TUNING.color.regionFillHoverAlpha,
+          ),
+        )
+        .style("--ethno-region-stroke-hover", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.regionStrokeHoverAdjust.s, TUNING.color.regionStrokeHoverAdjust.l),
+            TUNING.color.regionStrokeHoverAlpha,
+          ),
+        )
         .on("click", (event, entry) => navigateTo(event, entry.url))
         .on("pointerenter", (_, entry) => setHint(entry.title))
         .on("pointerleave", () => setHint(""))
@@ -475,10 +575,25 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
-        .style("--ethno-country-fill", (entry) => toHsla(entry.color, 0.18))
-        .style("--ethno-country-stroke", (entry) => toHsla(adjustColor(entry.color, 8, 14), 0.5))
-        .style("--ethno-country-fill-hover", (entry) => toHsla(adjustColor(entry.color, 14, 6), 0.36))
-        .style("--ethno-country-stroke-hover", (entry) => toHsla(adjustColor(entry.color, 24, 22), 0.86))
+        .style("--ethno-country-fill", (entry) => toHsla(entry.color, TUNING.color.countryFillAlpha))
+        .style("--ethno-country-stroke", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.countryStrokeAdjust.s, TUNING.color.countryStrokeAdjust.l),
+            TUNING.color.countryStrokeAlpha,
+          ),
+        )
+        .style("--ethno-country-fill-hover", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.countryFillHoverAdjust.s, TUNING.color.countryFillHoverAdjust.l),
+            TUNING.color.countryFillHoverAlpha,
+          ),
+        )
+        .style("--ethno-country-stroke-hover", (entry) =>
+          toHsla(
+            adjustColor(entry.color, TUNING.color.countryStrokeHoverAdjust.s, TUNING.color.countryStrokeHoverAdjust.l),
+            TUNING.color.countryStrokeHoverAlpha,
+          ),
+        )
         .on("click", (event, entry) => navigateTo(event, entry.url))
         .on("pointerenter", (_, entry) => setHint(entry.title))
         .on("pointerleave", () => setHint(""))
@@ -494,22 +609,20 @@
       let zoomScale = 1
       let dragOrigin = null
       let dragRotate = null
-      const minScale = 0.72
-      const maxScale = 2.45
-
       const applyScale = () => {
         projection.scale(baseScale * zoomScale)
       }
 
       const syncStageHeight = () => {
+        // Overlay mode uses the full viewport height to avoid top/bottom clipping.
         if (isEthnoOverlayPage()) {
-          stage.style.height = `${Math.max(320, window.innerHeight)}px`
+          stage.style.height = `${Math.max(TUNING.stage.minSizePx, window.innerHeight)}px`
           return
         }
 
         const rect = stage.getBoundingClientRect()
         const available = Math.floor(window.innerHeight - rect.top)
-        if (available > 320) {
+        if (available > TUNING.stage.minSizePx) {
           stage.style.height = `${available}px`
         }
       }
@@ -521,11 +634,13 @@
             .attr("d", (feature) => path(feature))
             .attr("fill", (feature) => {
               const color = countryFeatureColors.get(feature)
-              return color ? toHsla(color, 0.48) : "rgba(13, 19, 29, 0.76)"
+              return color ? toHsla(color, TUNING.color.mapCountryFillAlpha) : TUNING.color.fallbackMapCountryFill
             })
             .attr("stroke", (feature) => {
               const color = countryFeatureColors.get(feature)
-              return color ? toHsla(adjustColor(color, 12, 16), 0.82) : "rgba(246, 250, 255, 0.32)"
+              return color
+                ? toHsla(adjustColor(color, 12, 16), TUNING.color.mapCountryStrokeAlpha)
+                : TUNING.color.fallbackMapCountryStroke
             })
         }
         if (bordersPath && worldData) {
@@ -571,9 +686,12 @@
 
       const resize = () => {
         syncStageHeight()
-        width = Math.max(320, Math.floor(stage.clientWidth || 320))
-        height = Math.max(320, Math.floor(stage.clientHeight || 320))
-        baseScale = Math.max(120, Math.min(width, height) * 0.5 - 8)
+        width = Math.max(TUNING.stage.minSizePx, Math.floor(stage.clientWidth || TUNING.stage.minSizePx))
+        height = Math.max(TUNING.stage.minSizePx, Math.floor(stage.clientHeight || TUNING.stage.minSizePx))
+        baseScale = Math.max(
+          TUNING.projection.minBaseScalePx,
+          Math.min(width, height) * TUNING.projection.baseScaleFactor + TUNING.projection.baseScaleOffset,
+        )
 
         svg.attr("viewBox", `0 0 ${width} ${height}`)
         svg.select(".ethno-globe-backdrop").attr("width", width).attr("height", height)
@@ -592,11 +710,11 @@
         .on("drag", (event) => {
           if (!dragOrigin || !dragRotate) return
 
-          const sensitivity = 0.24 / zoomScale
+          const sensitivity = TUNING.drag.sensitivity / zoomScale
           const dx = event.x - dragOrigin[0]
           const dy = event.y - dragOrigin[1]
           const lambda = dragRotate[0] + dx * sensitivity
-          const phi = clamp(dragRotate[1] - dy * sensitivity, -85, 85)
+          const phi = clamp(dragRotate[1] - dy * sensitivity, TUNING.drag.minLatitude, TUNING.drag.maxLatitude)
           projection.rotate([lambda, phi, dragRotate[2] || 0])
           redraw()
         })
@@ -612,8 +730,8 @@
         "wheel",
         (event) => {
           event.preventDefault()
-          const nextScale = zoomScale * Math.exp(-event.deltaY * 0.0015)
-          zoomScale = clamp(nextScale, minScale, maxScale)
+          const nextScale = zoomScale * Math.exp(-event.deltaY * TUNING.zoom.wheelSensitivity)
+          zoomScale = clamp(nextScale, TUNING.zoom.min, TUNING.zoom.max)
           applyScale()
           redraw()
         },
@@ -639,6 +757,7 @@
     }
   }
 
+  // === Page Integration (SPA + full reload) ===
   const initAll = () => {
     const roots = Array.from(document.querySelectorAll(ETHNO_ROOT_SELECTOR))
     const activeRoots = new Set(roots)

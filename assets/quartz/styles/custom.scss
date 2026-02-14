@@ -1,9 +1,12 @@
-/* Ethnomusicology globe page overrides loaded in Quartz stylesheet order. */
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) {
+$ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
+
+/* Page Activation Scope */
+#{$ethno-page-scope} {
   overflow: hidden !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .singlePage {
+/* SPA Wrapper Neutralization */
+#{$ethno-page-scope} .singlePage {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
@@ -11,18 +14,19 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .singlePage {
   min-height: 100dvh !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) main.flex {
+/* Full Viewport Overlay Layout */
+#{$ethno-page-scope} main.flex {
   position: relative;
   height: 100dvh !important;
   min-height: 100dvh !important;
   overflow: hidden !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-toc {
+#{$ethno-page-scope} .book-toc {
   display: none !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container {
+#{$ethno-page-scope} .book-page.container {
   position: fixed !important;
   inset: 0 !important;
   width: 100vw !important;
@@ -34,7 +38,7 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container 
   z-index: 20 !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container .markdown {
+#{$ethno-page-scope} .book-page.container .markdown {
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
@@ -42,12 +46,93 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container 
   overflow: hidden !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container .markdown > * {
+#{$ethno-page-scope} .book-page.container .markdown > * {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu {
+#{$ethno-page-scope} .ethno-globe-layout,
+#{$ethno-page-scope} .ethno-globe-stage,
+#{$ethno-page-scope} .ethno-globe-svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#{$ethno-page-scope} .ethno-globe-layout {
+  margin: 0;
+  position: relative;
+}
+
+#{$ethno-page-scope} .ethno-globe-stage {
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+  isolation: isolate;
+}
+
+#{$ethno-page-scope} .ethno-globe-loading,
+#{$ethno-page-scope} .ethno-globe-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  color: rgba(236, 242, 252, 0.74);
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  z-index: 1;
+  pointer-events: none;
+  text-align: center;
+}
+
+#{$ethno-page-scope} .ethno-globe-error {
+  color: rgba(226, 148, 148, 0.95);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+#{$ethno-page-scope} .ethno-globe-svg {
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-svg {
+  cursor: grabbing;
+}
+
+#{$ethno-page-scope} .ethno-globe-backdrop {
+  fill: transparent;
+}
+
+#{$ethno-page-scope} .ethno-globe-sphere {
+  fill: #0b1118;
+  stroke: rgba(246, 250, 255, 0.62);
+  stroke-width: 1.15;
+}
+
+#{$ethno-page-scope} .ethno-globe-country {
+  fill: rgba(13, 19, 29, 0.78);
+  stroke: rgba(246, 250, 255, 0.34);
+  stroke-width: 0.58;
+  vector-effect: non-scaling-stroke;
+}
+
+#{$ethno-page-scope} .ethno-globe-borders {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.52);
+  stroke-width: 0.66;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+/* Sidebar Overlay Layer */
+#{$ethno-page-scope} .book-menu {
   position: fixed !important;
   left: 0;
   top: 0;
@@ -55,7 +140,7 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu {
   z-index: 120 !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu .book-menu-content {
+#{$ethno-page-scope} .book-menu .book-menu-content {
   margin-top: 0 !important;
   height: 100dvh !important;
   background: rgba(30, 30, 30, 0.3) !important;
@@ -63,65 +148,112 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu .book-menu
   -webkit-backdrop-filter: blur(16px) !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-layout,
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-stage,
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-svg {
-  width: 100% !important;
-  height: 100% !important;
+/* Globe Typography + Tooltip */
+#{$ethno-page-scope} .ethno-globe-hint {
+  position: absolute;
+  top: 0.12rem !important;
+  left: 50%;
+  transform: translate(-50%, -0.75rem);
+  opacity: 0;
+  pointer-events: none;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 252, 255, 0.22);
+  background: rgba(8, 12, 19, 0.72);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.32);
+  color: rgba(245, 249, 255, 0.94);
+  font-size: 0.58em;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  white-space: nowrap;
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  z-index: 3;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint {
-  top: 0.16rem !important;
-  transform: translate(-50%, -0.7rem);
-}
-
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint.is-visible {
+#{$ethno-page-scope} .ethno-globe-hint.is-visible {
+  opacity: 1;
   transform: translate(-50%, 0);
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels text {
+#{$ethno-page-scope} .ethno-globe-labels text {
+  fill: rgba(246, 250, 255, 0.96);
   font-family: var(--font-body) !important;
   font-size: 18px !important;
+  font-weight: 600;
   stroke: none !important;
   stroke-width: 0 !important;
   paint-order: normal !important;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.01em;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-2 {
+#{$ethno-page-scope} .ethno-globe-labels .depth-2 {
   font-size: 17px !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-3 {
+#{$ethno-page-scope} .ethno-globe-labels .depth-3 {
   font-size: 16px !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels .depth-4 {
+#{$ethno-page-scope} .ethno-globe-labels .depth-4 {
   font-size: 15px !important;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region path {
-  fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.003)) !important;
-  stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.008)) !important;
+/* Halo/Country Interaction Visuals */
+#{$ethno-page-scope} .ethno-globe-link {
+  cursor: pointer;
+  outline: none;
 }
 
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region:hover path,
-body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.region:focus path {
+#{$ethno-page-scope} .ethno-globe-link path {
+  vector-effect: non-scaling-stroke;
+  transition: fill 0.16s ease, stroke 0.16s ease, opacity 0.16s ease;
+}
+
+#{$ethno-page-scope} .ethno-globe-link.country path {
+  fill: var(--ethno-country-fill, rgba(255, 255, 255, 0.02));
+  stroke: var(--ethno-country-stroke, rgba(255, 255, 255, 0.45));
+  stroke-width: 1.16;
+}
+
+#{$ethno-page-scope} .ethno-globe-link.country:hover path,
+#{$ethno-page-scope} .ethno-globe-link.country:focus path {
+  fill: var(--ethno-country-fill-hover, rgba(191, 97, 106, 0.34));
+  stroke: var(--ethno-country-stroke-hover, rgba(248, 252, 255, 0.87));
+}
+
+#{$ethno-page-scope} .ethno-globe-link.region path {
+  fill: var(--ethno-region-fill, rgba(255, 255, 255, 0.003)) !important;
+  stroke: var(--ethno-region-stroke, rgba(255, 255, 255, 0.008)) !important;
+  stroke-width: 1.2;
+}
+
+#{$ethno-page-scope} .ethno-globe-link.region:hover path,
+#{$ethno-page-scope} .ethno-globe-link.region:focus path {
   fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.06)) !important;
   stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.28)) !important;
 }
 
+#{$ethno-page-scope} .ethno-globe-link:focus-visible path {
+  filter: drop-shadow(0 0 0.28rem rgba(246, 251, 255, 0.82));
+}
+
+/* Mobile Overrides */
 @media screen and (max-width: 56rem) {
-  body:is(.page-ethno-map-full, .page-ethno-map-full-active) main.flex,
-  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-page.container {
+  #{$ethno-page-scope} main.flex,
+  #{$ethno-page-scope} .book-page.container {
     height: 100dvh !important;
     min-height: 100dvh !important;
   }
 
-  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .book-menu .book-menu-content {
+  #{$ethno-page-scope} .book-menu .book-menu-content {
     height: 100dvh !important;
   }
 
-  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-hint {
+  #{$ethno-page-scope} .ethno-globe-hint {
     top: 0.08rem !important;
     font-size: 0.56em !important;
     max-width: calc(100% - 1.5rem);
@@ -129,7 +261,21 @@ body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-link.reg
     white-space: normal;
   }
 
-  body:is(.page-ethno-map-full, .page-ethno-map-full-active) .ethno-globe-labels text {
+  #{$ethno-page-scope} .ethno-globe-labels text {
     font-size: 14px !important;
   }
+}
+
+.ethno-map-empty {
+  margin: 1rem 0;
+  color: var(--gray);
+}
+
+/* Match Markdown Preview Enhanced footnote back-arrow appearance. */
+.markdown .footnotes .footnote-backref,
+.markdown .footnotes a[href^="#fnref"] {
+  font-size: 0.7em;
+  font-weight: normal;
+  text-decoration: none;
+  opacity: 0.3;
 }

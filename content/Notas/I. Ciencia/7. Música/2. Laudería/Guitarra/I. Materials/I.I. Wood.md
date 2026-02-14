@@ -1,5 +1,5 @@
 ---
-title: Wood
+title: I.I. Wood
 weight: 6
 ---
 
@@ -35,6 +35,8 @@ weight: 6
 - **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity <1.0 means that the wood floats.
 - Important for, e.g., boats.
 
+<br>
+
 1. Poplar — 0.42.
 2. Cherry — 0.50.
 3. Walnut — 0.55.
@@ -48,6 +50,8 @@ weight: 6
 - **Compressive strength** — resistance to pressure applied along the grain.
 - Important for, e.g., table legs.
 
+<br>
+
 1. Poplar — 5540 psi.
 2. Cherry — 7110 psi.
 3. White oak — 7440 psi.
@@ -59,6 +63,8 @@ weight: 6
 
 - **Bending strength** = **modulus of rupture** — resistance to pressure applied perpendicular to the grain.
 - Important for, e.g., table tops, canoe paddles.
+
+<br>
 
 1. Poplar — 10 100 psi.
 2. Cherry — 12 300 psi.
@@ -72,6 +78,8 @@ weight: 6
 - **Stiffness** = **modulus of elasticity** — resistance to bowing.
 - Important for, e.g., shelves, archery bow, fishing pole.
 
+<br>
+
 1. Cherry — 1.49 Mpsi.
 2. Poplar — 1.58 Mpsi.
 3. Walnut — 1.68 Mpsi.
@@ -83,6 +91,8 @@ weight: 6
 
 - **Hardness** — resistance to abuse.
 - Important for, e.g., desktop, workbench top, baseball bat.
+
+<br>
 
 1. Poplar — 540 lbs.
 2. Yellow pine — 870 lbs.

@@ -41,18 +41,26 @@ title: "I.I. Génesis"
      - text: commemorating the past, the ancestors and their deeds, sometimes mentioning how each had died;
   2. (later) a religious celebration of music, dance, theater; dancers played maracas and may have worn rattles tied to their ankles.
 
+<br>
+
 - Voices:
   - elderly — low;
   - young — upper;
   - women — tenór, alto, soprano.
 
+<br>
+
 - Taíno singing was not harsh to European ears.
 - It is unknown what taíno music sounded like, but historians have recorded some instruments. Apparently, there is no Amerindian influence in la música cubana.
+
+<br>
 
 - Taínos and Africans lived together as cimarrones. → Africans might have absorbed taíno musical elements:
   - drums, other instruments;
   - antiphonal singing;
   - ecstatic mass singing and dancing.
+
+<br>
 
 - **By the 1600s** — the Amerindians died out of:
 exogenous diseases;
@@ -63,6 +71,8 @@ exogenous diseases;
 
 - **27 October 1492** — Columbus discovered Cuba.
 - Were arriving even in the early XX c.
+
+<br>
 
 - European influences:
   - chordal harmony;
@@ -90,6 +100,8 @@ exogenous diseases;
   - Occitanians;
   - Celts;
   - Visigoths.
+
+<br>
 
 - The urban Caribbean music was influenced directly by the music of the Spanish court, theater, military, church.
 - Música campesina throughout América Latina is almost entirely of Spanish origin.
