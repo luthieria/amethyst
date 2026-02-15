@@ -104,3 +104,32 @@
 .vditor-ir .footnotes-list > li:last-child {
   margin-bottom: 0 !important;
 }
+
+.vditor-preview .vditor-reset table,
+.vditor-wysiwyg table,
+.vditor-ir table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vditor-preview .vditor-reset table th:not([align]),
+.vditor-preview .vditor-reset table td:not([align]),
+.vditor-wysiwyg table th:not([align]),
+.vditor-wysiwyg table td:not([align]),
+.vditor-ir table th:not([align]),
+.vditor-ir table td:not([align]) {
+  text-align: center;
+}
+
+.vditor-preview .vditor-reset table th,
+.vditor-preview .vditor-reset table td,
+.vditor-wysiwyg table th,
+.vditor-wysiwyg table td,
+.vditor-ir table th,
+.vditor-ir table td {
+  padding: 0.2em 0.55em !important;
+}
+

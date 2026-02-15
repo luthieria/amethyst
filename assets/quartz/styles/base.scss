@@ -139,15 +139,22 @@ p {
 
 table {
   border: 1px solid var(--outlinegray);
-  width: 100%;
-  padding: 1.5em;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.5em auto;
+  padding: 0;
   border-collapse: collapse;
 }
 
 td,
 th {
-  padding: 0.2em 1em;
+  padding: 0.2em 0.55em;
   border: 1px solid var(--outlinegray);
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: center;
 }
 
 img {

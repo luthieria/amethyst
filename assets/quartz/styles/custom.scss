@@ -127,14 +127,6 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   opacity: 0.78;
 }
 
-#{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-link.country path,
-#{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-link.country:hover path,
-#{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-link.country:focus path {
-  fill-opacity: 0.42;
-  stroke-opacity: 0.38;
-  stroke-width: 0.78;
-}
-
 #{$ethno-page-scope} .ethno-globe-backdrop {
   fill: transparent;
 }
@@ -242,7 +234,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-labels text {
   fill: rgba(246, 250, 255, 0.96);
-  font-family: var(--font-body) !important;
+  font-family: var(--font-sans) !important;
   font-size: 18px !important;
   font-weight: 600;
   stroke: none !important;
