@@ -103,8 +103,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/": {
     "title": "Mediterráneo",
-    "content": "\r\n",
-    "lastmodified": "2026-02-15T14:23:15.5531464-04:00",
+    "content": "",
+    "lastmodified": "2026-02-15T15:04:53.0845161-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/Espa%C3%B1a/": {
@@ -121,14 +121,14 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/": {
     "title": "América",
-    "content": "\r\n[[América Latina]]\r\n\r\n[[Anglo-America]]",
-    "lastmodified": "2026-02-15T14:43:32.8410811-04:00",
+    "content": "\r\n[[4.1. América Latina]]\r\n\r\n[[4.2. Anglo-America]]",
+    "lastmodified": "2026-02-15T15:17:53.8741772-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/": {
     "title": "América Latina",
-    "content": "",
-    "lastmodified": "2026-02-14T01:08:57.5016619-04:00",
+    "content": "\r\n[[4.1.1. Hispanoamérica]]\r\n\r\n[[4.1.2. Brasil]]\r\n\r\n[[4.1.3. Antilles françaises]]",
+    "lastmodified": "2026-02-15T15:15:01.6908365-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/": {
@@ -145,8 +145,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/": {
     "title": "Cuba",
-    "content": "\r\n[[La música cubana]]",
-    "lastmodified": "2026-02-15T14:19:43.5878352-04:00",
+    "content": "\r\n\u003c!-- [[La música cubana]] --\u003e",
+    "lastmodified": "2026-02-15T15:08:31.2041405-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": {
@@ -236,7 +236,7 @@
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.2.-Brasil/": {
     "title": "Brasil",
     "content": "",
-    "lastmodified": "2026-02-14T00:31:50.511434-04:00",
+    "lastmodified": "2026-02-15T15:05:30.8463562-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.2.-Brasil/M%C3%BAsica-brasileira": {
@@ -247,8 +247,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.3.-Antilles-fran%C3%A7aises/": {
     "title": "Antilles françaises",
-    "content": "\r\n",
-    "lastmodified": "2026-02-14T18:58:05.5317615-04:00",
+    "content": "",
+    "lastmodified": "2026-02-15T15:05:30.2823294-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.3.-Antilles-fran%C3%A7aises/Franco-Caribbean-Music": {
@@ -257,19 +257,19 @@
     "lastmodified": "2026-02-13T17:48:04.7121363-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/": {
     "title": "Anglo-America",
-    "content": "\r\n[[Anglo-Caribbean]]\r\n\r\n[[USA]]",
-    "lastmodified": "2026-02-15T14:44:37.5682418-04:00",
+    "content": "\r\n[Anglo-Caribbean](\u003ccontent/Notas/I. Ciencia/7. Música/1. Etnomusicología/4. América/4.2. Anglo-America/Anglo-Caribbean Music.md\u003e)\r\n\r\n[USA](\u003ccontent/Notas/I. Ciencia/7. Música/1. Etnomusicología/4. América/4.2. Anglo-America/African American Music.md\u003e)",
+    "lastmodified": "2026-02-15T15:24:57.4401261-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/African-American-Music": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music": {
     "title": "African American Music",
     "content": "",
     "lastmodified": "2026-02-14T00:36:01.4716676-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/Anglo-Caribbean-Music": {
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/Anglo-Caribbean-Music": {
     "title": "Anglo-Caribbean Music",
     "content": "",
     "lastmodified": "2026-02-14T00:37:04.3422405-04:00",
