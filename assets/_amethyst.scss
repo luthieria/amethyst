@@ -213,6 +213,8 @@ pre::-webkit-scrollbar {
     scrollbar-width: none;
     position: relative;
     overflow-x: visible;
+    overscroll-behavior: contain;
+    overscroll-behavior-y: contain;
 }
 
 .book-menu-hover-zone,
@@ -288,16 +290,12 @@ pre::-webkit-scrollbar {
         width: 18px;
         height: 66px;
         padding: 0;
-        border: 1px solid var(--outlinegray);
-        border-left: none;
-        border-radius: 0 10px 10px 0;
-        background: rgba(26, 30, 38, 0.84);
+        border: none;
+        border-radius: 0;
+        background: transparent;
         color: var(--gray);
-        font-size: 10px;
-        letter-spacing: 0.02em;
+        font-size: 16px;
         line-height: 1;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
         cursor: pointer;
         z-index: 121;
         user-select: none;
@@ -307,14 +305,12 @@ pre::-webkit-scrollbar {
     body.sidebar-autohide-enabled .book-menu-pin:hover,
     body.sidebar-autohide-enabled .book-menu-pin:focus-visible {
         color: var(--secondary);
-        border-color: var(--secondary);
-        background: rgba(30, 34, 44, 0.92);
+        background: transparent;
         outline: none;
     }
 
     body.sidebar-autohide-enabled .book-menu-pin[aria-pressed="true"] {
         color: var(--tertiary);
-        border-color: var(--tertiary);
     }
 
     body[dir="rtl"].sidebar-autohide-enabled .book-menu {
@@ -341,10 +337,6 @@ pre::-webkit-scrollbar {
     body[dir="rtl"].sidebar-autohide-enabled .book-menu-pin {
         right: auto;
         left: -18px;
-        border-right: none;
-        border-left: 1px solid var(--outlinegray);
-        border-radius: 10px 0 0 10px;
-        writing-mode: vertical-lr;
     }
 }
 

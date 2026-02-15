@@ -42,7 +42,7 @@
     button.setAttribute("aria-pressed", pinned ? "true" : "false")
     button.setAttribute("aria-label", label)
     button.setAttribute("title", label)
-    button.textContent = pinned ? "Unpin" : "Pin"
+    button.textContent = "☰"
   }
 
   const init = () => {
