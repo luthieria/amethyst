@@ -30,9 +30,9 @@ html body> :first-child {
   margin-top: 0;
 }
 
-/* # HEADINGS */
+/* # I. HEADINGS */
 
-// ## Additional
+// ## I.I. Additional
 p.volume,
 p.part,
 p.chapter,
@@ -67,7 +67,7 @@ p.section {
   font-size: 0.85em;
 }
 
-// ## Default
+// ## I. II. Default
 html body h1,
 html body h2,
 html body h3,
@@ -78,6 +78,7 @@ html body h6 {
   text-align: center;
 
   line-height: 1.2;
+
   margin-top: 1em;
   margin-bottom: 16px;
 }
@@ -122,15 +123,15 @@ html body h6 {
   color: #b48ead;
 }
 
-/* --- Typography & Emphasis --- */
+/* # II. HIGHLIGHT TEXT */
 
-// Mouse selection highlight
+// II.II. Mouse selection highlight
 ::selection {
   background: #4c566a;
   color: #eceff4;
 }
 
-// Text highlight (== ==)
+// II.III.Text highlight (== ==)
 mark {
   background-color: rgba(235, 203, 139);
   color: #2e3440;
@@ -219,7 +220,7 @@ html body kbd {
   border-radius: 3px;
 }
 
-/* --- Links --- */
+/* # III. LINKS  */
 
 html body a {
   color: #ddd;
@@ -236,13 +237,13 @@ html body a:hover {
   text-decoration: none;
 }
 
-/* --- Media --- */
+/* # IV. MEDIA */
 
 html body img {
   max-width: 100%;
 }
 
-/* --- Layout Elements --- */
+/* # V. LAYOUT ELEMENTS */
 
 html body>p,
 html body blockquote,
@@ -270,7 +271,7 @@ html body hr {
   border: 0 none;
 }
 
-/* --- Blockquotes --- */
+/* ## V.I. Blockquotes */
 
 html body blockquote {
   margin: 0;
@@ -278,8 +279,6 @@ html body blockquote {
   padding-top: 5px;
   padding-bottom: 5px;
 
-
-  //color: #9ba09d;
   background-color: #303337;
   border-left: 4px solid #43484c;
 }
@@ -318,7 +317,7 @@ html body .book-comment-marker,
   opacity: 0.9;
 }
 
-/* --- Lists --- */
+/* ## V.II. Lists */
 
 html body>ol,
 html body>ul {
@@ -394,7 +393,7 @@ html body .task-list-item-checkbox:hover {
   cursor: pointer;
 }
 
-// ### List spacing
+// ### V.II.I. List spacing
 /* Tight list items stay compact */
 .markdown-preview ul>li,
 .markdown-preview ol>li {
@@ -418,7 +417,7 @@ html body .task-list-item-checkbox:hover {
   /* pulls sublist back up */
 }
 
-/* Footnote spacing */
+/* #### V.II.I.I. Footnote spacing */
 .markdown-preview .footnotes-list {
   // font-size: 14px;
 
@@ -441,7 +440,7 @@ html body .task-list-item-checkbox:hover {
   margin-bottom: 0;
 }
 
-/* --- Tables --- */
+/* --- ## V.III. Tables --- */
 
 html body table {
   margin: 10px 0 15px 0;
@@ -452,6 +451,7 @@ html body table {
   overflow: auto;
   word-break: normal;
   word-break: keep-all;
+  text-align: center;
 }
 
 html body table th {
