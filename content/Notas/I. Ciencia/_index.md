@@ -4,7 +4,8 @@ weight: 1
 bookCollapseSection: true
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
+<!-- present them as modern, beautiful tabs with minimalist icons, in 2 columns -->
+
 [[1. Filosofia]]
 
 [[2. Antropologia]]
@@ -22,4 +23,3 @@ bookCollapseSection: true
 [[8. Marxismo — política]]
 
 [[9. Computer Science]]
-<!-- AUTO-CHILD-LINKS:END -->

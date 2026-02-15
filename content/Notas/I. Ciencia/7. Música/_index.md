@@ -4,7 +4,6 @@ weight: 2
 bookCollapseSection: true
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
 [[1. Etnomusicología]]
 
 [[2. Laudería]]
@@ -16,4 +15,3 @@ bookCollapseSection: true
 [[5. Audio Engineering]]
 
 [[6. DSP]]
-<!-- AUTO-CHILD-LINKS:END -->

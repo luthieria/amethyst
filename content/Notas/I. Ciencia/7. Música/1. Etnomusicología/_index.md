@@ -10,3 +10,11 @@ bodyClass: "page-ethno-map-full"
 ---
 
 {{< ethno-world-map >}}
+
+<!-- [[África subsahariana]]
+
+[[Oriente Medio]]
+
+[[Mediterráneo]]
+
+[[América]] --> 

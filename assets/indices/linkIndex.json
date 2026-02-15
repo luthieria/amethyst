@@ -8,16 +8,84 @@
           "text": "Заметки по марксизму"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/Am%C3%A9rica-Latina",
+          "text": "América Latina"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/Anglo-America",
+          "text": "Anglo-America"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/M%C3%A9xico",
+          "text": "México"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Cuba",
+          "text": "Cuba"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Santo-Domingo",
+          "text": "Santo Domingo"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Puerto-Rico",
+          "text": "Puerto Rico"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Colombia",
+          "text": "Colombia"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Ecuador",
+          "text": "Ecuador"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Per%C3%BA",
+          "text": "Perú"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         },
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+          "target": "/Anglo-Caribbean",
+          "text": "Anglo-Caribbean"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+          "target": "/USA",
+          "text": "USA"
         }
       ],
       "/Notas/I.-Ciencia/9.-Computer-Science/": [
@@ -86,7 +154,7 @@
       ],
       "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         }
@@ -98,11 +166,53 @@
           "text": "AI_Audio_Plugin_Dev_Guide"
         }
       ],
+      "/Am%C3%A9rica-Latina": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/Am%C3%A9rica-Latina",
+          "text": "América Latina"
+        }
+      ],
+      "/Anglo-America": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+          "target": "/Anglo-America",
+          "text": "Anglo-America"
+        }
+      ],
+      "/Anglo-Caribbean": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+          "target": "/Anglo-Caribbean",
+          "text": "Anglo-Caribbean"
+        }
+      ],
       "/Audio_Engineering_Standard_Operating_Procedures": [
         {
           "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
           "target": "/Audio_Engineering_Standard_Operating_Procedures",
           "text": "Audio_Engineering_Standard_Operating_Procedures"
+        }
+      ],
+      "/Colombia": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Colombia",
+          "text": "Colombia"
+        }
+      ],
+      "/Cuba": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Cuba",
+          "text": "Cuba"
+        }
+      ],
+      "/Ecuador": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Ecuador",
+          "text": "Ecuador"
         }
       ],
       "/Generative-Form-and-Abstracted-Cross-Rhythm": [
@@ -112,6 +222,13 @@
           "text": "Generative Form and Abstracted Cross-Rhythm"
         }
       ],
+      "/La-m%C3%BAsica-cubana": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
       "/LaTeX": [
         {
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
@@ -119,11 +236,25 @@
           "text": "LaTeX"
         }
       ],
+      "/M%C3%A9xico": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/M%C3%A9xico",
+          "text": "México"
+        }
+      ],
       "/Notas": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
+        }
+      ],
+      "/Per%C3%BA": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Per%C3%BA",
+          "text": "Perú"
         }
       ],
       "/Portfolio-ideas": [
@@ -131,6 +262,20 @@
           "source": "/Notas/II.-Personal/Tareas/",
           "target": "/Portfolio-ideas",
           "text": "Portfolio ideas"
+        }
+      ],
+      "/Puerto-Rico": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Puerto-Rico",
+          "text": "Puerto Rico"
+        }
+      ],
+      "/Santo-Domingo": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+          "target": "/Santo-Domingo",
+          "text": "Santo Domingo"
         }
       ],
       "/Tareas": [
@@ -160,6 +305,13 @@
           "target": "/Trabajo",
           "text": "Trabajo"
         }
+      ],
+      "/USA": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+          "target": "/USA",
+          "text": "USA"
+        }
       ]
     }
   },
@@ -170,14 +322,74 @@
       "text": "Заметки по марксизму"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
       "text": "Предисловие"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/1.-Am%C3%A9rica-Latina/Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/Notas",
       "text": "Notas"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+      "target": "/La-m%C3%BAsica-cubana",
+      "text": "La música cubana"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/M%C3%A9xico",
+      "text": "México"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Cuba",
+      "text": "Cuba"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Santo-Domingo",
+      "text": "Santo Domingo"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Puerto-Rico",
+      "text": "Puerto Rico"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Colombia",
+      "text": "Colombia"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Ecuador",
+      "text": "Ecuador"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/",
+      "target": "/Per%C3%BA",
+      "text": "Perú"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+      "target": "/Anglo-Caribbean",
+      "text": "Anglo-Caribbean"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-Am%C3%A9rica/",
+      "target": "/USA",
+      "text": "USA"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+      "target": "/Am%C3%A9rica-Latina",
+      "text": "América Latina"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/",
+      "target": "/Anglo-America",
+      "text": "Anglo-America"
     },
     {
       "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
