@@ -17,7 +17,15 @@
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }} class="{{ delimit $bodyClasses " " }}"{{ end }}>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <main class="flex">
+    <div class="book-menu-hover-zone" aria-hidden="true"></div>
     <aside class="book-menu">
+      <button
+        type="button"
+        class="book-menu-pin"
+        aria-pressed="false"
+        aria-label="Pin sidebar"
+        title="Pin sidebar"
+      >Pin</button>
       <div class="book-menu-content">
         {{ template "menu" . }} <!-- Left menu Content -->
       </div>

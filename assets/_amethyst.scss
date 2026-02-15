@@ -215,31 +215,143 @@ pre::-webkit-scrollbar {
     overflow-x: visible;
 }
 
-.book-menu .book-menu-content::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -18px;
-    width: 18px;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-        to right,
-        rgba(30, 30, 30, 0.28) 0%,
-        rgba(30, 30, 30, 0.14) 48%,
-        rgba(30, 30, 30, 0) 100%
-    );
+.book-menu-hover-zone,
+.book-menu-pin {
+    display: none;
 }
 
-body[dir="rtl"] .book-menu .book-menu-content::after {
-    right: auto;
-    left: -18px;
-    background: linear-gradient(
-        to left,
-        rgba(30, 30, 30, 0.28) 0%,
-        rgba(30, 30, 30, 0.14) 48%,
-        rgba(30, 30, 30, 0) 100%
-    );
+@media screen and (min-width: $mobile-breakpoint) {
+    body.sidebar-autohide-enabled main.flex {
+        justify-content: center;
+    }
+
+    body.sidebar-autohide-enabled .book-menu {
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        bottom: 0;
+        width: $menu-width;
+        margin-top: 0;
+        z-index: 120;
+        flex: none;
+        transform: translateX(calc(-1 * #{$menu-width}));
+        transition: transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    body.sidebar-autohide-enabled.sidebar-menu-open .book-menu,
+    body.sidebar-autohide-enabled.sidebar-menu-pinned .book-menu {
+        transform: translateX(0);
+    }
+
+    body.sidebar-autohide-enabled .book-menu .book-menu-content {
+        width: $menu-width;
+        margin-top: 0 !important;
+        height: calc(100dvh - #{$header-height});
+    }
+
+    body.sidebar-autohide-enabled .book-page.container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body.sidebar-autohide-enabled .book-toc {
+        flex: 0 0 0;
+        width: 0;
+        margin-top: 0;
+        pointer-events: none;
+    }
+
+    body.sidebar-autohide-enabled .book-toc .book-toc-content {
+        right: 0;
+        pointer-events: auto;
+    }
+
+    body.sidebar-autohide-enabled .book-menu-hover-zone {
+        display: block;
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        bottom: 0;
+        width: 14px;
+        z-index: 119;
+        background: transparent;
+    }
+
+    body.sidebar-autohide-enabled .book-menu-pin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: -18px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 66px;
+        padding: 0;
+        border: 1px solid var(--outlinegray);
+        border-left: none;
+        border-radius: 0 10px 10px 0;
+        background: rgba(26, 30, 38, 0.84);
+        color: var(--gray);
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        cursor: pointer;
+        z-index: 121;
+        user-select: none;
+        transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease;
+    }
+
+    body.sidebar-autohide-enabled .book-menu-pin:hover,
+    body.sidebar-autohide-enabled .book-menu-pin:focus-visible {
+        color: var(--secondary);
+        border-color: var(--secondary);
+        background: rgba(30, 34, 44, 0.92);
+        outline: none;
+    }
+
+    body.sidebar-autohide-enabled .book-menu-pin[aria-pressed="true"] {
+        color: var(--tertiary);
+        border-color: var(--tertiary);
+    }
+
+    body[dir="rtl"].sidebar-autohide-enabled .book-menu {
+        left: auto;
+        right: 0;
+        transform: translateX($menu-width);
+    }
+
+    body[dir="rtl"].sidebar-autohide-enabled.sidebar-menu-open .book-menu,
+    body[dir="rtl"].sidebar-autohide-enabled.sidebar-menu-pinned .book-menu {
+        transform: translateX(0);
+    }
+
+    body[dir="rtl"].sidebar-autohide-enabled .book-menu-hover-zone {
+        left: auto;
+        right: 0;
+    }
+
+    body[dir="rtl"].sidebar-autohide-enabled .book-toc .book-toc-content {
+        right: auto;
+        left: 0;
+    }
+
+    body[dir="rtl"].sidebar-autohide-enabled .book-menu-pin {
+        right: auto;
+        left: -18px;
+        border-right: none;
+        border-left: 1px solid var(--outlinegray);
+        border-radius: 10px 0 0 10px;
+        writing-mode: vertical-lr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.sidebar-autohide-enabled .book-menu {
+        transition: none;
+    }
 }
 
 .book-menu-content::-webkit-scrollbar,
