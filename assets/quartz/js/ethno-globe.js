@@ -74,14 +74,14 @@
       color: { h: 204, s: 38, l: 92 },
     },
     color: {
-      regionFillAlpha: 0.03,
-      regionStrokeAlpha: 0.14,
-      regionFillHoverAlpha: 0.08,
-      regionStrokeHoverAlpha: 0.32,
-      countryFillAlpha: 0.2,
-      countryStrokeAlpha: 0.38,
-      countryFillHoverAlpha: 0.3,
-      countryStrokeHoverAlpha: 0.68,
+      regionFillAlpha: 0.026,
+      regionStrokeAlpha: 0.12,
+      regionFillHoverAlpha: 0.068,
+      regionStrokeHoverAlpha: 0.28,
+      countryFillAlpha: 0.19,
+      countryStrokeAlpha: 0.34,
+      countryFillHoverAlpha: 0.27,
+      countryStrokeHoverAlpha: 0.6,
       mapCountryFillAlpha: 0.48,
       mapCountryStrokeAlpha: 0.82,
       fallbackMapCountryFill: "rgba(13, 19, 29, 0.76)",
@@ -89,23 +89,23 @@
       regionStrokeAdjust: { s: 8, l: 16 },
       regionFillHoverAdjust: { s: 8, l: 8 },
       regionStrokeHoverAdjust: { s: 20, l: 20 },
-      countryStrokeAdjust: { s: 2, l: 10 },
-      countryFillHoverAdjust: { s: 4, l: 10 },
-      countryStrokeHoverAdjust: { s: 10, l: 14 },
+      countryStrokeAdjust: { s: 0, l: 8 },
+      countryFillHoverAdjust: { s: 2, l: 8 },
+      countryStrokeHoverAdjust: { s: 8, l: 12 },
       countryVariation: {
-        hueSpreadCap: 22,
-        hueSpreadBase: 42,
-        hueJitter: 9,
-        saturationBaseBoost: -10,
-        saturationEdgeBoost: 2,
-        saturationJitterBoost: 2,
-        saturationMin: 24,
-        saturationMax: 64,
-        lightnessBaseShift: 12,
-        lightnessIndexShift: 3,
-        lightnessJitterShift: 2,
-        lightnessMin: 50,
-        lightnessMax: 84,
+        hueSpreadCap: 16,
+        hueSpreadBase: 30,
+        hueJitter: 5,
+        saturationBaseBoost: -8,
+        saturationEdgeBoost: 1.5,
+        saturationJitterBoost: 1.4,
+        saturationMin: 22,
+        saturationMax: 54,
+        lightnessBaseShift: 10,
+        lightnessIndexShift: 2.4,
+        lightnessJitterShift: 1.6,
+        lightnessMin: 48,
+        lightnessMax: 82,
       },
     },
   }
@@ -142,15 +142,15 @@
   ]
   const DEFAULT_REGION_COLOR = { h: 208, s: 52, l: 56 }
   const REGION_COLOR_PRESETS = {
-    "africa-subsahariana": { h: 28, s: 54, l: 50 }, // earthy orange
-    magreb: { h: 46, s: 54, l: 57 }, // desert yellow
-    "oriente-medio": { h: 48, s: 64, l: 63 }, // brighter desert yellow
-    mediterraneo: { h: 174, s: 46, l: 52 }, // green-blue
-    "america-latina": { h: 24, s: 66, l: 56 }, // warm yellow-red
-    "antilles-franceses": { h: 252, s: 52, l: 60 }, // blue-purple
+    "africa-subsahariana": { h: 24, s: 42, l: 52 }, // terracotta
+    magreb: { h: 44, s: 38, l: 62 }, // desert sand
+    "oriente-medio": { h: 47, s: 50, l: 67 }, // bright desert amber
+    mediterraneo: { h: 184, s: 36, l: 51 }, // muted teal
+    "america-latina": { h: 18, s: 56, l: 60 }, // saffron-coral
+    "antilles-franceses": { h: 244, s: 40, l: 63 }, // periwinkle
   }
   const COUNTRY_COLOR_PRESETS = {
-    brasil: { h: 132, s: 52, l: 45 }, // selva green
+    brasil: { h: 138, s: 42, l: 46 }, // selva green, refined
   }
   const COUNTRY_NAME_ALIASES = {
     lybia: "libya",
