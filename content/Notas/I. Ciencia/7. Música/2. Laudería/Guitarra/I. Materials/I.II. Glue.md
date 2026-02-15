@@ -36,9 +36,12 @@ weight: 7
 
 ---
 
-# Animal
-## Hide Glue
+# i. Animal
+
+## i.i. Hide Glue
+
 ### Hot[^https://youtu.be/ER1T5zMKG-g?si=TsHSYwHjxESBmPWN][^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/stewmac-ground-hide-glue/]
+
 #### Description
 
 {{< expand "To do" >}}
@@ -111,12 +114,13 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 - Don’t add adulterants (urea, urea formaldehyde). It extends open time, but makes the glue act like a synthetic one (= extend in the joint) when in a warm environment.[^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]
 
-### Usage[^https://youtu.be/Raq3pbGmmOg?si=x4FHZ6SLIzWLfYh8][^https://youtu.be/ER1T5zMKG-g?si=TsHSYwHjxESBmPWN]
-#### 1. Preparation
+#### Usage[^https://youtu.be/Raq3pbGmmOg?si=x4FHZ6SLIzWLfYh8][^https://youtu.be/ER1T5zMKG-g?si=TsHSYwHjxESBmPWN]
+
+##### 1. Preparation
 
 - For glueing narrow joints, you may make a thicker glue — for it not to run so much.[^https://youtu.be/XzlvPUTsWMY?si=Gcj3p_DKfSzjyxTi]
 
-##### Bruné M. E.[^https://youtu.be/wHAOe-6vPO4?si=uoVaz-t1Sf3QF-Fn][^https://youtu.be/iYoLUvZ9SH8?si=RIdeXpLrUxZJAvjv]
+###### Bruné M. E.[^https://youtu.be/wHAOe-6vPO4?si=uoVaz-t1Sf3QF-Fn][^https://youtu.be/iYoLUvZ9SH8?si=RIdeXpLrUxZJAvjv]
 
 1. Glue:water: 1:1.25.
 2. Mix.
@@ -131,7 +135,7 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
    -  Reheatable ~4 times before losing strength.
 10. When the glue has run out, clean the jar.
 
-##### Erlewine D.
+###### Erlewine D.
 
 1. Glue:water: 1:≥1 / 1:2 (e.g., 1:2 oz).
 2. Mix.
@@ -142,7 +146,7 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 7. Store it in a refrigerator. 
 8. Next usage: heat in a microwave for 30 seconds.
 
-##### O’Brien R.[^https://youtu.be/stpmQfLrQPo?si=OxXlBS8mJTT1EFqV]
+###### O’Brien R.[^https://youtu.be/stpmQfLrQPo?si=OxXlBS8mJTT1EFqV]
 
 1. Glue:water: 1:1.9 by weight.
 2. Leave for 30–60 minutes — for the glue to absorb the water.
@@ -159,7 +163,7 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
   - freezer — for longer storage.
     - May store in an ice cube tray.
 
-#### 2. Glueing
+##### 2. Glueing
 
 1. Do 2–3 dry runs. Move fast.
 2. Heat up the parts to be glued.
@@ -171,12 +175,12 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 - After 20–30 minutes, the glued piece is handleable as long as it doesn’t receive much stress. → Can be un-clamped.[^https://youtu.be/XSa3WP2khUg?si=ByypWf3BvQF-a6w7]
 
-#### 3. Cleaning
+##### 3. Cleaning
 
 1. Clean up with a hot-watered rag as much as possible right after joining the parts.
 2. Chip off, clean up with a hot-watered rag the remains.
 
-### I.II. Liquid[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-liquid-hide-glue]
+### i.ii. Liquid[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-liquid-hide-glue]
 
 - Similar to hot hide glue, but longer working time.
 - For:
@@ -196,6 +200,7 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 1. While unsettled, wipe with a hot-watered rag.
 2. When settled, sand / scrape / chisel.
 
+## ii.ii. Fish Glue
 
 
 <!-- Footnotes -->
