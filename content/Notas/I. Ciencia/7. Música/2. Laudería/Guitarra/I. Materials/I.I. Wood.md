@@ -12,8 +12,9 @@ weight: 6
   - light, wide — grown at spring (trees grow faster);
   - dark, narrow, dense — grown in autumn (trees grow slower).
 
-
 ![alt text](Imagenes/Cuts.png)
+
+
 
 ### Strength[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]
 
@@ -23,20 +24,24 @@ weight: 6
 
 - All strength measurements are averages.
 
+
+
 #### Specific Gravity
 
 - **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity <1.0 means that the wood floats.
 - Important for, e.g., boats.
 
-| Wood        | Specific Gravity |
-|------------:|------------------|
-| Poplar      | 0.42             |
-| Cherry      | 0.50             |
-| Walnut      | 0.55             |
-| Yellow pine | 0.59             |
-| Hard maple  | 0.63             |
-| White oak   | 0.68             |
-| Ebony       | 1.0 (→ sinks)    |
+| **Wood**    |**Specific Gravity**|
+|------------:|--------------------|
+| Poplar      | 0.42               |
+| Cherry      | 0.50               |
+| Walnut      | 0.55               |
+| Yellow pine | 0.59               |
+| Hard maple  | 0.63               |
+| White oak   | 0.68               |
+| Ebony       | 1.0 (→ sinks)      |
+
+
 
 #### Compressive Strength
 
@@ -52,6 +57,8 @@ weight: 6
 5. Hard maple — 7830 psi.
 6. Yellow pine — 8470 psi.
 
+
+
 #### Bending Strength
 
 - **Bending strength** = **modulus of rupture** — resistance to pressure applied perpendicular to the grain.
@@ -65,6 +72,8 @@ weight: 6
 4. Walnut — 14 600 psi.
 5. White oak — 15 200 psi.
 6. Hard maple — 15 800 psi.
+
+
 
 #### Stiffness
 
@@ -80,6 +89,8 @@ weight: 6
 5. Hard maple — 1.83 Mpsi.
 6. Yellow pine — 1.98 Mpsi.
 
+
+
 #### Hardness
 
 - **Hardness** — resistance to abuse.
@@ -93,6 +104,8 @@ weight: 6
 4. Walnut — 1010 lbs.
 5. White oak — 1360 lbs.
 6. Hard maple — 1450 lbs.
+
+
 
 ## Moisture[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]
 
@@ -118,7 +131,9 @@ weight: 6
 
 - M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
 
-# Oiliness[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]
+
+
+## Oiliness[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]
 
 - Some woods are oily (rosewood, cocobolo, etc.).
 - Can be wiped with Naphtha / alcohol / acetone.
@@ -130,6 +145,8 @@ weight: 6
 
 - Synthetic glues key into the wood imperfections.
 
+
+
 # Species
 
 ## Western Larch
@@ -138,6 +155,12 @@ weight: 6
 - Very resonant: very high tap tone, long sustain.
 - Heavier.
 - For braces.
+
+
+
+
+
+
 
 
 
