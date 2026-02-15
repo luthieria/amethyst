@@ -172,7 +172,7 @@ entries:
         kind: country
         iso2: "ES"
         depth: 2
-        lat: 40.0
+        lat: 43.0
         lon: -4.0
         dx: -58
         dy: -8
@@ -185,8 +185,8 @@ entries:
         depth: 2
         lat: 39.0
         lon: -8.0
-        dx: -64
-        dy: 12
+        dx: -40
+        dy: 8
 
   - id: america
     title: "América"
