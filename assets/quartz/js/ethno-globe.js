@@ -575,28 +575,40 @@
     if (canMerge) {
       const geometries = []
       const seenGeometries = new Set()
-      let containsSupplementalFeature = false
+      const supplementalFeatures = []
 
       features.forEach((feature) => {
         if (feature?.__ethnoSupplemental) {
-          containsSupplementalFeature = true
+          supplementalFeatures.push(feature)
           return
         }
 
         const id = String(feature?.id || "").trim()
-        if (!id || seenGeometries.has(id)) return
+        if (!id || seenGeometries.has(id)) {
+          if (feature?.geometry) supplementalFeatures.push(feature)
+          return
+        }
         const geometry = worldData.geometryById.get(id)
         if (!geometry) {
-          containsSupplementalFeature = true
+          if (feature?.geometry) supplementalFeatures.push(feature)
           return
         }
         seenGeometries.add(id)
         geometries.push(geometry)
       })
 
-      if (!containsSupplementalFeature && geometries.length > 0) {
+      if (geometries.length > 0) {
         const merged = window.topojson.merge(worldData.topology, geometries)
-        if (merged) return merged
+        if (merged) {
+          if (supplementalFeatures.length === 0) {
+            return merged
+          }
+
+          return {
+            type: "FeatureCollection",
+            features: [{ type: "Feature", properties: {}, geometry: merged }, ...supplementalFeatures],
+          }
+        }
       }
     }
 
