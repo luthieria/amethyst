@@ -80,6 +80,10 @@ entries:
       - "Bahrain"
       - "Egypt"
 
+      - "Azerbaijan"
+      - "Armenia"
+      - "Georgia"
+
       - "Greece"
       - "Turkey"
       - "Cyprus"
@@ -349,5 +353,7 @@ entries:
 
 
 # add:
-# 1. Anglo-America
+# 1. Anglo-America as a region
 # 2. all French colonies to the antilles françaises
+# 3. Western Sahara, Somali to Africa
+# 4. Israel, Palestine to Oriente Medio

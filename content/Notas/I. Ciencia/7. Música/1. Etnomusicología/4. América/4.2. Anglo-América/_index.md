@@ -4,6 +4,6 @@ weight: 5
 bookCollapseSection: true
 ---
 
-[[Anglo-Caribbean]]
+<!-- [[Anglo-Caribbean]]
 
-[[USA]]
+[[USA]] -->

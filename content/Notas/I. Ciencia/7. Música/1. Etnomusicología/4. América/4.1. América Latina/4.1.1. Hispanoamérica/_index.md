@@ -3,7 +3,7 @@ title: "Hispanoamérica"
 weight: 6
 bookCollapseSection: true
 ---
-
+<!-- 
 [[México]]
 
 [[Cuba]]
@@ -16,4 +16,4 @@ bookCollapseSection: true
 
 [[Ecuador]]
 
-[[Perú]]
+[[Perú]] -->
