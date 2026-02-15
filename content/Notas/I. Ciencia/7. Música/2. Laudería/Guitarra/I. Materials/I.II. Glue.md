@@ -40,7 +40,7 @@ weight: 7
 ## Hot Hide Glue[^StewMac_HideGlue][^StewMac_HideGlueBuy]
 ### Description
 
-{{< expand >}}
+{{< expand "To do" >}}
 
 Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQfLrQPo?si=OxXlBS8mJTT1EFqV)
 
