@@ -53,8 +53,8 @@ entries:
       - "Mauritius"
       - "Madagascar"
     depth: 1
-    lat: 12.0
-    lon: 20.0
+    lat: -3.0
+    lon: -15.0
     halo_rx: 420
     halo_ry: 260
     halo_rotate: -5

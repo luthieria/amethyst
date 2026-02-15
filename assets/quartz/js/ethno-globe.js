@@ -1051,6 +1051,48 @@
       countryLinks.append("path")
 
       const labelEntries = [...regionEntries, ...countryEntries]
+      const labelTextAnchor = (entry) => (entry.dx > 8 ? "start" : entry.dx < -8 ? "end" : "middle")
+      const syncLabelChipGeometry = (node, entry) => {
+        if (!node) return
+
+        const link = d3.select(node)
+        const labelText = link
+          .select("text")
+          .attr("class", (datum) => `depth-${datum.depth}`)
+          .attr("text-anchor", (datum) => labelTextAnchor(datum))
+          .attr("dominant-baseline", "middle")
+          .attr("x", 0)
+          .attr("y", 0)
+          .text((datum) => datum.title)
+
+        const textNode = labelText.node()
+        if (!textNode || typeof textNode.getBBox !== "function") return
+        const computedFontSize =
+          typeof window !== "undefined" && window.getComputedStyle ? window.getComputedStyle(textNode).fontSize : ""
+        const key = `${entry.title}|${entry.depth}|${labelTextAnchor(entry)}|${computedFontSize}`
+        if (node.__ethnoLabelChipKey === key) return
+        node.__ethnoLabelChipKey = key
+
+        let bounds
+        try {
+          bounds = textNode.getBBox()
+        } catch (_) {
+          return
+        }
+
+        const padX = 12
+        const padY = 6
+        const cornerRadius = 10
+        link
+          .select("rect")
+          .attr("x", bounds.x - padX)
+          .attr("y", bounds.y - padY)
+          .attr("width", Math.max(0, bounds.width + padX * 2))
+          .attr("height", Math.max(0, bounds.height + padY * 2))
+          .attr("rx", cornerRadius)
+          .attr("ry", cornerRadius)
+      }
+
       let width = 0
       let height = 0
       let baseScale = 1
@@ -1359,25 +1401,44 @@
           })
           .filter(Boolean)
 
-        labelsGroup
-          .selectAll("text")
+        const labelLinks = labelsGroup
+          .selectAll("a.ethno-globe-label-link")
           .data(visibleLabels, (entry) => entry.id)
           .join(
             (enter) =>
               enter
-                .append("text")
-                .attr("class", (entry) => `depth-${entry.depth}`)
-                .attr("text-anchor", (entry) => (entry.dx > 8 ? "start" : entry.dx < -8 ? "end" : "middle"))
-                .attr("dominant-baseline", "middle")
-                .text((entry) => entry.title),
+                .append("a")
+                .attr("class", "ethno-globe-label-link")
+                .attr("href", (entry) => entry.url)
+                .attr("xlink:href", (entry) => entry.url)
+                .attr("aria-label", (entry) => entry.title)
+                .on("click", (event, entry) => {
+                  if (shouldSuppressClickNavigation()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    return
+                  }
+                  navigateTo(event, entry.url)
+                })
+                .on("pointerenter", (_, entry) => setHint(entry.title))
+                .on("pointerleave", () => setHint(""))
+                .on("focus", (_, entry) => setHint(entry.title))
+                .on("blur", () => setHint(""))
+                .call((selection) => {
+                  selection.append("rect").attr("class", "ethno-globe-label-chip")
+                  selection.append("text")
+                }),
             (update) =>
               update
-                .attr("class", (entry) => `depth-${entry.depth}`)
-                .attr("text-anchor", (entry) => (entry.dx > 8 ? "start" : entry.dx < -8 ? "end" : "middle")),
+                .attr("href", (entry) => entry.url)
+                .attr("xlink:href", (entry) => entry.url)
+                .attr("aria-label", (entry) => entry.title),
             (exit) => exit.remove(),
           )
-          .attr("x", (entry) => entry.x)
-          .attr("y", (entry) => entry.y)
+
+        labelLinks.attr("transform", (entry) => `translate(${entry.x},${entry.y})`).each(function (entry) {
+          syncLabelChipGeometry(this, entry)
+        })
       }
 
       const applyInteractionMode = () => {

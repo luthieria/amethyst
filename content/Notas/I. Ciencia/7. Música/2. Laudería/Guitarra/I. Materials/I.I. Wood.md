@@ -28,14 +28,14 @@ weight: 6
 - Important for, e.g., boats.
 
 | Wood        | Specific Gravity |
-|-------------:|------------------|
+|------------:|------------------|
 | Poplar      | 0.42             |
 | Cherry      | 0.50             |
 | Walnut      | 0.55             |
 | Yellow pine | 0.59             |
 | Hard maple  | 0.63             |
 | White oak   | 0.68             |
-| Ebony       | 1.0 (sinks)      |
+| Ebony       | 1.0 (→ sinks)    |
 
 #### Compressive Strength
 

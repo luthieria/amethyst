@@ -218,6 +218,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.32);
+
   color: rgba(245, 249, 255, 0.94);
   font-size: 0.58em;
   letter-spacing: 0.02em;
@@ -235,26 +236,58 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 #{$ethno-page-scope} .ethno-globe-labels text {
   fill: rgba(246, 250, 255, 0.96);
   font-family: var(--font-sans) !important;
-  font-size: 18px !important;
+  font-size: 0.58em !important;
   font-weight: 600;
   stroke: none !important;
   stroke-width: 0 !important;
   paint-order: normal !important;
   pointer-events: none;
   user-select: none;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
 }
 
 #{$ethno-page-scope} .ethno-globe-labels .depth-2 {
-  font-size: 17px !important;
+  font-size: 0.56em !important;
 }
 
 #{$ethno-page-scope} .ethno-globe-labels .depth-3 {
-  font-size: 16px !important;
+  font-size: 0.54em !important;
 }
 
 #{$ethno-page-scope} .ethno-globe-labels .depth-4 {
-  font-size: 15px !important;
+  font-size: 0.52em !important;
+}
+
+#{$ethno-page-scope} .ethno-globe-label-link {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+#{$ethno-page-scope} .ethno-globe-label-link .ethno-globe-label-chip {
+  fill: rgba(8, 12, 19, 0.72);
+  stroke: rgba(250, 252, 255, 0.22);
+  stroke-width: 1;
+  filter: drop-shadow(0 0.35rem 1.2rem rgba(0, 0, 0, 0.32));
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transition: fill 0.16s ease, stroke 0.16s ease, filter 0.16s ease;
+}
+
+#{$ethno-page-scope} .ethno-globe-label-link:hover .ethno-globe-label-chip,
+#{$ethno-page-scope} .ethno-globe-label-link:focus .ethno-globe-label-chip,
+#{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip {
+  fill: rgba(8, 12, 19, 0.72);
+  stroke: rgba(250, 252, 255, 0.22);
+}
+
+#{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip {
+  filter: drop-shadow(0 0 0.38rem rgba(246, 251, 255, 0.62));
+}
+
+#{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-label-link {
+  pointer-events: none;
 }
 
 /* Halo/Country Interaction Visuals */
@@ -339,7 +372,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   }
 
   #{$ethno-page-scope} .ethno-globe-labels text {
-    font-size: 14px !important;
+    font-size: 0.56em !important;
   }
 }
 
