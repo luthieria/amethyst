@@ -169,6 +169,7 @@
 
   // === Shared State ===
   const rootStates = new Map()
+  let rootInstanceCount = 0
   let dependencyPromise = null
   const worldDataPromises = {
     high: null,
@@ -209,6 +210,16 @@
   const canonicalCountryName = (value) => {
     const normalized = normalizeCountryName(value)
     return COUNTRY_NAME_ALIASES[normalized] || normalized
+  }
+
+  const toDomIdSegment = (value, fallback = "entry") => {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9_-]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+
+    return normalized || fallback
   }
 
   // === Data & Resource Loading ===
@@ -805,6 +816,8 @@
         .attr("class", "ethno-globe-svg")
         .attr("role", "img")
         .attr("aria-label", "Interactive ethnomusicology globe")
+      rootInstanceCount += 1
+      const rootDomIdPrefix = `ethno-globe-${rootInstanceCount}`
       svg.append("rect").attr("class", "ethno-globe-backdrop")
 
       const setHint = () => {}
@@ -929,6 +942,14 @@
         ...entry,
         geometry: d3.geoCircle().center([entry.lon, entry.lat]).radius(regionRadiusDegrees(entry))(),
       }))
+      const regionHaloMaskIdByEntryId = new Map(
+        regionEntries.map((entry, index) => [
+          entry.id,
+          `${rootDomIdPrefix}-region-halo-mask-${index}-${toDomIdSegment(entry.id, "region")}`,
+        ]),
+      )
+      const regionHaloMaskWorldExtent = 4096
+      const regionHaloInwardBleedPx = 1.4
 
       const recomputeRegionGeometries = () => {
         regionEntries.forEach((entry) => {
@@ -953,6 +974,38 @@
           }
         })
       })
+
+      const defs = svg.append("defs")
+      const regionHaloMasks = defs
+        .selectAll("mask.ethno-globe-region-halo-mask")
+        .data(regionEntries, (entry) => entry.id)
+        .enter()
+        .append("mask")
+        .attr("class", "ethno-globe-region-halo-mask")
+        .attr("id", (entry) => regionHaloMaskIdByEntryId.get(entry.id))
+        .attr("maskUnits", "userSpaceOnUse")
+        .attr("maskContentUnits", "userSpaceOnUse")
+        .attr("x", -regionHaloMaskWorldExtent)
+        .attr("y", -regionHaloMaskWorldExtent)
+        .attr("width", regionHaloMaskWorldExtent * 2)
+        .attr("height", regionHaloMaskWorldExtent * 2)
+
+      regionHaloMasks
+        .append("rect")
+        .attr("x", -regionHaloMaskWorldExtent)
+        .attr("y", -regionHaloMaskWorldExtent)
+        .attr("width", regionHaloMaskWorldExtent * 2)
+        .attr("height", regionHaloMaskWorldExtent * 2)
+        .attr("fill", "#fff")
+
+      const regionHaloMaskCutouts = regionHaloMasks.append("path").attr("fill", "#000")
+      const regionHaloMaskEdgeRestores = regionHaloMasks
+        .append("path")
+        .attr("fill", "none")
+        .attr("stroke", "#fff")
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-linecap", "round")
+        .attr("stroke-width", regionHaloInwardBleedPx)
 
       const regionLinks = regionGroup
         .selectAll("a")
@@ -1005,7 +1058,10 @@
         .on("focus", (_, entry) => setActiveEntry(entry, "region-focus"))
         .on("blur", () => setActiveEntry("", "region-blur"))
 
-      regionLinks.append("path").attr("class", "ethno-globe-region-halo")
+      regionLinks
+        .append("path")
+        .attr("class", "ethno-globe-region-halo")
+        .attr("mask", (entry) => `url(#${regionHaloMaskIdByEntryId.get(entry.id)})`)
       regionLinks.append("path").attr("class", "ethno-globe-region-hit")
 
       const countryLinks = countryGroup
@@ -1364,6 +1420,8 @@
         } else if (coastlinePath) {
           coastlinePath.attr("d", null)
         }
+        regionHaloMaskCutouts.attr("d", (entry) => path(entry.geometry))
+        regionHaloMaskEdgeRestores.attr("d", (entry) => path(entry.geometry))
         regionLinks.selectAll(".ethno-globe-region-halo").attr("d", (entry) => path(entry.geometry))
         regionLinks.selectAll(".ethno-globe-region-hit").attr("d", (entry) => path(entry.geometry))
         countryLinks.select("path").attr("d", (entry) => path(entry.shape))
