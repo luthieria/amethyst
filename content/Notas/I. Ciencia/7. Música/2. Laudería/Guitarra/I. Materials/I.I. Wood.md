@@ -12,6 +12,7 @@ weight: 6
   - light, wide — grown at spring (trees grow faster);
   - dark, narrow, dense — grown in autumn (trees grow slower).
 
+
 ![alt text](Imagenes/Cuts.png)
 
 ### Strength[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]

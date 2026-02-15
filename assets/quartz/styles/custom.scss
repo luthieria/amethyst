@@ -370,3 +370,10 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   text-decoration: none;
   opacity: 0.3;
 }
+
+/* Keep Markdown images centered in rendered note content. */
+.markdown img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
