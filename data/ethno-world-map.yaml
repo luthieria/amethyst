@@ -59,7 +59,7 @@ entries:
     halo_ry: 260
     halo_rotate: -5
     dx: 12
-    dy: -10
+    dy: -20
     
   - id: oriente-medio
     title: "Oriente Medio"
@@ -85,8 +85,8 @@ entries:
     halo_rx: 220
     halo_ry: 120
     halo_rotate: 8
-    dx: 12
-    dy: -10
+    dx: 5
+    dy: -8
     children:
       - id: iran
         title: "Irán"
@@ -96,7 +96,7 @@ entries:
         depth: 2
         lat: 32.0
         lon: 53.0
-        dx: 10
+        dx: -0
         dy: -8
 
       - id: arabe
@@ -252,13 +252,13 @@ entries:
           - "Argentina"
           - "Uruguay"
         depth: 2
-        lat: -15.0
-        lon: -60.0
+        lat: 5.0
+        lon: -43.0
         halo_rx: 360
         halo_ry: 260
         halo_rotate: -22
-        dx: 12
-        dy: 20
+        dx: 0
+        dy: 0
         children:
           - id: antilles-franceses
             title: "Antilles françaises"
@@ -313,8 +313,8 @@ entries:
               - "Argentina"
               - "Uruguay"
             depth: 3
-            lat: 9.0
-            lon: -75.0
+            lat: 6.0
+            lon: -93.0
             halo_rx: 260
             halo_ry: 130
             halo_rotate: -12
@@ -330,7 +330,7 @@ entries:
                 lat: 21.5
                 lon: -79.5
                 dx: 10
-                dy: -14
+                dy: -35
 
               - id: brasil
                 title: "Brasil"
@@ -340,8 +340,8 @@ entries:
                 depth: 3
                 lat: -14.2
                 lon: -51.9
-                dx: 10
-                dy: -10
+                dx: 0
+                dy: -40
 
               - id: mexico
                 title: "México"
