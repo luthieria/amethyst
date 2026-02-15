@@ -964,6 +964,8 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
+        .attr("data-entry-id", (entry) => entry.id)
+        .attr("data-entry-kind", () => "region")
         .style("--ethno-region-fill", (entry) => toHsla(entry.color, TUNING.color.regionFillAlpha))
         .style("--ethno-region-stroke", (entry) =>
           toHsla(
@@ -999,10 +1001,10 @@
           }
           navigateTo(event, entry.url)
         })
-        .on("pointerenter", (_, entry) => setHint(entry.title))
-        .on("pointerleave", () => setHint(""))
-        .on("focus", (_, entry) => setHint(entry.title))
-        .on("blur", () => setHint(""))
+        .on("pointerenter", (_, entry) => setActiveEntry(entry, "region-pointerenter"))
+        .on("pointerleave", () => setActiveEntry("", "region-pointerleave"))
+        .on("focus", (_, entry) => setActiveEntry(entry, "region-focus"))
+        .on("blur", () => setActiveEntry("", "region-blur"))
 
       regionLinks.append("path").attr("class", "ethno-globe-region-halo")
       regionLinks.append("path").attr("class", "ethno-globe-region-hit")
@@ -1016,6 +1018,8 @@
         .attr("href", (entry) => entry.url)
         .attr("xlink:href", (entry) => entry.url)
         .attr("aria-label", (entry) => entry.title)
+        .attr("data-entry-id", (entry) => entry.id)
+        .attr("data-entry-kind", () => "country")
         .style("--ethno-country-fill", (entry) => toHsla(entry.color, TUNING.color.countryFillAlpha))
         .style("--ethno-country-stroke", (entry) =>
           toHsla(
@@ -1043,15 +1047,42 @@
           }
           navigateTo(event, entry.url)
         })
-        .on("pointerenter", (_, entry) => setHint(entry.title))
-        .on("pointerleave", () => setHint(""))
-        .on("focus", (_, entry) => setHint(entry.title))
-        .on("blur", () => setHint(""))
+        .on("pointerenter", (_, entry) => setActiveEntry(entry, "country-pointerenter"))
+        .on("pointerleave", () => setActiveEntry("", "country-pointerleave"))
+        .on("focus", (_, entry) => setActiveEntry(entry, "country-focus"))
+        .on("blur", () => setActiveEntry("", "country-blur"))
 
       countryLinks.append("path")
 
       const labelEntries = [...regionEntries, ...countryEntries]
+      const entryById = new Map(labelEntries.map((entry) => [entry.id, entry]))
       const labelTextAnchor = (entry) => (entry.dx > 8 ? "start" : entry.dx < -8 ? "end" : "middle")
+      let labelLinks = labelsGroup.selectAll("a.ethno-globe-label-link")
+      let activeEntryId = ""
+
+      const syncActiveClasses = () => {
+        const isActive = (entry) => !!activeEntryId && entry?.id === activeEntryId
+        regionLinks.classed("is-linked-hover", (entry) => isActive(entry))
+        countryLinks.classed("is-linked-hover", (entry) => isActive(entry))
+        labelLinks.classed("is-linked-hover", (entry) => isActive(entry))
+      }
+
+      const setActiveEntry = (entryOrId, _source = "") => {
+        let nextEntry = null
+        if (entryOrId && typeof entryOrId === "object") {
+          nextEntry = entryOrId
+        } else if (typeof entryOrId === "string") {
+          const key = entryOrId.trim()
+          if (key) {
+            nextEntry = entryById.get(key) || null
+          }
+        }
+
+        activeEntryId = nextEntry?.id || ""
+        setHint(nextEntry?.title || "")
+        syncActiveClasses()
+      }
+
       const syncLabelChipGeometry = (node, entry) => {
         if (!node) return
 
@@ -1401,7 +1432,7 @@
           })
           .filter(Boolean)
 
-        const labelLinks = labelsGroup
+        labelLinks = labelsGroup
           .selectAll("a.ethno-globe-label-link")
           .data(visibleLabels, (entry) => entry.id)
           .join(
@@ -1409,9 +1440,6 @@
               enter
                 .append("a")
                 .attr("class", "ethno-globe-label-link")
-                .attr("href", (entry) => entry.url)
-                .attr("xlink:href", (entry) => entry.url)
-                .attr("aria-label", (entry) => entry.title)
                 .on("click", (event, entry) => {
                   if (shouldSuppressClickNavigation()) {
                     event.preventDefault()
@@ -1420,25 +1448,33 @@
                   }
                   navigateTo(event, entry.url)
                 })
-                .on("pointerenter", (_, entry) => setHint(entry.title))
-                .on("pointerleave", () => setHint(""))
-                .on("focus", (_, entry) => setHint(entry.title))
-                .on("blur", () => setHint(""))
+                .on("pointerenter", (_, entry) => setActiveEntry(entry, "label-pointerenter"))
+                .on("pointerleave", () => setActiveEntry("", "label-pointerleave"))
+                .on("focus", (_, entry) => setActiveEntry(entry, "label-focus"))
+                .on("blur", () => setActiveEntry("", "label-blur"))
                 .call((selection) => {
                   selection.append("rect").attr("class", "ethno-globe-label-chip")
                   selection.append("text")
                 }),
-            (update) =>
-              update
-                .attr("href", (entry) => entry.url)
-                .attr("xlink:href", (entry) => entry.url)
-                .attr("aria-label", (entry) => entry.title),
+            (update) => update,
             (exit) => exit.remove(),
+          )
+          .attr("href", (entry) => entry.url)
+          .attr("xlink:href", (entry) => entry.url)
+          .attr("aria-label", (entry) => entry.title)
+          .attr("data-entry-id", (entry) => entry.id)
+          .attr("data-entry-kind", (entry) => entry.kind)
+          .style("--ethno-label-accent", (entry) =>
+            toHsla(adjustColor(entry.color, TUNING.color.countryStrokeHoverAdjust.s, TUNING.color.countryStrokeHoverAdjust.l), 0.96),
+          )
+          .style("--ethno-label-chip-glow", (entry) =>
+            toHsla(adjustColor(entry.color, TUNING.color.countryStrokeHoverAdjust.s, TUNING.color.countryStrokeHoverAdjust.l), 0.24),
           )
 
         labelLinks.attr("transform", (entry) => `translate(${entry.x},${entry.y})`).each(function (entry) {
           syncLabelChipGeometry(this, entry)
         })
+        syncActiveClasses()
       }
 
       const applyInteractionMode = () => {

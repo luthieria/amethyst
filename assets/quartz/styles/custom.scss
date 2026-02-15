@@ -234,17 +234,20 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 }
 
 #{$ethno-page-scope} .ethno-globe-labels text {
-  fill: rgba(246, 250, 255, 0.96);
+  fill: rgba(248, 252, 255, 0.98);
   font-family: var(--font-sans) !important;
-  font-size: 0.58em !important;
-  font-weight: 600;
+  font-size: 0.6em !important;
+  font-weight: 650;
   stroke: none !important;
   stroke-width: 0 !important;
   paint-order: normal !important;
   pointer-events: none;
   user-select: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.016em;
   line-height: 1.1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  transition: fill 0.16s ease, opacity 0.16s ease;
 }
 
 #{$ethno-page-scope} .ethno-globe-labels .depth-2 {
@@ -266,24 +269,34 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 }
 
 #{$ethno-page-scope} .ethno-globe-label-link .ethno-globe-label-chip {
-  fill: rgba(8, 12, 19, 0.72);
-  stroke: rgba(250, 252, 255, 0.22);
-  stroke-width: 1;
-  filter: drop-shadow(0 0.35rem 1.2rem rgba(0, 0, 0, 0.32));
+  fill: rgba(8, 13, 22, 0.64);
+  stroke: rgba(250, 252, 255, 0.3);
+  stroke-width: 1.02;
+  filter: drop-shadow(0 0.28rem 0.92rem rgba(0, 0, 0, 0.29));
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  transition: fill 0.16s ease, stroke 0.16s ease, filter 0.16s ease;
+  transition: fill 0.16s ease, stroke 0.16s ease, filter 0.16s ease, transform 0.16s ease;
 }
 
 #{$ethno-page-scope} .ethno-globe-label-link:hover .ethno-globe-label-chip,
 #{$ethno-page-scope} .ethno-globe-label-link:focus .ethno-globe-label-chip,
-#{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip {
-  fill: rgba(8, 12, 19, 0.72);
-  stroke: rgba(250, 252, 255, 0.22);
+#{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip,
+#{$ethno-page-scope} .ethno-globe-label-link.is-linked-hover .ethno-globe-label-chip {
+  fill: rgba(10, 18, 30, 0.8);
+  stroke: var(--ethno-label-accent, rgba(248, 252, 255, 0.54));
+  filter: drop-shadow(0 0.35rem 1.12rem rgba(0, 0, 0, 0.35)) drop-shadow(0 0 0.45rem var(--ethno-label-chip-glow, rgba(248, 252, 255, 0.24)));
+  transform: translateY(-0.24px);
+}
+
+#{$ethno-page-scope} .ethno-globe-label-link:hover text,
+#{$ethno-page-scope} .ethno-globe-label-link:focus text,
+#{$ethno-page-scope} .ethno-globe-label-link:focus-visible text,
+#{$ethno-page-scope} .ethno-globe-label-link.is-linked-hover text {
+  fill: rgba(254, 255, 255, 1);
 }
 
 #{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip {
-  filter: drop-shadow(0 0 0.38rem rgba(246, 251, 255, 0.62));
+  filter: drop-shadow(0 0 0.42rem rgba(246, 251, 255, 0.72));
 }
 
 #{$ethno-page-scope} .ethno-globe-stage.is-dragging .ethno-globe-label-link {
@@ -308,7 +321,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 }
 
 #{$ethno-page-scope} .ethno-globe-link.country:hover path,
-#{$ethno-page-scope} .ethno-globe-link.country:focus path {
+#{$ethno-page-scope} .ethno-globe-link.country:focus path,
+#{$ethno-page-scope} .ethno-globe-link.country.is-linked-hover path {
   fill: var(--ethno-country-fill-hover, rgba(191, 97, 106, 0.34));
   stroke: var(--ethno-country-stroke-hover, rgba(248, 252, 255, 0.87));
 }
@@ -334,7 +348,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-link.region:hover .ethno-globe-region-halo,
 #{$ethno-page-scope} .ethno-globe-link.region:focus .ethno-globe-region-halo,
-#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-halo {
+#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-halo,
+#{$ethno-page-scope} .ethno-globe-link.region.is-linked-hover .ethno-globe-region-halo {
   fill: var(--ethno-region-fill-hover, rgba(248, 252, 255, 0.08));
   stroke: var(--ethno-region-stroke-hover, rgba(248, 252, 255, 0.32));
   filter: blur(9px) drop-shadow(0 0 13px var(--ethno-region-glow, rgba(248, 252, 255, 0.2)));
@@ -342,7 +357,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} .ethno-globe-link.region:hover .ethno-globe-region-hit,
 #{$ethno-page-scope} .ethno-globe-link.region:focus .ethno-globe-region-hit,
-#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-hit {
+#{$ethno-page-scope} .ethno-globe-link.region:focus-visible .ethno-globe-region-hit,
+#{$ethno-page-scope} .ethno-globe-link.region.is-linked-hover .ethno-globe-region-hit {
   fill: var(--ethno-region-hit-fill-hover, rgba(255, 255, 255, 0.03));
 }
 
