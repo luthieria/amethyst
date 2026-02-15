@@ -38,7 +38,7 @@ weight: 7
 
 # i. Animal
 
-## i.i. Hide Glue
+## i.i. Hide
 
 ### Hot[^https://youtu.be/ER1T5zMKG-g?si=TsHSYwHjxESBmPWN][^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/stewmac-ground-hide-glue/]
 
@@ -200,10 +200,290 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 1. While unsettled, wipe with a hot-watered rag.
 2. When settled, sand / scrape / chisel.
 
-## ii.ii. Fish Glue
+## i.ii. Fish
+
+- [^https://youtu.be/Uozzynq9hPg]Collagen-based.
+  - → Lots of the same properties of the hide glue.
+  - → Rejuvenates with hot water. → Bonds to itself and hide glue.
+- Longer open time than hide glue.
+
+<br>
+
+- Good for glueing:
+  - wood to wood (e.g., fingerboard to the neck, braces to plates[^https://youtu.be/df-tDHxBTRQ?si=iQaBliQ7W3cZKWCq]);
+  - metal to wood (e.g., carbon rods inside the neck);
+  - plastic to wood (e.g., fingerboard binding to the fingerboard).[^https://youtu.be/N0HrIQKtVlI?si=sw1pDlJmMMiL5GMR]
+
+<br>
+
+- Thinning: for the wood to draw in the glue better, add very hot water to it before glueing.[^https://youtu.be/Uozzynq9hPg][^https://youtu.be/df-tDHxBTRQ?si=iQaBliQ7W3cZKWCq]
+
+# ii. Synthetic
+
+## ii.i. PVA / Aliphatic Resin 
+
+<!-- 
+15.2.2026. Verify each statement whether it's about PVA or aliphathic resin. Then separate these 2 categories. 
+-->
+
+- [^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]Relies on its thickness. → Fallible to starvation.
+- More cantankerous with its flowingness than hide glue. → Should be applied onto both surfaces.[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
+
+### Titebond
+
+#### Original[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-original-wood-glue]
+
+- Strong.
+- Working time: 5 minutes.
+- Undoable with water and heat.
+
+<br>
+
+- Glueing time: 12 hours.
+
+<br>
+
+- Used on almost every guitar.
+
+<br>
+
+- When there’s too much glue under the bridge (even the classical one), Dan Erlewine dries it for 2 days.[^https://youtu.be/aoFdX_qw654?si=KUM1XffMcOuL23ST]
+
+<br>
+
+- The best glue for maple in terms of color.[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
+
+#### III[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-iii-ultimate-wood-glue]
+
+- Stronger than Titebond Original. → For guitars that will be abused (e.g., touring).
+- Waterproof. → Great for laminating wooden bindings before bending.
+- Solvent-resistant.
+- Working time: 10 minutes.
+
+<br>
+
+- The color blends nicely with walnut.[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
+
+<br>
+
+- The best all-around glue.[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
+
+### * * *
+
+- [^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]If PVA thickens up:
+  - shake it vigorously;
+  - (optional) add ≤5% of water.
+
+<br>
+
+- Wipe PVA with a cloth instead of paper, as the latter leaves pieces.[^https://youtu.be/oXN4RFExaWs?si=IKs12YqiHok_0-IU]
+
+### Undoing[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
+
+- **Unsettled**: can be wiped with a damp cloth, which can drive the PVA into the wood fibers. → The wood should be sanded afterwards.
+- (Best) **Slightly settled**:
+  1. let it set up a bit, to get a skin (10–20 minutes);
+  2. remove it with a chisel / scraper / putty knife;
+  3. wipe with a damp cloth;
+  4. scrape / sand (before putting a finish on).
+- Settled: 
+  - chisel (risky);
+  /
+  - card / cabinet scraper;
+  /
+  - sand.
+
+## ii.ii. CA[^https://youtu.be/Ni82f1-cAXg?si=r-mphW7UiSphqs38]
+
+- **Cyanoacrylate** = **CA**.
+
+<br>
+
+- CA glue in the tube is a liquid of identical ethyl cyanoacrylate monomer molecules.
+- When poured:
+  1. fills every pore and crevice;
+  2. monomers react with each other, forming polymer chains, = the liquid glue solidifies.
+
+### Reaction
+
+1. Ethyl cyanoacrylate has 2 double bonds.
+2. The carbon double bond is attached to a nitrile group and an ester group.
+3. → The chemistry of these groups make the carbon bond electron-deficient; the oxygen and nitrogen atoms attract electrons more than the carbons, leaving the carbon slightly *positively* charged.
+4. → Carbon needs any electron source = something even slightly electro*negative* (= a negative ion) (often, it’s the oxygen atoms in the polar water molecule and the hydroxide ions in water) breaks open the carbon double bond.
+   - = Electron deficiency makes the CA so reactive.
+5. → 4 single bonds form.
+6. → The negative nitrile and ester groups pull the extra electron across the molecule.
+7. → This carbon becomes negative.
+8. → Another, slightly positive carbon on a separate monomer is attracted.
+9. → Monomers link together = a polymer chain emerges: the process from step 6 repeats for each new monomer.
+
+<br>
+
+- A negative ion is the reaction initiator.
+- Many initiators → many short polymer chains.
+
+### Properties
+
+#### Strengths[^Iintentionally...]
+
+- CA glue’s polymers are almost all single linear chains between the surfaces = directional like wood grain. Tension (compression) is uni-directional. → Polymer chains can deform enough. → CA glue is ==**strong in compression** — when pulled along the “grain”==.
+  - Tensile strength can be >25 MPa — similar to other polymers (e.g., a 5×5 cm patch can suspend a fully grown African elephant).
+- CA glue is about as hard as a safety helmet.
+
+<br>
+
+- Other glues (e.g., PVA, glue sticks) cure when the water *evaporates*, → have longer cure times. Inversely, the polymerization of CA glue is *triggered* by water, which is almost everywhere. →
+  - CA glue ==cures fast (normally 10–30 seconds) on almost every surface==.
+  - Water can’t undo the CA glue, but can only accelerate its curing. → ==Only acetone undoes CA glue==.
+
+#### Weaknesses
+
+- Needs to fill the surface’s crevices. → ==Poorly adheres to smooth surfaces==o==. → The surface needs, e.g., sanding==.
+
+<br>
+
+- (Fast cure’s downside:) The quick reaction produces short polymer chains that have a matrix with built-in stress. Stress in any material is a potential failure point.
+  - Inversely, the polymer chains of polyethylene, polypropylene, nylons can deform, absorbing strong impacts.
+- → Impacts break CA glue’s rigid polymer chains, and get absorbed in chains’ stress points. = ==CA glue is brittle==.
+
+<br>
+
+- Shear = compression + friction. = Unlike tension (compression), shear is not uni-directional = doesn’t get spread evenly: it's higher at the edges, lower in the middle. → The polymers can’t redistribute the stress. → Stress releases, breaking the polymer chains. = CA glue is ==**weak in shear** — when pulled perpendicular to the “grain”==.
+  - Peeling back on one end of a surface applies all the force on a few polymers. → Chains break one by one. → ==If one glued end of a big enough surface breaks, the rest can easily break too==.
+
+![alt text](Imagenes/Shear.png) <br>
+
+- ==CA glue doesn’t adhere to chemically inert materials==: polythene, polyethylene, polypropylene, polystyrene, Teflon.
+
+
+<br>
+
+- Recyclement: at 210°C, CA glue breaks back down into monomers that can be distilled and polymerize again.
+
+
+#### Neutral
+
+- As CA glue cures, it releases heat (especially on, e.g., cotton).
+
+### Modifications
+
+- Monomers are very runny (almost like water). → Thickening agents (e.g., fumed silica) increase viscosity, turning CA glue into a gel, and slowing down the cure.
+  - To glue underwater, slow down the cure — use high-viscosity CA glue.
+- Often, some acids are added to inhibit polymerization in the tube.
+- Extra negative ions (e.g., accelerators, baking soda) speed up the cure.
+  - Baking soda reacts with air moisture, producing hydroxide ions; + forms a very hard substance. → Strengthens joins, fills in gaps.
+    - Pure water + CA glue = plastic droplets. <br>
+    Pure water + baking soda + CA glue = long, fragile plastic.
+  - Accelerators are basically baking soda dissolved in water.[^https://youtu.be/KHk9vQ0dvfU?si=BO0EH4M_tUtP4mEg]
+- Dermabond (= medical CA glue): an increased a number of molecules in a carbon chain makes the monomers bond slower: 
+  - cures slower;
+  - heats less;
+  - releases the toxins later (← longer polymers break down slower, → the wound can heal for the glue to be removed before the toxins are released);
+  - less brittle (← longer polymers absorb stress better).
+
+### * * *
+
+- CA glue is a pH-based curing system. → Drying time depends on the wood’s acidity: the bigger the pH difference, the quicker it sets.[^https://youtu.be/KHk9vQ0dvfU?si=BO0EH4M_tUtP4mEg]
+
+<br>
+
+- Fragile. → Not for structural repairs.[^https://youtu.be/7ULld8sVj2Y?si=FdHxR-RbtxowEHz_]
+- Readily reversible (with acetone).[^https://youtu.be/93Fw1SCg-CY?si=g_uTPz0J1LxImIE5]
+
+<br>
+
+- [^https://youtu.be/-HWCyqeygbU?si=6hGRppUbMtPe0pZq]For:
+  - filling in the littlest pores of wood;
+  - hardening softwood (e.g., maple, western red cedar);
+    - changes the wood’s sound to more glassy-like;
+  - as a finish.
+- One of the few glues that binds bone to wood well. → Use for the bridge (ultra-thin).[^https://youtu.be/bQlGPr4t5dY?si=mertgRXhjZK7BBjl]
+
+<br>
+
+- Keep in the refrigerator.[^https://youtu.be/iYoLUvZ9SH8?si=evfHhySxK3Wlp-UN]
+
+<br>
+
+- Always wear safety glasses, latex gloves. Don’t breathe the CA’s fumes.[^Erlewine_D._Guitar_Player_Repair_Guide]
+
+### Life[^https://youtu.be/-HWCyqeygbU?si=6hGRppUbMtPe0pZq]
+
+| Unopened        | Opened           |
+|-----------------|------------------|
+| 1 year          | ~1 month         |
+
+- To prolong life:
+  - pull out air before closing;
+  - close tightly;
+  - put it in a freezer.
+
+## ii.iii. Polyurethane[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l_(Titebond)]
+
+- For:
+  - **non-porous surfaces** (e.g., finish);
+  - **wet wood** (≥10%) — because water activate the polyurethane glue;
+  - **exotic oily woods** (immediately before glueing, sand the wood or wipe it with acetone / denatured alcohol, so that the oil didn’t have time to come out of the wood).
+
+- Short shelf life. Get the air out of the bottle before closing to prolong the life.
+- Foams up. → Needs high clamping pressure.
+
+### Undoing[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
+
+1. While unsettled, paper towel with acetone / mineral spirits.
+2. When settled, chisel / scrape / sand.
+
+# * * *
+
+- Not glueable:
+  - packing tape[^https://youtu.be/g7iK2OI2VE4?si=B8E7Xu6ai3jNePvB];
+  - paraffin paper.
+
+<!-- 
+Titebond Comparison Table 
+// Figure out how to make merged cells in markdown tables. 
+-->
 
 
 <!-- Footnotes -->
+
+[^https://youtu.be/g7iK2OI2VE4?si=B8E7Xu6ai3jNePvB]: [**Bruné M. E.**](https://youtu.be/g7iK2OI2VE4?si=B8E7Xu6ai3jNePvB)
+
+[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l_(Titebond)]: [**The Wood Whisperer**](https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l) (Titebond)
+
+[^https://youtu.be/iYoLUvZ9SH8?si=evfHhySxK3Wlp-UN]: [**Bruné M. E.**](https://youtu.be/iYoLUvZ9SH8?si=evfHhySxK3Wlp-UN)
+
+[^Erlewine_D._Guitar_Player_Repair_Guide]: **Erlewine D.** *Guitar Player Repair Guide* (1994)
+
+[^https://youtu.be/bQlGPr4t5dY?si=mertgRXhjZK7BBjl]: [**Bruné M. E.**](https://youtu.be/bQlGPr4t5dY?si=mertgRXhjZK7BBjl)  
+
+[^https://youtu.be/-HWCyqeygbU?si=6hGRppUbMtPe0pZq]: [**The Wood Whisperer**](https://youtu.be/-HWCyqeygbU?si=6hGRppUbMtPe0pZq)
+
+[^https://youtu.be/7ULld8sVj2Y?si=FdHxR-RbtxowEHz_]: [**StewMac**](https://youtu.be/7ULld8sVj2Y?si=FdHxR-RbtxowEHz_)  
+
+[^https://youtu.be/93Fw1SCg-CY?si=g_uTPz0J1LxImIE5]: [**Bruné M. E.**](https://youtu.be/93Fw1SCg-CY?si=g_uTPz0J1LxImIE5)
+
+[^https://youtu.be/KHk9vQ0dvfU?si=BO0EH4M_tUtP4mEg]: [**Bruné M. E.**](https://youtu.be/KHk9vQ0dvfU?si=BO0EH4M_tUtP4mEg)
+
+[^Iintentionally...]: I intentionally don’t call it “advantages” / “disadvantages”, as these definitions depend on each particular situation. “Strengths” / “weaknesses” are more correct because I define them from the point of view of CA glue’s functioning, i.e. when it is literally strongest, and when it is weakest.
+
+[^https://youtu.be/Ni82f1-cAXg?si=r-mphW7UiSphqs38]: [**Veritasium**](https://youtu.be/Ni82f1-cAXg?si=r-mphW7UiSphqs38)
+
+[^https://youtu.be/oXN4RFExaWs?si=IKs12YqiHok_0-IU]: [**StewMac**](https://youtu.be/oXN4RFExaWs?si=IKs12YqiHok_0-IU)
+
+[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-iii-ultimate-wood-glue]: [**StewMac**](https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-iii-ultimate-wood-glue)
+
+[^https://youtu.be/aoFdX_qw654?si=KUM1XffMcOuL23ST]: [**StewMac (Erlewine D.)**](https://youtu.be/aoFdX_qw654?si=KUM1XffMcOuL23ST)
+
+[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-original-wood-glue]: [**StewMac**](https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-original-wood-glue)
+
+[^https://youtu.be/Uozzynq9hPg]: [**StewMac (Dan Erlewine)**](https://youtu.be/Uozzynq9hPg)
+
+[^https://youtu.be/df-tDHxBTRQ?si=iQaBliQ7W3cZKWCq]: [**StewMac (Dan Erlewine)**](https://youtu.be/df-tDHxBTRQ?si=iQaBliQ7W3cZKWCq)
+
+[^https://youtu.be/N0HrIQKtVlI?si=sw1pDlJmMMiL5GMR]: [**StewMac**](https://youtu.be/N0HrIQKtVlI?si=sw1pDlJmMMiL5GMR)
+
+[^https://youtu.be/Uozzynq9hPg]: [**StewMac (Dan Erlewine)**](https://youtu.be/Uozzynq9hPg)
 
 [^https://youtu.be/iYoLUvZ9SH8?si=zbzhprr0rPI-qI4-]: [**Bruné M. E.**](https://youtu.be/iYoLUvZ9SH8?si=zbzhprr0rPI-qI4-)
 

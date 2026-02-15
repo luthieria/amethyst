@@ -143,9 +143,9 @@
   {{$content = replace $content . $fixed}}
 {{end}}
 
-{{$pinkMark := findRE "pk==([^=\\n]+)==" $content}}
+{{$pinkMark := findRE "o==([^=\\n]+)==" $content}}
 {{range $pinkMark}}
-  {{$fixed := printf "<span class=\"highlight-pink\">%s</span>" (replaceRE "^pk==|==$" "" .)}}
+  {{$fixed := printf "<span class=\"highlight-orange\">%s</span>" (replaceRE "^o==|==$" "" .)}}
   {{$content = replace $content . $fixed}}
 {{end}}
 
