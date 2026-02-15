@@ -132,17 +132,18 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
   /* 4) Base globe geometry layers. */
   .ethno-globe-backdrop {
-    fill: transparent;
+    fill: #090e14;
   }
 
   .ethno-globe-sphere {
-    fill: #101010;
+    fill: #0b1118;
+    filter: drop-shadow(0 0 1rem rgba(198, 218, 255, 0.12));
   }
 
   .ethno-globe-country {
-    fill: rgba(13, 19, 29, 0.78);
-    stroke: rgba(246, 250, 255, 0.025);
-    stroke-width: 0.2;
+    fill: rgba(14, 21, 32, 0.8);
+    stroke: rgba(246, 250, 255, 0.11);
+    stroke-width: 0.38;
     vector-effect: non-scaling-stroke;
   }
 
@@ -156,8 +157,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
   .ethno-globe-coastline {
     fill: none;
-    //stroke: var(--dark) /* rgba(236, 244, 255, 0.816) */;
-    stroke-width: 0.1;
+    stroke: rgba(236, 244, 255, 0.8);
+    stroke-width: 0.5;
     vector-effect: non-scaling-stroke;
     pointer-events: none;
     filter: drop-shadow(0 0 2px rgba(198, 218, 255, 0.14));
