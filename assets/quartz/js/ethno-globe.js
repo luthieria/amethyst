@@ -790,26 +790,8 @@
         .attr("aria-label", "Interactive ethnomusicology globe")
       svg.append("rect").attr("class", "ethno-globe-backdrop")
 
-      const hint = document.createElement("div")
-      hint.className = "ethno-globe-hint"
-      hint.setAttribute("aria-live", "polite")
-      hint.setAttribute("aria-atomic", "true")
-      stage.appendChild(hint)
-
-      const setHint = (text) => {
-        const message = typeof text === "string" ? text.trim() : ""
-        if (!message) {
-          hint.textContent = ""
-          hint.classList.remove("is-visible")
-          return
-        }
-
-        hint.textContent = message
-        hint.classList.add("is-visible")
-      }
-
-      const onStageMouseLeave = () => setHint("")
-      stage.addEventListener("mouseleave", onStageMouseLeave)
+      const setHint = () => {}
+      const onStageMouseLeave = null
       let suppressClickUntil = 0
       const shouldSuppressClickNavigation = () => Date.now() < suppressClickUntil
 
