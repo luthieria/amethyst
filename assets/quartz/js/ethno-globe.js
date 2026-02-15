@@ -141,6 +141,17 @@
     { h: 206, s: 62, l: 56 },
   ]
   const DEFAULT_REGION_COLOR = { h: 208, s: 52, l: 56 }
+  const REGION_COLOR_PRESETS = {
+    "africa-subsahariana": { h: 28, s: 54, l: 50 }, // earthy orange
+    magreb: { h: 46, s: 54, l: 57 }, // desert yellow
+    "oriente-medio": { h: 48, s: 64, l: 63 }, // brighter desert yellow
+    mediterraneo: { h: 174, s: 46, l: 52 }, // green-blue
+    "america-latina": { h: 24, s: 66, l: 56 }, // warm yellow-red
+    "antilles-franceses": { h: 252, s: 52, l: 60 }, // blue-purple
+  }
+  const COUNTRY_COLOR_PRESETS = {
+    brasil: { h: 132, s: 52, l: 45 }, // selva green
+  }
   const COUNTRY_NAME_ALIASES = {
     lybia: "libya",
     mauretania: "mauritania",
@@ -857,7 +868,7 @@
         .map((entry, index) => ({
           ...entry,
           normalizedPath: normalizePath(entry.path),
-          color: REGION_PALETTE[index % REGION_PALETTE.length] || DEFAULT_REGION_COLOR,
+          color: REGION_COLOR_PRESETS[entry.id] || REGION_PALETTE[index % REGION_PALETTE.length] || DEFAULT_REGION_COLOR,
         }))
 
       const countryColorById = new Map()
@@ -865,8 +876,9 @@
         .filter((entry) => entry.kind === "country")
         .map((entry, index) => {
           const parentRegion = resolveCountryRegion(entry, seededRegions)
-          const regionColor =
+          const inheritedColor =
             parentRegion?.color || REGION_PALETTE[(seededRegions.length + index) % REGION_PALETTE.length] || DEFAULT_REGION_COLOR
+          const regionColor = COUNTRY_COLOR_PRESETS[entry.id] || inheritedColor
           return {
             ...entry,
             normalizedPath: normalizePath(entry.path),
