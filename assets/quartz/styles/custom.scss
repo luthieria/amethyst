@@ -278,6 +278,11 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   transition: fill 0.16s ease, stroke 0.16s ease, filter 0.16s ease, transform 0.16s ease;
 }
 
+#{$ethno-page-scope} .ethno-globe-label-link[data-entry-kind="region"] .ethno-globe-label-chip {
+  stroke-dasharray: 2.4 2.8;
+  stroke-linecap: round;
+}
+
 #{$ethno-page-scope} .ethno-globe-label-link:hover .ethno-globe-label-chip,
 #{$ethno-page-scope} .ethno-globe-label-link:focus .ethno-globe-label-chip,
 #{$ethno-page-scope} .ethno-globe-label-link:focus-visible .ethno-globe-label-chip,
