@@ -141,8 +141,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
   .ethno-globe-country {
     fill: rgba(13, 19, 29, 0.78);
-    stroke: rgba(246, 250, 255, 0.12);
-    stroke-width: 0.4;
+    stroke: rgba(246, 250, 255, 0.025);
+    stroke-width: 0.2;
     vector-effect: non-scaling-stroke;
   }
 
@@ -156,8 +156,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
   .ethno-globe-coastline {
     fill: none;
-    stroke: rgba(236, 244, 255, 0.816);
-    stroke-width: 0.5;
+    //stroke: var(--dark) /* rgba(236, 244, 255, 0.816) */;
+    stroke-width: 0.1;
     vector-effect: non-scaling-stroke;
     pointer-events: none;
     filter: drop-shadow(0 0 2px rgba(198, 218, 255, 0.14));
@@ -202,39 +202,11 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
     -webkit-backdrop-filter: blur(16px) !important;
   }
 
-  /* 6) Tooltip and label typography. */
-  .ethno-globe-hint {
-    position: absolute;
-    top: 0.12rem !important;
-    left: 50%;
-    transform: translate(-50%, -0.75rem);
-    opacity: 0;
-    pointer-events: none;
-    padding: 0.38rem 0.72rem;
-    border-radius: 999px;
-    border: 1px solid rgba(250, 252, 255, 0.22);
-    background: rgba(8, 12, 19, 0.72);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.32);
-    color: rgba(245, 249, 255, 0.94);
-    font-size: 0.58em;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-    white-space: nowrap;
-    transition: opacity 0.16s ease, transform 0.16s ease;
-    z-index: 3;
-  }
-
-  .ethno-globe-hint.is-visible {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-
+  /* 6) Label typography. */
   .ethno-globe-labels text {
     fill: rgba(248, 252, 255, 0.98);
     font-family: var(--font-sans) !important;
-    font-size: 0.6em !important;
+    font-size: 0.8em !important;
     font-weight: 650;
     stroke: none !important;
     stroke-width: 0 !important;
@@ -249,15 +221,15 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   }
 
   .ethno-globe-labels .depth-2 {
-    font-size: 0.56em !important;
+    font-size: 0.7em !important;
   }
 
   .ethno-globe-labels .depth-3 {
-    font-size: 0.54em !important;
+    font-size: 0.65em !important;
   }
 
   .ethno-globe-labels .depth-4 {
-    font-size: 0.52em !important;
+    font-size: 0.6em !important;
   }
 
   .ethno-globe-label-link {
