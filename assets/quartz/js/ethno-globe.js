@@ -34,7 +34,7 @@
     inertia: {
       enabled: true,
       decayPer60fps: 0.978,
-      minVelocityDegPerMs: 0.0012,
+      minVelocityDegPerMs: 0.0022,
       maxVelocityDegPerMs: 0.18,
       sampleWindowMs: 170,
       clickSuppressDistancePx: 6,

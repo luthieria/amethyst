@@ -211,6 +211,35 @@ pre::-webkit-scrollbar {
 .book-menu-content {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    position: relative;
+    overflow-x: visible;
+}
+
+.book-menu .book-menu-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 18px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0.28) 0%,
+        rgba(30, 30, 30, 0.14) 48%,
+        rgba(30, 30, 30, 0) 100%
+    );
+}
+
+body[dir="rtl"] .book-menu .book-menu-content::after {
+    right: auto;
+    left: -18px;
+    background: linear-gradient(
+        to left,
+        rgba(30, 30, 30, 0.28) 0%,
+        rgba(30, 30, 30, 0.14) 48%,
+        rgba(30, 30, 30, 0) 100%
+    );
 }
 
 .book-menu-content::-webkit-scrollbar,
