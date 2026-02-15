@@ -23,30 +23,77 @@ globalGraph:
     enableLegend: false
     enableDrag: true
     enableZoom: true
-    depth: -1 # set to -1 to show full graph
-    scale: 1.4
-    repelForce: 1
-    centerForce: 1
-    linkDistance: 1
-    fontSize: 0.5
+    depth: -1
+    scale: 1.1          # was 1.4 (too tight visually)
+    repelForce: 3.2     # was 1 → HUGE difference
+    centerForce: 0.4    # reduce pull to center
+    linkDistance: 140   # was 5 → extremely small before
+    fontSize: 0.65      # slightly larger
     opacityScale: 3
 
 ### For all graphs ###
 
 paths:
-  - /Notas/I.-Ciencia/1.-Filosofia: "#e8b8c6"
-  - /Notas/I.-Ciencia/2.-Antropologia: "#c7d8ef"
-  - /Notas/I.-Ciencia/3.-Economia: "#d6c3e6"
-  - /Notas/I.-Ciencia/4.-Hist%C3%B3ria: "#bcdfe0"
-  - /Notas/I.-Ciencia/5.-L%C3%ADnguas: "#e7d7b1"
-  - /Notas/I.-Ciencia/6.-Religiones: "#c5d7b9"
-  - /Notas/I.-Ciencia/7.-M%C3%BAsica: "#a9d8e6"
-  - /Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica: "#e7c7a8"
-  - /Notas/I.-Ciencia/9.-Computer-Science: "#c3cfe8"
-  - /Notas/II.-Personal/Tareas: "#f0cbbf"
-  - /Notas/II.-Personal/Trabajo: "#b9d6c4"
 
-  - /Notas/I.-Ciencia: "#b8cad8"
-  - /Notas/II.-Personal: "#c7d2c0"
+  # ===== ROOT =====
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa: "#3f7f8a"
 
-  - /moc: "#9bb7d4"
+  # ===== OLD WORLD =====
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/1.-%C3%81frica-subsahariana: "#3f9a8f"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Oriente-Medio: "#c69a4b"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo: "#5b6ea6"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/Espa%C3%B1a: "#d17868"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/Portugal: "#d99a63"
+
+  # ===== AMÉRICA =====
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica: "#47b7ad"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina: "#58cdd8"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica: "#e3a65a"
+
+  # Hispanoamérica (soft warm pastel spectrum)
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba: "#f2a38c"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/M%C3%A9xico: "#f2c879"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Colombia: "#eec199"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Per%C3%BA: "#f29b86"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Ecuador: "#f3b38e"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Puerto-Rico: "#f0a7a3"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Santo-Domingo: "#f4b28a"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.2.-Brasil: "#6fd3b1"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.3.-Antilles-fran%C3%A7aises: "#d3bdf2"
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America: "#8ab6e8"
+
+  # ===== LAUDERÍA =====
+
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa: "#5a6fd8"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Familia-del-viol%C3%ADn: "#7d79e6"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra: "#9ec5f4"
+
+  # ===== DISCIPLINES =====
+
+  - /Notas/I.-Ciencia/1.-Filosofia: "#c279b5"
+  - /Notas/I.-Ciencia/2.-Antropologia: "#7ea4d6"
+  - /Notas/I.-Ciencia/3.-Economia: "#9a76d9"
+  - /Notas/I.-Ciencia/4.-Hist%C3%B3ria: "#6ec2e4"
+  - /Notas/I.-Ciencia/5.-L%C3%ADnguas: "#d9b86e"
+  - /Notas/I.-Ciencia/6.-Religiones: "#8ebc7a"
+  - /Notas/I.-Ciencia/7.-M%C3%BAsica: "#63b6da"
+  - /Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica: "#e08a6e"
+  - /Notas/I.-Ciencia/9.-Computer-Science: "#7f86e6"
+
+  # ===== PERSONAL =====
+
+  - /Notas/II.-Personal/Tareas: "#e68e94"
+  - /Notas/II.-Personal/Trabajo: "#7fb0a6"
+
+  - /Notas/I.-Ciencia: "#4f6a82"
+  - /Notas/II.-Personal: "#5f7f6c"
