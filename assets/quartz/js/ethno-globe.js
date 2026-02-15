@@ -683,14 +683,19 @@
 
   const navigateTo = (event, url) => {
     if (!url) return
+    if (!event) return
     if (event.defaultPrevented) return
-    if (event.type === "click" && event.button !== 0) return
+    const isPrimaryClick = event.type !== "click" || typeof event.button !== "number" || event.button === 0
+    if (!isPrimaryClick) return
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
 
+    event.preventDefault()
     if (window.Million && typeof window.Million.navigate === "function") {
-      event.preventDefault()
       window.Million.navigate(url, ".singlePage")
+      return
     }
+
+    window.location.assign(url)
   }
 
   const regionRadiusDegrees = (entry) => {
@@ -1422,6 +1427,9 @@
               enter
                 .append("a")
                 .attr("class", "ethno-globe-label-link")
+                .on("pointerdown", (event) => event.stopPropagation())
+                .on("mousedown", (event) => event.stopPropagation())
+                .on("touchstart", (event) => event.stopPropagation())
                 .on("click", (event, entry) => {
                   if (shouldSuppressClickNavigation()) {
                     event.preventDefault()
