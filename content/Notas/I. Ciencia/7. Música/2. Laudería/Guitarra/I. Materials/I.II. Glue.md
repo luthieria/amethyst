@@ -11,7 +11,7 @@ weight: 7
 
 - [^Whisperer]Time:
   - **open** (← “open joint”) — the glue remains liquid and workable;
-    - joining parts after the open time results in a weak bond;[^Wikipedia_AnimalGlue]
+    - joining parts after the open time results in a weak bond;[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue]
   - **assembly** — open time + the time one has to manoeuvre the pieces after joining them together.
 - **Glue starvation** — over-clamping causing the glue to come out of the joint. It will hold for a while (~25 years) before coming apart.[^Bruné_Glue]
 
@@ -56,9 +56,9 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 1. **Repairability**:undoable cleanly an infinite number of times (with heat, moisture, hot knife), → makes an instrument repairable (as opposed to synthetic glues which may ruin the instrument).
 2. For the **strongest** joints.
-3. **No creep** under pressure (as opposed to PVA, which creates plastic joints that creep over time under heavy loads[^Wikipedia_AnimalGlue]).
+3. **No creep** under pressure (as opposed to PVA, which creates plastic joints that creep over time under heavy loads[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue]).
 4. **Cleans easily** with heat / steam / hot water.
-5. Creates a somewhat brittle joint, → **cleanly breaks along the joint** (as opposed to PVA, which damages the glued surfaces[^Wikipedia_AnimalGlue]).
+5. Creates a somewhat brittle joint, → **cleanly breaks along the joint** (as opposed to PVA, which damages the glued surfaces[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue]).
 6. **Bonds to itself**, reactivates older hide glue.
 7. **Functions as its own clamp**: once it begins to gel, it pulls the joint together.
 8. **No glue starvation**.
@@ -77,6 +77,11 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 - Hide glue is just a liquid, → flows properly, → doesn’t need to be applied onto both surfaces (it will only produce more squeeze).[^Bruné_Tonewoods]
 
+<br>
+
+- The best glue for old instruments.
+  - Used for violins since the XVI c.[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue+https://web.archive.org/web/20120426041320/http://www.karlroyviolinbook.com/pdfs/Glue211-213.pdf]; old Martins, Gibsons.
+
 
 
 
@@ -92,7 +97,9 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 [^Whisperer]: [**The Wood Whisperer**](https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l)
 
-[^Wikipedia_AnimalGlue]: [**Wikipedia**](https://en.wikipedia.org/wiki/Animal_glue#Hide_glue)
+[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue]: [**Wikipedia**](https://en.wikipedia.org/wiki/Animal_glue#Hide_glue)
+
+[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue+https://web.archive.org/web/20120426041320/http://www.karlroyviolinbook.com/pdfs/Glue211-213.pdf]: [**Wikipedia**](https://en.wikipedia.org/wiki/Animal_glue#Hide_glue) (some [book](https://web.archive.org/web/20120426041320/http://www.karlroyviolinbook.com/pdfs/Glue211-213.pdf))
 
 [^Bruné_Glue]: [**Bruné M. E.**](https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8)
 
