@@ -2,6 +2,10 @@
 
 ---
 
+- how to set font per page?
+
+---
+
 - Change font to --font-sans:
     - search bar
     - graph
@@ -26,6 +30,19 @@
 - move the "Home" button (the network icon) and the search bar to the left side bar (for all pages).
 
 - remove the top bar from all pages altogether, so that the rest of the website layout could move up
+
+- in the left side bar, the arrows that signify unfodability: style them like in Obsidian (see screenshot)
+![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
+
+---
+
+- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
+  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios
+
+---
+
+- how to add material symbols to the folders in the left side bar? I want it like in Obsidian (see screenshot)
+![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
 
 ---
 
@@ -124,3 +141,8 @@
     - if the website is already running, make it stop, and then serve again
     - remove the "Open" option
   - add a shortcut that resets the repository to the last commit (git reset --hard HEAD)
+
+---
+
+- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)
+![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)

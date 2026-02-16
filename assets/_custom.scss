@@ -1,6 +1,4 @@
-/* You can add custom styles here. */
-
-// @import "plugins/numbered";
+//@import "plugins/numbered";
 
 body {
     font-size: 24px;
@@ -50,7 +48,7 @@ body.home header {
         min-width: 0;
     }
 
-    li + li::before {
+    li+li::before {
         content: "→";
         margin-right: 0.6em;
         color: var(--outlinegray);

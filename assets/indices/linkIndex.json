@@ -32,6 +32,18 @@
           "text": "USA"
         }
       ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+          "target": "/La-guitarra",
+          "text": "La guitarra"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+          "target": "/Libros-sumarios",
+          "text": "Libros (sumarios)"
+        }
+      ],
       "/Notas/I.-Ciencia/9.-Computer-Science/": [
         {
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
@@ -124,11 +136,25 @@
           "text": "Generative Form and Abstracted Cross-Rhythm"
         }
       ],
+      "/La-guitarra": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+          "target": "/La-guitarra",
+          "text": "La guitarra"
+        }
+      ],
       "/LaTeX": [
         {
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
           "target": "/LaTeX",
           "text": "LaTeX"
+        }
+      ],
+      "/Libros-sumarios": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+          "target": "/Libros-sumarios",
+          "text": "Libros (sumarios)"
         }
       ],
       "/Notas": [
@@ -214,6 +240,16 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
       "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music",
       "text": "USA"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+      "target": "/La-guitarra",
+      "text": "La guitarra"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
+      "target": "/Libros-sumarios",
+      "text": "Libros (sumarios)"
     },
     {
       "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
