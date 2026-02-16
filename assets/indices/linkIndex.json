@@ -8,26 +8,26 @@
           "text": "Заметки по марксизму"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         },
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
           "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/Anglo-Caribbean-Music",
           "text": "Anglo-Caribbean"
         },
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
           "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music",
           "text": "USA"
         }
@@ -98,7 +98,7 @@
       ],
       "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
           "text": "Предисловие"
         }
@@ -133,7 +133,7 @@
       ],
       "/Notas": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
           "target": "/Notas",
           "text": "Notas"
         }
@@ -175,14 +175,14 @@
       ],
       "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
           "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music",
           "text": "USA"
         }
       ],
       "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/Anglo-Caribbean-Music": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
           "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/Anglo-Caribbean-Music",
           "text": "Anglo-Caribbean"
         }
@@ -196,22 +196,22 @@
       "text": "Заметки по марксизму"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
       "text": "Предисловие"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/Notas",
       "text": "Notas"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
       "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/Anglo-Caribbean-Music",
       "text": "Anglo-Caribbean"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
       "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music",
       "text": "USA"
     },
