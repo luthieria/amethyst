@@ -1,0 +1,274 @@
+{
+  "main": {
+    "id": "a47369014d840d0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf874c4e00227dda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63e4d10ff2cc8e59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "I. Ciencia/1. Filosofia/Заметки по марксизму.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Заметки по марксизму"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "49923aa8410b52bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "70852306bdfc8579",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9970ff210b187aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "08eba5f53a25fdad",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "405451b7da9cb5d3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "f5e7f96843dcb1b7",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "mk-path-view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 291.5004348754883
+  },
+  "right": {
+    "id": "4c881b01dbf2a640",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e8968b3313a46a0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "efb5d57445eda492",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/III. Instruments/III.I. Clásica.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for III.I. Clásica"
+            }
+          },
+          {
+            "id": "e62835e1a9e5b6b5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Cuba.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Cuba"
+            }
+          },
+          {
+            "id": "ebe5805c07528648",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ea572795b59106da",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "bfe5d19c014f3901",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          },
+          {
+            "id": "fd15d3a25ffd2ae9",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
+          },
+          {
+            "id": "f76138c854d407c2",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "I. Ciencia/7. Música/1. Etnomusicología/Mediterráneo/Untitled.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "63e4d10ff2cc8e59",
+  "lastOpenFiles": [
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Guitarra.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/IV. Repairs/IV. Repairs.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/III. Instruments/III.I. Clásica.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/y.md",
+    "package-lock.json",
+    "website/I. Ciencia/9. Computer Science/LaTeX.html",
+    "website/I. Ciencia/9. Computer Science",
+    "website/data/navigation.json",
+    "website/data/graph.json",
+    "website/data/documents.json",
+    "website/data",
+    "website/graph.html",
+    "website/index.html",
+    "website/II. Personal/Trabajo/Laudería/Violino Michael (26.12.2025)/Violino Michael.html",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/III. Instruments/III.II. Acoustic.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/I. Materials/I.I. Wood.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/I. Materials.md",
+    "I. Ciencia/7. Música/2. Laudería/Guitarras/Volumes/Parts/III.I. Clásica.md",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/IV. Violín.md",
+    "II. Personal/Tareas/To do.md",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/V. Bow.md",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/I. Tools.md",
+    "Pasted image 20260101225938.png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Pasted image 20260101225949.png",
+    "II. Personal/Trabajo/Laudería/Violino Michael (26.12.2025)/Violino Michael.canvas",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Standard violin diagram (Strobel H. A.).png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Neck Stop.png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Correctly fitted neck.png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/3.svg",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/2.svg",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/1.svg",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Recursos/Standard violin diagram (Strobel H. A.).png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Imagenes/Recursos/Correctly fitted neck.png",
+    "I. Ciencia/7. Música/2. Laudería/Familia del violín/Contrabajo.md",
+    "II. Personal/Trabajo/Laudería/Violino Michael (26.12.2025)/Drawing 2025-12-26 22.14.51.excalidraw.md",
+    "II. Personal/Trabajo/Laudería/Violino Michael (26.12.2025)/Violino Michael.md",
+    "I. Ciencia/7. Música/1. Etnomusicología/2. Hispanoamérica/Cuba/Música cubana/Предисловие.md",
+    "I. Ciencia/7. Música/1. Etnomusicología/Mediterráneo/Untitled.md",
+    "I. Ciencia/7. Música/1. Etnomusicología/Hispanoamérica/Música cubana.md",
+    "II. Personal/Música/Laudería/Untitled.canvas",
+    "Excalidraw/Drawing 2025-12-26 22.09.10.excalidraw.md",
+    "I. Ciencia/1. Filosofia/Введение в науку логики _ Михаил Васильевич Попов.md",
+    "II. Personal/Música/Laudería/Drawing 2025-12-26 22.09.51.excalidraw.md",
+    "II. Personal/Música/Laudería/Untitled.md",
+    "Música cubana.md",
+    "I. Ciencia/1. Filosofia/Заметки по марксизму.md",
+    "Excel 2025-12-26 16.59.38.univer.md",
+    "Livros/Guitar Player Repair Guide (2nd edition).md",
+    "Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}

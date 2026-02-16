@@ -1,0 +1,13 @@
+{
+  "enabledCssSnippets": [
+    "book-covers",
+    "Colored Sidebar Items",
+    "center-headings"
+  ],
+  "baseFontSizeAction": true,
+  "cssTheme": "",
+  "textFontFamily": "Lusitana,Literaturnaya",
+  "interfaceFontFamily": "Cascadia Mono",
+  "baseFontSize": 19,
+  "accentColor": ""
+}

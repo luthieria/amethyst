@@ -1,0 +1,20 @@
+/* ===== Reading View ===== */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  text-align: center;
+}
+
+/* ===== Source View + Live Preview (CodeMirror 6) ===== 
+.cm-editor .cm-header {
+  display: block;
+  text-align: center;
+}*/
+
+/* Ensure the whole line is centered 
+.cm-editor .cm-line:has(.cm-header) {
+  text-align: center;
+}*/
