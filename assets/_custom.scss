@@ -17,8 +17,14 @@ body.home header {
     box-shadow: none !important;
 }
 
+.book-menu,
+.book-menu a,
 .book-menu-content {
-  margin-top: 0 !important;
+    font-family: var(--font-sans);
+}
+
+.book-menu-content {
+    margin-top: 0 !important;
 }
 
 .book-breadcrumbs {
@@ -45,7 +51,7 @@ body.home header {
     }
 
     li + li::before {
-        content: "â€º";
+        content: "→";
         margin-right: 0.6em;
         color: var(--outlinegray);
     }
