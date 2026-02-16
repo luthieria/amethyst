@@ -1,5 +1,5 @@
 ---
-title: "4. Historia"
+title: "Cuba"
 weight: 2
 bookCollapseSection: true
 ---

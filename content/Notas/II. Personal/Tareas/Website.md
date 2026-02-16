@@ -38,7 +38,7 @@
 
 ---
 
-- pages "4. Historia", "7. Música":
+- page "7. Música":
   - Make the links appear like 2 columns of tabs with 
     - corresponding, minimalistic icons (from Google Material Symbols), 
     - --font-sans,
@@ -79,6 +79,11 @@
 ---
 
 - make images on the website clickable to expand to full screen
+
+---
+
+- copy the globe to the page "4. Historia", but adapt its countries / links to the folders and files inside the "4. Historia" folder.
+- instead of the modern post-Soviet countries, make the USSR appear on the globe
 
 ---
 

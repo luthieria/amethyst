@@ -1,5 +1,5 @@
 ---
-title: "4. Historia"
-weight: 2
+title: "América"
+weight: 6
 bookCollapseSection: true
 ---
