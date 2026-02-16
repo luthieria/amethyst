@@ -8,6 +8,8 @@
     - footer (bakclinks, interactive graph)
     - right side bar (table of contents)
 
+- when the name of the page appear at the page's beginning, make it of the default text color, not red.
+
 - Make the top 2 folders (I. Ciencia, II. Personal) always expanded
 
 - right side bar (table of contents):
