@@ -35,7 +35,8 @@
 ![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
 
 - make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
-  - centered on page
+  - center breadcrumbs on page
+  - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
 ---
 
