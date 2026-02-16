@@ -1,5 +1,5 @@
 ---
-title: "1. Etnomusicología"
+title: "Etnomusicología"
 weight: 3
 bookCollapseSection: true
 BookHiddenTitle: true

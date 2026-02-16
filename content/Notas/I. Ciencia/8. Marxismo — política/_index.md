@@ -1,6 +1,6 @@
 ---
 title: "8. Marxismo — política"
-weight: 2
+weight: 9
 bookCollapseSection: true
 ---
 

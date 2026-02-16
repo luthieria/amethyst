@@ -1,6 +1,6 @@
 ---
-title: "5. Audio Engineering"
-weight: 3
+title: "Audio Engineering"
+weight: 7
 bookCollapseSection: true
 ---
 

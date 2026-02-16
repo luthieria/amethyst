@@ -1,6 +1,6 @@
 ---
-title: "3. Instrumentos"
-weight: 3
+title: "Instrumentos"
+weight: 5
 bookCollapseSection: true
 ---
 

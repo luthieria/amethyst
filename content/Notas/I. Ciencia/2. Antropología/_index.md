@@ -1,5 +1,5 @@
 ---
 title: "2. Antropología"
-weight: 2
+weight: 3
 bookCollapseSection: true
 ---

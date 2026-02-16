@@ -1,17 +1,17 @@
 ---
 title: "7. Música"
-weight: 2
+weight: 8
 bookCollapseSection: true
 ---
 
-[[1. Etnomusicología]]
+[[7.1. Etnomusicología]]
 
-[[2. Laudería]]
+[[7.2. Laudería]]
 
-[[3. Instrumentos]]
+[[7.3. Instrumentos]]
 
-[[4. Teoria musical]]
+[[7.4. Teoria musical]]
 
-[[5. Audio Engineering]]
+[[7.5. Audio Engineering]]
 
-[[6. DSP]]
+[[7.6. DSP]]

@@ -1,9 +1,5 @@
 ---
-title: "6. DSP"
-weight: 3
+title: "DSP"
+weight: 8
 bookCollapseSection: true
 ---
-
-<!-- AUTO-CHILD-LINKS:START -->
-
-<!-- AUTO-CHILD-LINKS:END -->

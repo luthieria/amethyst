@@ -1,6 +1,6 @@
 ---
 title: "5. Lenguas"
-weight: 2
+weight: 6
 bookCollapseSection: true
 ---
 
