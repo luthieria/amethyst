@@ -2,7 +2,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
 
 #{$ethno-page-scope} {
   /* 1) Overlay activation + host layout overrides. */
-  overflow: hidden !important; /* Lock page scrolling while the full-screen globe is active. */
+  overflow: hidden !important;
+  /* Lock page scrolling while the full-screen globe is active. */
 
   .singlePage {
     padding: 0 !important;
@@ -43,7 +44,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
     overflow: hidden !important;
   }
 
-  .book-page.container .markdown > * {
+  .book-page.container .markdown>* {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -110,7 +111,8 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   .ethno-globe-stage.is-dragging .ethno-globe-territory-island,
   .ethno-globe-stage.is-dragging .ethno-globe-link path,
   .ethno-globe-stage.is-dragging .ethno-globe-microstate {
-    transition: none !important; /* Remove visual lag while rotating/dragging the globe. */
+    transition: none !important;
+    /* Remove visual lag while rotating/dragging the globe. */
   }
 
   .ethno-globe-stage.is-dragging .ethno-globe-link.region .ethno-globe-region-halo,
@@ -260,8 +262,7 @@ $ethno-page-scope: "body:is(.page-ethno-map-full, .page-ethno-map-full-active)";
   .ethno-globe-label-link.is-linked-hover .ethno-globe-label-chip {
     fill: rgba(10, 18, 30, 0.8);
     stroke: var(--ethno-label-accent, rgba(248, 252, 255, 0.54));
-    filter: drop-shadow(0 0.35rem 1.12rem rgba(0, 0, 0, 0.35))
-      drop-shadow(0 0 0.45rem var(--ethno-label-chip-glow, rgba(248, 252, 255, 0.24)));
+    filter: drop-shadow(0 0.35rem 1.12rem rgba(0, 0, 0, 0.35)) drop-shadow(0 0 0.45rem var(--ethno-label-chip-glow, rgba(248, 252, 255, 0.24)));
     transform: translateY(-0.24px);
   }
 

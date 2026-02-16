@@ -28,6 +28,11 @@ body.home header {
 .book-breadcrumbs {
     margin: 0 0 1.2rem;
     max-width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background-color: var(--background);
     font-size: 0.72em;
     line-height: 1.35;
     color: var(--gray);
@@ -40,6 +45,11 @@ body.home header {
         margin: 0;
         padding: 0;
         min-width: 0;
+    }
+
+    li,
+    li a {
+        font-family: var(--font-sans);
     }
 
     li {

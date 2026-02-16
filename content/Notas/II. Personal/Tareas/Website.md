@@ -34,6 +34,9 @@
 - in the left side bar, the arrows that signify unfodability: style them like in Obsidian (see screenshot)
 ![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
 
+- make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
+  - centered on page
+
 ---
 
 - make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
@@ -111,7 +114,7 @@
 
 - This repository got too complex. Optimize it carefully, so that nothing breaks. 
 
-    - remove reduntant and unused files, folders. (don't edit the "content/Notas" folder)
+    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current theme), folders. (don't edit the "content/Notas" folder)
 
     - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 
       - the graph appearance (font, colors, background,etc.) is controlled from one file, 

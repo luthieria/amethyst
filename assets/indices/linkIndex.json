@@ -8,6 +8,13 @@
           "text": "Заметки по марксизму"
         }
       ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
@@ -143,6 +150,13 @@
           "text": "La guitarra"
         }
       ],
+      "/La-m%C3%BAsica-cubana": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+          "target": "/La-m%C3%BAsica-cubana",
+          "text": "La música cubana"
+        }
+      ],
       "/LaTeX": [
         {
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
@@ -230,6 +244,11 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/Notas",
       "text": "Notas"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
+      "target": "/La-m%C3%BAsica-cubana",
+      "text": "La música cubana"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
