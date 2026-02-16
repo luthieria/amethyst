@@ -9,15 +9,13 @@
 - Change font to --font-sans:
     - search bar
     - graph
-    - footer (bakclinks, interactive graph)
-    - right side bar (table of contents)
+    - footer (backlinks, interactive graph)
 
 - when the name of the page appear at the page's beginning, make it of the default text color, not red.
 
 - Make the top 2 folders (I. Ciencia, II. Personal) always expanded
 
 - right side bar (table of contents):
-    - Remove the scroll bar, while still keeping the list scrollable
     - make the page title be displayed on top
 
 - The left side bar cuts off at the top of the screen. Fix it (it should be full page height like on the page "1. Etnomusicología").
@@ -115,7 +113,7 @@
 
 - This repository got too complex. Optimize it carefully, so that nothing breaks. 
 
-    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current theme), folders. (don't edit the "content/Notas" folder)
+    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current theme; languages, etc.), folders. (don't edit the "content/Notas" folder)
 
     - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 
       - the graph appearance (font, colors, background,etc.) is controlled from one file, 

@@ -25,6 +25,10 @@ body.home header {
     margin-top: 0 !important;
 }
 
+.book-toc a {
+    font-family: var(--font-sans);
+}
+
 .book-breadcrumbs {
     margin: 0 0 1.2rem;
     max-width: 100%;

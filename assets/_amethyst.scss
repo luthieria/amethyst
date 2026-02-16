@@ -45,11 +45,6 @@ header {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-// .book-header .spacer {
-//     order: 1;
-//     flex: 1 1 auto;
-// }
-
 .book-header #search-icon {
     order: 2;
     background-color: var(--light);
@@ -208,7 +203,8 @@ pre::-webkit-scrollbar {
 }
 
 /* Hide left menu scrollbar completely while preserving scroll behavior */
-.book-menu-content {
+.book-menu-content,
+.book-toc-content {
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
@@ -409,6 +405,7 @@ body.home .book-page.container {
     max-width: none;
 }
 
+// Home graph
 body.home .home-graph {
     position: fixed;
     top: 0;
