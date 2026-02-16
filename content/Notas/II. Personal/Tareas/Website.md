@@ -36,6 +36,9 @@
   - center breadcrumbs on page
   - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
+- the distances between headings are too big. Reduce them.
+![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)
+
 ---
 
 - make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
@@ -59,7 +62,7 @@
 
 ---
 
-- page "7. Música":
+- pages "I. Ciencia", "7. Música":
   - Make the links appear like 2 columns of tabs with 
     - corresponding minimalistic icons (from Google Material Symbols), 
     - --font-sans,

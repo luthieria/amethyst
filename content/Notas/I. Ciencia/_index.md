@@ -4,17 +4,15 @@ weight: 1
 bookCollapseSection: true
 ---
 
-<!-- present them as modern, beautiful tabs with minimalist icons, in 2 columns -->
+[[1. Filosofía]]
 
-[[1. Filosofia]]
+[[2. Antropología]]
 
-[[2. Antropologia]]
+[[3. Economía]]
 
-[[3. Economia]]
+[[4. Historia]]
 
-[[4. História]]
-
-[[5. Línguas]]
+[[5. Lenguas]]
 
 [[6. Religiones]]
 
