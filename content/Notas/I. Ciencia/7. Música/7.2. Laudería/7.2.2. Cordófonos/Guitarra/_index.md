@@ -1,5 +1,5 @@
 ---
 title: "Guitarra"
-weight: 5
+weight: 7
 bookCollapseSection: true
 ---

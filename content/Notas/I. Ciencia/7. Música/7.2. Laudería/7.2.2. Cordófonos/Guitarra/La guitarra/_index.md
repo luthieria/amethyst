@@ -1,7 +1,8 @@
 ---
-title: "Guitarra"
+title: "La guitarra"
 weight: 6
-bookCollapseSection: true
+
+bookHideChildren: true
 bookBreadcrumbStart: true
 ---
 
