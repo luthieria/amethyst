@@ -2,5 +2,8 @@
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": false,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "userIgnoreFilters": [
+    "/_index.md/"
+  ]
 }

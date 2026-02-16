@@ -3,6 +3,8 @@ title: I.I. Wood
 weight: 6
 ---
 
+- Your first 4–5 guitars won't be good enough to make them out of some expensive wood.[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]
+
 # Characteristics
 ## Grain
 
@@ -166,6 +168,9 @@ weight: 6
 
 
 <!-- Footnotes -->
+
+[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]: [**M. E. Bruné**](https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq)
+
 [^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
 
 [^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)

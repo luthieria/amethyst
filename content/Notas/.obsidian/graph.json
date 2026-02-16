@@ -6,17 +6,25 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"I. Ciencia/7. Música/1. Etnomusicología/4. América/4.1. América Latina/4.1.1. Hispanoamérica\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 9297317
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "lineSizeMultiplier": 0.974244604316547,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "centerStrength": 0.23103802672148,
+  "repelStrength": 6.19938335046249,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 2.4582980136637165,
+  "linkDistance": 185,
+  "scale": 0.7019916138390925,
   "close": true
 }

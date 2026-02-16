@@ -2,7 +2,8 @@
   "enabledCssSnippets": [
     "book-covers",
     "Colored Sidebar Items",
-    "center-headings"
+    "center-headings",
+    "hide-files"
   ],
   "baseFontSizeAction": true,
   "cssTheme": "",
