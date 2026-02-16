@@ -42,12 +42,15 @@
 
 - page "7. Música":
   - Make the links appear like 2 columns of tabs with 
-    - corresponding, minimalistic icons (from Google Material Symbols), 
+    - corresponding minimalistic icons (from Google Material Symbols), 
     - --font-sans,
   - move the "backlinks" section to the right side, and make it hideable (foldable)
   - Interactive Graph:
     - remove border (make it appear seamless like on the Home page)
     - make it full page right below the link tabs (similar to liek it is on the Home page, but with the tabs above)
+
+- Page "Laudería":
+  - row 1 — Woodworking symbol, row 2 — piano, violin, guitar symbols, row 3 — aerófonos symbol.
 
 ---
 
