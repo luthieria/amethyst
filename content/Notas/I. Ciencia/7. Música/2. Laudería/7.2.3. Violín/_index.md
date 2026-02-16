@@ -1,13 +1,10 @@
 ---
 title: "Familia del violín"
-weight: 50
+weight: 6
 bookCollapseSection: true
 ---
-
-<!-- AUTO-CHILD-LINKS:START -->
 [[I. Tools]]
 
 [[IV. Violín]]
 
 [[V. Bow]]
-<!-- AUTO-CHILD-LINKS:END -->

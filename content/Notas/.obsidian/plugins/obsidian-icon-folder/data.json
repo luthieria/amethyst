@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiInfinity",
-      "LiBomb",
-      "LiMusic3",
-      "LiMoonStar",
-      "LiAsterisk"
+      "LiComputer",
+      "LiLanguages",
+      "LiCoins",
+      "LiAmphora",
+      "LiPersonStanding"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -38,5 +38,11 @@
   "II. Personal": "📓",
   "I. Ciencia/6. Religiones": "LiMoonStar",
   "I. Ciencia/7. Música": "LiMusic3",
-  "I. Ciencia/8. Marxismo — política": "LiBomb"
+  "I. Ciencia/8. Marxismo — política": "LiBomb",
+  "I. Ciencia/1. Filosofía": "LiInfinity",
+  "I. Ciencia/2. Antropología": "LiPersonStanding",
+  "I. Ciencia/4. Historia": "LiAmphora",
+  "I. Ciencia/3. Economía": "LiCoins",
+  "I. Ciencia/5. Lenguas": "LiLanguages",
+  "I. Ciencia/9. Computer Science": "LiComputer"
 }

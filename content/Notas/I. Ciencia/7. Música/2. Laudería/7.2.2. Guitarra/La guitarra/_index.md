@@ -1,6 +1,6 @@
 ---
 title: "Guitarra"
-weight: 4
+weight: 6
 bookCollapseSection: true
 bookBreadcrumbStart: true
 ---
