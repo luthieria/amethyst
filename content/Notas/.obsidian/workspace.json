@@ -10,18 +10,17 @@
           {
             "id": "63e4d10ff2cc8e59",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "I. Ciencia/7. Música/2. Laudería/Guitarra/I. Materials/I.II. Glue.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "I.II. Glue"
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -88,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307.500732421875
+    "width": 200
   },
   "right": {
     "id": "4c881b01dbf2a640",
@@ -104,7 +103,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "I. Ciencia/7. Música/2. Laudería/Guitarra/I. Materials/I.II. Glue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +112,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for I.II. Glue"
+              "title": "Backlinks"
             }
           },
           {
@@ -123,12 +121,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "I. Ciencia/7. Música/2. Laudería/Guitarra/I. Materials/I.II. Glue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from I.II. Glue"
+              "title": "Outgoing links"
             }
           },
           {
@@ -192,11 +189,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "I. Ciencia/7. Música/2. Laudería/Guitarra/I. Materials/I.II. Glue.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for I.II. Glue"
+              "title": "File properties"
             }
           }
         ],

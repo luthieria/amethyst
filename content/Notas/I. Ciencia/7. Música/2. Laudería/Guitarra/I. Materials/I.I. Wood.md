@@ -3,7 +3,7 @@ title: I.I. Wood
 weight: 6
 ---
 
-- Your first 4–5 guitars won't be good enough to make them out of some expensive wood.[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]
+- Your first 3–4 instruments won't be good enough to make them out of some expensive wood. May start with mahogany(cheap, easy to work, one of the best sounds).[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]
 
 # Characteristics
 ## Grain
