@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default " ltr"
+    .Site.Language.LanguageDirection }}">
+
+
+<head>
+    {{ partial "docs/html-head" . }}
+    {{ partial "docs/inject/head" . }}
+    {{ partial "quartz/head" . }}
+</head>
+{{ partial "quartz/search" . }}
+{{partial "quartz/header" . }}
+{{- $bodyClasses := slice -}}
+{{- if .IsHome -}}
+{{- $bodyClasses = $bodyClasses | append "home" -}}
+{{- end -}}
+{{- with .Params.bodyClass -}}
+{{- $bodyClasses = $bodyClasses | append . -}}
+{{- end -}}
+
+<body dir="{{ default " ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }}
+    class="{{ delimit $bodyClasses " " }}" {{ end }}>
+    <input type="checkbox" class="hidden toggle" id="menu-control" />
+    <main class="flex">
+        <div class="book-menu-hover-zone" aria-hidden="true"></div>
+        <aside class="book-menu">
+            <button type="button" class="book-menu-pin" aria-pressed="false" aria-label="Pin sidebar"
+                title="Pin sidebar">☰</button>
+            <div class="book-menu-content">
+                {{ template "menu" . }} <!-- Left menu Content -->
+            </div>
+        </aside>
+        <div class="book-page container">
+            {{/* <header class="book-header">
+                {{ template "header" . }} <!-- Mobile layout header -->
+            </header> */}}
+
+            {{ partial "docs/inject/content-before" . }}
+
+            <!-- TABBED LAYOUT CONTENT START -->
+            <div class="tabbed-layout">
+                <div class="tabbed-content">
+                    <article class="markdown">
+                        {{ if not .Params.BookHiddenTitle }}
+                        <h1>{{ partial "docs/title" . }}</h1>
+                        {{ end }}
+                        {{ partial "quartz/textprocessing" . }}
+                    </article>
+
+                    <div class="tabbed-links">
+                        {{ partial "custom/tabs.html" . }}
+                    </div>
+                </div>
+
+                <aside class="backlinks-sidebar">
+                    <details open>
+                        <summary>{{ i18n "backlinks" }}</summary>
+                        {{ partial "quartz/backlinks.html" . }}
+                    </details>
+                </aside>
+            </div>
+
+            <section class="full-width-graph" id="footer">
+                {{ partial "quartz/graph.html" . }}
+            </section>
+            <!-- TABBED LAYOUT CONTENT END -->
+
+            {{ partial "docs/inject/content-after" . }}
+
+
+            {{ template "comments" . }} <!-- Comments block -->
+
+            <label for="menu-control" class="hidden book-menu-overlay"></label>
+        </div>
+
+        {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+        <aside class="book-toc">
+            <div class="book-toc-content">
+                {{ template "toc" . }} <!-- Table of Contents -->
+            </div>
+        </aside>
+        {{ end }}
+    </main>
+
+    {{ partial "docs/inject/body" . }}
+</body>
+
+</html>
+
+{{ define "menu" }}
+{{ partial "docs/menu" . }}
+{{ end }}
+
+{{ define "header" }}
+{{ partial "docs/header" . }}
+
+{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+<aside class="hidden clearfix">
+    {{ template "toc" . }}
+</aside>
+{{ end }}
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "docs/footer" . }}
+{{ end }}
+
+{{ define "comments" }}
+{{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+<div class="book-comments">
+    {{- partial "docs/comments" . -}}
+</div>
+{{ end }}
+{{ end }}
+
+{{ define "toc" }}
+{{ partial "docs/toc" . }}
+{{ end }}

@@ -1,6 +1,8 @@
 ---
 title: "1. Filosofía"
 weight: 2
+
+icon: "all_inclusive"
 bookCollapseSection: true
 ---
 

@@ -116,7 +116,7 @@
 
 - This repository got too complex. Optimize it carefully, so that nothing breaks. 
 
-    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current theme; languages, etc.), folders. (don't edit the "content/Notas" folder)
+    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the "content/Notas" folder)
 
     - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 
       - the graph appearance (font, colors, background,etc.) is controlled from one file, 

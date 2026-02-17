@@ -1,0 +1,10 @@
+<div class="tab-links-grid">
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}" class="tab-link">
+        <span class="material-symbols-outlined">
+            {{ default "description" .Params.icon }}
+        </span>
+        <span class="tab-link-title">{{ .Title }}</span>
+    </a>
+    {{ end }}
+</div>

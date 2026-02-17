@@ -136,15 +136,15 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
     if (typeof segment !== "string" || segment.length === 0) return keys
 
     const decoded = decodePathSegments(segment)
-    ;[segment, decoded].forEach((candidate) => {
-      const value = candidate.trim()
-      if (!value) return
-      keys.add(value)
-      const dot = value.lastIndexOf(".")
-      if (dot > 0) {
-        keys.add(value.slice(0, dot))
-      }
-    })
+      ;[segment, decoded].forEach((candidate) => {
+        const value = candidate.trim()
+        if (!value) return
+        keys.add(value)
+        const dot = value.lastIndexOf(".")
+        if (dot > 0) {
+          keys.add(value.slice(0, dot))
+        }
+      })
 
     return keys
   }
@@ -531,7 +531,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
       d.fy = null
     }
 
-    const noop = () => {}
+    const noop = () => { }
     return d3
       .drag()
       .on("start", enableDrag ? dragstarted : noop)

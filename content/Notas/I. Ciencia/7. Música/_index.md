@@ -2,6 +2,8 @@
 title: "7. Música"
 weight: 8
 bookCollapseSection: true
+type: tabbed
+layout: tabbed
 ---
 
 [[7.1. Etnomusicología]]

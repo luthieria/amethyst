@@ -4,3 +4,4 @@ exampleSite/public/
 .hugo_build.lock
 themesnul
 hugo-sync-bf3479717a86.json
+public_test*

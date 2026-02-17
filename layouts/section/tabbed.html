@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div style="background: blue; color: white;">DEBUG: INSIDE TABBED LIST LAYOUT</div>
+<div class="tabbed-layout">
+  <div class="tabbed-content">
+    <article class="markdown">
+      {{ if not .Params.BookHiddenTitle }}
+      <h1>{{ partial "docs/title" . }}</h1>
+      {{ end }}
+      {{ partial "quartz/textprocessing" . }}
+    </article>
+
+    <div class="tabbed-links">
+      {{ partial "custom/tabs.html" . }}
+    </div>
+  </div>
+
+  <aside class="backlinks-sidebar">
+    <details open>
+      <summary>{{ i18n "backlinks" }}</summary>
+      {{ partial "quartz/backlinks.html" . }}
+    </details>
+  </aside>
+</div>
+
+<section class="full-width-graph">
+  {{ partial "quartz/graph.html" . }}
+</section>
+{{ end }}

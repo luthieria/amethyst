@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default " ltr"
+  .Site.Language.LanguageDirection }}">
+
+
 <head>
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}
@@ -9,37 +12,45 @@
 {{partial "quartz/header" . }}
 {{- $bodyClasses := slice -}}
 {{- if .IsHome -}}
-  {{- $bodyClasses = $bodyClasses | append "home" -}}
+{{- $bodyClasses = $bodyClasses | append "home" -}}
 {{- end -}}
 {{- with .Params.bodyClass -}}
-  {{- $bodyClasses = $bodyClasses | append . -}}
+{{- $bodyClasses = $bodyClasses | append . -}}
 {{- end -}}
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }} class="{{ delimit $bodyClasses " " }}"{{ end }}>
+
+<body dir="{{ default " ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }}
+  class="{{ delimit $bodyClasses " " }}" {{ end }}>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <main class="flex">
     <div class="book-menu-hover-zone" aria-hidden="true"></div>
     <aside class="book-menu">
-      <button
-        type="button"
-        class="book-menu-pin"
-        aria-pressed="false"
-        aria-label="Pin sidebar"
-        title="Pin sidebar"
-      >☰</button>
+      <button type="button" class="book-menu-pin" aria-pressed="false" aria-label="Pin sidebar"
+        title="Pin sidebar">☰</button>
       <div class="book-menu-content">
         {{ template "menu" . }} <!-- Left menu Content -->
       </div>
     </aside>
     <div class="book-page container">
-      {{/*  <header class="book-header">
+      {{/* <header class="book-header">
         {{ template "header" . }} <!-- Mobile layout header -->
-      </header>  */}}
+      </header> */}}
 
       {{ partial "docs/inject/content-before" . }}
-      {{ template "main" . }} <!-- Page Content -->
+      {{ block "main" . }}
+      <article class="markdown">
+        {{ if not .Params.BookHiddenTitle }}
+        <h1>{{ partial "docs/title" . }}</h1>
+        {{ end }}
+        {{partial "quartz/textprocessing" . }}
+        {{ if not .Params.quartzHideFooter }}
+        {{ partial "quartz/footer" .}}
+        {{ end }}
+        {{/* {{- .Content -}} */}}
+      </article>
+      {{ end }} <!-- Page Content -->
       {{ partial "docs/inject/content-after" . }}
-      
-      
+
+
       {{ template "comments" . }} <!-- Comments block -->
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -56,47 +67,35 @@
 
   {{ partial "docs/inject/body" . }}
 </body>
+
 </html>
 
 {{ define "menu" }}
-  {{ partial "docs/menu" . }}
+{{ partial "docs/menu" . }}
 {{ end }}
 
 {{ define "header" }}
-  {{ partial "docs/header" . }}
+{{ partial "docs/header" . }}
 
-  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-  <aside class="hidden clearfix">
-    {{ template "toc" . }}
-  </aside>
-  {{ end }}
+{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+<aside class="hidden clearfix">
+  {{ template "toc" . }}
+</aside>
+{{ end }}
 {{ end }}
 
 {{ define "footer" }}
-  {{ partial "docs/footer" . }}
+{{ partial "docs/footer" . }}
 {{ end }}
 
 {{ define "comments" }}
-  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-  <div class="book-comments">
-    {{- partial "docs/comments" . -}}
-  </div>
-  {{ end }}
+{{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+<div class="book-comments">
+  {{- partial "docs/comments" . -}}
+</div>
 {{ end }}
-
-{{ define "main" }}
-  <article class="markdown">
-    {{ if not .Params.BookHiddenTitle }}
-    <h1>{{ partial "docs/title" . }}</h1>
-    {{ end }}
-    {{partial "quartz/textprocessing" . }}
-    {{ if not .Params.quartzHideFooter }}
-    {{ partial "quartz/footer" .}}
-    {{ end }}
-    {{/*  {{- .Content -}}  */}}
-  </article>
 {{ end }}
 
 {{ define "toc" }}
-  {{ partial "docs/toc" . }}
+{{ partial "docs/toc" . }}
 {{ end }}
