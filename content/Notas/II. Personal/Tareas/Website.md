@@ -10,10 +10,7 @@
 
 - left side bar
   -  it cuts off at the top of the screen. Fix it (it should be full page height like on the page "1. Etnomusicología").
-  - Make the top 2 folders (I. Ciencia, II. Personal) always expanded
-  - move the "Home" button (the network icon) and the search bar to the left side bar (for all pages).
-  - the arrows that signify unfodability: style them like in Obsidian (see screenshot) [alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
-  - add the icons to the folders in the left side bar (the icons are specified inside each folder ("icon" property))
+
   - The "Pin" icon:
     - replace the icon with a vertical single bar (ensure it looks professional and modern),
     - make bigger, 

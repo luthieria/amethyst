@@ -9,7 +9,7 @@
     {{ partial "quartz/head" . }}
 </head>
 {{ partial "quartz/search" . }}
-{{partial "quartz/header" . }}
+{{/* {{partial "quartz/header" . }} */}}
 {{- $bodyClasses := slice -}}
 {{- if .IsHome -}}
 {{- $bodyClasses = $bodyClasses | append "home" -}}
