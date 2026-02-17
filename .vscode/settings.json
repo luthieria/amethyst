@@ -14,8 +14,17 @@
             "args": "Serve & Open",
             "statusBar": {
                 "alignment": "left",
-                "text": "$(globe) Serve & Open",
-                "tooltip": "Run Hugo Server and Open in Browser"
+                "text": "$(globe) Serve",
+                "tooltip": "Stop existing Hugo and start new server"
+            }
+        },
+        "Git: Reset Hard": {
+            "command": "workbench.action.tasks.runTask",
+            "args": "Git: Reset Hard",
+            "statusBar": {
+                "alignment": "left",
+                "text": "$(discard) Reset Repo",
+                "tooltip": "git reset --hard HEAD"
             }
         }
     },
