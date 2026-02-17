@@ -8,6 +8,7 @@
     margin-top: 0;
   }
 
+  // # HEADINGS
   h1,
   h2,
   h3,
@@ -15,11 +16,11 @@
   h5,
   h6 {
     font-family: var(--font-header);
-    font-weight: normal;
-    line-height: 1;
-    margin-top: 1.5em;
-    margin-bottom: $padding-16;
+    font-weight: bold;
     text-align: center;
+
+    line-height: .5;
+    margin-bottom: $padding-4;
 
     a.anchor {
       opacity: 0;
@@ -30,74 +31,63 @@
 
     &:hover a.anchor,
     a.anchor:focus {
-      opacity: initial;
+      opacity: 70%;
     }
   }
 
   h1 {
-    font-size: 2.25em;
-    font-weight: 600;
-    color: #bf616a;
-
-    padding-bottom: .3em;
+    font-size: $font-size-h1;
+    color: var(--h1);
   }
 
   h2 {
-    font-size: 1.75em;
-    font-weight: 500;
-    color: #d08770;
-
-    padding-bottom: .3em;
+    font-size: $font-size-h1 - 0.25em;
+    color: var(--h2);
   }
 
   h3 {
-    font-size: 1.5em;
-    font-weight: 400;
-    color: #ebcb8b;
+    font-size: $font-size-h1 - 0.5em;
+    color: var(--h3);
   }
 
   h4 {
-    font-size: 1.25em;
-    font-weight: 400;
-    color: #a3be8c;
+    font-size: $font-size-h1 - 0.75em;
+    color: var(--h4);
   }
 
   h5 {
-    font-size: 1em;
-    font-weight: 400;
-    color: #81a1c1;
+    font-size: $font-size-h1 - 1em;
+    color: var(--h5);
   }
 
   h6 {
-    font-size: 1em;
-    font-weight: 400;
-    color: #b48ead;
+    font-size: $font-size-h1 - 1.25em;
+    color: var(--h6);
   }
 
-
+  // # BOLD
   b,
   optgroup,
   strong {
     font-weight: bolder;
   }
 
+  // # LINKS
   a {
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
     }
-
-    // &:visited {
-    //   color: var(--color-visited-link);
-    // }
   }
 
+  // # IMAGES
   img {
     max-width: 100%;
     height: auto;
   }
 
+  // # CODE
   code {
     padding: 0 $padding-4;
     background: var(--gray-200);
@@ -117,6 +107,7 @@
     }
   }
 
+  // # PARAGRAPHS
   p {
     word-wrap: break-word;
     color: var(--dark);
@@ -134,34 +125,32 @@
     display: none;
   }
 
+  // # TEXT INDENT
   >p {
     text-indent: 2em;
   }
 
+  // ## No indent
   .no-indent p {
     text-indent: 0;
   }
 
+  // ## No indent (right)
   .no-indent-right p {
     text-indent: 0;
     text-align: right;
     margin: 1rem;
   }
 
-  // blockquote {
-  //   margin: $padding-16 0;
-  //   padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp
+  // # QUOTE
+  blockquote {
+    border-left: 3px solid var(--secondary);
+    background-color: var(--lightgray);
 
-  //   border-inline-start: $padding-4 solid var(--gray-200);
-  //   border-radius: $border-radius;
-
-  //   :first-child {
-  //     margin-top: 0;
-  //   }
-  //   :last-child {
-  //     margin-bottom: 0;
-  //   }
-  // }
+    margin-left: 0;
+    padding-left: 1em;
+    transition: border-color 0.2s ease;
+  }
 
   table {
     overflow: auto;
@@ -193,18 +182,22 @@
     }
   }
 
+  // # HORIZONTAL RULE
   hr {
     height: $padding-1;
     border: none;
     background: var(--gray-200);
   }
 
+  // # LISTS
+  // ## Unordered lists
   ul {
     padding-inline-start: $padding-16 * 2;
     margin-top: 0;
     margin-bottom: 0;
   }
 
+  // ## Ordered lists
   // Render nested ordered lists as 1., 1.1., 1.2.1., etc.
   ol:not(.footnotes-list) {
     list-style-type: none;
@@ -237,6 +230,7 @@
     }
   }
 
+  // # FOOTNOTES
   // Keep Hugo footnotes on regular decimal markers.
   .footnotes ol {
     list-style-type: decimal;
@@ -284,6 +278,7 @@
     }
   }
 
+  // # DEFINITION LISTS
   dl {
     dt {
       font-weight: bolder;

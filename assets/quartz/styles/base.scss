@@ -28,7 +28,6 @@ html {
   }
 }
 
-
 body {
   margin: 0;
   height: 100vh;
@@ -39,24 +38,6 @@ body {
   overflow: scroll;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-thead {
-  font-family: var(--font-header);
-  color: var(--dark);
-  font-weight: revert;
-  margin: 2rem 0 0;
-  padding: 2rem auto 1rem;
-
-  &:hover>.hanchor {
-    color: var(--secondary);
-  }
-}
-
 .hanchor {
   font-family: var(--font-header);
   opacity: 0.8;
@@ -64,6 +45,7 @@ thead {
   color: var(--dark);
 }
 
+// # PARAGRAPHS
 p,
 ul,
 text,
@@ -81,12 +63,34 @@ ul {
   padding: revert;
 }
 
+// # TABLES
 tbody,
 li,
 p {
   line-height: 1.5em;
 }
 
+table {
+  border: 1px solid var(--outlinegray);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.5em auto;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.2em 0.55em;
+  border: 1px solid var(--outlinegray);
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: center;
+}
+
+// # TOC
 .mainTOC {
   border-radius: 5px;
   padding: 0.75em 0;
@@ -137,26 +141,6 @@ p {
   }
 }
 
-table {
-  border: 1px solid var(--outlinegray);
-  width: fit-content;
-  max-width: 100%;
-  margin: 0.5em auto;
-  padding: 0;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: 0.2em 0.55em;
-  border: 1px solid var(--outlinegray);
-}
-
-td:not([align]),
-th:not([align]) {
-  text-align: center;
-}
-
 img {
   max-width: 100%;
   border-radius: 3px;
@@ -170,13 +154,6 @@ p>img+em {
 
 sup {
   line-height: 0
-}
-
-blockquote {
-  margin-left: 0;
-  border-left: 3px solid var(--secondary);
-  padding-left: 1em;
-  transition: border-color 0.2s ease;
 }
 
 .footnotes p {
@@ -314,6 +291,7 @@ pre {
   overflow-x: scroll;
 }
 
+// # CODE
 code {
   font-family: var(--font-mono);
   font-size: 0.85em;
@@ -332,6 +310,7 @@ code {
   }
 }
 
+// # FOOTER
 footer {
   margin-top: 4em;
   text-align: center;
@@ -341,6 +320,7 @@ footer {
   }
 }
 
+// # HORIZONTAL RULE
 hr {
   width: 100%;
   margin: 2em auto;
@@ -349,6 +329,7 @@ hr {
   background-color: var(--outlinegray);
 }
 
+// # PAGE END
 .page-end {
   display: flex;
   flex-direction: row;
@@ -362,6 +343,7 @@ hr {
     flex: 1 0 0;
   }
 
+  // ## Backlinks Container
   &>.backlinks-container {
     &>ul {
       list-style: none;
@@ -369,17 +351,21 @@ hr {
       margin: 0;
 
       &>li {
+        font-family: var(--font-sans);
+
         margin: 0.5em 0;
         padding: 0.25em 1em;
+
         border: var(--outlinegray) 1px solid;
         border-radius: 5px
       }
     }
   }
 
+  // ## Graph Container
   & #graph-container {
-    border: var(--outlinegray) 1px solid;
-    border-radius: 5px;
+    // border: var(--outlinegray) 1px solid;
+    // border-radius: 5px;
     box-sizing: border-box;
     min-height: 250px;
     margin: 0.5em 0;
@@ -447,6 +433,7 @@ header,
   }
 }
 
+// # SEARCH CONTAINER
 #search-container {
   position: fixed;
   z-index: 9999;
@@ -665,6 +652,8 @@ header,
   }
 }
 
+// # TEXT HIGHLIGHTS
+
 mark {
   background-color: var(--highlighted);
   color: #2e3440;
@@ -673,11 +662,10 @@ mark {
   padding: 0 2px;
 }
 
-// ==== Text Highlight Colors ====
-
 .highlight-red {
   background-color: #E6B8AF;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -685,14 +673,15 @@ mark {
 .highlight-green {
   background-color: #D9EAD3;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
-
 }
 
 .highlight-blue {
   background-color: #CFE2F3;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -700,6 +689,7 @@ mark {
 .highlight-purple {
   background-color: #D9D2E9;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -707,6 +697,7 @@ mark {
 .highlight-orange {
   background-color: #f5c9a2;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -714,6 +705,7 @@ mark {
 .highlight-peach {
   background-color: #FCE5CD;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -721,6 +713,7 @@ mark {
 .highlight-teal {
   background-color: #D0E0E3;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -728,6 +721,7 @@ mark {
 .highlight-periwinkle {
   background-color: #C9DAF8;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }
@@ -735,6 +729,7 @@ mark {
 .highlight-mauve {
   background-color: #EAD1DC;
   color: #2e3440;
+
   border-radius: 6px;
   padding: 0 2px;
 }

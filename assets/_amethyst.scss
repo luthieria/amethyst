@@ -389,11 +389,14 @@ body.home .book-menu .book-menu-content {
     background: transparent;
 }
 
-.markdown h1,
-.markdown h2,
-.markdown h3 {
-    font-weight: bold;
-}
+// .markdown h1,
+// .markdown h2,
+// .markdown h3,
+// .markdown h4,
+// .markdown h5,
+// .markdown h6 {
+//     font-weight: bold;
+// }
 
 .title {
     color: var(--title);
@@ -443,8 +446,8 @@ input.toggle:checked+label::before {
     color: var(--secondary);
 }
 
+// * * *
 .book-menu-content a:hover,
-
 .markdown-inner,
 .book-tabs {
     font-family: var(--font-sans);
