@@ -4,6 +4,9 @@ weight: 7
 
 bookHideChildren: true
 bookBreadcrumbStart: true
+
+type: tabbed
+layout: tabbed
 ---
 
 [[Erlewine D. Guitar player repair guide (1994, 2008)]]
