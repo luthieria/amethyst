@@ -125,7 +125,7 @@
   }
 
   // Preserve visible blank lines between markdown paragraphs.
-  p + p {
+  p+p {
     margin-top: 1em;
   }
 
@@ -134,7 +134,7 @@
     display: none;
   }
 
-  > p {
+  >p {
     text-indent: 2em;
   }
 
@@ -215,12 +215,12 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    > li {
+    >li {
       display: block;
       counter-increment: item;
     }
 
-    > li::before {
+    >li::before {
       content: counters(item, ".") ". ";
       display: inline-block;
       width: 2.2em;
@@ -246,12 +246,12 @@
     margin-top: 1px;
     margin-bottom: 0;
 
-    > li {
+    >li {
       display: list-item;
       counter-increment: none;
     }
 
-    > li::before {
+    >li::before {
       content: none;
     }
 
@@ -268,7 +268,7 @@
 
     font-size: 20px;
 
-    > hr {
+    >hr {
       display: none;
     }
 

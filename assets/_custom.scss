@@ -23,101 +23,7 @@ body.home {
   font-family: var(--font-sans);
 }
 
-// # 2. LEFT SIDEBAR #
-// ## 2.1. Header ##
-.sidebar-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  margin-bottom: 0.5rem;
-  gap: 1.25rem;
-
-  // ### 2.1.1. Home Button ###
-  .book-home-link {
-    padding: 0;
-    margin: 0;
-    color: var(--gray);
-    text-decoration: none;
-    order: 1;
-
-    .book-home-icon {
-      font-size: 32px;
-    }
-  }
-
-  // ### 2.1.2. Search Button ###
-  .menu-search {
-    display: flex !important;
-    order: 2;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-
-    #search-icon {
-      display: flex;
-      align-items: center;
-      background: none;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      cursor: pointer;
-      color: var(--gray);
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: var(--secondary);
-      }
-
-      svg {
-        width: 26px;
-        height: 26px;
-        stroke: currentColor;
-      }
-
-      p {
-        display: none;
-      }
-    }
-  }
-}
-
-// ## 2.2. Menu ##
-.book-menu,
-.book-menu a,
-.book-menu-content {
-  font-family: var(--font-sans);
-}
-
-.book-menu-content {
-  margin-top: 0 !important;
-  padding-top: 0.5rem !important;
-}
-
-// # 3. RIGHT SIDEBAR #
-// ## 3.1. Contents ##
-// ### 3.1.1. Title ###
-.toc-title {
-  font-family: var(--font-sans);
-  font-weight: bold;
-  font-size: 1.1em;
-  color: var(--title);
-
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--outlinegray);
-}
-
-// ### 3.1.2. Menu ###
-.book-toc a {
-  font-family: var(--font-sans);
-}
-
-// # 4. FOOTER #
-#footer h3 {
-  display: none;
-}
-
+// # 2. BREADCRUMBS #
 .book-breadcrumbs {
   margin: 0 0 1.2rem;
   max-width: 100%;
@@ -175,39 +81,103 @@ body.home {
   }
 }
 
-[saved-theme="dark"] {
-  h1 {
-    color: #bf616a;
+// # 3. LEFT SIDEBAR #
+// ## 3.1. Header ##
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  gap: 1.25rem;
+
+  // ### 3.1.1. Home Button ###
+  .book-home-link {
+    padding: 0;
+    margin: 0;
+    color: var(--gray);
+    text-decoration: none;
+    order: 1;
+
+    .book-home-icon {
+      font-size: 32px;
+    }
   }
 
-  h2 {
-    color: #d08770;
-  }
+  // ### 3.1.2. Search Button ###
+  .menu-search {
+    display: flex !important;
+    order: 2;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
 
-  h3 {
-    color: #ebcb8b;
-  }
+    #search-icon {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.2s ease;
 
-  h4 {
-    color: #a3be8c;
-  }
+      &:hover {
+        color: var(--secondary);
+      }
 
-  h5 {
-    color: #81a1c1;
-  }
+      svg {
+        width: 26px;
+        height: 26px;
+        stroke: currentColor;
+      }
 
-  h6 {
-    color: #b48ead;
-  }
-
-  blockquote {
-    background-color: #303337;
-    border-left: 4px solid #43484c;
-    color: #9ba09d;
+      p {
+        display: none;
+      }
+    }
   }
 }
 
-// Custom styles for tabbed layout
+// ## 3.2. Menu ##
+.book-menu,
+.book-menu a,
+.book-menu-content {
+  font-family: var(--font-sans);
+}
+
+.book-menu-content {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
+}
+
+// # 4. RIGHT SIDEBAR #
+// ## 4.1. Contents ##
+// ### 4.1.1. Title ###
+.toc-title {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--title);
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--outlinegray);
+}
+
+// ### 4.1.2. Menu ###
+.book-toc a {
+  font-family: var(--font-sans);
+}
+
+// # 5. FOOTER #
+// ## 5.1. Headers ("Backlinks", "Interactive Graph") ##
+#footer h3 {
+  display: none;
+}
+
+// # 6. LAYOUT: TABBED #
 .tabbed-layout {
   display: flex;
   flex-wrap: wrap;
@@ -216,28 +186,31 @@ body.home {
   margin-bottom: 2rem;
 }
 
-.tabbed-content {
-  flex: 1 1 600px;
-  display: flex;
-  flex-direction: column;
-  /* Stack markdown (if visible) and tabs vertically */
-}
-
-/* Hide the original markdown content in tabbed layout */
+// ## 6.1. Content ##
+/* Hide the original .md text */
 .tabbed-layout .markdown {
   display: none;
 }
 
+.tabbed-content {
+  flex: 1 1 600px;
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically */
+}
+
+// ## 6.2. Grid ##
 .tab-links-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 0;
-  /* Remove top margin since markdown is hidden */
+  /* Remove top margin since .md is hidden */
   width: 100%;
   align-items: center;
   gap: 3rem;
 }
 
+// ## 6.3. Individual tabs ##
 .tab-link {
   display: flex;
   flex-direction: column;
@@ -253,6 +226,7 @@ body.home {
   text-align: center;
 }
 
+// ### 6.3.1. Behavior on hover ###
 .tab-link:hover {
   border-color: var(--secondary);
   background: var(--light);
@@ -260,12 +234,14 @@ body.home {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+// ### 6.3.2. Icon ###
 .tab-link .material-symbols-outlined {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   color: var(--secondary);
 }
 
+// ### 6.3.3. Title ###
 .tab-link-title {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -273,16 +249,13 @@ body.home {
   color: var(--dark);
 }
 
-// # FOOTER #
-
-// ## Backlinks ##
-
+// # 7. FOOTER #
+// ## 7.1. Backlinks ##
 .backlinks-sidebar {
   display: none;
 }
 
-// ## Graph ##
-
+// ## 7.2. Graph ##
 .full-width-graph {
   width: 100vw;
   position: relative;
