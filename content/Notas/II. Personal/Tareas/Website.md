@@ -6,35 +6,29 @@
 
 ---
 
-- Change font to --font-sans:
-    - search bar
-    - graph
-    - footer (backlinks, interactive graph)
-
 - when the name of the page appear at the page's beginning, make it of the default text color, not red.
 
-- Make the top 2 folders (I. Ciencia, II. Personal) always expanded
-
-- right side bar (table of contents):
-    - make the page title be displayed on top
-
-- The left side bar cuts off at the top of the screen. Fix it (it should be full page height like on the page "1. Etnomusicología").
-
-- The "Pin" icon:
+- left side bar
+  -  it cuts off at the top of the screen. Fix it (it should be full page height like on the page "1. Etnomusicología").
+  - Make the top 2 folders (I. Ciencia, II. Personal) always expanded
+  - move the "Home" button (the network icon) and the search bar to the left side bar (for all pages).
+  - the arrows that signify unfodability: style them like in Obsidian (see screenshot) [alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
+  - add the icons to the folders in the left side bar (the icons are specified inside each folder ("icon" property))
+  - The "Pin" icon:
     - replace the icon with a vertical single bar (ensure it looks professional and modern),
     - make bigger, 
     - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.
 
-- move the "Home" button (the network icon) and the search bar to the left side bar (for all pages).
+- right side bar (table of contents):
+    - make the page title be displayed on top
 
 - remove the top bar from all pages altogether, so that the rest of the website layout could move up
-
-- in the left side bar, the arrows that signify unfodability: style them like in Obsidian (see screenshot)
-![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
 
 - make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
   - center breadcrumbs on page
   - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+
+---
 
 - the distances between headings are too big. Reduce them.
 ![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)

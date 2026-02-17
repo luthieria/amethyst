@@ -1,6 +1,7 @@
-$header-height: 80px;
+$header-height: 0px;
 
 header {
+    display: none;
     position: fixed;
     width: 100%;
     padding: 0px 80px;
@@ -42,7 +43,7 @@ header {
     height: 100%;
     font-size: 30px;
     line-height: 1;
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 }
 
 .book-header #search-icon {
@@ -225,7 +226,7 @@ pre::-webkit-scrollbar {
 
     body.sidebar-autohide-enabled .book-menu {
         position: fixed;
-        top: $header-height;
+        top: 0;
         left: 0;
         bottom: 0;
         width: $menu-width;
@@ -250,6 +251,7 @@ pre::-webkit-scrollbar {
     body.sidebar-autohide-enabled .book-page.container {
         margin-left: auto;
         margin-right: auto;
+        margin-top: 0;
     }
 
     body.sidebar-autohide-enabled .book-toc {
@@ -281,32 +283,43 @@ pre::-webkit-scrollbar {
         justify-content: center;
         position: absolute;
         top: 50%;
-        right: -18px;
+        right: -24px;
         transform: translateY(-50%);
-        width: 18px;
-        height: 66px;
+        width: 24px;
+        height: 100px;
         padding: 0;
         border: none;
-        border-radius: 0;
+        border-radius: 4px 0 0 4px;
         background: transparent;
         color: var(--gray);
-        font-size: 16px;
-        line-height: 1;
         cursor: pointer;
         z-index: 121;
         user-select: none;
-        transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease;
+        transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+        span {
+            display: block;
+            width: 2px;
+            height: 40px;
+            background-color: currentColor;
+            border-radius: 1px;
+            transition: height 0.2s ease;
+        }
+
+        &:hover span {
+            background-color: var(--secondary);
+            height: 60px;
+        }
     }
 
-    body.sidebar-autohide-enabled .book-menu-pin:hover,
-    body.sidebar-autohide-enabled .book-menu-pin:focus-visible {
-        color: var(--secondary);
-        background: transparent;
-        outline: none;
-    }
-
-    body.sidebar-autohide-enabled .book-menu-pin[aria-pressed="true"] {
+    body.sidebar-autohide-enabled.sidebar-menu-pinned .book-menu-pin {
+        right: 10px;
         color: var(--tertiary);
+
+        span {
+            height: 60px;
+            background-color: var(--tertiary);
+        }
     }
 
     body[dir="rtl"].sidebar-autohide-enabled .book-menu {
@@ -379,17 +392,38 @@ pre::-webkit-scrollbar {
     opacity: 1;
 }
 
-.book-menu input.toggle+label::after {
-    font-size: 150%;
+// folding arrows like Obsidian
+input.toggle+label::before {
+    content: "\e5cc"; // chevron_right
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    opacity: 0.5;
+    margin-right: 4px;
+    transform-origin: center;
 }
 
-.book-menu input.toggle+label:hover {
+input.toggle:checked+label::before {
+    transform: rotate(90deg);
+}
+
+.sidebar-icon {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
     color: var(--secondary);
 }
 
+.book-menu-content a:hover,
+
 .markdown-inner,
 .book-tabs {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     color: var(--dark);
 }
 

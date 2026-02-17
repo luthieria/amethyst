@@ -12,9 +12,9 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/": {
-    "title": "1. Filosofía",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[Заметки по марксизму]]\r\n\r\n[[Попов М. В.]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T22:53:07.7721292-04:00",
+    "title": "Filosofía",
+    "content": "\r\n[[Заметки по марксизму]]\r\n\r\n[[Попов М. В.]]",
+    "lastmodified": "2026-02-17T00:05:43.5536889-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": {
@@ -30,21 +30,21 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/2.-Antropolog%C3%ADa/": {
-    "title": "2. Antropología",
+    "title": "Antropología",
     "content": "",
-    "lastmodified": "2026-02-16T22:53:44.551734-04:00",
+    "lastmodified": "2026-02-17T00:05:57.4652918-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/3.-Econom%C3%ADa/": {
-    "title": "3. Economía",
+    "title": "Economía",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:25:36.5637194-04:00",
+    "lastmodified": "2026-02-17T00:06:02.3084952-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/4.-Historia/": {
-    "title": "4. Historia",
+    "title": "Historia",
     "content": "",
-    "lastmodified": "2026-02-16T13:25:36.0297469-04:00",
+    "lastmodified": "2026-02-17T00:06:06.2159921-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/4.-Historia/4.1.-%C3%81frica/": {
@@ -150,21 +150,21 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/5.-Lenguas/": {
-    "title": "5. Lenguas",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:25:35.6801365-04:00",
+    "title": "Lenguas",
+    "content": "",
+    "lastmodified": "2026-02-17T00:09:43.2935464-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/6.-Religiones/": {
-    "title": "6. Religiones",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:25:35.1325724-04:00",
+    "title": "Religiones",
+    "content": "",
+    "lastmodified": "2026-02-17T00:09:43.2566535-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/": {
-    "title": "7. Música",
+    "title": "Música",
     "content": "\r\n[[7.1. Etnomusicología]]\r\n\r\n[[7.2. Laudería]]\r\n\r\n[[7.3. Instrumentos]]\r\n\r\n[[7.4. Teoria musical]]\r\n\r\n[[7.5. Audio Engineering]]\r\n\r\n[[7.6. DSP]]",
-    "lastmodified": "2026-02-16T22:22:25.9897934-04:00",
+    "lastmodified": "2026-02-17T00:09:43.2925437-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/": {
@@ -576,15 +576,15 @@
     "tags": []
   },
   "/Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica/": {
-    "title": "8. Marxismo — política",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:25:34.1969277-04:00",
+    "title": "Marxismo — política",
+    "content": "",
+    "lastmodified": "2026-02-17T00:06:33.0098331-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/9.-Computer-Science/": {
-    "title": "9. Computer Science",
+    "title": "Computer Science",
     "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n[[LaTeX]]\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:25:33.8932833-04:00",
+    "lastmodified": "2026-02-17T00:09:43.2566535-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/": {
@@ -607,8 +607,8 @@
   },
   "/Notas/II.-Personal/Tareas/Website": {
     "title": "Website",
-    "content": "\r\n- how to set font per page?\r\n\r\n---\r\n\r\n- Change font to --font-sans:\r\n    - search bar\r\n    - graph\r\n    - footer (backlinks, interactive graph)\r\n\r\n- when the name of the page appear at the page's beginning, make it of the default text color, not red.\r\n\r\n- Make the top 2 folders (I. Ciencia, II. Personal) always expanded\r\n\r\n- right side bar (table of contents):\r\n    - make the page title be displayed on top\r\n\r\n- The left side bar cuts off at the top of the screen. Fix it (it should be full page height like on the page \"1. Etnomusicología\").\r\n\r\n- The \"Pin\" icon:\r\n    - replace the icon with a vertical single bar (ensure it looks professional and modern),\r\n    - make bigger, \r\n    - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.\r\n\r\n- move the \"Home\" button (the network icon) and the search bar to the left side bar (for all pages).\r\n\r\n- remove the top bar from all pages altogether, so that the rest of the website layout could move up\r\n\r\n- in the left side bar, the arrows that signify unfodability: style them like in Obsidian (see screenshot)\r\n![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)\r\n\r\n- make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)\r\n  - center breadcrumbs on page\r\n  - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)\r\n\r\n- the distances between headings are too big. Reduce them.\r\n![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)\r\n\r\n---\r\n\r\n- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: \r\n  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios\r\n\r\n---\r\n\r\n- how to add material symbols to the folders in the left side bar? I want it like in Obsidian (see screenshot)\r\n![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)\r\n\r\n---\r\n\r\n- make the .md page items foldable like in the Obsidian (see the screenshot) and the VS Code editor\r\n![alt text]({2AFD7144-7A4F-4B29-9A26-CFD8C9D7AF2C}.png)\r\n\r\n---\r\n\r\n- Prevent the text labels on the globe from overlapping, while placing each one in its most appropriate location on the globe.\r\n\r\n- Exclude French Guiana from the Mediterráneo region.\r\n\r\n---\r\n\r\n- Page \"Laudería\":\r\n  - row 1 — Woodworking symbol, row 2 — piano, violin, guitar symbols, row 3 — aerófonos symbol.\r\n\r\n---\r\n\r\n- Style the graph like in the lastest version of Obsidian.\r\n\r\n- Can you add a menu interface controlling the graph on the Home page, like the Obsidian has (see the screenshot)? ![alt text]({CE2322B8-B1BA-488E-85B8-572211DB264A}.png)\r\n\r\n---\r\n\r\n- Create a new page in the folder \"II. Personal\". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):\r\n1. books sorted by categories and subcategories (that mirror my \"I. Ciencia\" folder and subfolders) \r\n2. columns: \r\n   1. Ciencia (area)\r\n   2. Subarea\r\n   3. Author\r\n   4. Title\r\n   5. Chapter\r\n   6. Year\r\n   7. Timing (dates):\r\n      1. start\r\n      2. end\r\n   8. pages:\r\n      1. current (make it editable, so I could easily update it)\r\n      2. total\r\n      3. Progress bar + percentage text overlayed on top of the bar\r\n3. color each category according to its color in the graph.\r\n4. total read books (overall and per category).\r\n5. copy this book list: \"D:\\Downloads\\Tareas.xlsx\"\r\n![alt text](image.png)\r\n\r\n---\r\n\r\n- make images on the website clickable to expand to full screen\r\n\r\n---\r\n\r\n- copy the globe to the page \"4. Historia\", but adapt its countries / links to the folders and files inside the \"4. Historia\" folder.\r\n- instead of the modern post-Soviet countries, make the USSR appear on the globe\r\n\r\n---\r\n\r\n- This repository got too complex. Optimize it carefully, so that nothing breaks. \r\n\r\n    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the \"content/Notas\" folder)\r\n\r\n    - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., \r\n      - the graph appearance (font, colors, background,etc.) is controlled from one file, \r\n      - the globe layout (positions, etc.) is controlled from another file, \r\n      - the Markdown rendering (colors, etc.) is controlled from another file, \r\n      - etc.\r\n\r\n    - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.\r\n\r\n    - remove unnecessary comments, like commented-out code blocks.\r\n\r\n    - add clear, concise comments to the .scss files in the \"assets\" folder.\r\n\r\n---\r\n\r\n- How to color the folders in the left side bar and in the reading tracker according to their color in the graph? So that I could control the colors from a single place.\r\n\r\n---\r\n\r\n- Is it possible to add at least a simple text editor to the pages that are rendered from .md files?\r\n- How to create a \"Live Preview\" mode (like the Obsidian has) for .md inside VS Code or the website?\r\n\r\n---\r\n\r\n- shortcuts in the bottom bar of VS Code\r\n  - \"Serve \u0026 Open\": \r\n    - if the website is already running, make it stop, and then serve again\r\n    - remove the \"Open\" option\r\n  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD)\r\n\r\n---\r\n\r\n- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)\r\n![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)",
-    "lastmodified": "2026-02-17T00:03:28.6667695-04:00",
+    "content": "\r\n- how to set font per page?\r\n\r\n---\r\n\r\n- when the name of the page appear at the page's beginning, make it of the default text color, not red.\r\n\r\n- left side bar\r\n  -  it cuts off at the top of the screen. Fix it (it should be full page height like on the page \"1. Etnomusicología\").\r\n  - Make the top 2 folders (I. Ciencia, II. Personal) always expanded\r\n  - move the \"Home\" button (the network icon) and the search bar to the left side bar (for all pages).\r\n  - the arrows that signify unfodability: style them like in Obsidian (see screenshot) [alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)\r\n  - add the icons to the folders in the left side bar (the icons are specified inside each folder (\"icon\" property))\r\n  - The \"Pin\" icon:\r\n    - replace the icon with a vertical single bar (ensure it looks professional and modern),\r\n    - make bigger, \r\n    - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.\r\n\r\n- right side bar (table of contents):\r\n    - make the page title be displayed on top\r\n\r\n- remove the top bar from all pages altogether, so that the rest of the website layout could move up\r\n\r\n- make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)\r\n  - center breadcrumbs on page\r\n  - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)\r\n\r\n---\r\n\r\n- the distances between headings are too big. Reduce them.\r\n![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)\r\n\r\n---\r\n\r\n- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: \r\n  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios\r\n\r\n---\r\n\r\n- how to add material symbols to the folders in the left side bar? I want it like in Obsidian (see screenshot)\r\n![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)\r\n\r\n---\r\n\r\n- make the .md page items foldable like in the Obsidian (see the screenshot) and the VS Code editor\r\n![alt text]({2AFD7144-7A4F-4B29-9A26-CFD8C9D7AF2C}.png)\r\n\r\n---\r\n\r\n- Prevent the text labels on the globe from overlapping, while placing each one in its most appropriate location on the globe.\r\n\r\n- Exclude French Guiana from the Mediterráneo region.\r\n\r\n---\r\n\r\n- Page \"Laudería\":\r\n  - row 1 — Woodworking symbol, row 2 — piano, violin, guitar symbols, row 3 — aerófonos symbol.\r\n\r\n---\r\n\r\n- Style the graph like in the lastest version of Obsidian.\r\n\r\n- Can you add a menu interface controlling the graph on the Home page, like the Obsidian has (see the screenshot)? ![alt text]({CE2322B8-B1BA-488E-85B8-572211DB264A}.png)\r\n\r\n---\r\n\r\n- Create a new page in the folder \"II. Personal\". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):\r\n1. books sorted by categories and subcategories (that mirror my \"I. Ciencia\" folder and subfolders) \r\n2. columns: \r\n   1. Ciencia (area)\r\n   2. Subarea\r\n   3. Author\r\n   4. Title\r\n   5. Chapter\r\n   6. Year\r\n   7. Timing (dates):\r\n      1. start\r\n      2. end\r\n   8. pages:\r\n      1. current (make it editable, so I could easily update it)\r\n      2. total\r\n      3. Progress bar + percentage text overlayed on top of the bar\r\n3. color each category according to its color in the graph.\r\n4. total read books (overall and per category).\r\n5. copy this book list: \"D:\\Downloads\\Tareas.xlsx\"\r\n![alt text](image.png)\r\n\r\n---\r\n\r\n- make images on the website clickable to expand to full screen\r\n\r\n---\r\n\r\n- copy the globe to the page \"4. Historia\", but adapt its countries / links to the folders and files inside the \"4. Historia\" folder.\r\n- instead of the modern post-Soviet countries, make the USSR appear on the globe\r\n\r\n---\r\n\r\n- This repository got too complex. Optimize it carefully, so that nothing breaks. \r\n\r\n    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the \"content/Notas\" folder)\r\n\r\n    - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., \r\n      - the graph appearance (font, colors, background,etc.) is controlled from one file, \r\n      - the globe layout (positions, etc.) is controlled from another file, \r\n      - the Markdown rendering (colors, etc.) is controlled from another file, \r\n      - etc.\r\n\r\n    - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.\r\n\r\n    - remove unnecessary comments, like commented-out code blocks.\r\n\r\n    - add clear, concise comments to the .scss files in the \"assets\" folder.\r\n\r\n---\r\n\r\n- How to color the folders in the left side bar and in the reading tracker according to their color in the graph? So that I could control the colors from a single place.\r\n\r\n---\r\n\r\n- Is it possible to add at least a simple text editor to the pages that are rendered from .md files?\r\n- How to create a \"Live Preview\" mode (like the Obsidian has) for .md inside VS Code or the website?\r\n\r\n---\r\n\r\n- shortcuts in the bottom bar of VS Code\r\n  - \"Serve \u0026 Open\": \r\n    - if the website is already running, make it stop, and then serve again\r\n    - remove the \"Open\" option\r\n  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD)\r\n\r\n---\r\n\r\n- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)\r\n![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)",
+    "lastmodified": "2026-02-17T00:15:04.9641571-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Trabajo/": {
