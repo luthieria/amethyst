@@ -100,6 +100,16 @@ body.home header {
   font-family: var(--font-sans);
 }
 
+.toc-title {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--title);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--outlinegray);
+}
+
 
 #footer h3 {
   display: none;
@@ -112,7 +122,7 @@ body.home header {
   top: 0;
   z-index: 10;
 
-  background-color: var(--background);
+  background-color: var(--light);
   font-size: 0.72em;
   line-height: 1.35;
   color: var(--gray);
@@ -120,6 +130,7 @@ body.home header {
   ol {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.25em 0.6em;
     list-style: none;
     margin: 0;

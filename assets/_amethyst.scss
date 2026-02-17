@@ -1,7 +1,7 @@
 $header-height: 0px;
 
 header {
-    display: none;
+    display: none !important;
     position: fixed;
     width: 100%;
     padding: 0px 80px;
@@ -30,8 +30,6 @@ header {
     justify-content: center;
     width: 30px;
     height: 30px;
-    // margin-left: 14px;
-    // margin-right: 0;
     padding-left: 1rem;
     color: var(--dark);
     order: 3;
@@ -43,7 +41,7 @@ header {
     height: 100%;
     font-size: 30px;
     line-height: 1;
-    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 .book-header #search-icon {
@@ -299,11 +297,11 @@ pre::-webkit-scrollbar {
 
         span {
             display: block;
-            width: 2px;
-            height: 40px;
+            width: 3px;
+            height: 60px;
             background-color: currentColor;
-            border-radius: 1px;
-            transition: height 0.2s ease;
+            border-radius: 2px;
+            transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         &:hover span {

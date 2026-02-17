@@ -8,18 +8,13 @@
 
 - when the name of the page appear at the page's beginning, make it of the default text color, not red.
 
-- left side bar
-  -  it cuts off at the top of the screen. Fix it (it should be full page height like on the page "1. Etnomusicología").
-
-  - The "Pin" icon:
-    - replace the icon with a vertical single bar (ensure it looks professional and modern),
-    - make bigger, 
-    - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.
+- The "Pin" icon:
+  - replace the icon with a vertical single bar (ensure it looks professional and modern),
+  - make bigger, 
+  - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.
 
 - right side bar (table of contents):
     - make the page title be displayed on top
-
-- remove the top bar from all pages altogether, so that the rest of the website layout could move up
 
 - make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
   - center breadcrumbs on page
@@ -96,7 +91,7 @@
 
 ---
 
-- This repository got too complex. Optimize it carefully, so that nothing breaks. 
+- This repository got too complex. Optimize it carefully, making sure that nothing breaks. Make it easier to edit and control the website manually.
 
     - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the "content/Notas" folder)
 
@@ -110,7 +105,7 @@
 
     - remove unnecessary comments, like commented-out code blocks.
 
-    - add clear, concise comments to the .scss files in the "assets" folder.
+    - add clear, concise comments to the .scss files in the "assets" folder, also add comments describing what each file does.
 
 ---
 
