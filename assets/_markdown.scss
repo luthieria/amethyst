@@ -23,6 +23,7 @@
     margin-bottom: $padding-4;
 
     a.anchor {
+      color: inherit;
       opacity: 0;
       font-size: 0.75em;
       vertical-align: middle;
@@ -31,7 +32,7 @@
 
     &:hover a.anchor,
     a.anchor:focus {
-      opacity: 70%;
+      opacity: 90%;
     }
   }
 

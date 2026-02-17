@@ -6,18 +6,13 @@
 
 ---
 
-- when the name of the page appear at the page's beginning, make it of the default text color, not red.
+- when the name of the page appears at the page's beginning, make it of the default text color, not red.
 
 - The "Pin" icon:
   - replace the icon with a vertical single bar (ensure it looks professional and modern),
   - make bigger
 
 - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
-
----
-
-- the distances between headings are too big. Reduce them.
-![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)
 
 ---
 

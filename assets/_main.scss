@@ -47,7 +47,7 @@ aside nav ul {
   li {
     font-family: var(--font-sans);
 
-    margin: .5em 0; // Inter-item spacing
+    margin: .4em 0; // Inter-item spacing
     position: relative;
   }
 
@@ -62,7 +62,7 @@ aside nav ul {
 
   // ## 6.2. Indent of nested lists
   ul {
-    padding-inline-start: $padding-16;
+    padding-inline-start: $font-size-12;
   }
 }
 

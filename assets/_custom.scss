@@ -153,8 +153,7 @@ body.home {
 }
 
 // # 4. RIGHT SIDEBAR #
-// ## 4.1. Contents ##
-// ### 4.1.1. Title ###
+// ## 4.1. Title ##
 .toc-title {
   font-family: var(--font-sans);
   font-weight: bold;
@@ -166,15 +165,11 @@ body.home {
   border-bottom: 1px solid var(--outlinegray);
 }
 
-// ### 4.1.2. Menu ###
+// ## 4.2. Menu ##
 .book-toc a {
   font-family: var(--font-sans);
-}
-
-// # 5. FOOTER #
-// ## 5.1. Headers ("Backlinks", "Interactive Graph") ##
-#footer h3 {
-  display: none;
+  color: var(--gray);
+  font-weight: 500;
 }
 
 // # 6. LAYOUT: TABBED #
@@ -203,26 +198,28 @@ body.home {
 .tab-links-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 0;
-  /* Remove top margin since .md is hidden */
+  margin-top: 2rem;
   width: 100%;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 // ## 6.3. Individual tabs ##
 .tab-link {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   aspect-ratio: 1 / 1;
-  padding: 1rem;
+  padding: 2rem;
   background: var(--light);
-  //border: 1px solid var(--outlinegray);
+  // border: 1px solid var(--outlinegray);
   border-radius: 8px;
+
   text-decoration: none;
   transition: all 0.2s ease;
+
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -275,4 +272,9 @@ body.home {
   height: 600px;
   width: 100%;
   border: none;
+}
+
+// ## 7.3. Headers ("Backlinks", "Interactive Graph") ##
+#footer h3 {
+  display: none;
 }
