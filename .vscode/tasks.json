@@ -132,7 +132,7 @@
         {
             "label": "Git: Reset Hard",
             "type": "shell",
-            "command": "powershell -Command \"$wshell = New-Object -ComObject WScript.Shell; $result = $wshell.Popup('Are you sure you want to reset the repository? This will discard all uncommitted changes.', 0, 'Confirm Reset', 4 + 48); if ($result -eq 6) { git reset --hard HEAD } else { Write-Host 'Reset cancelled.' }\"",
+            "command": "powershell -Command \"Add-Type -AssemblyName System.Windows.Forms; if ([System.Windows.Forms.MessageBox]::Show('Are you sure you want to reset the repository? This will discard all uncommitted changes.', 'Confirm Reset', 'YesNo', 'Warning') -eq 'Yes') { git reset --hard HEAD } else { Write-Host 'Reset cancelled.' }\"",
             "problemMatcher": [],
             "presentation": {
                 "reveal": "silent",
