@@ -1,6 +1,9 @@
 ---
 title: "Etnomusicología"
+icon: "globe"
+
 weight: 3
+
 bookCollapseSection: true
 BookHiddenTitle: true
 BookComments: false
@@ -10,11 +13,3 @@ bodyClass: "page-ethno-map-full"
 ---
 
 {{< ethno-world-map >}}
-
-<!-- [[África subsahariana]]
-
-[[Oriente Medio]]
-
-[[Mediterráneo]]
-
-[[América]] --> 

@@ -1,6 +1,9 @@
 ---
 title: "Música"
+icon: "music_note"
+
 weight: 8
+
 bookCollapseSection: true
 type: tabbed
 layout: tabbed

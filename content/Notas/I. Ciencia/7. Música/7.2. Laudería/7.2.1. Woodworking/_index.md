@@ -1,5 +1,8 @@
 ---
 title: "Woodworking"
-weight: 4  
+icon: "carpenter"
+
+weight: 4
+
 bookCollapseSection: true
 ---

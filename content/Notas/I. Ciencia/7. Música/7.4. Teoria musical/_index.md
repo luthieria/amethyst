@@ -1,9 +1,8 @@
 ---
 title: "Teoria musical"
+icon: "music_note_2"
+
 weight: 6
+
 bookCollapseSection: true
 ---
-
-<!-- AUTO-CHILD-LINKS:START -->
-
-<!-- AUTO-CHILD-LINKS:END -->

@@ -1,6 +1,8 @@
 ---
 title: "I. Ciencia"
+
 weight: 1
+
 bookCollapseSection: true
 type: tabbed
 layout: tabbed
