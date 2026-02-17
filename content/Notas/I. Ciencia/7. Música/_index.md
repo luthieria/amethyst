@@ -1,5 +1,5 @@
 ---
-title: "7. Música"
+title: "Música"
 weight: 8
 bookCollapseSection: true
 type: tabbed

@@ -1,5 +1,5 @@
 ---
-title: "3. Economía"
+title: "Economía"
 weight: 4
 bookCollapseSection: true
 ---

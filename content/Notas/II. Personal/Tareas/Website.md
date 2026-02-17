@@ -129,10 +129,6 @@
 
 - Is it possible to add at least a simple text editor to the pages that are rendered from .md files?
 - How to create a "Live Preview" mode (like the Obsidian has) for .md inside VS Code or the website?
-dfdfffffff
-
-
-
 
 ---
 

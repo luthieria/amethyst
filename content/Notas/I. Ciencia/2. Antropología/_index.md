@@ -1,5 +1,5 @@
 ---
-title: "2. Antropología"
+title: "Antropología"
 weight: 3
 
 icon: "accessibility"

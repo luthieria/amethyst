@@ -29,6 +29,26 @@ body.home header {
   font-family: var(--font-sans);
 }
 
+#book-search-input,
+#book-search-input::placeholder,
+#search-bar,
+#search-bar::placeholder,
+#book-search-results,
+#results-container,
+#graph-container text,
+.home-graph text,
+#footer,
+#footer h3,
+.backlinks,
+#contact_buttons {
+  font-family: var(--font-sans);
+}
+
+
+#footer h3 {
+  display: none;
+}
+
 .book-breadcrumbs {
   margin: 0 0 1.2rem;
   max-width: 100%;

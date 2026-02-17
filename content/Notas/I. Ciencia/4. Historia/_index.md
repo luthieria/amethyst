@@ -1,5 +1,5 @@
 ---
-title: "4. Historia"
+title: "Historia"
 weight: 5
 bookCollapseSection: true
 ---

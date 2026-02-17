@@ -1,5 +1,5 @@
 ---
-title: "9. Computer Science"
+title: "Computer Science"
 weight: 10
 bookCollapseSection: true
 ---

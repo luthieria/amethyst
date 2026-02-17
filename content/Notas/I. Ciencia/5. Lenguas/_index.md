@@ -1,9 +1,5 @@
 ---
-title: "5. Lenguas"
+title: "Lenguas"
 weight: 6
 bookCollapseSection: true
 ---
-
-<!-- AUTO-CHILD-LINKS:START -->
-
-<!-- AUTO-CHILD-LINKS:END -->
