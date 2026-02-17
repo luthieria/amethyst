@@ -2,21 +2,22 @@
     --light: #1e1e1e !important;
     --dark: rgb(217, 217, 217) !important;
 
-    --visited: #81a1c1 !important;
 
     --primary: #bf616a !important;
     --secondary: #d9ca9a !important;
     --tertiary: #ebcb8b !important;
 
+    --highlighted: #FFF2CC;
+
     --gray: #9ba09d !important;
     --lightgray: #303337 !important;
     --outlinegray: #43484c !important;
 
-    --highlighted: #FFF2CC;
-
     --title: #8fbcbb;
-    --header: transparent;
+    //--header: transparent;
 
     --scrollbar: #4c566a;
     --scrollbar-track: #2e3440;
+
+    --visited: #81a1c1 !important;
 }
