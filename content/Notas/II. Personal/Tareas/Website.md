@@ -13,24 +13,12 @@
   - make bigger, 
   - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.
 
-- make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
-  - center breadcrumbs on page
-  - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+- make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
 ---
 
 - the distances between headings are too big. Reduce them.
 ![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)
-
----
-
-- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
-  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios
-
----
-
-- how to add material symbols to the folders in the left side bar? I want it like in Obsidian (see screenshot)
-![alt text]({8C3FD858-A19B-4FE1-ABFC-A27C4D795DBD}.png)
 
 ---
 
@@ -55,6 +43,9 @@
 - Can you add a menu interface controlling the graph on the Home page, like the Obsidian has (see the screenshot)? ![alt text]({CE2322B8-B1BA-488E-85B8-572211DB264A}.png)
 
 ---
+
+- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
+  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios
 
 - Create a new page in the folder "II. Personal". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):
 1. books sorted by categories and subcategories (that mirror my "I. Ciencia" folder and subfolders) 
@@ -116,10 +107,9 @@
 ---
 
 - shortcuts in the bottom bar of VS Code
-  - "Serve & Open": 
+  - "Serve": 
     - if the website is already running, make it stop, and then serve again
-    - remove the "Open" option
-  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD)
+  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD). make a confirmation warning appear before performing the task.
 
 ---
 
