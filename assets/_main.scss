@@ -22,6 +22,7 @@ body {
   }
 }
 
+// # 3. HEADINGS
 h1,
 h2,
 h3,
@@ -30,11 +31,13 @@ h5 {
   font-weight: $body-font-weight;
 }
 
+// # 4. LINKS
 a {
   text-decoration: none;
   color: var(--color-link);
 }
 
+// # 5. IMAGES
 img {
   vertical-align: baseline;
 }
@@ -43,16 +46,21 @@ img {
 //   @include outline;
 // }
 
+// # 6. SIDEBARS
 aside nav ul {
   padding: 0;
   margin: 0;
   list-style: none;
 
+  // ## 6.1. List items
   li {
-    margin: 1em 0;
+    font-family: var(--font-sans);
+
+    margin: .5em 0; // Inter-item spacing
     position: relative;
   }
 
+  // ## 6.1.1. List items-links
   a {
     display: block;
   }
@@ -61,46 +69,16 @@ aside nav ul {
     opacity: 0.5;
   }
 
+  // ## 6.2. Indent of nested lists
   ul {
     padding-inline-start: $padding-16;
   }
 }
 
-ul.pagination {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding-inline-start: 0px;
-
-  .page-item a {
-    padding: $padding-16;
-  }
-}
-
-.container {
-  max-width: $container-max-width;
-  margin: 0 auto;
-}
-
-.book-icon {
-  filter: var(--icon-filter);
-}
-
-.book-brand {
-  margin-top: 0;
-  margin-bottom: $padding-16;
-
-  img {
-    height: 1.5em;
-    width: 1.5em;
-    margin-inline-end: $padding-8;
-  }
-}
-
+// ## 6.1. Left sidebar
 .book-menu {
   flex: 0 0 $menu-width;
   font-size: $font-size-14;
-
 
   .book-menu-content {
     width: $menu-width;
@@ -139,6 +117,73 @@ ul.pagination {
   }
 }
 
+// ## 6.2. Right sidebar
+.book-toc {
+  flex: 0 0 $toc-width;
+
+  font-size: $font-size-14;
+
+  .book-toc-content {
+    width: $toc-width;
+    padding: $padding-16;
+
+    @include fixed;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+  }
+
+  nav>ul>li:first-child {
+    margin-top: 0;
+  }
+}
+
+// # 7. FOOTER
+.book-footer {
+  padding-top: $padding-16;
+  font-size: $font-size-14;
+
+  img {
+    height: 1em;
+    width: 1em;
+    margin-inline-end: $padding-8;
+  }
+}
+
+// # 8. PAGINATION
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-inline-start: 0px;
+
+  .page-item a {
+    padding: $padding-16;
+  }
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+.book-icon {
+  filter: var(--icon-filter);
+}
+
+.book-brand {
+  margin-top: 0;
+  margin-bottom: $padding-16;
+
+  img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-inline-end: $padding-8;
+  }
+}
+
 // for RTL support
 body[dir="rtl"] .book-menu {
   input.toggle+label::after {
@@ -173,20 +218,6 @@ body[dir="rtl"] .book-menu {
 .book-post {
   margin-bottom: $padding-16 * 3;
 }
-
-// .book-header {
-//   display: none;
-//   margin-bottom: $padding-16;
-
-//   label {
-//     line-height: 0;
-//   }
-
-//   img.book-icon {
-//     height: 1.5em;
-//     width: 1.5em;
-//   }
-// }
 
 .book-search {
   position: relative;
@@ -226,39 +257,6 @@ body[dir="rtl"] .book-menu {
 
   small {
     opacity: 0.5;
-  }
-}
-
-.book-toc {
-  flex: 0 0 $toc-width;
-
-  font-size: $font-size-14;
-
-  .book-toc-content {
-    width: $toc-width;
-    padding: $padding-16;
-
-    @include fixed;
-  }
-
-  img {
-    height: 1em;
-    width: 1em;
-  }
-
-  nav>ul>li:first-child {
-    margin-top: 0;
-  }
-}
-
-.book-footer {
-  padding-top: $padding-16;
-  font-size: $font-size-14;
-
-  img {
-    height: 1em;
-    width: 1em;
-    margin-inline-end: $padding-8;
   }
 }
 
