@@ -13,9 +13,6 @@
   - make bigger, 
   - when the side bar expands, make it quickly but smoothly migrate to inside the side bar.
 
-- right side bar (table of contents):
-    - make the page title be displayed on top
-
 - make the breadcrumbs have a background color of the page (so that they don't overlap with the page content when scrolled)
   - center breadcrumbs on page
   - make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
