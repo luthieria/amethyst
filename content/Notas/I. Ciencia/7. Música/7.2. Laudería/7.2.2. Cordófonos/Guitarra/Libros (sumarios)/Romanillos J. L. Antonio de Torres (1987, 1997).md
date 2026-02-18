@@ -1,5 +1,5 @@
 ---
-title: Romanillos J. L. Antonio de Torres (1997)
+title: Romanillos J. L. Antonio de Torres (1987, 1997)
 ---
 
 # Foreword
@@ -9,10 +9,16 @@ title: Romanillos J. L. Antonio de Torres (1997)
   - XIX c. —XIX-century guitar[^Luthiers];
   - romantic guitar (Torres).
 
+<br>
+
 - The baroque guitar's sound is of an alto instrument; the bass was often suggested, not pointed.
+
+<br>
 
 - 1790s — removal of double strings, addition of a bass string; → the guitar transitioned from being an alto instrument to a seemingly bass one (guitar's tessitura roughly corresponded to that of the violoncello).
   - Little to no changes in the sound chamber (which would have accommodated the new low frequencies) occurred.
+
+<br>
 
 - Francisco Tárrega (1852–1909) brought the suitar into the romantic era. Without the Torres' design, Tárrega’s contribution to guitar technique would have been minimal.
 
@@ -21,5 +27,6 @@ title: Romanillos J. L. Antonio de Torres (1997)
 <!-- -->
 
 # PART I. Life and Times
-## 1. The Ancestral Home
+## 
 
+- 

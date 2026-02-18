@@ -8,7 +8,7 @@
   "/Notas/I.-Ciencia/": {
     "title": "I. Ciencia",
     "content": "\r\n[[1. Filosofía]]\r\n\r\n[[2. Antropología]]\r\n\r\n[[3. Economía]]\r\n\r\n[[4. Historia]]\r\n\r\n[[5. Lenguas]]\r\n\r\n[[6. Religiones]]\r\n\r\n[[7. Música]]\r\n\r\n[[8. Marxismo — política]]\r\n\r\n[[9. Computer Science]]",
-    "lastmodified": "2026-02-16T22:22:24.0548945-04:00",
+    "lastmodified": "2026-02-17T19:29:00.4860151-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/": {
@@ -164,13 +164,13 @@
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/": {
     "title": "Música",
     "content": "\r\n[[7.1. Etnomusicología]]\r\n\r\n[[7.2. Laudería]]\r\n\r\n[[7.3. Instrumentos]]\r\n\r\n[[7.4. Teoria musical]]\r\n\r\n[[7.5. Audio Engineering]]\r\n\r\n[[7.6. DSP]]",
-    "lastmodified": "2026-02-17T00:09:43.2925437-04:00",
+    "lastmodified": "2026-02-17T19:25:45.1599405-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/": {
     "title": "Etnomusicología",
-    "content": "\n{{\u003c ethno-world-map \u003e}}\n\n\u003c!-- [[África subsahariana]]\n\n[[Oriente Medio]]\n\n[[Mediterráneo]]\n\n[[América]] --\u003e ",
-    "lastmodified": "2026-02-16T13:22:01.5440393-04:00",
+    "content": "\n{{\u003c ethno-world-map \u003e}}",
+    "lastmodified": "2026-02-17T19:26:14.7706752-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/1.-%C3%81frica-subsahariana/": {
@@ -307,8 +307,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/Libros-sumarios/": {
     "title": "_index",
-    "content": "---\r\ntitle: \"Peñalosa D. The Clave Matrix (2nd edition, 2012)\"\r\nweight: 1\r\n\r\nbookHideChildren: true\r\nbookBreadcrumbStart: true\r\n---[[Romanillos J. L. Antonio de Torres (1997)]]",
-    "lastmodified": "2026-02-16T15:42:50.6783737-04:00",
+    "content": "---\r\ntitle: \"Peñalosa D. The Clave Matrix (2nd edition, 2012)\"\r\nweight: 1\r\n\r\nbookHideChildren: true\r\nbookBreadcrumbStart: true\r\n---[[Romanillos J. L. Antonio de Torres (1987, 1997)]]",
+    "lastmodified": "2026-02-17T20:28:20.9337477-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Ecuador/": {
@@ -391,14 +391,14 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/": {
     "title": "Laudería",
-    "content": "\r\n\u003c!-- [[Familia del violín]]\r\n\r\n[[Guitarra]] --\u003e",
-    "lastmodified": "2026-02-16T13:23:39.1908342-04:00",
+    "content": "",
+    "lastmodified": "2026-02-17T19:32:57.1782755-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/": {
     "title": "Woodworking",
     "content": "",
-    "lastmodified": "2026-02-16T13:02:02.3470772-04:00",
+    "lastmodified": "2026-02-17T19:31:05.4759227-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools": {
@@ -409,14 +409,14 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/": {
     "title": "Cordófonos",
-    "content": "",
-    "lastmodified": "2026-02-16T14:22:46.0128179-04:00",
+    "content": "\r\n{{\u003c tabs \u003e}}\r\n\r\n[[Familia del violín]]\r\n\r\n[[Guitarra]]\r\n\r\n{{\u003c /tabs \u003e}}",
+    "lastmodified": "2026-02-17T19:33:10.0419618-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/": {
     "title": "Guitarra",
-    "content": "\r\n[[La guitarra]]\r\n\r\n[[Libros (sumarios)]]",
-    "lastmodified": "2026-02-16T14:36:33.2179947-04:00",
+    "content": "\r\n{{\u003c tabs \u003e}}\r\n\r\n[[La guitarra]]\r\n\r\n[[Libros (sumarios)]]\r\n\r\n{{\u003c /tabs \u003e}}",
+    "lastmodified": "2026-02-17T19:34:06.0652217-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/La-guitarra/": {
@@ -499,8 +499,8 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/Libros-sumarios/": {
     "title": "Libros (sumarios)",
-    "content": "\r\n[[Erlewine D. Guitar player repair guide (1994, 2008)]]\r\n\r\n[[Romanillos J. L. Antonio de Torres (1997)]]",
-    "lastmodified": "2026-02-16T14:54:50.173836-04:00",
+    "content": "\r\n[[Erlewine D. Guitar player repair guide (1994, 2008)]]\r\n\r\n[[Romanillos J. L. Antonio de Torres (1987, 1997)]]",
+    "lastmodified": "2026-02-17T20:28:20.9549968-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/Libros-sumarios/Erlewine-D.-Guitar-player-repair-guide-1994-2008/": {
@@ -509,10 +509,10 @@
     "lastmodified": "2026-02-16T14:53:58.5663752-04:00",
     "tags": []
   },
-  "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/Libros-sumarios/Romanillos-J.-L.-Antonio-de-Torres-1997": {
-    "title": "Romanillos J. L. Antonio de Torres (1997)",
-    "content": "\n# ",
-    "lastmodified": "2026-02-16T17:02:00.1272256-04:00",
+  "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/Libros-sumarios/Romanillos-J.-L.-Antonio-de-Torres-1987-1997": {
+    "title": "Romanillos J. L. Antonio de Torres (1987, 1997)",
+    "content": "\n# Foreword\n\n- Genesis:\n  - XVIII c. — baroque guitar;\n  - XIX c. —XIX-century guitar[^Luthiers];\n  - romantic guitar (Torres).\n\n- The baroque guitar's sound is of an alto instrument; the bass was often suggested, not pointed.\n\n- 1790s — removal of double strings, addition of a bass string; → the guitar transitioned from being an alto instrument to a seemingly bass one (guitar's tessitura roughly corresponded to that of the violoncello).\n  - Little to no changes in the sound chamber (which would have accommodated the new low frequencies) occurred.\n\n- Francisco Tárrega (1852–1909) brought the suitar into the romantic era. Without the Torres' design, Tárrega’s contribution to guitar technique would have been minimal.\n\n\u003c!-- Footnotes --\u003e\n[^Luthiers]: Pagés, Panormo, Lacôte.\n\u003c!-- --\u003e\n\n# PART I. Life and Times\n## 1. The Ancestral Home\n\n",
+    "lastmodified": "2026-02-17T21:33:50.2343869-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Piano/": {
@@ -553,26 +553,26 @@
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.3.-Instrumentos/": {
     "title": "Instrumentos",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:23:38.7121396-04:00",
+    "content": "",
+    "lastmodified": "2026-02-17T19:36:32.3941286-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.4.-Teoria-musical/": {
     "title": "Teoria musical",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:23:38.2205214-04:00",
+    "content": "",
+    "lastmodified": "2026-02-17T19:36:53.9702757-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.5.-Audio-Engineering/": {
     "title": "Audio Engineering",
-    "content": "\r\n\u003c!-- AUTO-CHILD-LINKS:START --\u003e\r\n\r\n\u003c!-- AUTO-CHILD-LINKS:END --\u003e\r\n",
-    "lastmodified": "2026-02-16T13:23:37.6192041-04:00",
+    "content": "",
+    "lastmodified": "2026-02-17T19:37:20.9036916-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.6.-DSP/": {
     "title": "DSP",
     "content": "",
-    "lastmodified": "2026-02-16T13:23:34.3846821-04:00",
+    "lastmodified": "2026-02-17T19:38:04.6979204-04:00",
     "tags": []
   },
   "/Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica/": {
@@ -607,8 +607,8 @@
   },
   "/Notas/II.-Personal/Tareas/Website": {
     "title": "Website",
-    "content": "\r\n- how to set font per page?\r\n\r\n---\r\n\r\n- when the name of the page appear at the page's beginning, make it of the default text color, not red.\r\n\r\n- The \"Pin\" icon:\r\n  - replace the icon with a vertical single bar (ensure it looks professional and modern),\r\n  - make bigger\r\n\r\n- make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)\r\n\r\n---\r\n\r\n- the distances between headings are too big. Reduce them.\r\n![alt text]({8A7C7D99-4EBA-4716-BE5E-06F1E7D3954D}.png)\r\n\r\n---\r\n\r\n- make the .md page items foldable like in the Obsidian (see the screenshot) and the VS Code editor\r\n![alt text]({2AFD7144-7A4F-4B29-9A26-CFD8C9D7AF2C}.png)\r\n\r\n---\r\n\r\n- Prevent the text labels on the globe from overlapping, while placing each one in its most appropriate location on the globe.\r\n\r\n- Exclude French Guiana from the Mediterráneo region.\r\n\r\n---\r\n\r\n- Page \"Laudería\":\r\n  - row 1 — Woodworking symbol, row 2 — piano, violin, guitar symbols, row 3 — aerófonos symbol.\r\n\r\n---\r\n\r\n- Style the graph like in the lastest version of Obsidian.\r\n\r\n- Can you add a menu interface controlling the graph on the Home page, like the Obsidian has (see the screenshot)? ![alt text]({CE2322B8-B1BA-488E-85B8-572211DB264A}.png)\r\n\r\n---\r\n\r\n- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: \r\n  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios\r\n\r\n- Create a new page in the folder \"II. Personal\". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):\r\n1. books sorted by categories and subcategories (that mirror my \"I. Ciencia\" folder and subfolders) \r\n2. columns: \r\n   1. Ciencia (area)\r\n   2. Subarea\r\n   3. Author\r\n   4. Title\r\n   5. Chapter\r\n   6. Year\r\n   7. Timing (dates):\r\n      1. start\r\n      2. end\r\n   8. pages:\r\n      1. current (make it editable, so I could easily update it)\r\n      2. total\r\n      3. Progress bar + percentage text overlayed on top of the bar\r\n3. color each category according to its color in the graph.\r\n4. total read books (overall and per category).\r\n5. copy this book list: \"D:\\Downloads\\Tareas.xlsx\"\r\n![alt text](image.png)\r\n\r\n---\r\n\r\n- make images on the website clickable to expand to full screen\r\n\r\n---\r\n\r\n- copy the globe to the page \"4. Historia\", but adapt its countries / links to the folders and files inside the \"4. Historia\" folder.\r\n- instead of the modern post-Soviet countries, make the USSR appear on the globe\r\n\r\n---\r\n\r\n- This repository got too complex. Optimize it carefully, making sure that nothing breaks. Make it easier to edit and control the website manually.\r\n\r\n    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the \"content/Notas\" folder)\r\n\r\n    - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., \r\n      - the graph appearance (font, colors, background,etc.) is controlled from one file, \r\n      - the globe layout (positions, etc.) is controlled from another file, \r\n      - the Markdown rendering (colors, etc.) is controlled from another file, \r\n      - etc.\r\n\r\n    - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.\r\n\r\n    - remove unnecessary comments, like commented-out code blocks.\r\n\r\n    - add clear, concise comments to the .scss files in the \"assets\" folder, also add comments describing what each file does.\r\n\r\n---\r\n\r\n- How to color the folders in the left side bar and in the reading tracker according to their color in the graph? So that I could control the colors from a single place.\r\n\r\n---\r\n\r\n- Is it possible to add at least a simple text editor to the pages that are rendered from .md files?\r\n- How to create a \"Live Preview\" mode (like the Obsidian has) for .md inside VS Code or the website?\r\n\r\n---\r\n\r\n- shortcuts in the bottom bar of VS Code\r\n  - \"Serve\": \r\n    - if the website is already running, make it stop, and then serve again\r\n  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD). make a confirmation warning appear before performing the task.\r\n\r\n---\r\n\r\n- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)\r\n![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)",
-    "lastmodified": "2026-02-17T17:20:34.6374557-04:00",
+    "content": "\r\n- how to set font per page?\r\n\r\n---\r\n\r\n- when the name of the page appears at the page's beginning, make it of the default text color, not red.\r\n\r\n- The \"Pin\" icon:\r\n  - replace the icon with a vertical single bar (ensure it looks professional and modern),\r\n  - make bigger\r\n\r\n- make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)\r\n\r\n---\r\n\r\n- make the .md page items foldable like in the Obsidian (see the screenshot) and the VS Code editor\r\n![alt text]({2AFD7144-7A4F-4B29-9A26-CFD8C9D7AF2C}.png)\r\n\r\n---\r\n\r\n- Prevent the text labels on the globe from overlapping, while placing each one in its most appropriate location on the globe.\r\n\r\n- Exclude French Guiana from the Mediterráneo region.\r\n\r\n---\r\n\r\n- Page \"Laudería\":\r\n  - row 1 — Woodworking symbol, row 2 — piano, violin, guitar symbols, row 3 — aerófonos symbol.\r\n\r\n---\r\n\r\n- Style the graph like in the lastest version of Obsidian.\r\n\r\n- Can you add a menu interface controlling the graph on the Home page, like the Obsidian has (see the screenshot)? ![alt text]({CE2322B8-B1BA-488E-85B8-572211DB264A}.png)\r\n\r\n---\r\n\r\n- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: \r\n  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios\r\n\r\n- Create a new page in the folder \"II. Personal\". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):\r\n1. books sorted by categories and subcategories (that mirror my \"I. Ciencia\" folder and subfolders) \r\n2. columns: \r\n   1. Ciencia (area)\r\n   2. Subarea\r\n   3. Author\r\n   4. Title\r\n   5. Chapter\r\n   6. Year\r\n   7. Timing (dates):\r\n      1. start\r\n      2. end\r\n   8. pages:\r\n      1. current (make it editable, so I could easily update it)\r\n      2. total\r\n      3. Progress bar + percentage text overlayed on top of the bar\r\n3. color each category according to its color in the graph.\r\n4. total read books (overall and per category).\r\n5. copy this book list: \"D:\\Downloads\\Tareas.xlsx\"\r\n![alt text](image.png)\r\n\r\n---\r\n\r\n- make images on the website clickable to expand to full screen\r\n\r\n---\r\n\r\n- copy the globe to the page \"4. Historia\", but adapt its countries / links to the folders and files inside the \"4. Historia\" folder.\r\n- instead of the modern post-Soviet countries, make the USSR appear on the globe\r\n\r\n---\r\n\r\n- This repository got too complex. Optimize it carefully, making sure that nothing breaks. Make it easier to edit and control the website manually.\r\n\r\n    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the \"content/Notas\" folder)\r\n\r\n    - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., \r\n      - the graph appearance (font, colors, background,etc.) is controlled from one file, \r\n      - the globe layout (positions, etc.) is controlled from another file, \r\n      - the Markdown rendering (colors, etc.) is controlled from another file, \r\n      - etc.\r\n\r\n    - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.\r\n\r\n    - remove unnecessary comments, like commented-out code blocks.\r\n\r\n    - add clear, concise comments to the .scss files in the \"assets\" folder, also add comments describing what each file does.\r\n\r\n---\r\n\r\n- How to color the folders in the left side bar and in the reading tracker according to their color in the graph? So that I could control the colors from a single place.\r\n\r\n---\r\n\r\n- Is it possible to add at least a simple text editor to the pages that are rendered from .md files?\r\n- How to create a \"Live Preview\" mode (like the Obsidian has) for .md inside VS Code or the website?\r\n\r\n---\r\n\r\n- shortcuts in the bottom bar of VS Code\r\n  - \"Serve\": \r\n    - if the website is already running, make it stop, and then serve again\r\n  - add a shortcut that resets the repository to the last commit (git reset --hard HEAD). make a confirmation warning appear before performing the task.\r\n\r\n---\r\n\r\n- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)\r\n![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)",
+    "lastmodified": "2026-02-17T19:23:28.8600978-04:00",
     "tags": []
   },
   "/Notas/II.-Personal/Trabajo/": {
