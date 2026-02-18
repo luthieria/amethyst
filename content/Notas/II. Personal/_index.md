@@ -1,11 +1,15 @@
 ---
-title: "II. Personal"
+title: "Personal"
+icon: "person_book"
+
 weight: 2
+
 bookCollapseSection: true
+
+type: tabbed
+layout: tabbed
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
-[[Tareas]]
+<!-- [[Tareas]]
 
-[[Trabajo]]
-<!-- AUTO-CHILD-LINKS:END -->
+[[Trabajo]] -->

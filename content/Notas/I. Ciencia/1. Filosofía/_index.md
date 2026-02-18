@@ -1,11 +1,15 @@
 ---
 title: "Filosofía"
+icon: "all_inclusive"
+
 weight: 2
 
-icon: "all_inclusive"
 bookCollapseSection: true
----
 
+type: tabbed
+layout: tabbed
+---
+<!-- 
 [[Заметки по марксизму]]
 
-[[Попов М. В.]]
+[[Попов М. В.]] -->

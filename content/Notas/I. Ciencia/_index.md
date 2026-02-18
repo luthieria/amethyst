@@ -1,10 +1,11 @@
 ---
-title: "I. Ciencia"
-icon: "atom"
+title: "Ciencia"
+icon: "globe_book"
 
 weight: 1
 
 bookCollapseSection: true
+
 type: tabbed
 layout: tabbed
 ---
