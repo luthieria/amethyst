@@ -2,6 +2,9 @@
 title: "La guitarra"
 weight: 6
 
+type: tabbed
+layout: tabbed
+
 bookHideChildren: true
 bookBreadcrumbStart: true
 ---

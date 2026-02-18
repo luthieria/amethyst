@@ -4,5 +4,13 @@ icon: "carpenter"
 
 weight: 4
 
-bookCollapseSection: true
+type: tabbed
+layout: tabbed
+
+bookHideChildren: true
+bookBreadcrumbStart: true
 ---
+
+[[Tools]]
+
+[[Finish]]

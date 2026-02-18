@@ -1,3 +1,8 @@
+---
+title: Tools
+weight: 7
+---
+
 # Planes[^https://youtu.be/p27uJvUhZrU?si=CTkcnH4kC9EkVfmM][^https://woodworkersinstitute.com/hand-planes-an-introduction]
 ## Types
 ### 1. Bench

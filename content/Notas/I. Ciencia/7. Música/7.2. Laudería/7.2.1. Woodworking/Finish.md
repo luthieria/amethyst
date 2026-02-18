@@ -1,5 +1,5 @@
 ---
-title: I.III. Finish
+title: Finish
 weight: 8
 ---
 
