@@ -121,10 +121,14 @@
     margin-top: 1em;
   }
 
-  // Collapse extra empty paragraphs so 2+ blank lines render like 1.
-  p:empty {
-    display: none;
+  ol+ol {
+    margin-top: 1em;
   }
+
+  // // Collapse extra empty paragraphs so 2+ blank lines render like 1.
+  // p:empty {
+  //   display: none;
+  // }
 
   // # TEXT INDENT
   >p {

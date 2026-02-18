@@ -11,4 +11,4 @@ layout: tabbed
 
 [[Erlewine D. Guitar player repair guide (1994, 2008)]]
 
-[[Romanillos J. L. Antonio de Torres (1997)]]
+[[Romanillos J. L. Antonio de Torres (1987, 1997)]]
