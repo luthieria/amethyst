@@ -1,13 +1,6 @@
 {
   "index": {
     "links": {
-      "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/": [
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/",
-          "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "text": "Заметки по марксизму"
-        }
-      ],
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/",
@@ -37,6 +30,18 @@
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/",
           "target": "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music",
           "text": "USA"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+          "target": "/Tools",
+          "text": "Tools"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+          "target": "/Finish",
+          "text": "Finish"
         }
       ],
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools": [
@@ -75,18 +80,6 @@
           "source": "/Notas/I.-Ciencia/9.-Computer-Science/",
           "target": "/LaTeX",
           "text": "LaTeX"
-        }
-      ],
-      "/Notas/II.-Personal/": [
-        {
-          "source": "/Notas/II.-Personal/",
-          "target": "/Tareas",
-          "text": "Tareas"
-        },
-        {
-          "source": "/Notas/II.-Personal/",
-          "target": "/Trabajo",
-          "text": "Trabajo"
         }
       ],
       "/Notas/II.-Personal/Tareas/": [
@@ -134,13 +127,6 @@
           "text": "Sellers P."
         }
       ],
-      "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83": [
-        {
-          "source": "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/",
-          "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-          "text": "Заметки по марксизму"
-        }
-      ],
       "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
@@ -167,6 +153,13 @@
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/",
           "target": "/Familia-del-viol%C3%ADn",
           "text": "Familia del violín"
+        }
+      ],
+      "/Finish": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+          "target": "/Finish",
+          "text": "Finish"
         }
       ],
       "/Generative-Form-and-Abstracted-Cross-Rhythm": [
@@ -225,13 +218,6 @@
           "text": "Portfolio ideas"
         }
       ],
-      "/Tareas": [
-        {
-          "source": "/Notas/II.-Personal/",
-          "target": "/Tareas",
-          "text": "Tareas"
-        }
-      ],
       "/Technical-Writing": [
         {
           "source": "/Notas/II.-Personal/Trabajo/",
@@ -246,11 +232,11 @@
           "text": "To do"
         }
       ],
-      "/Trabajo": [
+      "/Tools": [
         {
-          "source": "/Notas/II.-Personal/",
-          "target": "/Trabajo",
-          "text": "Trabajo"
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+          "target": "/Tools",
+          "text": "Tools"
         }
       ],
       "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music": [
@@ -270,11 +256,6 @@
     }
   },
   "links": [
-    {
-      "source": "/Notas/I.-Ciencia/1.-Filosof%C3%ADa/",
-      "target": "/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83",
-      "text": "Заметки по марксизму"
-    },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/La-m%C3%BAsica-cubana/",
       "target": "/%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5",
@@ -304,6 +285,16 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools",
       "target": "/",
       "text": "Sellers P."
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+      "target": "/Tools",
+      "text": "Tools"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
+      "target": "/Finish",
+      "text": "Finish"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/",
@@ -359,16 +350,6 @@
       "source": "/Notas/II.-Personal/Trabajo/",
       "target": "/Technical-Writing",
       "text": "Technical Writing"
-    },
-    {
-      "source": "/Notas/II.-Personal/",
-      "target": "/Tareas",
-      "text": "Tareas"
-    },
-    {
-      "source": "/Notas/II.-Personal/",
-      "target": "/Trabajo",
-      "text": "Trabajo"
     }
   ]
 }
