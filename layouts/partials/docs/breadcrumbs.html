@@ -53,22 +53,46 @@
     {{ end }}
 
     {{ if gt (len $crumbs) 0 }}
-      {{ $isCollapsible := gt (len $crumbs) 3 }}
-      {{ $toggleId := printf "breadcrumbs-toggle-%s" (md5 .RelPermalink) }}
-      <nav class="book-breadcrumbs" aria-label="Breadcrumb" {{ if $isCollapsible }}data-collapsible="true"{{ end }}>
-        {{ if $isCollapsible }}
-          <input type="checkbox" id="{{ $toggleId }}" class="breadcrumbs-toggle" />
-          <label for="{{ $toggleId }}" class="breadcrumbs-ellipsis" data-collapsed="..." data-expanded="-" aria-label="Toggle breadcrumbs" title="Toggle breadcrumbs"></label>
-        {{ end }}
+      <nav class="book-breadcrumbs" aria-label="Breadcrumb">
         <ol>
           {{ $last := sub (len $crumbs) 1 }}
           {{ range $i, $p := $crumbs }}
-            <li>
-              {{ if eq $i $last }}
-                <span aria-current="page">{{ partial "docs/title" $p }}</span>
-              {{ else }}
-                <a href="{{ $p.RelPermalink }}">{{ partial "docs/title" $p }}</a>
+            {{ $parent := $p.Parent }}
+            {{ if not $parent }}
+              {{ $parent = $bookRoot }}
+            {{ end }}
+            {{ $siblings := slice }}
+            {{ range (where $parent.Pages "Params.bookhidden" "ne" true) }}
+              {{ if .IsSection }}
+                {{ $siblings = $siblings | append . }}
+              {{ else if and .IsPage .Content }}
+                {{ $siblings = $siblings | append . }}
               {{ end }}
+            {{ end }}
+            <li class="breadcrumb-item">
+              {{/* Wrap label + chevron so the dropdown aligns to the text start. */}}
+              <span class="breadcrumb-label">
+                {{ if eq $i $last }}
+                  <span aria-current="page">{{ partial "docs/title" $p }}</span>
+                {{ else }}
+                  <a href="{{ $p.RelPermalink }}">{{ partial "docs/title" $p }}</a>
+                {{ end }}
+                {{ if gt (len $siblings) 1 }}
+                  {{/* VS Code-like dropdown for sibling items. */}}
+                  <details class="breadcrumb-menu">
+                    <summary aria-label="Show items in this folder" title="Show items in this folder"></summary>
+                    <ul>
+                      {{ range $s := $siblings }}
+                        <li>
+                          <a href="{{ $s.RelPermalink }}" class="{{ if eq $s $p }}active{{ end }}">
+                            {{ partial "docs/title" $s }}
+                          </a>
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </details>
+                {{ end }}
+              </span>
             </li>
           {{ end }}
         </ol>
