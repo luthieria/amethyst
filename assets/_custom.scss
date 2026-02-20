@@ -30,6 +30,11 @@ body.home {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25em 0.6em;
 
   background-color: var(--light);
   font-size: 0.72em;
@@ -45,6 +50,57 @@ body.home {
     margin: 0;
     padding: 0;
     min-width: 0;
+  }
+
+  .breadcrumbs-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .breadcrumbs-ellipsis {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.4em;
+    height: 1.4em;
+    padding: 0 0.4em;
+    border-radius: 999px;
+    border: 1px solid var(--outlinegray);
+    background: var(--light);
+    color: var(--secondary);
+    cursor: pointer;
+    font-size: 0.9em;
+    line-height: 1;
+    user-select: none;
+
+    &::before {
+      content: attr(data-collapsed);
+    }
+  }
+
+  &[data-collapsible="true"] {
+    .breadcrumbs-ellipsis {
+      display: inline-flex;
+    }
+
+    .breadcrumbs-toggle:checked + .breadcrumbs-ellipsis::before {
+      content: attr(data-expanded);
+    }
+
+    .breadcrumbs-toggle:checked + .breadcrumbs-ellipsis {
+      color: var(--dark);
+      border-color: var(--secondary);
+    }
+
+    .breadcrumbs-toggle:not(:checked)~ol li:not(:nth-last-child(-n+3)) {
+      display: none;
+    }
+
+    .breadcrumbs-toggle:not(:checked)~ol li:nth-last-child(3)::before {
+      content: none;
+      margin-right: 0;
+    }
   }
 
   li,
@@ -150,6 +206,45 @@ body.home {
 .book-menu-content {
   margin-top: 0 !important;
   padding-top: 0.5rem !important;
+}
+
+.book-menu-count {
+  margin-left: auto;
+  padding: 0 0.45em;
+
+ 
+  color: var(--gray);
+  //background: var(--light);
+
+  font-size: .8em;
+  font-weight: 400;
+
+  //border-radius: 999px;
+  //border: 1px solid var(--outlinegray);
+
+  line-height: 1.2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4em;
+  flex: 0 0 2.4em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+}
+
+.book-menu-content a,
+.book-menu-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  min-width: 0;
+  width: 100%;
+}
+
+.book-menu-title {
+  width: 100%;
 }
 
 // # 4. RIGHT SIDEBAR #

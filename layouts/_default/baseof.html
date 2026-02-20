@@ -18,6 +18,27 @@
 {{- $bodyClasses = $bodyClasses | append . -}}
 {{- end -}}
 
+{{- $pageFontValue := "" -}}
+{{- if isset .Params "font" -}}
+  {{- $raw := printf "%v" .Params.font -}}
+  {{- $trim := replaceRE "^\\s+|\\s+$" "" $raw -}}
+  {{- $lower := lower $trim -}}
+  {{- if hasPrefix $lower "var(" -}}
+    {{- $pageFontValue = $trim -}}
+  {{- else if hasPrefix $lower "--font-" -}}
+    {{- $pageFontValue = printf "var(%s)" $trim -}}
+  {{- else if hasPrefix $lower "font-" -}}
+    {{- $pageFontValue = printf "var(--%s)" $trim -}}
+  {{- else if $lower -}}
+    {{- $pageFontValue = printf "var(--font-%s)" $lower -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $pageFontStyle := "" -}}
+{{- if $pageFontValue -}}
+  {{- $pageFontStyle = printf "--page-font: %s; --page-font-heading: %s;" $pageFontValue $pageFontValue -}}
+{{- end -}}
+
 <body dir="{{ default " ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }}
   class="{{ delimit $bodyClasses " " }}" {{ end }}>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -30,7 +51,7 @@
         {{ template "menu" . }} <!-- Left menu Content -->
       </div>
     </aside>
-    <div class="book-page container">
+    <div class="book-page container"{{ if $pageFontStyle }} style="{{ $pageFontStyle | safeCSS }}"{{ end }}>
       {{/* <header class="book-header">
         {{ template "header" . }} <!-- Mobile layout header -->
       </header> */}}
@@ -39,7 +60,7 @@
       {{ block "main" . }}
       <article class="markdown">
         {{ if not .Params.BookHiddenTitle }}
-        <h1>{{ partial "docs/title" . }}</h1>
+        <h1 class="page-title">{{ partial "docs/title" . }}</h1>
         {{ end }}
         {{partial "quartz/textprocessing" . }}
         {{ if not .Params.quartzHideFooter }}

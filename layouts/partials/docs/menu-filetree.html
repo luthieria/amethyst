@@ -29,6 +29,11 @@
 {{ define "book-page-link" }}{{/* (dict "Page" .Page "CurrentPage" .CurrentPage) */}}
 {{ $current := eq .CurrentPage .Page }}
 {{ $ancestor := .Page.IsAncestor .CurrentPage }}
+{{ $noteCount := 0 }}
+{{ if .Page.IsSection }}
+{{ $visiblePages := where (where .Page.RegularPagesRecursive "Params.bookhidden" "ne" true) "Content" "ne" "" }}
+{{ $noteCount = len $visiblePages }}
+{{ end }}
 
 {{ if .Page.Params.BookCollapseSection }}
 {{ $title := partial "docs/title" .Page }}
@@ -41,17 +46,30 @@
     <span class="material-symbols-outlined sidebar-icon">{{ .Page.Params.icon }}</span>
     {{ end }}
     {{- $title -}}
+    {{ if .Page.IsSection }}
+    <span class="book-menu-count">{{ $noteCount }}</span>
+    {{ end }}
   </a>
 </label>
 {{ else if .Page.Params.BookHref }}
 <a href="{{ .Page.Params.BookHref }}" class="{{ if $current }}active{{ end }}" target="_blank" rel="noopener">
   {{- partial "docs/title" .Page -}}
+  {{ if .Page.IsSection }}
+  <span class="book-menu-count">{{ $noteCount }}</span>
+  {{ end }}
 </a>
 {{ else if .Page.Content }}
 <a href="{{ .Page.RelPermalink }}" class="{{ if $current }}active{{ end }}">
   {{- partial "docs/title" .Page -}}
+  {{ if .Page.IsSection }}
+  <span class="book-menu-count">{{ $noteCount }}</span>
+  {{ end }}
 </a>
 {{ else }}
-<span class="book-menu-title">{{- partial "docs/title" .Page -}}</span>
+<span class="book-menu-title">{{- partial "docs/title" .Page -}}
+  {{ if .Page.IsSection }}
+  <span class="book-menu-count">{{ $noteCount }}</span>
+  {{ end }}
+</span>
 {{ end }}
 {{ end }}

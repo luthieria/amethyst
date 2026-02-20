@@ -2,17 +2,11 @@
 
 ---
 
-- how to set font per page?
-
----
-
-- when the name of the page appears at the page's beginning, make it of the default text color, not red.
-
 - The "Pin" icon:
   - replace the icon with a vertical single bar (ensure it looks professional and modern),
   - make bigger
 
-- make the breadcrumbs expandable like they are inside VS Code (see screenshot) ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+- I have breadcrumbs on certain pages (when enabled). make the breadcrumbs expandable on click like they are inside VS Code (see screenshot), so that they expanded manu shows other items in their folder ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
 ---
 
@@ -104,8 +98,3 @@
   - "Serve": 
     - if the website is already running, make it stop, and then serve again
   - add a shortcut that resets the repository to the last commit (git reset --hard HEAD). make a confirmation warning appear before performing the task.
-
----
-
-- make the folders on the left side bar show the amount of notes inside (like in Obsidian, see screenshot)
-![alt text]({D3C8B204-2925-4B22-928F-FF17337CB384}.png)

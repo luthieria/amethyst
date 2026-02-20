@@ -53,7 +53,13 @@
     {{ end }}
 
     {{ if gt (len $crumbs) 0 }}
-      <nav class="book-breadcrumbs" aria-label="Breadcrumb">
+      {{ $isCollapsible := gt (len $crumbs) 3 }}
+      {{ $toggleId := printf "breadcrumbs-toggle-%s" (md5 .RelPermalink) }}
+      <nav class="book-breadcrumbs" aria-label="Breadcrumb" {{ if $isCollapsible }}data-collapsible="true"{{ end }}>
+        {{ if $isCollapsible }}
+          <input type="checkbox" id="{{ $toggleId }}" class="breadcrumbs-toggle" />
+          <label for="{{ $toggleId }}" class="breadcrumbs-ellipsis" data-collapsed="..." data-expanded="-" aria-label="Toggle breadcrumbs" title="Toggle breadcrumbs"></label>
+        {{ end }}
         <ol>
           {{ $last := sub (len $crumbs) 1 }}
           {{ range $i, $p := $crumbs }}

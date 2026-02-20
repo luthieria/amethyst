@@ -2,6 +2,18 @@
 
 .markdown {
   line-height: 1.6;
+  font-family: var(--page-font, var(--font-body));
+
+  p,
+  ul,
+  ol,
+  li,
+  td,
+  th,
+  tr,
+  a {
+    font-family: inherit;
+  }
 
   // remove padding at the beginning of page
   > :first-child {
@@ -15,7 +27,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-header);
+    font-family: var(--page-font-heading, var(--font-header));
     font-weight: bold;
     text-align: center;
 
@@ -39,6 +51,10 @@
   h1 {
     font-size: $font-size-h1;
     color: var(--h1);
+  }
+
+  > h1.page-title {
+    color: var(--dark);
   }
 
   h2 {
@@ -265,7 +281,7 @@
     &::before {
       content: "Footnotes";
       display: block;
-      font-family: var(--font-body);
+      font-family: var(--page-font, var(--font-body));
       margin-bottom: $padding-8;
       text-align: center;
       font-weight: 600;
@@ -303,7 +319,7 @@
   details {
     padding: $padding-16;
     border: none !important;
-    font-family: var(--font-body);
+    font-family: var(--page-font, var(--font-body));
     font-weight: bold;
     color: var(--dark);
     // border: $padding-1 solid var(--gray-200);
