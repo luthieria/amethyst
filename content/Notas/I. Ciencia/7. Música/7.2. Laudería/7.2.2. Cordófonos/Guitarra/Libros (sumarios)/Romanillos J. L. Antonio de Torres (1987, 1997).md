@@ -1,5 +1,7 @@
 ---
-title: Romanillos J. L. Antonio de Torres (1987, 1997)
+title: Antonio de Torres
+bookAuthor: "Romanillos J. L."
+bookYear: "1987, 1997"
 ---
 
 # Foreword

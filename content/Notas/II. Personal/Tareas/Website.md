@@ -32,8 +32,7 @@
 
 ---
 
-- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: 
-  - /Notas/I.-Ciencia/7.-Música/7.2.-Laudería/7.2.2.-Cordófonos/Guitarra/Libros-sumarios
+- make a visual library (bookshelf) with book covers (similar to what people do in Obsidian). transform this page into such library: "content\Notas\I. Ciencia\7. Música\7.2. Laudería\7.2.2. Cordófonos\Guitarra\Libros (sumarios)"
 
 - Create a new page in the folder "II. Personal". Make it a reading tracker similar to what I have on Google Sheets (see the screenshot):
 1. books sorted by categories and subcategories (that mirror my "I. Ciencia" folder and subfolders) 
@@ -51,7 +50,7 @@
       1. current (make it editable, so I could easily update it)
       2. total
       3. Progress bar + percentage text overlayed on top of the bar
-3. color each category according to its color in the graph.
+3. give me an ability to color categories (I'll do that later)
 4. total read books (overall and per category).
 5. copy this book list: "D:\Downloads\Tareas.xlsx"
 ![alt text](image.png)
@@ -68,7 +67,6 @@
 ---
 
 - This repository got too complex. Optimize it carefully, making sure that nothing breaks. Make it easier to edit and control the website manually.
-
     - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the "content/Notas" folder)
 
     - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 

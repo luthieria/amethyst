@@ -1,0 +1,1714 @@
+categories:
+  - id: "filosofia"
+    label: "Filosofía"
+    hierarchy: "Filosofía"
+    parent_id: null
+    source: "folder"
+    color: "#c279b5"
+    sort_order: 0
+  - id: "matematica"
+    label: "Matemática"
+    hierarchy: "Matemática"
+    parent_id: null
+    source: "custom"
+    color: "#8fb6d8"
+    sort_order: 1
+  - id: "fisica"
+    label: "Física"
+    hierarchy: "Física"
+    parent_id: null
+    source: "custom"
+    color: "#b59bd9"
+    sort_order: 2
+  - id: "antropologia"
+    label: "Antropología"
+    hierarchy: "Antropología"
+    parent_id: null
+    source: "folder"
+    color: "#7ea4d6"
+    sort_order: 3
+  - id: "historia"
+    label: "Historia"
+    hierarchy: "Historia"
+    parent_id: null
+    source: "folder"
+    color: "#6ec2e4"
+    sort_order: 4
+  - id: "lenguas"
+    label: "Lenguas"
+    hierarchy: "Lenguas"
+    parent_id: null
+    source: "folder"
+    color: "#d6ae8a"
+    sort_order: 5
+  - id: "marxismo-politica"
+    label: "Marxismo — política"
+    hierarchy: "Marxismo — política"
+    parent_id: null
+    source: "folder"
+    color: "#e08a6e"
+    sort_order: 6
+  - id: "musica"
+    label: "Música"
+    hierarchy: "Música"
+    parent_id: null
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 7
+  - id: "musica-lauderia"
+    label: "Laudería"
+    hierarchy: "Música / Laudería"
+    parent_id: "musica"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 8
+  - id: "musica-lauderia-woodworking"
+    label: "Woodworking"
+    hierarchy: "Música / Laudería / Woodworking"
+    parent_id: "musica-lauderia"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 9
+  - id: "musica-lauderia-cordofonos"
+    label: "Cordófonos"
+    hierarchy: "Música / Laudería / Cordófonos"
+    parent_id: "musica-lauderia"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 10
+  - id: "musica-lauderia-cordofonos-guitarra"
+    label: "Guitarra"
+    hierarchy: "Música / Laudería / Cordófonos / Guitarra"
+    parent_id: "musica-lauderia-cordofonos"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 11
+  - id: "musica-teoria-musical"
+    label: "Teoria musical"
+    hierarchy: "Música / Teoria musical"
+    parent_id: "musica"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 12
+  - id: "musica-artigos"
+    label: "Ártigos"
+    hierarchy: "Música / Ártigos"
+    parent_id: "musica"
+    source: "custom"
+    color: "#63b6da"
+    sort_order: 13
+  - id: "musica-audio-engineering"
+    label: "Audio Engineering"
+    hierarchy: "Música / Audio Engineering"
+    parent_id: "musica"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 14
+  - id: "musica-dsp"
+    label: "DSP"
+    hierarchy: "Música / DSP"
+    parent_id: "musica"
+    source: "folder"
+    color: "#63b6da"
+    sort_order: 15
+  - id: "pedagogia"
+    label: "Pedagogía"
+    hierarchy: "Pedagogía"
+    parent_id: null
+    source: "custom"
+    color: "#9ec7a8"
+    sort_order: 16
+  - id: "u-425-443-434-43e-436-435-441-442-432-435-43d-43d-"
+    label: "Художественная"
+    hierarchy: "Художественная"
+    parent_id: null
+    source: "custom"
+    color: "#d99fb3"
+    sort_order: 17
+entries:
+  - id: "r0005-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 5
+  - id: "r0006-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "1"
+    year: 2013
+    start: null
+    end: null
+    current: null
+    total: 222
+    is_book_row: false
+    sort_order: 6
+  - id: "r0007-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "2"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: false
+    sort_order: 7
+  - id: "r0008-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "3"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: false
+    sort_order: 8
+  - id: "r0009-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "4"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: false
+    sort_order: 9
+  - id: "r0010-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "5"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: false
+    sort_order: 10
+  - id: "r0011-u-412-432-435-434-435-43d-438-435-432-43d-430-443-"
+    area_id: "filosofia"
+    subarea_path: ""
+    author: "Юрий Семёнов"
+    title: "Введение в науку философии"
+    chapter: "6"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: false
+    sort_order: 11
+  - id: "r0013-u-423-447-438-442-435-441-44c-443-447-438-442-44c-"
+    area_id: "matematica"
+    subarea_path: ""
+    author: "Л. М. Фридман"
+    title: "Учитесь учиться математике"
+    chapter: null
+    year: 1985
+    start: null
+    end: null
+    current: null
+    total: 112
+    is_book_row: true
+    sort_order: 13
+  - id: "r0014-u-42d-43b-435-43c-435-43d-442-430-440-43d-430-44f-"
+    area_id: "matematica"
+    subarea_path: ""
+    author: "С. И. Туманов"
+    title: "Элементарная алгебра"
+    chapter: null
+    year: 1970
+    start: null
+    end: null
+    current: null
+    total: 855
+    is_book_row: true
+    sort_order: 14
+  - id: "r0016-i"
+    area_id: "fisica"
+    subarea_path: ""
+    author: "Пёрышкин, Крауклис"
+    title: "Курс физики. Часть I"
+    chapter: null
+    year: 1964
+    start: "Novembro 2024"
+    end: null
+    current: 25
+    total: 155
+    is_book_row: true
+    sort_order: 16
+  - id: "r0018-u-420-430-441-43e-432-435-434-435-43d-438-435"
+    area_id: "antropologia"
+    subarea_path: ""
+    author: "Станислав Дробышевский"
+    title: "Расоведение"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 18
+  - id: "r0020-jewish-literacy"
+    area_id: "historia"
+    subarea_path: ""
+    author: "Joseph Telushkin"
+    title: "Jewish Literacy"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 20
+  - id: "r0021-u-42d-440-430-432-43e-439-43d-438-43a-430-442-430-"
+    area_id: "historia"
+    subarea_path: ""
+    author: "Анатолий Несмиян"
+    title: "Эра войн и катастроф"
+    chapter: null
+    year: null
+    start: "2×.9.2025"
+    end: null
+    current: 96
+    total: 239
+    is_book_row: true
+    sort_order: 21
+  - id: "r0036-semitic-languages"
+    area_id: "lenguas"
+    subarea_path: ""
+    author: "Gideon Goldenberg"
+    title: "Semitic Languages"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 36
+  - id: "r0037-u-424-440-430-43d-446-443-437-441-43a-438-439-44f-"
+    area_id: "lenguas"
+    subarea_path: ""
+    author: "И. Н. Попова"
+    title: "Французский язык"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 37
+  - id: "r0040-u-41c-430-43d-438-444-435-441-442-43a-43e-43c-43c-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "Манифест коммунистической партии"
+    chapter: null
+    year: 1848
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 40
+  - id: "r0041-u-420-430-437-43c-44b-448-43b-435-43d-438-44f-44e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "Размышления юноши при выборе профессии"
+    chapter: null
+    year: 1835
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 41
+  - id: "r0042-u-42d-43a-43e-43d-43e-43c-438-447-435-441-43a-43e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "Экономическо-философские рукописи"
+    chapter: null
+    year: 1844
+    start: null
+    end: null
+    current: 1
+    total: 2
+    is_book_row: true
+    sort_order: 42
+  - id: "r0043-u-41a-435-432-440-435-439-441-43a-43e-43c-443-432-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "К еврейскому вопросу"
+    chapter: null
+    year: 1843
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 43
+  - id: "r0044-u-41d-438-449-435-442-430-444-438-43b-43e-441-43e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "Нищета философии"
+    chapter: null
+    year: 1847
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 44
+  - id: "r0045-u-41a-430-43f-438-442-430-43b"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Marx"
+    title: "Капитал"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 45
+  - id: "r0047-u-41f-440-438-43d-446-438-43f-44b-43a-43e-43c-43c-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Принципы коммунизма"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 47
+  - id: "r0048-u-41f-440-43e-438-441-445-43e-436-434-435-43d-438-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Происхождение семьи, частной собственности и государства"
+    chapter: null
+    year: 1884
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 48
+  - id: "r0049-u-41a-430-440-43b-41c-430-440-43a-441-2e-ab-41a-43"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Карл Маркс. «К критике политической экономии»"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 49
+  - id: "r0050-u-41a-430-440-43b-41c-430-440-43a-441"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Карл Маркс"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 50
+  - id: "r0051-u-410-43d-442-438-2d-414-44e-440-438-43d-433"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Анти-Дюринг"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 51
+  - id: "r0052-u-414-438-430-43b-435-43a-442-438-43a-430-43f-440-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Диалектика природы"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 52
+  - id: "r0053-u-41f-438-441-44c-43c-430-43e-431-438-441-442-43e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Письма об историческом материализме"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 53
+  - id: "r0054-9-1890"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Йозефу Блоху. 9.1890"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 54
+  - id: "r0055-27-10-1890"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Конраду Шмидту. 27.10.1890"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 55
+  - id: "r0056-14-7-1893"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Мерингу. 14.7.1893"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 56
+  - id: "r0057-25-1-1894"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Engels"
+    title: "Боргиусу. 25.1.1894"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 57
+  - id: "r0059-u-413-43e-441-443-434-430-440-441-442-432-43e-438-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Государство и революция"
+    chapter: null
+    year: 1917
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 59
+  - id: "r0060-u-413-440-43e-437-44f-449-430-44f-43a-430-442-430-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Грозящая катастрофа и как с ней бороться"
+    chapter: null
+    year: 1917
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 60
+  - id: "r0061-u-418-43c-43f-435-440-438-430-43b-438-437-43c-43a-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Империализм как высшая стадия капитализма"
+    chapter: null
+    year: 1916
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 61
+  - id: "r0062-u-41a-430-440-43b-41c-430-440-43a-441"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Карл Маркс"
+    chapter: null
+    year: 1914
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 62
+  - id: "r0063-u-422-440-438-438-441-442-43e-447-43d-438-43a-430-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Три источника и три составных части марксизма"
+    chapter: null
+    year: 1913
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 63
+  - id: "r0064-u-417-430-434-430-447-438-441-43e-44e-437-43e-432-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Задачи союзов молодёжи"
+    chapter: null
+    year: 1920
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 64
+  - id: "r0065-u-41e-437-430-434-430-447-430-445-43f-440-43e-43b-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "О задачах пролетариата в данной революции"
+    chapter: null
+    year: 1917
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 65
+  - id: "r0066-u-41e-43b-43e-437-443-43d-433-435-ab-421-43e-435-4"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "О лозунге «Соединенные Штаты Европы»"
+    chapter: null
+    year: 1915
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 66
+  - id: "r0067-u-41f-430-440-442-438-439-43d-430-44f-43e-440-433-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Ленин"
+    title: "Партийная организация и партийная литература"
+    chapter: null
+    year: 1905
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 67
+  - id: "r0069-u-41c-43e-44f-436-438-437-43d-44c"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Моя жизнь"
+    chapter: null
+    year: 1929
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 69
+  - id: "r0070-u-418-441-442-43e-440-438-44f-440-443-441-441-43a-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "История русской революции"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 70
+  - id: "r0071-u-418-441-442-43e-440-438-44f-440-443-441-441-43a-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "История русской революции"
+    chapter: "Том 2, часть 2"
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: false
+    sort_order: 71
+  - id: "r0072-u-422-43e-43b-441-442-43e-439"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Толстой"
+    chapter: null
+    year: 1910
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 72
+  - id: "r0073-u-41b-435-432-422-43e-43b-441-442-43e-439"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Лев Толстой"
+    chapter: null
+    year: 1908
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 73
+  - id: "r0074-u-421-442-430-43b-438-43d-438-437-43c-438-431-43e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Сталинизм и большевизм"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 74
+  - id: "r0075-u-418-445-43c-43e-440-430-43b-44c-438-43d-430-448-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Их мораль и наша"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 75
+  - id: "r0076-u-414-432-430-442-43e-440-438-43e-440-435-432-43e-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Два тори о революционере"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 76
+  - id: "r0077-u-41e-440-430-43d-435-43d-43e-43c"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "О раненом"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 77
+  - id: "r0078-u-41e-431-443-43c-435-440-448-435-43c"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Об умершем"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 78
+  - id: "r0079-u-41d-430-448-435-43e-442-435-447-435-441-442-432-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Троцкий"
+    title: "Наше отечество во времени"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 79
+  - id: "r0081-u-41b-435-432-411-43e-440-438-441-43e-432-438-447-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Луначарский"
+    title: "Лев Борисович Каменев"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 81
+  - id: "r0082-u-41b-435-432-414-430-432-438-434-43e-432-438-447-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Луначарский"
+    title: "Лев Давидович Троцкий"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 82
+  - id: "r0083-u-41b-435-43d-438-43d-43a-430-43a-443-447-435-43d-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Луначарский"
+    title: "Ленин как ученый и публицист"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 83
+  - id: "r0084-u-41a-445-430-440-430-43a-442-435-440-438-441-442-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Луначарский"
+    title: "К характеристике Ленина как личности"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 84
+  - id: "r0086-u-418-441-43a-443-441-441-442-432-43e-438-43e-431-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Плеханов"
+    title: "Искусство и общественная жизнь"
+    chapter: null
+    year: 1912
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 86
+  - id: "r0087-u-41a-432-43e-43f-440-43e-441-443-43e-440-43e-43b-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Плеханов"
+    title: "К вопросу о роли личности в истории"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 87
+  - id: "r0089-u-412-2e-418-2e-41b-435-43d-438-43d"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Горький"
+    title: "В. И. Ленин"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 89
+  - id: "r0090-u-410-2e-41f-2e-427-435-445-43e-432"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Горький"
+    title: "А. П. Чехов"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 90
+  - id: "r0091-u-41f-43e-43b-438-442-438-447-435-441-43a-430-44f-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Константин Островитянов"
+    title: "Политическая экономия"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 85
+    total: 455
+    is_book_row: true
+    sort_order: 91
+  - id: "r0092-u-414-438-430-43b-435-43a-442-438-447-435-441-43a-"
+    area_id: "marxismo-politica"
+    subarea_path: ""
+    author: "Морис Корнфорт"
+    title: "Диалектический материализм"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 258
+    total: 501
+    is_book_row: true
+    sort_order: 92
+  - id: "r0096-the-new-wood-finishing-book"
+    area_id: "musica"
+    subarea_path: "Laudería / Woodworking"
+    author: "Dresdner M."
+    title: "The New Wood Finishing Book"
+    chapter: null
+    year: 1999
+    start: null
+    end: null
+    current: null
+    total: 384
+    is_book_row: true
+    sort_order: 96
+  - id: "r0098-identifying-wood"
+    area_id: "musica"
+    subarea_path: "Laudería / Woodworking"
+    author: "Hoadley R. B."
+    title: "Identifying Wood"
+    chapter: null
+    year: 1990
+    start: null
+    end: null
+    current: null
+    total: 215
+    is_book_row: true
+    sort_order: 98
+  - id: "r0099-understanding-wood"
+    area_id: "musica"
+    subarea_path: "Laudería / Woodworking"
+    author: "Hoadley R. B."
+    title: "Understanding Wood"
+    chapter: null
+    year: 2000
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 99
+  - id: "r0100-the-perfect-edge"
+    area_id: "musica"
+    subarea_path: "Laudería / Woodworking"
+    author: "Hock R."
+    title: "The Perfect Edge"
+    chapter: null
+    year: 2009
+    start: null
+    end: null
+    current: null
+    total: 221
+    is_book_row: true
+    sort_order: 100
+  - id: "r0103-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: null
+    year: 1994
+    start: null
+    end: null
+    current: 141
+    total: 307
+    is_book_row: true
+    sort_order: 103
+  - id: "r0104-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "Pre"
+    year: null
+    start: null
+    end: null
+    current: 6
+    total: 6
+    is_book_row: false
+    sort_order: 104
+  - id: "r0105-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "1. Set-Up & Maintenance"
+    year: null
+    start: null
+    end: null
+    current: 34
+    total: 125
+    is_book_row: false
+    sort_order: 105
+  - id: "r0106-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "2. Nut Work & Fret Work"
+    year: null
+    start: null
+    end: "25.11.2025"
+    current: 59
+    total: 59
+    is_book_row: false
+    sort_order: 106
+  - id: "r0107-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "3. Repairs & Modifications"
+    year: null
+    start: null
+    end: null
+    current: null
+    total: 68
+    is_book_row: false
+    sort_order: 107
+  - id: "r0108-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "4. Finishes"
+    year: null
+    start: null
+    end: null
+    current: 25
+    total: 25
+    is_book_row: false
+    sort_order: 108
+  - id: "r0109-guitar-player-repair-guide-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (2nd edition)"
+    chapter: "5. Supplies & Sources"
+    year: null
+    start: null
+    end: null
+    current: 17
+    total: 17
+    is_book_row: false
+    sort_order: 109
+  - id: "r0110-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: null
+    year: 2007
+    start: null
+    end: null
+    current: 72
+    total: 846
+    is_book_row: true
+    sort_order: 110
+  - id: "r0111-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: "1. Cleaning and care"
+    year: null
+    start: null
+    end: null
+    current: 18
+    total: 18
+    is_book_row: false
+    sort_order: 111
+  - id: "r0112-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: "2. Installing strings"
+    year: null
+    start: null
+    end: null
+    current: 31
+    total: 31
+    is_book_row: false
+    sort_order: 112
+  - id: "r0113-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: "3. Neck evaluation and truss rod adjustment"
+    year: null
+    start: null
+    end: null
+    current: 49
+    total: 49
+    is_book_row: false
+    sort_order: 113
+  - id: "r0114-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: "4. Setup and action"
+    year: null
+    start: null
+    end: null
+    current: 72
+    total: 147
+    is_book_row: false
+    sort_order: 114
+  - id: "r0115-guitar-player-repair-guide-3rd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Player Repair Guide (3rd edition)"
+    chapter: "17. Shipping a guitar or amp"
+    year: null
+    start: null
+    end: null
+    current: 8
+    total: 8
+    is_book_row: false
+    sort_order: 115
+  - id: "r0116-guitar-finishing-step-by-step-2nd-edition"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Erlewine D."
+    title: "Guitar Finishing Step-by-Step (2nd edition)"
+    chapter: null
+    year: 2008
+    start: null
+    end: null
+    current: null
+    total: 169
+    is_book_row: true
+    sort_order: 116
+  - id: "r0118-antonio-de-torres-guitarrero-su-vida-y-obra"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Romanillos J. L."
+    title: "Antonio de Torres Guitarrero. Su vida y obra"
+    chapter: null
+    year: 1997
+    start: null
+    end: null
+    current: null
+    total: 338
+    is_book_row: true
+    sort_order: 118
+  - id: "r0119-making-a-spanish-guitar"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Romanillos J. L."
+    title: "Making a Spanish Guitar"
+    chapter: null
+    year: 2013
+    start: null
+    end: null
+    current: null
+    total: 215
+    is_book_row: true
+    sort_order: 119
+  - id: "r0120-things-about-the-guitar"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Ramirez J."
+    title: "Things About The Guitar"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 120
+  - id: "r0122-santos-hernandez-1874-1943-maestro-guitarrero"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Martinez A."
+    title: "Santos Hernández. 1874-1943. Maestro guitarrero"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 122
+  - id: "r0123-daniel-friederich-1932-2020-luthier-d-art"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Martinez A."
+    title: "Daniel Friederich. 1932-2020. Luthier d'Art"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 123
+  - id: "r0124-a-collection-of-fine-spanish-guitars-from-torres-to-the-present"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Sheldon U."
+    title: "A Collection of Fine Spanish Guitars from Torres to the Present"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 124
+  - id: "r0125-granada-and-the-traditional-guitar"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Vários"
+    title: "Granada and the Traditional Guitar"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 125
+  - id: "r0126-how-to-make-a-classic-guitar"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Wallo Joseph F."
+    title: "How to Make a Classic Guitar"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 126
+  - id: "r0127-the-spanish-guitar-1750-1950"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Wallo Joseph F."
+    title: "The Spanish Guitar 1750-1950"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 127
+  - id: "r0128-vicente-arias-the-forgotten-luthier"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Wallo Joseph F."
+    title: "Vicente Arias. The Forgotten Luthier"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 128
+  - id: "r0129-el-arte-de-la-guitarra"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "María Isabel López Gonzálvez"
+    title: "El Arte de la Guitarra"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 129
+  - id: "r0130-rene-lacote-luthier-a-paris"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "María Isabel López Gonzálvez"
+    title: "René Lacote. Luthier a Paris"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 130
+  - id: "r0131-making-master-guitars"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Roy Courtnall"
+    title: "Making Master Guitars"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 131
+  - id: "r0132-orfeo-magazine"
+    area_id: "musica"
+    subarea_path: "Laudería / Cordófonos / Guitarra"
+    author: "Roy Courtnall"
+    title: "Orfeo Magazine"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 132
+  - id: "r0134-inside-arabic-music"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Johnny Farraj, Sami Abu Shumays"
+    title: "Inside Arabic Music"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 63
+    total: 481
+    is_book_row: true
+    sort_order: 134
+  - id: "r0135-salsa-guidebook"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Rebeca Mauleón"
+    title: "Salsa Guidebook"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 135
+  - id: "r0136-101-montunos"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Rebeca Mauleón"
+    title: "101 Montunos"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 136
+  - id: "r0137-el-verdadero-bajo-cubano"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Carlos del Puerto, Silvio Vergara"
+    title: "El verdadero bajo cubano"
+    chapter: null
+    year: 1994
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 137
+  - id: "r0138-the-clave-matrix"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "David Peñalosa"
+    title: "The Clave Matrix"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 138
+  - id: "r0139-cuba-and-its-music"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Ned Sublette"
+    title: "Cuba and Its Music"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 139
+  - id: "r0140-caribbean-currents"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Peter Manuel"
+    title: "Caribbean Currents"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 140
+  - id: "r0141-popular-musics-of-the-non-western-world"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Peter Manuel"
+    title: "Popular Musics of the Non-Western World"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 141
+  - id: "r0142-music-in-the-hispanic-caribbean"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Robin Moore"
+    title: "Music in the Hispanic Caribbean"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 142
+  - id: "r0143-the-rise-of-music-in-the-ancient-world-east-and-west"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Curt Sachs"
+    title: "The rise of music in the ancient world, East and West"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 143
+  - id: "r0144-the-history-of-musical-instruments"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Curt Sachs"
+    title: "The History of Musical Instruments"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 144
+  - id: "r0145-u-41e-431-438-441-43a-443-441-441-442-432-435-444-"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Нейгауз Г."
+    title: "Об искусстве фортепианной игры"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 145
+  - id: "r0146-u-410-43d-434-440-435-441-421-435-433-43e-432-438-"
+    area_id: "musica"
+    subarea_path: "Teoria musical"
+    author: "Вайсборд М."
+    title: "Андрес Сеговия"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 146
+  - id: "r0148-from-scarlatti-to-guantanamera-dual-tonicity-in-spanish-and-latin-american-musics"
+    area_id: "musica"
+    subarea_path: "Ártigos"
+    author: "Peter Manuel"
+    title: "From Scarlatti to \"Guantanamera\": Dual tonicity in Spanish and Latin American Musics"
+    chapter: null
+    year: 2002
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 148
+  - id: "r0149-from-contradanza-to-son-new-perspectives-on-the-prehistory-of-cuban-popular-music"
+    area_id: "musica"
+    subarea_path: "Ártigos"
+    author: "Peter Manuel"
+    title: "From Contradanza to Son: New Perspectives on the Prehistory of Cuban Popular Music"
+    chapter: null
+    year: 2009
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 149
+  - id: "r0150-the-anticipated-bass-in-cuban-popular-music"
+    area_id: "musica"
+    subarea_path: "Ártigos"
+    author: "Peter Manuel"
+    title: "The Anticipated Bass in Cuban Popular Music"
+    chapter: null
+    year: 1985
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 150
+  - id: "r0151-the-guajira-between-cuba-and-spain"
+    area_id: "musica"
+    subarea_path: "Ártigos"
+    author: "Peter Manuel"
+    title: "The Guajira between Cuba and Spain"
+    chapter: null
+    year: 2004
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 151
+  - id: "r0154-mastering-audio"
+    area_id: "musica"
+    subarea_path: "Audio Engineering"
+    author: "Bob Katz"
+    title: "Mastering Audio"
+    chapter: null
+    year: 2002
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 154
+  - id: "r0155-the-studio-builder-s-handbook"
+    area_id: "musica"
+    subarea_path: "Audio Engineering"
+    author: "Bobby Owsinski"
+    title: "The Studio Builder's Handbook"
+    chapter: null
+    year: 2011
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 155
+  - id: "r0156-the-recording-engineer-s-handbook"
+    area_id: "musica"
+    subarea_path: "Audio Engineering"
+    author: "Bobby Owsinski"
+    title: "The Recording Engineer's Handbook"
+    chapter: null
+    year: 2023
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 156
+  - id: "r0157-the-mixing-engineer-s-handbook"
+    area_id: "musica"
+    subarea_path: "Audio Engineering"
+    author: "Bobby Owsinski"
+    title: "The Mixing Engineer's Handbook"
+    chapter: null
+    year: 2022
+    start: "2025-09-28"
+    end: null
+    current: 150
+    total: 283
+    is_book_row: true
+    sort_order: 157
+  - id: "r0158-the-mastering-engineer-s-handbook"
+    area_id: "musica"
+    subarea_path: "Audio Engineering"
+    author: "Bobby Owsinski"
+    title: "The Mastering Engineer's Handbook"
+    chapter: null
+    year: 2024
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 158
+  - id: "r0160-build-ai-enhanced-audio-plugins-with-c"
+    area_id: "musica"
+    subarea_path: "DSP"
+    author: "Yee-King M. J."
+    title: "Build AI-Enhanced Audio Plugins with C++"
+    chapter: null
+    year: 2024
+    start: "2025-11-23"
+    end: null
+    current: 95
+    total: 362
+    is_book_row: true
+    sort_order: 160
+  - id: "r0161-designing-audio-effect-plugins-in-c"
+    area_id: "musica"
+    subarea_path: "DSP"
+    author: "Pirkle W. C."
+    title: "Designing Audio Effect Plugins in C++"
+    chapter: null
+    year: 2019
+    start: null
+    end: null
+    current: null
+    total: 703
+    is_book_row: true
+    sort_order: 161
+  - id: "r0162-the-audio-programming-book"
+    area_id: "musica"
+    subarea_path: "DSP"
+    author: "Richard Boulanger"
+    title: "The Audio Programming Book"
+    chapter: null
+    year: 2010
+    start: "2025-09-28"
+    end: "2025-11-22"
+    current: 143
+    total: 916
+    is_book_row: true
+    sort_order: 162
+  - id: "r0164-u-421-435-440-434-446-435-43e-442-434-430-44e-434-"
+    area_id: "pedagogia"
+    subarea_path: ""
+    author: "Василий Сухомлинский"
+    title: "Сердце отдаю детям"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 164
+  - id: "r0165-u-41f-438-441-44c-43c-430-43a-441-44b-43d-443"
+    area_id: "pedagogia"
+    subarea_path: ""
+    author: "Василий Сухомлинский"
+    title: "Письма к сыну"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: 1
+    total: 1
+    is_book_row: true
+    sort_order: 165
+  - id: "r0167-u-41f-43e-441-43b-435-434-43d-44f-44f-43f-43e-44d-"
+    area_id: "u-425-443-434-43e-436-435-441-442-432-435-43d-43d-"
+    subarea_path: ""
+    author: "Рабиндранат Тагор"
+    title: "Последняя поэма"
+    chapter: null
+    year: null
+    start: null
+    end: null
+    current: null
+    total: null
+    is_book_row: true
+    sort_order: 167

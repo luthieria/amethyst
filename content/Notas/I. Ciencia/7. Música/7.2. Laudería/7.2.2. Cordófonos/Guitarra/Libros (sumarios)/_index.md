@@ -7,6 +7,9 @@ bookBreadcrumbStart: true
 
 type: tabbed
 layout: tabbed
+tabVariant: bookshelf
+
+font: sans
 ---
 
 [[Erlewine D. Guitar player repair guide (1994, 2008)]]

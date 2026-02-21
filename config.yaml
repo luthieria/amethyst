@@ -36,6 +36,11 @@ params:
   name: Yakov Sverdlov
   title: 📓 Notas
 
+  readingAnalytics:
+    supabaseUrl: ""
+    supabaseAnonKey: ""
+    ownerEmail: ""
+
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
 

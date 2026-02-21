@@ -1,0 +1,182 @@
+{{ define "main" }}
+{{ $tracker := .Site.Data.reading_tracker }}
+{{ $categories := $tracker.categories | default (slice) }}
+{{ $entries := $tracker.entries | default (slice) }}
+
+{{ $overridesRoot := .Site.Data.reading_tracker_overrides }}
+{{ $overrides := dict }}
+{{ if and $overridesRoot (isset $overridesRoot "overrides") }}
+{{ $overrides = index $overridesRoot "overrides" }}
+{{ end }}
+
+{{ $categoriesByID := dict }}
+{{ range $cat := $categories }}
+{{ $categoriesByID = merge $categoriesByID (dict $cat.id $cat) }}
+{{ end }}
+
+{{ $scratch := newScratch }}
+{{ $scratch.Set "areaOrder" (slice) }}
+{{ $scratch.Set "areaSeen" (dict) }}
+{{ range $entry := $entries }}
+{{ $seen := $scratch.Get "areaSeen" }}
+{{ if not (isset $seen $entry.area_id) }}
+{{ $scratch.Set "areaSeen" (merge $seen (dict $entry.area_id true)) }}
+{{ $scratch.Set "areaOrder" (($scratch.Get "areaOrder") | append $entry.area_id) }}
+{{ end }}
+{{ end }}
+{{ $areaOrder := $scratch.Get "areaOrder" }}
+
+<section class="reading-tracker-page" data-reading-tracker>
+  <article class="markdown">
+    {{ if not .Params.BookHiddenTitle }}
+    <h1 class="page-title">{{ partial "docs/title" . }}</h1>
+    {{ end }}
+    {{ .Content }}
+  </article>
+
+  <div class="reading-tracker-toolbar">
+    <button type="button" class="rt-btn" id="rt-copy-overrides">Copy Overrides YAML</button>
+    <button type="button" class="rt-btn" id="rt-download-overrides">Download Overrides YAML</button>
+    <span class="rt-status" id="rt-export-status" aria-live="polite"></span>
+  </div>
+
+  <div class="reading-tracker-summary">
+    <div class="rt-summary-total">Total read books: <strong id="rt-total-read">0</strong></div>
+    <div class="rt-summary-areas" id="rt-area-summary">
+      {{ range $areaID := $areaOrder }}
+      {{ $area := index $categoriesByID $areaID }}
+      {{ if $area }}
+      <div class="rt-summary-area" data-area-summary="{{ $areaID }}" style="--area-color: {{ $area.color }}">
+        <span class="rt-summary-area-label">{{ $area.label }}</span>
+        <span class="rt-summary-area-count">0</span>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="reading-tracker-table-wrap">
+    <table class="reading-tracker-table" data-tracker-table>
+      <thead>
+        <tr class="rt-head-group">
+          <th colspan="6">Información</th>
+          <th colspan="2">Timing</th>
+          <th colspan="3">Pages</th>
+        </tr>
+        <tr class="rt-head-columns">
+          <th>Ciencia</th>
+          <th>Subarea</th>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Chapter</th>
+          <th>Year</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Current</th>
+          <th>Total</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ $scratch.Set "lastArea" "" }}
+        {{ $scratch.Set "lastSub" "" }}
+        {{ range $entry := $entries }}
+        {{ $areaID := $entry.area_id }}
+        {{ $area := index $categoriesByID $areaID }}
+        {{ $areaLabel := $areaID }}
+        {{ $areaColor := "#627d98" }}
+        {{ if $area }}
+        {{ $areaLabel = $area.label }}
+        {{ $areaColor = $area.color }}
+        {{ end }}
+        {{ if ne $areaID ($scratch.Get "lastArea") }}
+        <tr class="rt-area-row" data-area-row="{{ $areaID }}" style="--area-color: {{ $areaColor }}">
+          <td colspan="11">{{ $areaLabel }}</td>
+        </tr>
+        {{ $scratch.Set "lastArea" $areaID }}
+        {{ $scratch.Set "lastSub" "" }}
+        {{ end }}
+
+        {{ $subarea := $entry.subarea_path | default "" }}
+        {{ $showSubarea := ne $subarea ($scratch.Get "lastSub") }}
+        {{ $scratch.Set "lastSub" $subarea }}
+
+        {{ $override := dict }}
+        {{ if and $overrides (isset $overrides $entry.id) }}
+        {{ $override = index $overrides $entry.id }}
+        {{ end }}
+
+        {{ $start := $entry.start }}
+        {{ if and $override (isset $override "start") }}
+        {{ $start = index $override "start" }}
+        {{ end }}
+
+        {{ $end := $entry.end }}
+        {{ if and $override (isset $override "end") }}
+        {{ $end = index $override "end" }}
+        {{ end }}
+
+        {{ $current := $entry.current }}
+        {{ if and $override (isset $override "current") }}
+        {{ $current = index $override "current" }}
+        {{ end }}
+
+        {{ $startStr := "" }}
+        {{ if ne $start nil }}
+        {{ $startStr = printf "%v" $start }}
+        {{ end }}
+
+        {{ $endStr := "" }}
+        {{ if ne $end nil }}
+        {{ $endStr = printf "%v" $end }}
+        {{ end }}
+
+        {{ $currentStr := "" }}
+        {{ if ne $current nil }}
+        {{ $currentStr = printf "%v" $current }}
+        {{ end }}
+
+        {{ $totalStr := "" }}
+        {{ if ne $entry.total nil }}
+        {{ $totalStr = printf "%v" $entry.total }}
+        {{ end }}
+
+        <tr class="rt-entry-row" data-entry-id="{{ $entry.id | htmlEscape }}" data-area-id="{{ $areaID | htmlEscape }}"
+          data-area-label="{{ $areaLabel | htmlEscape }}"
+          data-is-book="{{ if $entry.is_book_row }}true{{ else }}false{{ end }}"
+          data-current="{{ $currentStr | htmlEscape }}" data-total="{{ $totalStr | htmlEscape }}"
+          style="--area-color: {{ $areaColor }}">
+          <td class="rt-cell rt-area">{{ $areaLabel }}</td>
+          <td class="rt-cell rt-subarea">{{ if $showSubarea }}{{ $subarea }}{{ end }}</td>
+          <td class="rt-cell rt-author">{{ $entry.author }}</td>
+          <td class="rt-cell rt-title">{{ $entry.title }}</td>
+          <td class="rt-cell rt-chapter">{{ $entry.chapter }}</td>
+          <td class="rt-cell rt-year">{{ $entry.year }}</td>
+          <td class="rt-cell rt-start">
+            <span contenteditable="true" class="rt-editable" data-field="start"
+              data-base="{{ $startStr | htmlEscape }}">{{ $startStr
+              }}</span>
+          </td>
+          <td class="rt-cell rt-end">
+            <span contenteditable="true" class="rt-editable" data-field="end" data-base="{{ $endStr | htmlEscape }}">{{
+              $endStr
+              }}</span>
+          </td>
+          <td class="rt-cell rt-current">
+            <span contenteditable="true" class="rt-editable rt-editable-number" data-field="current"
+              data-base="{{ $currentStr | htmlEscape }}">{{ $currentStr }}</span>
+          </td>
+          <td class="rt-cell rt-total">{{ $totalStr }}</td>
+          <td class="rt-cell rt-progress">
+            <div class="rt-progress" data-progress>
+              <div class="rt-progress-fill"></div>
+              <span class="rt-progress-label">0%</span>
+            </div>
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{ end }}

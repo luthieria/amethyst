@@ -1,0 +1,119 @@
+{{ define "main" }}
+{{ $ra := .Site.Params.readingAnalytics }}
+{{ $supabaseURL := "" }}
+{{ $supabaseAnonKey := "" }}
+{{ $ownerEmail := "" }}
+{{ if $ra }}
+{{ $supabaseURL = $ra.supabaseUrl | default "" }}
+{{ $supabaseAnonKey = $ra.supabaseAnonKey | default "" }}
+{{ $ownerEmail = $ra.ownerEmail | default "" }}
+{{ end }}
+
+<section class="reading-analytics-page" data-reading-analytics data-supabase-url="{{ $supabaseURL | htmlEscape }}"
+  data-supabase-anon-key="{{ $supabaseAnonKey | htmlEscape }}" data-owner-email="{{ $ownerEmail | htmlEscape }}">
+  <article class="markdown">
+    {{ if not .Params.BookHiddenTitle }}
+    <h1 class="page-title">{{ partial "docs/title" . }}</h1>
+    {{ end }}
+    {{ .Content }}
+  </article>
+
+  <div class="reading-analytics-auth">
+    <div class="ra-auth-row" data-auth-logged-out>
+      <input type="email" id="ra-owner-email-input" class="ra-input" placeholder="Owner email"
+        value="{{ $ownerEmail | htmlEscape }}" />
+      <button type="button" class="ra-btn" id="ra-sign-in">Sign in with magic link</button>
+    </div>
+    <div class="ra-auth-row" data-auth-logged-in hidden>
+      <span class="ra-auth-label">Signed in as <strong id="ra-user-email"></strong></span>
+      <button type="button" class="ra-btn ra-btn-secondary" id="ra-sign-out">Sign out</button>
+    </div>
+  </div>
+
+  <div class="reading-analytics-toolbar">
+    <button type="button" class="ra-btn" id="ra-load">Reload</button>
+    <button type="button" class="ra-btn" id="ra-add-row">Add row</button>
+    <button type="button" class="ra-btn ra-btn-secondary" id="ra-delete-row">Delete selected rows</button>
+    <button type="button" class="ra-btn ra-btn-primary" id="ra-save">Save</button>
+    <span class="ra-dirty-indicator" id="ra-dirty-indicator" data-dirty="false">No unsaved changes</span>
+    <span class="ra-status" id="ra-status" aria-live="polite"></span>
+  </div>
+
+  <section class="reading-analytics-goals">
+    <h2>Yearly goals</h2>
+    <div class="ra-goals-controls">
+      <label class="ra-goal-field">
+        <span>Year</span>
+        <select id="ra-goal-year" class="ra-input"></select>
+      </label>
+      <label class="ra-goal-field">
+        <span>Books target</span>
+        <input id="ra-goal-books" class="ra-input" type="number" min="0" step="1" />
+      </label>
+      <label class="ra-goal-field">
+        <span>Pages target</span>
+        <input id="ra-goal-pages" class="ra-input" type="number" min="0" step="1" />
+      </label>
+      <button type="button" class="ra-btn" id="ra-save-goals">Save goals</button>
+    </div>
+  </section>
+
+  <section class="reading-analytics-cards">
+    <article class="ra-card">
+      <h3>Books this year</h3>
+      <p><strong id="ra-card-books-value">0 / 0</strong></p>
+    </article>
+    <article class="ra-card">
+      <h3>Pages this year</h3>
+      <p><strong id="ra-card-pages-value">0 / 0</strong></p>
+    </article>
+  </section>
+
+  <div class="reading-analytics-sheet-wrap">
+    <div id="reading-analytics-sheet" class="reading-analytics-sheet"></div>
+  </div>
+
+  <section class="reading-analytics-stats">
+    <article class="ra-stats-block">
+      <h2>Monthly statistics</h2>
+      <div class="ra-table-wrap">
+        <table class="ra-table" id="ra-monthly-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Month</th>
+              <th>Books finished</th>
+              <th>Pages finished</th>
+              <th>Re-reads</th>
+              <th>Abandoned</th>
+              <th>Avg rating</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="ra-stats-block">
+      <h2>Yearly statistics</h2>
+      <div class="ra-table-wrap">
+        <table class="ra-table" id="ra-yearly-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Books finished</th>
+              <th>Pages finished</th>
+              <th>Re-reads</th>
+              <th>Abandoned</th>
+              <th>Avg rating</th>
+              <th>Books goal</th>
+              <th>Pages goal</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+</section>
+{{ end }}

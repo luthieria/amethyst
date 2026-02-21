@@ -1,0 +1,31 @@
+<div class="bookshelf-grid">
+  {{ range .Pages }}
+  {{ $title := partial "docs/title" . }}
+  {{ $author := .Params.bookAuthor }}
+  {{ $year := .Params.bookYear }}
+  {{ $cover := .Params.bookCover }}
+  {{ $coverURL := "" }}
+  {{ if $cover }}
+  {{ with .Resources.GetMatch $cover }}
+  {{ $coverURL = .RelPermalink }}
+  {{ else }}
+  {{ $coverURL = ($cover | relURL) }}
+  {{ end }}
+  {{ end }}
+  <a href="{{ .RelPermalink }}" class="bookshelf-book">
+    <span class="bookshelf-book-cover{{ if not $coverURL }} is-fallback{{ end }}">
+      {{ if $coverURL }}
+      <img src="{{ $coverURL }}" alt="{{ $title }} cover" loading="lazy">
+      {{ else }}
+      <span class="bookshelf-fallback-title">{{ $title }}</span>
+      {{ if $author }}<span class="bookshelf-fallback-meta">{{ $author }}</span>{{ else if $year }}<span
+          class="bookshelf-fallback-meta">{{ $year }}</span>{{ end }}
+      {{ end }}
+    </span>
+    <span class="bookshelf-book-title">{{ $title }}</span>
+    {{ if or $author $year }}
+    <span class="bookshelf-book-meta">{{ $author }}{{ if and $author $year }} · {{ end }}{{ $year }}</span>
+    {{ end }}
+  </a>
+  {{ end }}
+</div>

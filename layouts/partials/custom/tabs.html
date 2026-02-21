@@ -1,3 +1,6 @@
+{{ if eq .Params.tabVariant "bookshelf" }}
+{{ partial "custom/bookshelf.html" . }}
+{{ else }}
 <div class="tab-links-grid">
     {{ range .Pages }}
     <a href="{{ .RelPermalink }}" class="tab-link">
@@ -8,3 +11,4 @@
     </a>
     {{ end }}
 </div>
+{{ end }}
