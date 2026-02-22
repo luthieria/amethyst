@@ -1,0 +1,79 @@
+// # 6. LAYOUT: TABBED #
+.tabbed-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+// ## 6.1. Content ##
+/* Hide the original .md text */
+.tabbed-layout .markdown {
+  display: none;
+}
+
+.tabbed-content {
+  flex: 1 1 600px;
+  display: flex;
+  flex-direction: column;
+  /* Stack vertically */
+}
+
+// ## 6.2. Grid ##
+.tab-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+// ## 6.3. Individual tabs ##
+.tab-link {
+  display: flex;
+  flex-direction: column;
+
+  aspect-ratio: 1 / 1;
+  padding: 2rem;
+  background: var(--light);
+  // border: 1px solid var(--outlinegray);
+  border-radius: 8px;
+
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// ### 6.3.1. Behavior on hover ###
+.tab-link:hover {
+  border-color: var(--secondary);
+  background: var(--light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// ### 6.3.2. Icon ###
+.tab-link .material-symbols-outlined {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+// ### 6.3.3. Title ###
+.tab-link-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+// # 7. FOOTER #
+// ## 7.1. Backlinks ##
+.backlinks-sidebar {
+  display: none;
+}

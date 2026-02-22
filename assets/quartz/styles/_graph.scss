@@ -1,0 +1,63 @@
+:root {
+  --g-node: var(--secondary);
+  --g-node-active: var(--primary);
+  --g-node-inactive: var(--visited);
+  --g-link: var(--outlinegray);
+  --g-link-active: #5a7282;
+}
+
+#graph-container text,
+.home-graph text {
+  font-family: var(--font-sans);
+}
+
+// Home graph
+body.home .home-graph {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: auto;
+    margin: 0;
+    min-height: 120vh;
+}
+
+body.home .home-graph h3 {
+    display: none;
+}
+
+body.home .home-graph #graph-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+}
+
+// ## 7.2. Graph ##
+.full-width-graph {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: var(--background);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.full-width-graph #graph-container {
+  height: 600px;
+  width: 100%;
+  border: none;
+}
+
+// ## 7.3. Headers ("Backlinks", "Interactive Graph") ##
+#footer h3 {
+  display: none;
+}

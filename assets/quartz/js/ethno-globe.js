@@ -1,4 +1,5 @@
 ;(function () {
+  // Runtime interaction tuning for the ethnomusicology globe lives in this object.
   // === Config: Manual Tuning ===
   const TUNING = {
     stage: {

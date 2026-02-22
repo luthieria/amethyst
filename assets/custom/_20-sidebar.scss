@@ -1,0 +1,153 @@
+// # 3. LEFT SIDEBAR #
+// ## 3.1. Header ##
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  gap: 1.25rem;
+
+  // ### 3.1.1. Home Button ###
+  .book-home-link {
+    padding: 0;
+    margin: 0;
+    color: var(--gray);
+    text-decoration: none;
+    order: 1;
+
+    .book-home-icon {
+      font-size: 32px;
+    }
+  }
+
+  // ### 3.1.2. Search Button ###
+  .menu-search {
+    display: flex !important;
+    order: 2;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+
+    #search-icon {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--secondary);
+      }
+
+      svg {
+        width: 26px;
+        height: 26px;
+        stroke: currentColor;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+// ## 3.2. Menu ##
+.book-menu,
+.book-menu a,
+.book-menu-content {
+  font-family: var(--font-sans);
+}
+
+.book-menu-content {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;
+  --sidebar-chevron-slot: calc(1.2rem + 4px);
+  --sidebar-icon-slot: 1.35rem;
+}
+
+.book-menu-count {
+  margin-left: auto;
+  padding: 0 0.45em;
+
+ 
+  color: var(--gray);
+  //background: var(--light);
+
+  font-size: .8em;
+  font-weight: 400;
+
+  //border-radius: 999px;
+  //border: 1px solid var(--outlinegray);
+
+  line-height: 1.2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4em;
+  flex: 0 0 2.4em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+}
+
+.book-menu-content input.toggle+label {
+  display: flex;
+  align-items: center;
+}
+
+.book-menu-content a,
+.book-menu-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  min-width: 0;
+  width: 100%;
+  position: relative;
+  padding-inline-start: var(--sidebar-icon-slot);
+}
+
+.book-menu-content li>a:not(.book-collapse-toggle),
+.book-menu-content li>.book-menu-title {
+  padding-inline-start: calc(var(--sidebar-chevron-slot) + var(--sidebar-icon-slot));
+}
+
+.book-menu-content .sidebar-icon {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  width: var(--sidebar-icon-slot);
+  margin-right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.book-menu-title {
+  width: 100%;
+}
+
+// # 4. RIGHT SIDEBAR #
+// ## 4.1. Title ##
+.toc-title {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--title);
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--outlinegray);
+}
+
+// ## 4.2. Menu ##
+.book-toc a {
+  font-family: var(--font-sans);
+  color: var(--gray);
+  font-weight: 500;
+}

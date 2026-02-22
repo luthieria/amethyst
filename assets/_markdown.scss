@@ -102,6 +102,9 @@
   img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // # CODE
@@ -288,6 +291,15 @@
       letter-spacing: 0.04em;
       color: var(--gray);
     }
+  }
+
+  /* Match Markdown Preview Enhanced footnote back-arrow appearance. */
+  .footnotes .footnote-backref,
+  .footnotes a[href^="#fnref"] {
+    font-size: 0.7em;
+    font-weight: normal;
+    text-decoration: none;
+    opacity: 0.3;
   }
 
   // # DEFINITION LISTS

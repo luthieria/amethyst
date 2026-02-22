@@ -1,0 +1,21 @@
+body {
+  font-size: 24px;
+  line-height: 1.35;
+  overflow-x: hidden !important;
+}
+
+body.home {
+  overflow: hidden !important;
+}
+
+#book-search-input,
+#book-search-input::placeholder,
+#search-bar,
+#search-bar::placeholder,
+#book-search-results,
+#results-container,
+#footer,
+.backlinks,
+#contact_buttons {
+  font-family: var(--font-sans);
+}

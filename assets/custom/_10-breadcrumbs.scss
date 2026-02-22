@@ -1,0 +1,161 @@
+// # 2. BREADCRUMBS #
+.book-breadcrumbs {
+  margin: 0 0 1.2rem;
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background-color: var(--light);
+  font-size: 0.72em;
+  line-height: 1.35;
+  color: var(--gray);
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25em 0.6em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  li,
+  li a {
+    font-family: var(--font-sans);
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    position: relative; // Anchor for dropdown positioning.
+  }
+
+  li+li::before {
+    content: "â†’";
+    margin-right: 0.6em;
+    color: var(--outlinegray);
+  }
+
+  a {
+    color: var(--secondary);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  [aria-current="page"] {
+    color: var(--dark);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+}
+
+.breadcrumb-item {
+  display: inline-flex; // Keep items aligned on the same baseline.
+  align-items: center;
+  gap: 0.35em;
+}
+
+.breadcrumb-label {
+  display: inline-flex; // Keep text + chevron on a single line.
+  align-items: center;
+  gap: 0.35em; // Space between label and chevron.
+  min-width: 0;
+  position: relative; // Anchor dropdown left edge to label start.
+}
+
+.breadcrumb-menu {
+  position: static; // Let the label be the positioning anchor.
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15em;
+    height: 1.15em;
+    color: var(--secondary);
+    border-radius: 3px;
+    line-height: 1; // Center the icon vertically.
+    align-self: center; // Keep the chevron centered vs. label text.
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "\e5cf"; // expand_more
+    font-family: 'Material Symbols Outlined';
+    font-size: 1em;
+    color: var(--gray);
+
+    line-height: 1;
+    display: block; // Avoid baseline alignment shifts.
+    transform: translateY(0.08em); // Nudge icon down to text center.
+    transition: transform 0.15s ease;
+  }
+
+  &[open] summary::before {
+    transform: translateY(0.08em) rotate(180deg); // Keep the same vertical center.
+  }
+
+  ul {
+    position: absolute;
+    top: calc(100% + 0.35em);
+    left: 0; // Left-align with the breadcrumb label.
+    transform: none;
+    min-width: 12rem;
+    width: max-content;
+    max-height: 50vh;
+    overflow: auto;
+    background: var(--light);
+    border: 1px solid var(--outlinegray);
+    border-radius: 8px;
+    //padding: 0.35rem 0.4rem;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    list-style: none;
+    z-index: 50;
+
+    li+li::before {
+      display: none;
+    }
+  }
+
+  li {
+    display: block;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    color: var(--gray);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  a:hover {
+    //background: var(--lightgray);
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  a.active {
+    color: var(--dark);
+    //background: rgba(217, 202, 154, 0.15);
+
+    font-weight: 600;
+  }
+}

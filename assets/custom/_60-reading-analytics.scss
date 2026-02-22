@@ -1,0 +1,212 @@
+// # 10. READING ANALYTICS TRACKER #
+.reading-analytics-page {
+  margin-top: 0.5rem;
+}
+
+.reading-analytics-auth,
+.reading-analytics-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.ra-auth-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ra-auth-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--dark);
+}
+
+.ra-input {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  border: 1px solid var(--outlinegray);
+  border-radius: 6px;
+  background: var(--light);
+  color: var(--dark);
+  padding: 0.35rem 0.5rem;
+  min-width: 8rem;
+}
+
+.ra-btn {
+  border: 1px solid var(--outlinegray);
+  background: var(--light);
+  color: var(--dark);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 0.38rem 0.68rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ra-btn:hover:not(:disabled) {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.ra-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ra-btn-primary {
+  border-color: #4e8dcc;
+  color: #4e8dcc;
+}
+
+.ra-btn-secondary {
+  border-color: var(--outlinegray);
+  color: var(--gray);
+}
+
+.ra-dirty-indicator,
+.ra-status {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  color: var(--gray);
+}
+
+.ra-dirty-indicator[data-dirty="true"] {
+  color: #d8b560;
+}
+
+.ra-status[data-level="success"] {
+  color: #6cc28c;
+}
+
+.ra-status[data-level="error"] {
+  color: #de7c7c;
+}
+
+.ra-status[data-level="warn"] {
+  color: #d8b560;
+}
+
+.reading-analytics-goals {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--outlinegray);
+  border-radius: 8px;
+  background: var(--light);
+}
+
+.reading-analytics-goals h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.ra-goals-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.6rem;
+}
+
+.ra-goal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ra-goal-field span {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+.reading-analytics-cards {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.ra-card {
+  border: 1px solid var(--outlinegray);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  background: color-mix(in srgb, #558ec6 12%, var(--light));
+}
+
+.ra-card h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.ra-card p {
+  margin: 0.35rem 0 0;
+  text-indent: 0 !important;
+}
+
+.ra-card strong {
+  font-size: 0.94rem;
+  font-family: var(--font-sans);
+  color: var(--dark);
+}
+
+.reading-analytics-sheet-wrap {
+  margin-top: 0.9rem;
+  border: 1px solid var(--outlinegray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reading-analytics-sheet {
+  width: 100%;
+  overflow: auto;
+}
+
+.reading-analytics-sheet .handsontable {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+}
+
+.reading-analytics-stats {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.ra-stats-block h2 {
+  margin: 0 0 0.55rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.ra-table-wrap {
+  border: 1px solid var(--outlinegray);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.ra-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  font-size: 0.76rem;
+  font-family: var(--font-sans);
+}
+
+.ra-table th,
+.ra-table td {
+  border: 1px solid var(--outlinegray);
+  padding: 0.34rem 0.4rem;
+  text-align: left;
+}
+
+.ra-table th {
+  background: var(--light);
+  color: var(--dark);
+}

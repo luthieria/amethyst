@@ -67,19 +67,19 @@
 ---
 
 - This repository got too complex. Optimize it carefully, making sure that nothing breaks. Make it easier to edit and control the website manually.
-    - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.), folders. (don't edit the "content/Notas" folder)
+  - remove reduntant and unused files (e.g., everything related to the light theme, because I only want the current dark theme, etc.). (don't edit the "content/Notas" folder)
 
-    - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 
-      - the graph appearance (font, colors, background,etc.) is controlled from one file, 
-      - the globe layout (positions, etc.) is controlled from another file, 
-      - the Markdown rendering (colors, etc.) is controlled from another file, 
-      - etc.
+  - is it possible to merge certain files, so that editing and controlling various elements of the website would be from a single place? E.g., 
+    - the graph appearance (font, colors, background,etc.) is controlled from one file, 
+    - the globe layout (positions, etc.) is controlled from another file, 
+    - the Markdown rendering (colors, etc.) is controlled from another file, 
+    - etc.
 
-    - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.
+  - go through all files (especially .scss), and optimize and clean them up: delete reduntant code, order the code blocks logically, group lines visually where possible, etc.
 
-    - remove unnecessary comments, like commented-out code blocks.
+  - remove unnecessary comments, like commented-out code blocks.
 
-    - add clear, concise comments to the .scss files in the "assets" folder, also add comments describing what each file does.
+  - add clear, concise comments to the .scss files in the "assets" folder, also add comments describing what each file does.
 
 ---
 
