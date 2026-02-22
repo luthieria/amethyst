@@ -55,6 +55,7 @@
 
   > h1.page-title {
     color: var(--dark);
+    padding-bottom: 1rem;
   }
 
   h2 {
@@ -198,7 +199,7 @@
   hr {
     height: $padding-1;
     border: none;
-    background: var(--gray-200);
+    background: var(--gray);
   }
 
   // # LISTS
