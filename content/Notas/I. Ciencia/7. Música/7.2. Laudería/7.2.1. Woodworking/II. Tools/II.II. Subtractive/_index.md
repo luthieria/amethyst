@@ -3,14 +3,17 @@ title: II.II. Subtractive
 icon: content_cut
 
 weight: 2
+
+type: tabbed
+layout: tabbed
 ---
 
-[[0. Sharpening]]
+[[Sharpening]]
 
-[[1. Sawing]]
+[[Sawing]]
 
-[[2. Cutting]]
+[[Cutting]]
 
-[[3. Abrasive]]
+[[Abrasive]]
 
-[[4. Boring]]
+[[Boring]]

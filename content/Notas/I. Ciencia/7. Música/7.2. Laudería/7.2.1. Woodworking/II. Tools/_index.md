@@ -1,5 +1,5 @@
 ---
-title: "II.III. Joining"
+title: "II. Tools"
 icon: "construction"
 
 weight: 4
@@ -11,6 +11,8 @@ bookHideChildren: true
 bookBreadcrumbStart: true
 ---
 
-[[1. Gripping]]
+[[II.I. Measuring]]
 
-[[2. Fastening]]
+[[II.II. Subtractive]]
+
+[[II.III. Joining]]
