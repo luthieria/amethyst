@@ -33,15 +33,15 @@ weight: 6
 - **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity <1.0 means that the wood floats.
 - Important for, e.g., boats.
 
-| **Wood**    |**Specific Gravity**|
-|------------:|--------------------|
-| Poplar      | 0.42               |
-| Cherry      | 0.50               |
-| Walnut      | 0.55               |
-| Yellow pine | 0.59               |
-| Hard maple  | 0.63               |
-| White oak   | 0.68               |
-| Ebony       | 1.0 (→ sinks)      |
+|    **Wood** | **Specific Gravity** |
+| ----------: | -------------------- |
+|      Poplar | 0.42                 |
+|      Cherry | 0.50                 |
+|      Walnut | 0.55                 |
+| Yellow pine | 0.59                 |
+|  Hard maple | 0.63                 |
+|   White oak | 0.68                 |
+|       Ebony | 1.0 (→ sinks)        |
 
 
 
@@ -131,7 +131,7 @@ weight: 6
 
 - Temperate climate: tight in the summer, loose in the winter.
 
-- M. E. Bruné dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
+- Bruné M. E. dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
 
 
 
@@ -169,12 +169,12 @@ weight: 6
 
 <!-- Footnotes -->
 
-[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]: [**M. E. Bruné**](https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq)
+[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]: [**Bruné M. E.**](https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq)
 
 [^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
 
 [^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]: [**Workshop Companion**](https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD)
 
-[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]: [**M. E. Bruné**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
+[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]: [**Bruné M. E.**](https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX)
 
-[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]: [**M. E. Bruné**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)
+[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]: [**Bruné M. E.**](https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR)
