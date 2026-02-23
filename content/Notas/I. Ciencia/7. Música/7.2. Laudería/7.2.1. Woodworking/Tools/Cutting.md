@@ -1,6 +1,8 @@
 ---
-title: Tools
-weight: 7
+title: Cutting
+icon: content_cut
+
+weight: 2
 ---
 
 # Planes[^https://youtu.be/p27uJvUhZrU?si=CTkcnH4kC9EkVfmM][^https://woodworkersinstitute.com/hand-planes-an-introduction]
@@ -115,8 +117,7 @@ weight: 7
 4. (Optional) Stanley Sweetheart **low-angle**.
 
 <!-- Footnotes -->
-[^https://woodworkersinstitute.com/hand-planes-an-introduction]: [Woodworkers Institute](https://woodworkersinstitute.com/hand-planes-an-introduction
-)
+[^https://woodworkersinstitute.com/hand-planes-an-introduction]: [Woodworkers Institute](https://woodworkersinstitute.com/hand-planes-an-introduction)
 
 [^https://youtu.be/p27uJvUhZrU?si=CTkcnH4kC9EkVfmM]: [Krueger R.](https://youtu.be/p27uJvUhZrU?si=CTkcnH4kC9EkVfmM)
 

@@ -1,7 +1,11 @@
 ---
 title: "II. Tools"
+
+weight: 6
+
+font: sans
+
+bookCollapseSection: true
 ---
 
-<!-- AUTO-CHILD-LINKS:START -->
 [[II. Tools]]
-<!-- AUTO-CHILD-LINKS:END -->

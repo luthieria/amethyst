@@ -11,6 +11,6 @@ bookHideChildren: true
 bookBreadcrumbStart: true
 ---
 
-[[Tools]]
+[[Cutting]]
 
 [[Finish]]
