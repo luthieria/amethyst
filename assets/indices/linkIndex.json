@@ -184,18 +184,47 @@
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Tools",
-          "text": "Tools"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
           "target": "/Finish",
           "text": "Finish"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools": [
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Sharpening",
+          "text": "Sharpening"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Sawing",
+          "text": "Sawing"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Cutting",
+          "text": "Cutting"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Abrasive",
+          "text": "Abrasive"
+        },
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Boring",
+          "text": "Boring"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/",
+          "target": "/Chisels",
+          "text": "Chisels"
+        }
+      ],
+      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/2.2.-Planes": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/2.2.-Planes",
           "target": "/",
           "text": "Sellers P."
         }
@@ -271,7 +300,7 @@
     "backlinks": {
       "/": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools",
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/2.2.-Planes",
           "target": "/",
           "text": "Sellers P."
         }
@@ -486,11 +515,39 @@
           "text": "AI_Audio_Plugin_Dev_Guide"
         }
       ],
+      "/Abrasive": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Abrasive",
+          "text": "Abrasive"
+        }
+      ],
       "/Audio_Engineering_Standard_Operating_Procedures": [
         {
           "source": "/Notas/II.-Personal/Trabajo/Technical-Writing/",
           "target": "/Audio_Engineering_Standard_Operating_Procedures",
           "text": "Audio_Engineering_Standard_Operating_Procedures"
+        }
+      ],
+      "/Boring": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Boring",
+          "text": "Boring"
+        }
+      ],
+      "/Chisels": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/",
+          "target": "/Chisels",
+          "text": "Chisels"
+        }
+      ],
+      "/Cutting": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Cutting",
+          "text": "Cutting"
         }
       ],
       "/Familia-del-viol%C3%ADn": [
@@ -570,6 +627,20 @@
           "text": "Portfolio ideas"
         }
       ],
+      "/Sawing": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Sawing",
+          "text": "Sawing"
+        }
+      ],
+      "/Sharpening": [
+        {
+          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+          "target": "/Sharpening",
+          "text": "Sharpening"
+        }
+      ],
       "/Technical-Writing": [
         {
           "source": "/Notas/II.-Personal/Trabajo/",
@@ -582,13 +653,6 @@
           "source": "/Notas/II.-Personal/Tareas/",
           "target": "/To-do",
           "text": "To do"
-        }
-      ],
-      "/Tools": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Tools",
-          "text": "Tools"
         }
       ],
       "/content/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/African-American-Music": [
@@ -779,14 +843,39 @@
       "text": "USA"
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/Tools",
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/2.2.-Planes",
       "target": "/",
       "text": "Sellers P."
     },
     {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-      "target": "/Tools",
-      "text": "Tools"
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/2.-Cutting/",
+      "target": "/Chisels",
+      "text": "Chisels"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+      "target": "/Sharpening",
+      "text": "Sharpening"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+      "target": "/Sawing",
+      "text": "Sawing"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+      "target": "/Cutting",
+      "text": "Cutting"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+      "target": "/Abrasive",
+      "text": "Abrasive"
+    },
+    {
+      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.II.-Subtractive/",
+      "target": "/Boring",
+      "text": "Boring"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
