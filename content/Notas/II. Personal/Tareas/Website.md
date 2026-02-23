@@ -2,6 +2,25 @@
 
 ---
 
+- left sidebar
+  - add tree lines to the left side bar (only vertical lines). like in obsidian.
+  - add expansion animation like in obsidian.
+  - prevent the note count from being underlined on selection
+- The "Pin" icon:
+  - replace the icon with a vertical single bar (ensure it looks professional and modern),
+  - make bigger
+
+---
+
+- how to adjust the left sidebar icons' color
+
+---
+
+- make the tabbed layout flexible: make it scale tabs depending on their amount, and keep the tabs rows centered
+- give me an ability to deliberately put certain tabs in certain rows
+
+---
+
 - how to get better tables in .md? more controllable and customizable
 
 ---
@@ -10,11 +29,7 @@
 
 ---
 
-- The "Pin" icon:
-  - replace the icon with a vertical single bar (ensure it looks professional and modern),
-  - make bigger
-
-- I have breadcrumbs on certain pages (when enabled). make the breadcrumbs expandable on click like they are inside VS Code (see screenshot), so that they expanded manu shows other items in their folder ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+- style the breadcrumbs expandansion menu similar to the VS Code breadcrumbs (see screenshot). remove their chevrons. make them expand on click, and on second click open the corresponding page ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
 ---
 

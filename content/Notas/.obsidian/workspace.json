@@ -11,10 +11,14 @@
             "id": "6049f780a0dfe8dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "I. Ciencia/7. Música/7.2. Laudería/7.2.2. Cordófonos/Guitarra/La guitarra/IV. Repairs/IV. Repairs.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "IV. Repairs"
             }
           }
         ]
@@ -212,7 +216,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "f9970ff210b187aa",
+  "active": "6049f780a0dfe8dc",
   "lastOpenFiles": [
     "I. Ciencia/7. Música/7.1. Etnomusicología/4. América/4.1. América Latina/4.1.1. Hispanoamérica/Puerto Rico/La música puertorriqueña.md",
     "I. Ciencia/7. Música/7.2. Laudería/7.2.1. Woodworking/Imagenes/Fore plane. Traditional setup.png",
