@@ -1,7 +1,7 @@
 ---
 title: "Cuba"
 weight: 7
-bookCollapseSection: true
+bookHideChildren: true
 ---
 
 [[La música cubana]]

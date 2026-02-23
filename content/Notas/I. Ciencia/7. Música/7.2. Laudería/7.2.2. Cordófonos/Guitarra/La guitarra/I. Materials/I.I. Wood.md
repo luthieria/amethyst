@@ -26,8 +26,6 @@ weight: 6
 
 - All strength measurements are averages.
 
-
-
 #### Specific Gravity
 
 - **Specific gravity** = **density** calculated by comparing the same volume of wood and water. Water’s specific gravity is 1.0. A specific gravity <1.0 means that the wood floats.
@@ -43,71 +41,61 @@ weight: 6
 |   White oak | 0.68                 |
 |       Ebony | 1.0 (→ sinks)        |
 
-
-
 #### Compressive Strength
 
 - **Compressive strength** — resistance to pressure applied along the grain.
 - Important for, e.g., table legs.
 
-<br>
-
-1. Poplar — 5540 psi.
-2. Cherry — 7110 psi.
-3. White oak — 7440 psi.
-4. Walnut — 7580 psi.
-5. Hard maple — 7830 psi.
-6. Yellow pine — 8470 psi.
-
-
+|    **Wood** | **Compressive strength**, psi |
+| ----------: | ----------------------------- |
+|      Poplar | 5540                          |
+|      Cherry | 7110                          |
+|   White oak | 7440                          |
+|      Walnut | 7580                          |
+|  Hard maple | 7830                          |
+| Yellow pine | 8470                          |
 
 #### Bending Strength
 
 - **Bending strength** = **modulus of rupture** — resistance to pressure applied perpendicular to the grain.
 - Important for, e.g., table tops, canoe paddles.
 
-<br>
-
-1. Poplar — 10 100 psi.
-2. Cherry — 12 300 psi.
-3. Yellow pine — 14 500 psi.
-4. Walnut — 14 600 psi.
-5. White oak — 15 200 psi.
-6. Hard maple — 15 800 psi.
-
-
+|    **Wood** | **Bending strength**, psi |
+| ----------: | ------------------------- |
+|      Poplar | 10 100                    |
+|      Cherry | 12 300                    |
+| Yellow pine | 14 500                    |
+|      Walnut | 14 600                    |
+|   White oak | 15 200                    |
+|  Hard maple | 15 800                    |
 
 #### Stiffness
 
 - **Stiffness** = **modulus of elasticity** — resistance to bowing.
 - Important for, e.g., shelves, archery bow, fishing pole.
 
-<br>
-
-1. Cherry — 1.49 Mpsi.
-2. Poplar — 1.58 Mpsi.
-3. Walnut — 1.68 Mpsi.
-4. White oak — 1.78 Mpsi.
-5. Hard maple — 1.83 Mpsi.
-6. Yellow pine — 1.98 Mpsi.
-
-
+|    **Wood** | **Stiffness**, Mpsi |
+| ----------: | ------------------- |
+|      Cherry | 1.49                |
+|      Poplar | 1.58                |
+|      Walnut | 1.68                |
+|   White oak | 1.78                |
+|  Hard maple | 1.83                |
+| Yellow pine | 1.98                |
 
 #### Hardness
 
 - **Hardness** — resistance to abuse.
 - Important for, e.g., desktop, workbench top, baseball bat.
 
-<br>
-
-1. Poplar — 540 lbs.
-2. Yellow pine — 870 lbs.
-3. Cherry — 950 lbs.
-4. Walnut — 1010 lbs.
-5. White oak — 1360 lbs.
-6. Hard maple — 1450 lbs.
-
-
+|    **Wood** | **Hardness**, lbs |
+| ----------: | ----------------- |
+|      Poplar | 540               |
+| Yellow pine | 870               |
+|      Cherry | 950               |
+|      Walnut | 1010              |
+|   White oak | 1360              |
+|  Hard maple | 1450              |
 
 ## Moisture[^https://youtu.be/oZkYLVrTYe4?si=m93uFLkxhwl8m-dD]
 
@@ -124,7 +112,7 @@ weight: 6
 - → Quarter-sawn lumber is more stable than plain-sawn, mixed-grain.
 - Always allow for wood movement; across a 12” = 30 mm lumber:
   - plain-sawn — ±¼” = 6 mm;
-  - quarter-sawn — ±1/8” = 3 mm.
+  - quarter-sawn — ±⅛” = 3 mm.
 - Glue elasticity allows for some movement when joining lumbers of opposite grain. Generally, keep the joint < 3” = 7.5 cm.
 
 <br>
@@ -132,8 +120,6 @@ weight: 6
 - Temperate climate: tight in the summer, loose in the winter.
 
 - Bruné M. E. dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
-
-
 
 ## Oiliness[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]
 
@@ -147,8 +133,6 @@ weight: 6
 
 - Synthetic glues key into the wood imperfections.
 
-
-
 # Species
 
 ## Western Larch
@@ -159,16 +143,7 @@ weight: 6
 - For braces.
 
 
-
-
-
-
-
-
-
-
 <!-- Footnotes -->
-
 [^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]: [**Bruné M. E.**](https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq)
 
 [^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)

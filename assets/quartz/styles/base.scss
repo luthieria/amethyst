@@ -189,7 +189,7 @@ sup {
 
 article {
   &>h1 {
-    margin-top: 2em;
+    //margin-top: 2em;
     font-size: 2em;
   }
 
@@ -656,7 +656,7 @@ header,
 
 mark {
   background-color: var(--highlighted);
-  color: #2e3440;
+  color: var(--light);
 
   border-radius: 6px;
   padding: 0 2px;
