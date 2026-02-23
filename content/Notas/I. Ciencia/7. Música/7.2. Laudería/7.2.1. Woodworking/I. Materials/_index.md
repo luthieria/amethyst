@@ -1,12 +1,13 @@
 ---
 title: "I. Materials"
-weight: 5
+weight: 1
 
-font: sans
-
-bookCollapseSection: true
+type: tabbed
+layout: tabbed
 ---
 
 [[I.I. Wood]]
 
 [[I.II. Glue]]
+
+[[I.III. Finish]]

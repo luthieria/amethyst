@@ -1,6 +1,6 @@
 ---
-title: Workplace
-icon: table
+title: II.I. Workplace
+icon: table_lamp
 
 weight: 1
 ---

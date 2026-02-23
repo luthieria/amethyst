@@ -2,7 +2,7 @@
 title: "Etnomusicología"
 icon: "globe"
 
-weight: 3
+weight: 1
 
 bookCollapseSection: true
 BookHiddenTitle: true

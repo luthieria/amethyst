@@ -6,6 +6,10 @@
 
 ---
 
+- when centering headings, is it possible to ignore the footnotes (superscript)?
+
+---
+
 - The "Pin" icon:
   - replace the icon with a vertical single bar (ensure it looks professional and modern),
   - make bigger

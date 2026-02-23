@@ -1,6 +1,6 @@
 ---
-title: II.II. Subtractive
-icon: content_cut
+title: II.III. Subtractive
+icon: surgical
 
 weight: 3
 

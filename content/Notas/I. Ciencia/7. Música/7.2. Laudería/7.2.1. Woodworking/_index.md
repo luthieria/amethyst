@@ -2,15 +2,14 @@
 title: "Woodworking"
 icon: "carpenter"
 
-weight: 4
+weight: 1
 
 type: tabbed
 layout: tabbed
 
 bookHideChildren: true
-bookBreadcrumbStart: true
 ---
 
-[[Essential]]
+[[I. Materials]]
 
-[[Finish]]
+[[II. Tools]]
