@@ -125,7 +125,7 @@ A single-piece plate requires an exceptionally thick tree, which would be:
 
 - Thickness (Brazilian rosewood): 2.5–2.6 mm.[^https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk]
 
-#### I.I.II.II. Sides
+### I.I.II.II. Sides
 
 - 
 

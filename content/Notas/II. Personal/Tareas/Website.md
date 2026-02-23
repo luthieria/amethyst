@@ -26,7 +26,9 @@
   - under each SVG, the name of the .md files (III.I. Clásica, III.II. Acoustic, III.III. Electric)
   - each SVG (along with its text) is a link to the corresponding .md file
 
-- 
+---
+
+- nested numbered lists under unnumbered lists appear as a continuation of some previous numbered lists. Fix it. ![alt text]({D87125C9-B2FF-457E-83AD-E35EDAF41ADD}.png)
 
 ---
 
