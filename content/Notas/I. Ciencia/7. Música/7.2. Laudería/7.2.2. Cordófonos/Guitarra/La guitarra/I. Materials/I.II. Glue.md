@@ -222,9 +222,9 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 ## ii.i. PVA / Aliphatic Resin 
 
-<!-- 
-15.2.2026. Verify each statement whether it's about PVA or aliphathic resin. Then separate these 2 categories. 
--->
+{{< expand "To do" >}}
+15.2.2026. Verify each statement whether it's about PVA or aliphathic resin. Then separate these 2 categories.
+{{< /expand >}}
 
 - [^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]Relies on its thickness. → Fallible to starvation.
 - More cantankerous with its flowingness than hide glue. → Should be applied onto both surfaces.[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
@@ -409,9 +409,9 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 ### Life[^https://youtu.be/-HWCyqeygbU?si=6hGRppUbMtPe0pZq]
 
-| Unopened        | Opened           |
-|-----------------|------------------|
-| 1 year          | ~1 month         |
+| Unopened | Opened   |
+| -------- | -------- |
+| 1 year   | ~1 month |
 
 - To prolong life:
   - pull out air before closing;

@@ -32,7 +32,7 @@
     text-align: center;
 
     line-height: 1;
-    margin-bottom: $padding-4;
+    margin: $padding-4;
 
     a.anchor {
       color: inherit;
@@ -113,6 +113,7 @@
     font-size: 0.875em;
   }
 
+  // # PRE
   pre {
     padding: $padding-16;
     background: var(--gray-100);
@@ -158,13 +159,14 @@
   // # QUOTE
   blockquote {
     border-left: 3px solid var(--secondary);
-    background-color: var(--lightgray);
+    //background-color: var(--lightgray);
 
     margin-left: 0;
     padding-left: 1em;
     transition: border-color 0.2s ease;
   }
 
+  // # TABLE
   table {
     overflow: auto;
     display: block;
