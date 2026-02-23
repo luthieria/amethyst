@@ -2,6 +2,10 @@
 
 ---
 
+- how to get better tables in .md? more controllable and customizable
+
+---
+
 - The "Pin" icon:
   - replace the icon with a vertical single bar (ensure it looks professional and modern),
   - make bigger
