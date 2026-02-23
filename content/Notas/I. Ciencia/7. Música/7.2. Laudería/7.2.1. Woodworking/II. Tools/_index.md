@@ -9,10 +9,6 @@ layout: tabbed
 
 bookHideChildren: true
 bookBreadcrumbStart: true
+
 ---
 
-[[II.I. Measuring]]
-
-[[II.II. Subtractive]]
-
-[[1. Screws]]

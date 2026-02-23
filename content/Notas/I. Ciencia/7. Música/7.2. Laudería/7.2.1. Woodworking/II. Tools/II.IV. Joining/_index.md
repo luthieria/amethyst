@@ -2,7 +2,7 @@
 title: II.III. Joining
 icon: tools_phillips
 
-weight: 3
+weight: 4
 
 type: tabbed
 layout: tabbed

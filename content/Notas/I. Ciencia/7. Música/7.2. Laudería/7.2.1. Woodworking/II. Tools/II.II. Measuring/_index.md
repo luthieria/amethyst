@@ -2,7 +2,7 @@
 title: II.I. Measuring
 icon: straighten
 
-weight: 1
+weight: 2
 
 type: tabbed
 layout: tabbed

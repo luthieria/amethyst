@@ -2,12 +2,12 @@
 title: Essential
 icon: toolbox
 
-weight: 1
+weight: 5
 ---
 
 # Necessary[^https://youtu.be/HqrJhw2wJog?si=uOpR9jZfCSuI9wL-]
 
-- It’s possible to build a guitar with them only.
+- It’s possible to build a guitar with these only.
 
 <br>
 
