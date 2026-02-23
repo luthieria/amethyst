@@ -1,6 +1,6 @@
 ---
-title: "Woodworking"
-icon: "carpenter"
+title: "II.III. Joining"
+icon: "construction"
 
 weight: 4
 
@@ -11,6 +11,6 @@ bookHideChildren: true
 bookBreadcrumbStart: true
 ---
 
-[[II. Tools]]
+[[1. Gripping]]
 
-[[Finish]]
+[[2. Fastening]]
