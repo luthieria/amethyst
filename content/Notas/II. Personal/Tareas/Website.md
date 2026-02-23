@@ -21,7 +21,16 @@
 
 ---
 
-- how to get better tables in .md? more controllable and customizable
+- create the following layout and put it on page "content\Notas\I. Ciencia\7. Música\7.2. Laudería\7.2.2. Cordófonos\Guitarra\La guitarra\III. Instruments":
+  - 3 big SVGs of classical (preferably some Torres model), acoustic (preferably some classic Martin model), and electric (preferably Les Paul or Telecaster) guitars in a row.
+  - under each SVG, the name of the .md files (III.I. Clásica, III.II. Acoustic, III.III. Electric)
+  - each SVG (along with its text) is a link to the corresponding .md file
+
+- 
+
+---
+
+- how to get better tables in .md? more controllable and customizable, like in Excel / Google Sheets, or at least like in Word / Google Docs. Particularly, I need to be able to merge cells.
 
 ---
 

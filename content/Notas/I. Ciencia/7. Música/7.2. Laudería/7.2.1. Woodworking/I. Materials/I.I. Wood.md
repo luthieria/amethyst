@@ -3,8 +3,6 @@ title: I.I. Wood
 weight: 6
 ---
 
-- Your first 3–4 instruments won't be good enough to make them out of some expensive wood. May start with mahogany(cheap, easy to work, one of the best sounds).[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]
-
 # Characteristics
 ## Grain
 
@@ -120,6 +118,10 @@ weight: 6
 - Temperate climate: tight in the summer, loose in the winter.
 
 - Bruné M. E. dries all the wood (particularly fingerboard ebony) for ≥7 years.[^https://youtu.be/GbGlVVzQgJY?si=iuYA-bfXAvtQWDVX]
+- The wood must be dried for at least 30 years at 50±3% humidity.
+[^https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk]
+[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
+[^https://youtu.be/fpfyF4gx3jw?si=_G84UBCpwE-u2nhO]
 
 ## Oiliness[^https://youtu.be/93Fw1SCg-CY?si=GjrSYyk3FsqzlNuR]
 
@@ -142,8 +144,33 @@ weight: 6
 - Heavier.
 - For braces.
 
+# For Lutherie
+
+- Before a tree is cut:
+  - it is hit with the back of an axe to hear if it rings;[^https://youtu.be/U7PzsI1fjdA?si=RkKX63ZoECfvOFM6]
+  - luthiers look for ≥8–12” of usable wood.[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
+
+<br>
+
+- Your first 3–4 instruments won't be good enough to make them out of some expensive wood. May start with mahogany (cheap, easy to work, one of the best sounds).[^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]
+
+<br>
+
+- Wax protects wood from excessive cracking: e.g., ends of Brazilian rosewood (← it’s prone to checking). Scrap it off before using the wood.[^https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk]
+
+
+
+
 
 <!-- Footnotes -->
+[^https://youtu.be/U7PzsI1fjdA?si=RkKX63ZoECfvOFM6]: [**Bruné M. E.**](https://youtu.be/U7PzsI1fjdA?si=RkKX63ZoECfvOFM6)
+
+[^https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk]: [**Bruné M. E.**](https://youtu.be/31TzgrRotyQ?si=STV_AtX6l8z_LmPk)
+
+[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]: [**Bruné M. E.**](https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW)
+
+[^https://youtu.be/fpfyF4gx3jw?si=_G84UBCpwE-u2nhO]: [**Bloomberg** (flamenco)](https://youtu.be/fpfyF4gx3jw?si=_G84UBCpwE-u2nhO)
+
 [^https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq]: [**Bruné M. E.**](https://youtu.be/VmqDDaXyiiY?si=BpDOSX_8mtv1WKGq)
 
 [^https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA]: [**Kert M.**](https://youtu.be/R8R2DXlqVgU?si=OiApUudeAoMCixtA)
