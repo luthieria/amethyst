@@ -6,8 +6,8 @@ html {
 
 body {
   min-width: $body-min-width;
-  color: var(--body-font-color);
-  background: var(--body-background);
+  // color: var(--body-font-color);
+  // background: var(--body-background);
 
   letter-spacing: 0.33px;
   font-weight: $body-font-weight;
@@ -75,7 +75,7 @@ aside nav ul {
     width: $menu-width;
     padding: $padding-16;
     scrollbar-gutter: stable;
-    background: rgba(30, 30, 30, 0.3);
+    background: var(--sidebar-background);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
