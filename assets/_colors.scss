@@ -1,6 +1,10 @@
 :root {
-    --light: #131314 !important;
-    --dark: #e3e3e3 !important;
+    /* Backgrounds */
+    --main-background: #131314;
+    --sidebar-background: #181818;
+
+    /* Text */
+    --title: #8fbcbb;
 
     --h1: #bf616a !important;
     --h2: #d08770 !important;
@@ -9,21 +13,31 @@
     --h5: #81a1c1 !important;
     --h6: #b48ead !important;
 
+    --light: #131314 !important;
+    --dark: #e3e3e3 !important;
+
+    --highlighted: #FFF2CC;
+
     --primary: #bf616a !important;
     --secondary: #d9ca9a !important;
     --tertiary: #ebcb8b !important;
-
-    --highlighted: #FFF2CC;
 
     --gray: #9ba09d !important;
     --lightgray: #303337 !important;
     --outlinegray: #43484c !important;
 
-    --title: #8fbcbb;
+    /* Categories */
+    // --filosofia: ;
+    // --antropologia: ;
+    // --economia: ;
+    // --historia: ;
+    // --lenguas: ;
+    // --religiones: ;
+    // --musica: ;
+    // --marxismo: ;
+    // --computer-science: ;
 
+    /* Scrollbar */
     --scrollbar: #4c566a;
     --scrollbar-track: #2e3440;
-
-    --main-background: #131314;
-    --sidebar-background: #181818;
 }

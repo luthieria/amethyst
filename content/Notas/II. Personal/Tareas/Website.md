@@ -2,6 +2,12 @@
 
 ---
 
+1. in "_colors.scss" I've added some of the variables for the folders (commented out). Assign colors to each. You may add more subcategories.
+2. For subcategories, use lighter shades of the parent category's color.
+3. Then make the folders / categories across the entire website (in the left sidebar, in the graph, in the reading tracker, tabs, etc.) appear with their corresponding colors. 
+
+---
+
 - left sidebar
   - add tree lines to the left side bar (only vertical lines). like in obsidian.
   - add expansion animation like in obsidian.
