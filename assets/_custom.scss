@@ -262,12 +262,12 @@ body.home {
   margin-left: auto;
   padding: 0 0.45em;
 
-
   color: var(--gray);
   //background: var(--light);
 
   font-size: .8em;
   font-weight: 400;
+  text-decoration: none !important; // prevent inheriting underline from a.active
 
   //border-radius: 999px;
   //border: 1px solid var(--outlinegray);

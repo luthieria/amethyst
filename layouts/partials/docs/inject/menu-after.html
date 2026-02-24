@@ -1,0 +1,64 @@
+<script>
+(function () {
+  function initSidebarAnim() {
+    var menu = document.querySelector('.book-menu');
+    if (!menu) return;
+
+    // For every toggle input, wire up the height animation.
+    menu.querySelectorAll('input.toggle').forEach(function (toggle) {
+      var ul = toggle.nextElementSibling && toggle.nextElementSibling.nextElementSibling;
+      if (!ul || ul.tagName !== 'UL') return;
+
+      // On page load: pre-checked items have height:auto from CSS.
+      // Replace with measured px so we can animate later if collapsed.
+      if (toggle.checked) {
+        ul.style.height = ul.scrollHeight + 'px';
+        // Allow it to breathe freely after a frame (in case content is lazy).
+        requestAnimationFrame(function () { ul.style.height = 'auto'; });
+      }
+
+      toggle.addEventListener('change', function () {
+        // Always cancel any in-flight transition before starting a new one.
+        ul.style.transition = 'none';
+
+        if (this.checked) {
+          // ── Expanding ────────────────────────────────────────────────────
+          // Start from 0, then on next frame kick off the transition to the
+          // measured target height.
+          ul.style.height = '0';
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              ul.style.transition = '';          // restore CSS transition
+              ul.style.height = ul.scrollHeight + 'px';
+
+              // After the slide, free the height so nested folders can grow.
+              ul.addEventListener('transitionend', function onEnd(e) {
+                if (e.propertyName !== 'height') return;
+                ul.style.height = 'auto';
+                ul.removeEventListener('transitionend', onEnd);
+              });
+            });
+          });
+
+        } else {
+          // ── Collapsing ───────────────────────────────────────────────────
+          // Freeze at current pixel height first (auto → px), then animate to 0.
+          ul.style.height = ul.offsetHeight + 'px';
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              ul.style.transition = '';          // restore CSS transition
+              ul.style.height = '0';
+            });
+          });
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSidebarAnim);
+  } else {
+    initSidebarAnim();
+  }
+})();
+</script>

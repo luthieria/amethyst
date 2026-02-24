@@ -94,12 +94,31 @@ aside nav ul {
     text-decoration: underline;
   }
 
+  // Height animation is driven by JS (see inject/menu-after.html).
+  // height:auto on :checked is the CSS-only fallback (no animation, but content is visible).
   input.toggle+label+ul {
-    display: none;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition:
+      height 0.22s cubic-bezier(0.22, 0.61, 0.36, 1),
+      opacity 0.2s ease,
+      transform 0.2s ease;
   }
 
   input.toggle:checked+label+ul {
-    display: block;
+    height: auto;
+    /* fallback without JS; JS replaces with px value */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition:
+      height 0.22s cubic-bezier(0.22, 0.61, 0.36, 1),
+      opacity 0.2s ease,
+      transform 0.2s ease;
   }
 
   input.toggle+label::after,
@@ -107,6 +126,7 @@ aside nav ul {
     display: none;
   }
 }
+
 
 // ## 6.2. Right sidebar
 .book-toc {
