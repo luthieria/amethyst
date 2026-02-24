@@ -1,0 +1,21 @@
+/* 
+  Graph Appearance Configuration
+  Use these variables to customize the colors and style of the interactive graph.
+*/
+
+:root {
+  /* Default node color (unlinked notes) */
+  --g-node: var(--secondary);
+  
+  /* Active/current node color */
+  --g-node-active: var(--primary);
+  
+  /* Inactive nodes (when hovering another node) */
+  --g-node-inactive: var(--visited);
+  
+  /* Default link color */
+  --g-link: var(--outlinegray);
+  
+  /* Active link color (when hovering a connected node) */
+  --g-link-active: #5a7282;
+}

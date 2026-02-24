@@ -1,0 +1,5 @@
+﻿Start building sites ΓÇª 
+hugo v0.127.0-74e0f3bd63c51f3c7a0f07a7c779eec9e922957e+extended windows/amd64 BuildDate=2024-06-05T10:27:59Z VendorInfo=gohugoio
+
+Total in 32 ms
+Error: error building site: "D:\Coding\Repositories\amethyst\layouts\partials\quartz\head.html:167:1": parse failed: template: partials/quartz/head.html:167: unexpected "}" in operand

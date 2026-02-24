@@ -1,0 +1,10 @@
+﻿Start building sites ΓÇª 
+hugo v0.127.0-74e0f3bd63c51f3c7a0f07a7c779eec9e922957e+extended windows/amd64 BuildDate=2024-06-05T10:27:59Z VendorInfo=gohugoio
+
+WARN  Expand shortcode is deprecated. Use 'details' instead.
+ERROR TOCSS: failed to transform "book.scss" (text/x-scss): "D:/Coding/Repositories/amethyst/assets/_markdown.scss:1:1": File to import not found or unreadable: variables.
+ERROR render of "section" failed: "D:\Coding\Repositories\amethyst\layouts\tabbed\baseof.html:9:7": execute of template failed: template: tabbed/list.html:9:7: executing "tabbed/list.html" at <partial "quartz/head" .>: error calling partial: "D:\Coding\Repositories\amethyst\layouts\partials\quartz\head.html:96:62": execute of template failed: template: partials/quartz/head.html:96:62: executing "partials/quartz/head.html" at <resources.Fingerprint>: error calling Fingerprint: <nil> can not be transformed
+ERROR render of "page" failed: "D:\Coding\Repositories\amethyst\layouts\_default\baseof.html:9:5": execute of template failed: template: _default/single.html:9:5: executing "_default/single.html" at <partial "quartz/head" .>: error calling partial: "D:\Coding\Repositories\amethyst\layouts\partials\quartz\head.html:96:62": execute of template failed: template: partials/quartz/head.html:96:62: executing "partials/quartz/head.html" at <resources.Fingerprint>: error calling Fingerprint: <nil> can not be transformed
+ERROR render of "section" failed: "D:\Coding\Repositories\amethyst\layouts\_default\baseof.html:9:5": execute of template failed: template: _default/list.html:9:5: executing "_default/list.html" at <partial "quartz/head" .>: error calling partial: "D:\Coding\Repositories\amethyst\layouts\partials\quartz\head.html:96:62": execute of template failed: template: partials/quartz/head.html:96:62: executing "partials/quartz/head.html" at <resources.Fingerprint>: error calling Fingerprint: <nil> can not be transformed
+Total in 1613 ms
+Error: error building site: TOCSS: failed to transform "book.scss" (text/x-scss): "D:/Coding/Repositories/amethyst/assets/_markdown.scss:1:1": File to import not found or unreadable: variables.

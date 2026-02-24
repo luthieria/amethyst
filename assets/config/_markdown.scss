@@ -1,0 +1,49 @@
+/* 
+  Markdown and Style Configuration
+  Use these variables to customize typography, colors, and the core site theme.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya+Sans:wght@400;500;700&display=swap');
+
+:root {
+    /* ================== FONTS ================== */
+    --font-header: 'Alegreya SC', serif;
+    --font-body: 'Ibarra Real Nova', Literaturnaya, serif;
+    --font-sans: 'IBM Plex Sans', 'Alegreya Sans', sans-serif;
+    --font-mono: 'Cascadia Mono', monospace;
+
+
+    /* ================= COLORS ================== */
+    /* Backgrounds */
+    --main-background: #131314;
+    --sidebar-background: #181818;
+
+    /* Theme Accents */
+    --primary: #bf616a !important;
+    --secondary: #d9ca9a !important;
+    --tertiary: #ebcb8b !important;
+
+    /* Text & Headers */
+    --title: #8fbcbb;
+    --light: #131314 !important;
+    --dark: #e3e3e3 !important;
+
+    --h1: #bf616a !important;
+    --h2: #d08770 !important;
+    --h3: #ebcb8b !important;
+    --h4: #a3be8c !important;
+    --h5: #81a1c1 !important;
+    --h6: #b48ead !important;
+
+    /* Utility Colors */
+    --highlighted: #FFF2CC;
+    --gray: #9ba09d !important;
+    --lightgray: #303337 !important;
+    --outlinegray: #43484c !important;
+
+    /* Scrollbar */
+    --scrollbar: #4c566a;
+    --scrollbar-track: #2e3440;
+}

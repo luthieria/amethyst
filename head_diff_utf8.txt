@@ -1,0 +1,159 @@
+﻿diff --git a/layouts/partials/quartz/head.html b/layouts/partials/quartz/head.html
+index 47eec37..6977e47 100644
+--- a/layouts/partials/quartz/head.html
++++ b/layouts/partials/quartz/head.html
+@@ -1,4 +1,4 @@
+-<!-- set data/config yaml file based on website language -->
++∩╗┐<!-- set data/config yaml file based on website language -->
+ {{ $config := cond (eq $.Site.Language.Lang "en") "config" (printf "config.%s" $.Site.Language.Lang) }}
+ {{ $data := $.Site.Params }}
+ <!-- Meta tags -->
+@@ -25,7 +25,8 @@
+ {{ end }}
+ 
+ <!-- CSS Stylesheets and Fonts -->
+-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
++<link rel="stylesheet"
++  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ {{$sass := resources.Match "quartz/styles/[!_]*.scss" }}
+ {{$css := slice }}
+ {{range $sass}}
+@@ -81,7 +82,8 @@ resources.Minify }}
+ {{ $d3Local := resources.Get "quartz/js/d3.js" | resources.Fingerprint "md5" | resources.Minify }}
+ <script defer src="{{$d3Local.Permalink}}"></script>
+ 
+-{{ $topojsonLocal := resources.Get "quartz/js/topojson-client.min.js" | resources.Fingerprint "md5" | resources.Minify }}
++{{ $topojsonLocal := resources.Get "quartz/js/topojson-client.min.js" | resources.Fingerprint "md5" | resources.Minify
++}}
+ <script defer src="{{$topojsonLocal.Permalink}}"></script>
+ 
+ {{ $sidebarAutoHide := resources.Get "quartz/js/sidebar-autohide.js" | resources.Fingerprint "md5" | resources.Minify }}
+@@ -90,7 +92,9 @@ resources.Minify }}
+ {{ $readingTracker := resources.Get "quartz/js/reading-tracker.js" | resources.Fingerprint "md5" | resources.Minify }}
+ <script defer src="{{$readingTracker.Permalink}}"></script>
+ 
+-<!-- Manual globe tuning lives in assets/quartz/js/ethno-globe.js and assets/quartz/styles/custom.scss -->
++<!-- Manual globe tuning lives in assets/config/globe.js and assets/quartz/styles/custom.scss -->
++{{ $globeConfig := resources.Get "config/globe.js" | resources.Fingerprint "md5" | resources.Minify }}
++<script src="{{$globeConfig.Permalink}}"></script>
+ {{ $ethnoGlobe := resources.Get "quartz/js/ethno-globe.js" | resources.Fingerprint "md5" | resources.Minify }}
+ <script defer src="{{$ethnoGlobe.Permalink}}"></script>
+ 
+@@ -98,10 +102,10 @@ resources.Minify }}
+ {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint "md5" | resources.Minify }}
+ {{$contentIndex := resources.Get "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify}}
+ <script>
+-  const SEARCH_ENABLED = {{.Site.Params.search.enableSemanticSearch }}
+-  const LATEX_ENABLED = {{.Site.Params.enableLatex }}
+-  const PRODUCTION = {{ hugo.IsProduction }}
+-  const BASE_URL = {{.Site.BaseURL }}
++  const SEARCH_ENABLED = "{{.Site.Params.search.enableSemanticSearch }}";
++  const LATEX_ENABLED = "{{.Site.Params.enableLatex }}";
++  const PRODUCTION = "{{ hugo.IsProduction }}";
++  const BASE_URL = "{{.Site.BaseURL }}";
+   const fetchData = Promise.all([
+     fetch("{{ $linkIndex.Permalink }}")
+       .then(data => data.json())
+@@ -132,26 +136,26 @@ resources.Minify }}
+     const pathWindow = window.location.pathname;
+     const isHome = pathBase == pathWindow;
+ 
+-    {{if $data.enableCodeBlockCopy | default $.Site.Params.enableCodeBlockCopy -}}
++    { { if $data.enableCodeBlockCopy | default $.Site.Params.enableCodeBlockCopy -} }
+     addCopyButtons();
+-    {{ end }}
++    { { end } }
+ 
+-    {{if $data.enableSPA | default $.Site.Params.enableSPA -}}
++    { { if $data.enableSPA | default $.Site.Params.enableSPA -} }
+     addTitleToCodeBlocks();
+-    {{ end }}
++    { { end } }
+ 
+-    {{if $data.enableCallouts | default $.Site.Params.enableCallouts -}}
++    { { if $data.enableCallouts | default $.Site.Params.enableCallouts -} }
+     addCollapsibleCallouts();
+-    {{ end }}
++    { { end } }
+ 
+-    {{if $data.enableLinkPreview | default $.Site.Params.enableLinkPreview}}
++    { { if $data.enableLinkPreview | default $.Site.Params.enableLinkPreview } }
+     initPopover(
+       {{ strings.TrimRight "/" .Site.BaseURL }},
+     {{ $data.enableContextualBacklinks | default $.Site.Params.enableContextualBacklinks}}
+     )
+-  {{end}}
++  { { end } }
+ 
+-  {{if $data.enableFooter | default $.Site.Params.enableFooter}}
++  { { if $data.enableFooter | default $.Site.Params.enableFooter } }
+   const footer = document.getElementById("footer")
+   if (footer) {
+     const container = document.getElementById("graph-container")
+@@ -160,7 +164,8 @@ resources.Minify }}
+     // clear the graph in case there is anything within it
+     container.textContent = ""
+ 
+-    const drawGlobal = isHome && {{ $.Site.Data.graphConfig.enableGlobalGraph }};
++    const drawGlobal = isHome && {{ $.Site.Data.graphConfig.enableGlobalGraph }
++  };
+   drawGraph(
+     {{ strings.TrimRight "/" .Site.BaseURL }},
+     drawGlobal,
+@@ -169,9 +174,9 @@ resources.Minify }}
+   );
+ 
+       }
+-  {{end}}
++  { { end } }
+ 
+-  {{if $data.enableMermaid | default $.Site.Params.enableMermaid}}
++  { { if $data.enableMermaid | default $.Site.Params.enableMermaid } }
+   var els = document.getElementsByClassName("mermaid");
+   if (els.length > 0) {
+     import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+@@ -182,7 +187,7 @@ resources.Minify }}
+       }
+     )
+   }
+-  {{end}}
++  { { end } }
+ 
+   if (typeof window.initEthnoWorldGlobe === "function") {
+     window.initEthnoWorldGlobe()
+@@ -199,14 +204,14 @@ resources.Minify }}
+ 
+   const init = (doc = document) => {
+     // NOTE: everything within this callback will be executed for initial page navigation. This is a good place to put JavaScript that only replaces DOM nodes.
+-    {{if $data.enableCodeBlockCopy | default $.Site.Params.enableCodeBlockCopy -}}
++    { { if $data.enableCodeBlockCopy | default $.Site.Params.enableCodeBlockCopy -} }
+     addCopyButtons();
+-    {{ end }}
++    { { end } }
+ 
+-    {{if $data.enableCodeBlockTitle | default $.Site.Params.enableCodeBlockTitle -}}
++    { { if $data.enableCodeBlockTitle | default $.Site.Params.enableCodeBlockTitle -} }
+     addTitleToCodeBlocks();
+-    {{- end -}}
+-    {{if $data.enableLatex | default $.Site.Params.enableLatex}}
++    { { - end -} }
++    { { if $data.enableLatex | default $.Site.Params.enableLatex } }
+     renderMathInElement(doc.body, {
+       delimiters: [
+         { left: '$$', right: '$$', display: true },
+@@ -217,7 +222,7 @@ resources.Minify }}
+       },
+       throwOnError: false
+     });
+-    {{end}}
++    { { end } }
+   };
+ </script>
+ {{if $data.enableSPA | default $.Site.Params.enableSPA}}
+@@ -239,4 +244,4 @@ resources.Minify }}
+     render()
+   })
+ </script>
+-{{end}}
++{{end}}
+\ No newline at end of file

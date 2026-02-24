@@ -181,18 +181,6 @@
           "text": "USA"
         }
       ],
-      "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Essential",
-          "text": "Essential"
-        },
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Finish",
-          "text": "Finish"
-        }
-      ],
       "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.III.-Subtractive/": [
         {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.III.-Subtractive/",
@@ -569,11 +557,6 @@
       ],
       "/Essential": [
         {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Essential",
-          "text": "Essential"
-        },
-        {
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/La-guitarra/",
           "target": "/Essential",
           "text": "Essential"
@@ -584,13 +567,6 @@
           "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/",
           "target": "/Familia-del-viol%C3%ADn",
           "text": "Familia del violín"
-        }
-      ],
-      "/Finish": [
-        {
-          "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-          "target": "/Finish",
-          "text": "Finish"
         }
       ],
       "/Generative-Form-and-Abstracted-Cross-Rhythm": [
@@ -917,16 +893,6 @@
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/II.-Tools/II.III.-Subtractive/",
       "target": "/Boring",
       "text": "Boring"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-      "target": "/Essential",
-      "text": "Essential"
-    },
-    {
-      "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.1.-Woodworking/",
-      "target": "/Finish",
-      "text": "Finish"
     },
     {
       "source": "/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/7.2.2.-Cord%C3%B3fonos/Guitarra/La-guitarra/",
