@@ -4,22 +4,13 @@
 
 ---
 
-- make the top 2 folders (I. Ciencia and II. Personal) always expanded on the left sidebar
-- decrease the space between the chevrons and folder names
-- make icon-less text start from the same location as the icons
-![alt text]({026E0483-78AA-4FAA-B21B-7937DBD4EE19}.png)
+
 
 ---
 
 1. in "_colors.scss" I've added some of the variables for the folders (commented out). Assign colors to each. You may add more subcategories.
 2. For subcategories, use lighter shades of the parent category's color.
-3. Then make the folders / categories across the entire website (in the left sidebar, in the graph, in the reading tracker, tabs, etc.) appear with their corresponding colors. 
-
----
-
-- The "Pin" icon:
-  - replace the icon with a vertical single bar (ensure it looks professional and modern),
-  - make bigger
+3. Then make the folders / categories across the entire website (in the left sidebar, in the graph, in the reading tracker, tabs, etc.) appear with their corresponding colors.
 
 ---
 

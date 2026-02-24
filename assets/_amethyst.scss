@@ -301,6 +301,7 @@ body.home .book-menu .book-menu-content {
         background: transparent;
     }
 
+    // Appearance when unpinned
     body.sidebar-autohide-enabled .book-menu-pin {
         display: flex;
         align-items: center;
@@ -323,8 +324,8 @@ body.home .book-menu .book-menu-content {
 
         span {
             display: block;
-            width: 4px;
-            height: 80px;
+            width: 6px;
+            height: 150px;
             background-color: currentColor;
             border-radius: 99px;
             transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -334,17 +335,18 @@ body.home .book-menu .book-menu-content {
             color: var(--secondary);
 
             span {
-                height: 88px;
+                height: 100px;
             }
         }
     }
 
+    // Appearance when pinned
     body.sidebar-autohide-enabled.sidebar-menu-pinned .book-menu-pin {
-        right: 8px;
+        right: 4px;
         color: var(--tertiary);
 
         span {
-            height: 80px;
+            height: 100px;
             background-color: var(--tertiary);
         }
     }
