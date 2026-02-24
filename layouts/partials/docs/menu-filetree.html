@@ -37,7 +37,8 @@
 
 {{ if .Page.Params.BookCollapseSection }}
 {{ $title := partial "docs/title" .Page }}
-{{ $shouldExpand := or $current $ancestor (eq $title "I. Ciencia") (eq $title "II. Personal") }}
+{{ $shouldExpand := or $current $ancestor (eq $title "I. Ciencia") (eq $title "II. Personal") (eq $title "Ciencias") (eq
+$title "Personal") }}
 <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if $shouldExpand }}checked{{ end }} />
 <label for="section-{{ md5 .Page }}" class="flex">
   <a {{ if .Page.Content }}href="{{ .Page.RelPermalink }}" {{ else }}role="button" {{ end }}

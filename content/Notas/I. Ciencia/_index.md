@@ -1,5 +1,5 @@
 ---
-title: "Ciencia"
+title: "Ciencias"
 icon: "globe_book"
 
 weight: 1

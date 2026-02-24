@@ -6,6 +6,7 @@
 
 - make the top 2 folders (I. Ciencia and II. Personal) always expanded on the left sidebar
 - decrease the space between the chevrons and folder names
+- make icon-less text start from the same location as the icons
 ![alt text]({026E0483-78AA-4FAA-B21B-7937DBD4EE19}.png)
 
 ---
@@ -16,17 +17,9 @@
 
 ---
 
-- left sidebar
-  - add tree lines to the left side bar (only vertical lines). like in obsidian.
-  - add expansion animation like in obsidian.
-  - prevent the note count from being underlined on selection
 - The "Pin" icon:
   - replace the icon with a vertical single bar (ensure it looks professional and modern),
   - make bigger
-
----
-
-- how to adjust the left sidebar icons' color
 
 ---
 
@@ -54,7 +47,8 @@
 
 ---
 
-- style the breadcrumbs expandansion menu similar to the VS Code breadcrumbs (see screenshot). remove their chevrons. make them expand on click, and on second click open the corresponding page ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+- move the breadcrumbs to the very top of the page
+- style the breadcrumbs expansion menu similar to the VS Code breadcrumbs (see screenshot). remove their chevrons. make them expand on click, and on second click open the corresponding page ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
 
 ---
 

@@ -254,26 +254,18 @@ body.home {
 .book-menu-content {
   margin-top: 0 !important;
   padding-top: 0.5rem !important;
-  --sidebar-chevron-slot: calc(1.2rem + 4px);
+  --sidebar-chevron-slot: calc(1.2rem + 2px);
   --sidebar-icon-slot: 1.35rem;
 }
 
 .book-menu-count {
   margin-left: auto;
   padding: 0 0.45em;
-
   color: var(--gray);
-  //background: var(--light);
-
   font-size: .8em;
   font-weight: 400;
-  text-decoration: none !important; // prevent inheriting underline from a.active
-
-  //border-radius: 999px;
-  //border: 1px solid var(--outlinegray);
-
+  text-decoration: none !important;
   line-height: 1.2;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -287,32 +279,45 @@ body.home {
 .book-menu-content input.toggle+label {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  min-width: 0;
+  width: 100%;
 }
 
 .book-menu-content a,
 .book-menu-title {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.5rem;
   min-width: 0;
   width: 100%;
   position: relative;
-  padding-inline-start: var(--sidebar-icon-slot);
+  padding: 0.2rem 0;
 }
 
+// Ensure icon-less items start where icons would be
+// Items that ARE sections but have NO icon
+.book-menu-content a.book-collapse-toggle {
+  padding-inline-start: 0;
+}
+
+// Leaf items (not sections, no chevron) align with the icon position of sections
 .book-menu-content li>a:not(.book-collapse-toggle),
 .book-menu-content li>.book-menu-title {
-  padding-inline-start: calc(var(--sidebar-chevron-slot) + var(--sidebar-icon-slot));
+  // Indent by chevron width + its margin (approx 21.2px)
+  padding-inline-start: var(--sidebar-chevron-slot);
 }
 
 .book-menu-content .sidebar-icon {
-  position: absolute;
-  inset-inline-start: 0;
-  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: var(--sidebar-icon-slot);
+  height: var(--sidebar-icon-slot);
   margin-right: 0;
-  text-align: center;
-  transform: translateY(-50%);
+  flex-shrink: 0;
+  color: var(--gray);
+  font-size: 1.1em;
 }
 
 .book-menu-title {

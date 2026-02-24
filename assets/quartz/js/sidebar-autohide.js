@@ -1,4 +1,4 @@
-;(function () {
+; (function () {
   const SELECTORS = {
     menu: "aside.book-menu",
     menuContent: ".book-menu-content",
@@ -42,7 +42,6 @@
     button.setAttribute("aria-pressed", pinned ? "true" : "false")
     button.setAttribute("aria-label", label)
     button.setAttribute("title", label)
-    button.textContent = "☰"
   }
 
   const init = () => {
