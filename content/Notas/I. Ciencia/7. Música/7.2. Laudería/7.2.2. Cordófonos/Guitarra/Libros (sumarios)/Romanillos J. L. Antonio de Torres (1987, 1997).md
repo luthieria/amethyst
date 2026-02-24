@@ -91,4 +91,16 @@ bookYear: "1987, 1997"
 
 ## 3. The Return to Almeria
 
-- 
+- "From his workshop, with its large window looking out towards the Mediterranean, Torres must have heard, while working on his instruments, the faint sound of a sea that he could just make out between the rows of slender cypress trees standing guard over the vale of La Cañada—some of which would furnish Torres with the material he needed for his guitars. Torres must have heard, too, the voices of farmhands and day-laborers toiling in the adjacent fields; the same villagers who at times would gather to hear Torres try out his instruments."
+- "Torres was a practicing Christian who sought comfort in the Catholic faith..."
+
+<br>
+
+- **1883** — the 2nd guitar for Francisco Tárrega.
+  - Back, ribs: flamed maple.
+  - No tornavoz.
+  - Worse tone. → Tárrega returned to the 1st one.
+
+<br>
+
+- Best guitars have 7 fan-struts.
