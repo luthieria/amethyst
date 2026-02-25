@@ -104,3 +104,40 @@ bookYear: "1987, 1997"
 <br>
 
 - Best guitars have 7 fan-struts.
+
+<br>
+
+- Torres used silver:
+  -  frets (some guitars);
+  -  nut, saddle, frets, machine heads (FE 08).
+
+## 4. The Nineteenth Century and After
+
+- **Late XVIII century** — the craft guilds' power over the artisans weakened, allowing for a freer production of musical instruments. $\Rightarrow$ 
+- **Early XIX century** — innovation period of the guitar.
+
+### Innovations
+
+- **1797** (Benito Sanchez de Aguilera) — plantilla (body shape) got greater differentiation between the bouts' sizes.
+
+<br>
+
+- **XVIII century** — Francisco Sanguino (Sevilla) invented the fan strutting.
+  - **Early XIX century** — Madrid adopted the fan strutting.
+
+<br>
+
+- Single-string course:
+  - **1801** — the first mention of single-course guitars, in Ronda (Málaga province) villages;
+  - **1803** — Agustin Caro (Granada) was already making single-course guitars;
+  - Juan Muñoa (1783-1824) — likely among the first Madrid luthiers to make single-course guitars.
+
+<br>
+
+- Dionisio Aguado’s influence over Manuel and Juan Muñoa was likely the turning point towards the modern concert guitar in Spain:
+  - **early XIX century** — bridge with a saddle (self-attributed by Dionisio Aguado); raised fingerboard.
+
+<br>
+
+- **1830** — Juan Moreno (Madrid) arched the soundboard, breaking the tradition of flat-tabled guitars.
+  - Influenced many of the guitarras de tablao (guitars used for flamenco) by, e.g., Francisco Gonzalez, José and Manuel Ramirez, Salvador Ibañez.
