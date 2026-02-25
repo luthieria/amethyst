@@ -1,0 +1,81 @@
+﻿{{ $id := delimit (slice "handsontable" (now.UnixNano)) "-" }}
+{{ if not (.Page.Scratch.Get "handsontable") }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  {{ .Page.Scratch.Set "handsontable" true }}
+{{ end }}
+
+<div class="handsontable-container" style="margin: 2rem 0; clear: both; width: 100%; position: relative;">
+  <div id="{{ $id }}" class="hot-container" style="width: 100%;"></div>
+</div>
+
+{{ $inner := .Inner | plainify }}
+{{ $inner = trim $inner " \n\r\t" }}
+{{ $rowHeaders := true }}
+{{ if eq (.Get "rowHeaders") "false" }}{{ $rowHeaders = false }}{{ end }}
+{{ $colHeaders := true }}
+{{ if eq (.Get "colHeaders") "false" }}{{ $colHeaders = false }}{{ end }}
+{{ $mergeCells := true }}
+{{ if eq (.Get "mergeCells") "false" }}{{ $mergeCells = false }}{{ end }}
+{{ $readOnly := false }}
+{{ if eq (.Get "readOnly") "true" }}{{ $readOnly = true }}{{ end }}
+
+<script type="text/javascript">
+(function() {
+  var container = document.getElementById('{{ $id }}');
+  if (!container) return;
+  
+  function parseCSV(str) {
+    var lines = str.replace(/\r/g, '').split('\n');
+    return lines
+      .map(function(line) { return line.trim(); })
+      .filter(function(line) { return line.length > 0; })
+      .map(function(line) { 
+        return line.split(',').map(function(cell) { return cell.trim(); }); 
+      });
+  }
+
+  var rawData = {{ $inner | jsonify }};
+  var data;
+  try {
+    data = JSON.parse(rawData);
+    if (!Array.isArray(data)) {
+        data = parseCSV(String(data));
+    }
+  } catch (e) {
+    data = parseCSV(rawData);
+  }
+
+  if (!Array.isArray(data) || data.length === 0) data = [[]];
+
+  var hot = new Handsontable(container, {
+    data: data,
+    rowHeaders: {{ $rowHeaders }},
+    colHeaders: {{ $colHeaders }},
+    height: 'auto', // Force Handsontable to expand to its content height
+    width: '100%',
+    licenseKey: 'non-commercial-and-evaluation',
+    multiColumnSorting: true,
+    filters: true,
+    dropdownMenu: true,
+    contextMenu: true,
+    manualRowMove: true,
+    manualColumnMove: true,
+    manualRowResize: true,
+    manualColumnResize: true,
+    mergeCells: {{ $mergeCells }},
+    readOnly: {{ $readOnly }},
+    stretchH: 'all',
+    renderAllRows: true, // Render everything at once for full height
+    autoColumnSize: true,
+    autoRowSize: true
+  });
+
+  container.classList.add('hot-dark');
+  
+  setTimeout(function() {
+    hot.render();
+    window.dispatchEvent(new Event('resize'));
+  }, 200);
+})();
+</script>

@@ -1,0 +1,251 @@
+﻿.premium-table-wrapper {
+    overflow-x: auto;
+    margin: $padding-16 0;
+    width: 100%;
+}
+
+.premium-table {
+    border-collapse: collapse;
+    width: auto;
+    min-width: 200px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+    border: 1px solid var(--gray-200);
+
+    th,
+    td {
+        padding: $padding-8 $padding-16;
+        border: 1px solid var(--gray-200);
+        line-height: 1.4;
+    }
+
+    /* Excel-like Theme */
+    &.excel-theme {
+        border: 1px solid #c0c0c0;
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: 600;
+            border: 1px solid #d4d4d4;
+            text-align: center;
+        }
+
+        td {
+            background-color: #ffffff;
+            color: #000;
+            border: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #e8f0fe !important;
+        }
+    }
+
+    /* Obsidian-like Dark Theme (default in dark mode) */
+    @media (prefers-color-scheme: dark) {
+        &.excel-theme {
+            border-color: var(--outlinegray);
+
+            th {
+                background-color: var(--lightgray);
+                color: var(--secondary);
+                border-color: var(--outlinegray);
+            }
+
+            td {
+                background-color: var(--main-background);
+                color: var(--dark);
+                border-color: var(--outlinegray);
+            }
+
+            tr:nth-child(even) td {
+                background-color: rgba(255, 255, 255, 0.03);
+            }
+
+            tr:hover td {
+                background-color: rgba(255, 255, 255, 0.05) !important;
+            }
+        }
+    }
+
+    /* Helper Classes */
+    &.sticky-header {
+        thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+    }
+}
+
+/* ==========================================================================
+   Handsontable Modern Premium Theme (Dark Mode)
+   ========================================================================== */
+
+/* 
+   Global Handsontable Menu Overrides (Context Menu & Dropdown)
+*/
+.htMenu,
+.htContextMenu,
+.htDropdownMenu {
+    font-family: var(--font-sans), sans-serif !important;
+    background-color: rgba(24, 24, 24, 0.9) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+    color: var(--dark) !important;
+    padding: 6px !important;
+    overflow: hidden !important;
+
+    table.htCore {
+        background-color: transparent !important;
+        border: none !important;
+
+        tr td {
+            background-color: var(--hot-menu-bg, rgba(24, 24, 24, 0.9)) !important;
+            color: var(--dark) !important;
+            border: none !important;
+            padding: 10px 16px !important;
+            border-radius: 6px !important;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+
+            &.current,
+            &.highlight {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--secondary) !important;
+            }
+
+            &.htSeparator {
+                border-bottom: 1px solid var(--outlinegray) !important;
+                height: 1px !important;
+                padding: 0 !important;
+                margin: 8px 0 !important;
+                border-radius: 0 !important;
+            }
+        }
+    }
+
+    /* Form Elements in Menus Settings */
+    .htUISelect,
+    .htUIInput,
+    .htUIMultipleSelect {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border: none !important;
+        color: var(--dark) !important;
+        border-radius: 6px !important;
+        font-family: var(--font-sans), sans-serif !important;
+
+        .htUISelectCaption,
+        input {
+            background-color: transparent !important;
+            color: var(--dark) !important;
+            border: none !important;
+            font-family: var(--font-sans), sans-serif !important;
+        }
+
+        .htUISelectArrow {
+            color: var(--gray) !important;
+        }
+    }
+
+    .htUIMultipleSelectSearch input::placeholder {
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+}
+
+/* 
+   Handsontable Layout: Force Full Page Expansion
+   Hides scrollbars and allows the table to show all rows.
+*/
+.handsontable-container,
+.hot-container {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* 
+   Handsontable Internal Containers: Kill fixed heights
+*/
+.wtHolder,
+.wtHider {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    min-height: 50px;
+}
+
+/* 
+   The main Handsontable Dark Theme wrapper
+*/
+.hot-dark {
+    --hot-primary: var(--secondary);
+    --hot-selection-bg: rgba(var(--secondary-rgb, 217, 202, 154), 0.15);
+    --hot-border: transparent;
+
+    .htCore {
+        background-color: var(--main-background) !important;
+        color: var(--dark) !important;
+        font-family: var(--font-sans), sans-serif !important;
+        display: table !important;
+
+        /* All Borders Hidden */
+        tr,
+        th,
+        td {
+            background-color: var(--main-background) !important;
+            color: var(--dark) !important;
+            border: none !important;
+            padding: 10px 14px !important;
+            vertical-align: middle;
+            font-family: var(--font-sans), sans-serif !important;
+        }
+
+        /* Header Styling */
+        th {
+            background-color: var(--sidebar-background) !important;
+            color: var(--secondary) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Zebra Striping */
+        tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.02) !important;
+        }
+
+        /* Row/Cell Selection */
+        .area {
+            background-color: var(--hot-selection-bg) !important;
+        }
+
+        .current {
+            background-color: var(--hot-selection-bg) !important;
+            outline: 1px solid var(--hot-primary) !important;
+            border: none !important;
+        }
+    }
+
+    /* Column Sort/Filter Indicators Settings */
+    .changeType {
+        color: var(--gray) !important;
+        background: transparent !important;
+        border: none !important;
+        font-size: 1em;
+        padding-left: 4px;
+
+        &:hover {
+            color: var(--secondary) !important;
+        }
+    }
+}

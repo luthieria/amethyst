@@ -89,9 +89,9 @@ aside nav ul {
     word-wrap: break-word;
   }
 
+  // When selected
   a.active {
     color: var(--tertiary);
-    text-decoration: underline;
   }
 
   // Height animation is driven by JS (see inject/menu-after.html).

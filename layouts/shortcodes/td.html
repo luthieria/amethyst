@@ -1,0 +1,4 @@
+<td {{ with .Get "colspan" }}colspan="{{ . }}" {{ end }} {{ with .Get "rowspan" }}rowspan="{{ . }}" {{ end }} {{ with
+    .Get "class" }}class="{{ . }}" {{ end }} {{ with .Get "align" }}style="text-align: {{ . }};" {{ end }}>
+    {{ .Inner | markdownify }}
+</td>

@@ -1,0 +1,6 @@
+<div class="premium-table-wrapper {{ .Get " class" }}">
+    <table {{ with .Get "id" }}id="{{ . }}" {{ end }} class="premium-table {{ with .Get " theme" }}{{ . }}{{ else
+        }}excel-theme{{ end }}">
+        {{ .Inner }}
+    </table>
+</div>
