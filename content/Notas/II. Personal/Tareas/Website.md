@@ -4,7 +4,30 @@
 
 ---
 
+![alt text](download.jpg)
+![alt text](download.png)
 
+1. increase the font size for spreadsheet cells.
+
+2. replace the down arrows with chevrons like in the left side bar. align them middle relative to the cell names (A, B, etc.)
+
+3. menus, submenus: 
+- remove the small arrow next to "alignment"
+- decrease the left and right margins for text
+- make all menus' length and width fit the content (not more, not less)
+- animate the menu the same way as the left side bar menu is animated (expansion / collapse)
+- make the filter by value section: 
+1) bigger, 
+2) possible multiple-columned (if the values fit), 
+3) scrollable (but not with the default browser scrollbar; you may use the commented out scrollbar style that i have in some of the .scss)
+4) some text is still serif. fix it
+5) checkboxes with website theme colors
+
+4. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
+
+5. make the selected cell highlight of some fitting website color, not default blue.
+
+6. remove those white borders that appear on cell selection (see photo 2)
 
 ---
 
