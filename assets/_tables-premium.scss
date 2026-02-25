@@ -87,61 +87,145 @@
    Handsontable Modern Premium Theme (Dark Mode)
    ========================================================================== */
 
-/* 
+/* ==========================================================================
    Global Handsontable Menu Overrides (Context Menu & Dropdown)
-*/
+   These apply even when menus are rendered as direct children of <body>
+   ========================================================================== */
 .htMenu,
 .htContextMenu,
 .htDropdownMenu {
+    /* TYPOGRAPHY: Strict enforcement of sans-serif for a modern look */
     font-family: var(--font-sans), sans-serif !important;
-    background-color: rgba(24, 24, 24, 0.9) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: none !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+
+    /* LAYOUT: Wider menu for better readability and touch-friendliness */
+    min-width: fit-content !important;
+    max-width: 320px !important;
+
+    /* AESTHETICS: Glassmorphism effect consistent with the main UI */
+    background-color: rgba(24, 24, 24, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+
+    /* BORDERS & SHADOWS: Minimalist borderless look with depth */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7) !important;
+
     color: var(--dark) !important;
-    padding: 6px !important;
+    padding: 8px !important;
     overflow: hidden !important;
 
-    table.htCore {
+    /* ANIMATION: Subtle fade and slide-in effect when appearing */
+    animation: hotMenuFadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top center;
+
+    /* Menu Core Table Styling: High specificity to kill default white backgrounds */
+    &.handsontable .htCore,
+    table.htCore,
+    .htCore {
         background-color: transparent !important;
         border: none !important;
+        width: 100% !important;
 
-        tr td {
-            background-color: var(--hot-menu-bg, rgba(24, 24, 24, 0.9)) !important;
-            color: var(--dark) !important;
+        /* Forced Transparency for all rows and cells in menus */
+        tr,
+        tr.ht__row_odd,
+        tr.ht__row_even,
+        td {
+            background-color: transparent !important;
             border: none !important;
-            padding: 10px 16px !important;
-            border-radius: 6px !important;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
+        }
 
+        /* Individual Menu Cells Styling */
+        tr td {
+            /* Text Color: Premium off-white for readability */
+            color: var(--dark) !important;
+            padding: 8px 10px !important;
+            border-radius: 8px !important;
+            transition: all 0.15s ease-out;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: var(--font-sans), sans-serif !important;
+            text-align: left;
+
+            /* HOVER STATE: Subtle highlight using white opacity */
             &.current,
-            &.highlight {
-                background-color: rgba(255, 255, 255, 0.1) !important;
+            &.highlight,
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.08) !important;
                 color: var(--secondary) !important;
             }
 
+            /* Menu Separator Line */
             &.htSeparator {
-                border-bottom: 1px solid var(--outlinegray) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
                 height: 1px !important;
                 padding: 0 !important;
-                margin: 8px 0 !important;
+                margin: 6px 0 !important;
                 border-radius: 0 !important;
+                background-color: transparent !important;
+
+                display: none;
+            }
+
+            /* DISABLED ITEMS: Professional faded state */
+            &.htDisabled {
+                opacity: 0.3 !important;
+                cursor: not-allowed !important;
+
+                &:hover {
+                    background-color: transparent !important;
+                }
             }
         }
     }
 
-    /* Form Elements in Menus Settings */
+    /* SELECTION LINKS: "Select all", "Clear" etc. in dropdown menus */
+    .htUISelectionControls {
+        padding: 8px 12px !important;
+        font-family: var(--font-sans), sans-serif !important;
+
+        a {
+            color: var(--secondary) !important;
+            text-decoration: none !important;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 12px;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    /* SUBMENU INDICATOR: The small arrow for nested menus */
+    .htSubmenu {
+        position: relative;
+
+        &:after {
+            content: '›';
+            position: absolute;
+            right: 12px;
+            font-size: 1.2rem;
+            color: var(--gray);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    /* FORM ELEMENTS: Inputs and selects inside the filter menu */
     .htUISelect,
     .htUIInput,
     .htUIMultipleSelect {
-        background-color: rgba(0, 0, 0, 0.4) !important;
-        border: none !important;
+        background-color: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
         color: var(--dark) !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         font-family: var(--font-sans), sans-serif !important;
+        margin: 6px 0 !important;
 
         .htUISelectCaption,
         input {
@@ -149,15 +233,69 @@
             color: var(--dark) !important;
             border: none !important;
             font-family: var(--font-sans), sans-serif !important;
+            padding: 10px 14px !important;
         }
 
         .htUISelectArrow {
             color: var(--gray) !important;
+            right: 12px !important;
+        }
+    }
+
+    /* Action Buttons (OK / Cancel) */
+    .htFiltersMenuActionBar {
+        padding: 16px 12px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+        display: flex;
+        gap: 12px;
+
+        .htUIButton {
+            flex: 1;
+            padding: 10px !important;
+            border-radius: 8px !important;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            border: none !important;
+            font-family: var(--font-sans), sans-serif !important;
+            font-size: 0.9rem;
+
+            &.htUIButtonOK {
+                background-color: var(--secondary) !important;
+                color: #000 !important;
+
+                &:hover {
+                    filter: brightness(1.1);
+                }
+            }
+
+            &.htUIButtonCancel {
+                background-color: rgba(255, 255, 255, 0.05) !important;
+                color: var(--gray) !important;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1) !important;
+                }
+            }
         }
     }
 
     .htUIMultipleSelectSearch input::placeholder {
         color: rgba(255, 255, 255, 0.3) !important;
+    }
+}
+
+/* KEYFRAMES: Animation for menu entry */
+@keyframes hotMenuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -242,7 +380,9 @@
         background: transparent !important;
         border: none !important;
         font-size: 1em;
-        padding-left: 4px;
+        //padding-left: 4px;
+        scale: 1.5;
+        vertical-align: middle;
 
         &:hover {
             color: var(--secondary) !important;
