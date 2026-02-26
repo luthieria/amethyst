@@ -2,6 +2,12 @@
 
 ---
 
+- fix the placing of tree lines in the right-side table of contents.
+
+---
+
+- make breadcrumbs appear on every layout if enabled.
+
 ---
 
 ![alt text](download.jpg)
@@ -23,11 +29,11 @@
 4) some text is still serif. fix it
 5) checkboxes with website theme colors
 
-4. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
+6. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
 
-5. make the selected cell highlight of some fitting website color, not default blue.
+7. make the selected cell highlight of some fitting website color, not default blue.
 
-6. remove those white borders that appear on cell selection (see photo 2)
+8. remove those white borders that appear on cell selection (see photo 2)
 
 ---
 

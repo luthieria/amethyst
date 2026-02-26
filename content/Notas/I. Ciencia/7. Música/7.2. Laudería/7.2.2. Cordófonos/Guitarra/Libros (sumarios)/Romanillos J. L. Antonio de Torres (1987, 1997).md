@@ -128,9 +128,9 @@ bookYear: "1987, 1997"
 <br>
 
 - Single-string course:
-  - **1801** — the first mention of single-course guitars, in Ronda (Málaga province) villages;
-  - **1803** — Agustin Caro (Granada) was already making single-course guitars;
-  - Juan Muñoa (1783-1824) — likely among the first Madrid luthiers to make single-course guitars.
+  - **1801** — the first mention of single-string course guitars, in Ronda (Málaga province) villages;
+  - **1803** — Agustin Caro (Granada) was already making single-string course guitars;
+  - Juan Muñoa (1783-1824) — likely among the first Madrid luthiers to make single-string course guitars.
 
 <br>
 
@@ -140,4 +140,94 @@ bookYear: "1987, 1997"
 <br>
 
 - **1830** — Juan Moreno (Madrid) arched the soundboard, breaking the tradition of flat-tabled guitars.
-  - Influenced many of the guitarras de tablao (guitars used for flamenco) by, e.g., Francisco Gonzalez, José and Manuel Ramirez, Salvador Ibañez.
+  - Influenced many of the guitarras de tablao (guitars used for flamenco) by, e.g., Francisco González, José and Manuel Ramírez, Salvador Ibañez.
+
+<br>
+
+- **Francisco González** (Madrid):
+  - walnut: flat soundboard, no struts;
+  - rosewood: arched, 3–7 struts;
+    - arched by means of an arched lower harmonic bar below the soundhole (in some guitars, ≤28 mm).
+
+<br>
+
+- 1856 — Torres created an opened harmonic bar below the soundhole.
+- 1863 — Eustaquio Torralba made a variation: replaced the harmonic bar with a complicated asymmetrical grid of bars and struts.
+
+### José Ramírez I (1858-1923)
+- Learned from Francisco González the typical *guitarra de tablao* principles and followed them:
+  - large body, 
+  - rigid, highly arched soundboard (developed mainly for the flamenco players of the *tablaos*, popular during the heyday of the *café cantantes*).
+
+### Manuel Ramírez (1864-1916)
+- Learned from José Ramírez I but followed the newer Torres principles of a lighter guitar.
+- Some of his *guitarras de tablao* followed closely those of José Ramírez I. Some followed Torres.
+- By many considered the most influential luthier since Torres.
+
+<br>
+
+- **Struts**:
+  - **shape**:
+    - Torres' finish and gable-ended shape;
+    /
+    - rounded;
+  - **amount**: 5–8.
+- **Ornaments**: Torres' influence.
+
+<br>
+
+- Influences on a certain (?) guitar of his:
+  - Torres: plantilla shape and size, light construction, 8 struts, 3-piece spruce top;
+  - José Ramírez I: a rounded-wing bridge (unlike the orthodox squared-wing bridge (used by Torres)).
+- Varied the fan strutting: e.g., 3-piece tops don't have a central joint, $\Rightarrow$ omitted the central strut (probably influencing Vicente Arias).
+
+<br>
+
+- **1912** — guitar for González Campos.
+  - Campos was an Andalucian guitarist, $\Rightarrow$ that's probably why it appears to be a Torres replica:
+    - apertures in the lower harmonic bar;
+    - 2 outside struts on each side of the soundboard, extending into the soundhole area;
+    - plantilla similar to the late 1880s large Torres guitars;
+
+<br>
+
+- Trained (on the Torres principles):
+  - Santos Hernández;
+  - Enrique García;
+  - Domingo Esteso;
+  - Modesto Borreguero;
+  - Antonio Emilio Pascual Viudes.
+
+### Santos Hernández
+
+- Subtly varied the Manuel Ramírez's design: innovated with the slanted harmonic bar on the soundboard's treble side (later used by Ignacio Fleta, José Ramírez III, Miguel Rodríguez).
+
+<br>
+
+- **1912** — guitar for Giménez Manjón, but presented to then-unknown Andrés Segovia.
+  - Made by Santos Hernández in Manuel Ramírez's workshop.
+  - Made for 11 strings, but converted to 6 before being presented to Segovia: 
+    - plugged holes in the head's back;
+    - wider, longer neck block.
+
+### Enrique García
+
+- Torres' influence: 
+  - extremely wide rosettes and purflings;
+  - plantillas;
+  - tornavoz;
+  - 7-strut fan.
+
+<br>
+
+- Prat introduced García's instruments into Argentina. Argentina especially praised García guitars.
+
+### Francisco Simplicio 
+
+- Enrique García's student.
+- At one stage, made guitars similar in design and ornamentation to those of García.
+- Often used the tornavoz.
+
+### Ignacio Fleta
+
+- 
