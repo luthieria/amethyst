@@ -129,7 +129,7 @@ bookYear: "1987, 1997"
 
 - Single-string course:
   - **1801** — the first mention of single-string course guitars, in Ronda (Málaga province) villages;
-  - **1803** — Agustin Caro (Granada) was already making single-string course guitars;
+  - **1803** — Agustín Caro (Granada) was already making single-string course guitars;
   - Juan Muñoa (1783-1824) — likely among the first Madrid luthiers to make single-string course guitars.
 
 <br>
@@ -151,17 +151,22 @@ bookYear: "1987, 1997"
 
 <br>
 
-- 1856 — Torres created an opened harmonic bar below the soundhole.
-- 1863 — Eustaquio Torralba made a variation: replaced the harmonic bar with a complicated asymmetrical grid of bars and struts.
+#### Opened harmonic bar
+
+- **1856** — Torres created an opened harmonic bar on the bass side below the soundhole.
+  - Used by: Manuel Ramírez (1912), Hermann Hauser (1930), Robert Bouchet.
+- **1863** — Eustaquio Torralba made a variation: replaced the harmonic bar with a complicated asymmetrical grid of bars and struts.
 
 ### José Ramírez I (1858-1923)
+
 - Learned from Francisco González the typical *guitarra de tablao* principles and followed them:
   - large body, 
   - rigid, highly arched soundboard (developed mainly for the flamenco players of the *tablaos*, popular during the heyday of the *café cantantes*).
 
 ### Manuel Ramírez (1864-1916)
+
 - Learned from José Ramírez I but followed the newer Torres principles of a lighter guitar.
-- Some of his *guitarras de tablao* followed closely those of José Ramírez I. Some followed Torres.
+- Some of his *guitarras de tablao* closely followed José Ramírez I. Some followed Torres.
 - By many considered the most influential luthier since Torres.
 
 <br>
@@ -185,7 +190,7 @@ bookYear: "1987, 1997"
 
 - **1912** — guitar for González Campos.
   - Campos was an Andalucian guitarist, $\Rightarrow$ that's probably why it appears to be a Torres replica:
-    - apertures in the lower harmonic bar;
+    - open lower harmonic bar;
     - 2 outside struts on each side of the soundboard, extending into the soundhole area;
     - plantilla similar to the late 1880s large Torres guitars;
 
@@ -230,4 +235,153 @@ bookYear: "1987, 1997"
 
 ### Ignacio Fleta
 
-- 
+- Torres-style guitars.
+- ≥ 1950s — modifications:
+  - plantilla: larger;
+  - harmonic bar: slanted;
+  - fan struts: +2.
+
+### Late XX c.
+
+- Nowadays luthiers produce guitars that closely follow the Torres concept, with innovations:
+  - strutting variations;
+  - woods: Western red cedar, Oregon pine, Columbian pine, Indian rosewood;
+  - spraying finish.
+
+<br>
+
+- José Ramírez III studiously worked for 16 years only to arrive to the old Manuel Ramírez's design.
+- Eduardo Ferrer (— the doyen of modern Granada luthiers, Benito Ferrer's nephew) believes that after Torres and Benito Ferrer, there's nothing to improve in the guitar.
+- Faustino Conde (Domingo Esteso's nephew) believes that after Torres, Manuel Ramírez, and Domingo Esteso, there's nothing to improve in the guitar.
+
+#### France
+
+- **Late XIX century** — Spanish-made guitars, although generally not so well-made but more vibrant, became preffered to French-made ones. The Spanish school's advent petered out the indigenous method.
+
+##### Julián Gómez Ramírez (1879–)
+
+- **End of XIX century** — settled in France (Paris) as the first important Spanish luthier.
+
+<br>
+
+- José Ramírez I's and Manuel Ramírez's student. Madrid School.
+- 1930s — guitars more similar to Manuel Ramírez's than to José Ramírez I's (e.g., 8 struts).
+- Introduced Robert Bouchet to luthiery.
+
+<br>
+
+- "...almost makes his guitars on the street." Workshop: ~ 10'$^2$.
+- Made a guitar from an old piano.
+
+<br>
+
+##### Robert Bouchet
+
+- Revived the French luthiery.
+
+<br>
+
+- Derived his method from Torres and, to a lesser extent, Gómez Ramírez.
+- Torres' influence:
+  - linings: continous kerfed;
+  - transverse bars: untapered (= unscalloped), resting on rib blocks;
+  - struts: gable-ended, extended.
+
+<br>
+
+- 1960s:
+  - struts: reduced to 5 (like in his replica of the Torres flamenco guitar);
+  - added a heavy under-bridge transverse bar.
+
+####
+
+- Arcas, Tárrega, Llobet, Pujol played Torres guitars, laying the foundation for Segovia to establish the guitar as an acceptable musical instrument.
+
+#### Hermann Hauser I
+
+- **Late 1920s** — beginning of the decline of lutherie in Spain: no great luthiers except Santos Hernández.
+- **1922** — Hauser made a template of Llobet's Torres FE 09.
+
+<br>
+
+- Categories of Hauser guitars:
+  1. following Manuel Ramírez (head design, wide strutting layout, size);
+  2. following Torres + subtle innovations;
+  - both combined: rounded shape (Ramírez) + Torres' head, scale length, decorations.
+
+<br>
+
+- Was trying to open harmonic bars rather than using a tornavoz. But used tornavoz until 1933.
+
+- By 1940 — even more similarities to Torres:
+  - symmetrical fan, converging in an apex at the fingerboard end;
+  - gable-ended;
+  - 2 diagonal struts at the soundboard base: longer, set well into the soundboard at almost a Torres angle;
+  - rosette pattern;
+  - double purfling for the soundboard;
+  - flat ends of the slot mortises in the head;
+  - domed soundboard.
+
+<br>
+
+- 1912 Manuel Ramírez / Santos Hernández and, more importantly, Torres (FE 13, FE 16) were the foundation for Hauser to progress to the 1937 "greatest guitar of our epoch"[^Segovia] for Segovia.
+
+<!-- {{< handsontable height="300px" >}}
+
+Luthier, Product, Price, Stock
+1, Acoustic Guitar, 450, 12
+2, Electric Guitar, 800, 5
+3, Violin, 600, 8
+4, Piano, 2500, 2
+5, Flute, 150, 20
+
+{{< /handsontable >}} -->
+
+{{< table >}}
+
+  {{< tr >}}
+    {{< td colspan="2" >}}**Luthier**{{< /td >}}
+    {{< th colspan="3" >}}Antonio de Torres{{< /th >}}
+    {{< th colspan="2" >}}Manuel Ramírez{{< /th >}}
+    {{< th colspan="7" >}}Hermann Hauser I{{< /th >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td colspan="2" >}}**Year**{{< /td >}}
+
+    {{< td >}}**1859** (FE 09){{< /td >}}
+    {{< td >}}**1863** (FE 16){{< /td >}}
+    {{< td >}}**1888** (SE 115){{< /td >}}
+
+    {{< td >}}**1888** (SE 115){{< /td >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td rowspan="6" >}}**Dimensions**{{< /td >}}
+  {{< /tr >}}
+
+    {{< tr >}}
+      {{< td >}}**Bout upper**{{< /td >}}
+    {{< /tr >}}
+
+    {{< tr >}}
+      {{< td >}}**Waist**{{< /td >}}
+    {{< /tr >}}
+
+    {{< tr >}}
+      {{< td >}}**Bout lower**{{< /td >}}
+    {{< /tr >}}
+
+    {{< tr >}}
+      {{< td >}}**Body length**{{< /td >}}
+    {{< /tr >}}
+
+    {{< tr >}}
+      {{< td >}}**Aggregate (cm$^2$)**{{< /td >}}
+    {{< /tr >}}
+
+{{< /table >}}
+
+<!-- Footnotes -->
+
+[^Segovia]: **Segovia Andrés**

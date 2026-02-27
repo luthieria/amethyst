@@ -90,4 +90,3 @@ ID, Product, Price, Stock
 4, Piano, 2500, 2
 5, Flute, 150, 20
 {{< /handsontable >}}
-
