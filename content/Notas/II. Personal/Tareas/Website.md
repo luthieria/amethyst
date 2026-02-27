@@ -6,7 +6,7 @@
 
 ---
 
-- make breadcrumbs appear on tabbed layout too, if enabled.
+- make breadcrumbs appear on all children pages.
 
 ---
 

@@ -9,10 +9,10 @@ type: tabbed
 layout: tabbed
 ---
 
-{{< tabs >}}
+<!-- {{< tabs >}}
 
 [[La guitarra]]
 
 [[Libros (sumarios)]]
 
-{{< /tabs >}}
+{{< /tabs >}} -->

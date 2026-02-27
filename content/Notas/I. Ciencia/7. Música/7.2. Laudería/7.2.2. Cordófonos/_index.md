@@ -10,10 +10,10 @@ type: tabbed
 layout: tabbed
 ---
 
-{{< tabs >}}
+<!-- {{< tabs >}} -->
 
-[[Familia del violín]]
+<!-- [[Familia del violín]]
 
-[[Guitarra]]
+[[Guitarra]] -->
 
-{{< /tabs >}}
+<!-- {{< /tabs >}} -->
