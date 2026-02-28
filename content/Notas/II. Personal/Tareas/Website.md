@@ -2,38 +2,40 @@
 
 ---
 
-- fix the placing of tree lines in the right-side table of contents.
+# Right sidebar
+
+- fix the placing of tree lines.
+- make the current section be subtly highlighted (e.g., bold / chevron / etc. — whatever looks best for our style)
+- make the items mirror their corresponding headings' colors
 
 ---
 
-- make breadcrumbs appear on all children pages.
+- make breadcrumbs appear on all children pages by default, unless disabled in the front matter.
 
 ---
+
+# Tables
 
 ![alt text](download.jpg)
 ![alt text](download.png)
 
 1. increase the font size for spreadsheet cells.
-
-2. replace the down arrows with chevrons like in the left side bar. align them middle relative to the cell names (A, B, etc.)
-
+2. replace the down arrows with chevrons like in the left side bar. align them middle relative to the cell names (A, B, etc.). Make the chevrons appear on hover only.
 3. menus, submenus: 
-- remove the small arrow next to "alignment"
-- decrease the left and right margins for text
-- make all menus' length and width fit the content (not more, not less)
-- animate the menu the same way as the left side bar menu is animated (expansion / collapse)
-- make the filter by value section: 
-1) bigger, 
-2) possible multiple-columned (if the values fit), 
-3) scrollable (but not with the default browser scrollbar; you may use the commented out scrollbar style that i have in some of the .scss)
-4) some text is still serif. fix it
-5) checkboxes with website theme colors
-
-6. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
-
-7. make the selected cell highlight of some fitting website color, not default blue.
-
-8. remove those white borders that appear on cell selection (see photo 2)
+   - remove the small arrow next to "alignment"
+   - decrease the left and right margins for text
+   - make all menus' length and width fit the content (not more, not less)
+   - animate the menu the same way as the left side bar menu is animated (expansion / collapse)
+   - make the filter by value section: 
+     1) bigger, 
+     2) possible multiple-columned (if the values fit), 
+     3) scrollable (but not with the default browser scrollbar; you may use the commented out scrollbar style that i have in some of the .scss)
+     4) some text is still serif. fix it
+     5) checkboxes with website theme colors
+4. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
+5. make the selected cell highlight of some fitting website color, not default blue.
+6. remove those white borders that appear on cell selection (see photo 2)
+7. If a table (both markdown and spreadsheet) is bigger than its container, make it expandable to full screen.
 
 ---
 

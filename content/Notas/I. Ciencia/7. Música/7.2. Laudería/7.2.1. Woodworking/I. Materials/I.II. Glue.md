@@ -45,9 +45,7 @@ weight: 7
 #### Description
 
 {{< expand "To do" >}}
-
 Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQfLrQPo?si=OxXlBS8mJTT1EFqV)
-
 {{< /expand >}}
 
 - Used since Ancient Mesopotamia = since the beginning of civilization (as opposed to PVA that appeared only after WWII). → Time-approved.[^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]
@@ -64,11 +62,13 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 4. **Cleans easily** with heat / steam / hot water.
 5. Creates a somewhat brittle joint, → **cleanly breaks along the joint** (as opposed to PVA, which damages the glued surfaces[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue]).
 6. **Bonds to itself**, reactivates older hide glue.
-7. **Functions as its own clamp**: once it begins to gel, it pulls the joint together.
+7. **Tighter joint**[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]: once the water dries out (the glue begins to gel), it pulls the joint together (acting as its own clamp).
 8. **No glue starvation**.
-9. **Good vibration** (→ tone) **transfer**.
+9. **Good vibration transfer** → better tone (as opposed to PVA that acts as a shock absorber due to its "mechanical" adhesion).
 10. **Very short working time**.
 11. **Transparent**, → makes cracks invisible.
+12. Pretty **impervious to heat** on its own (unless the wood is very wet).[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+13. **Relatively impervious** (especially the joints) **to water** on its own.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 ##### Disadvantages
 
@@ -77,7 +77,7 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 3. Thermal limitations.
 4. Vulnerability to micro-organisms.
 
-##### * * *
+##### ***
 
 - Hide glue is just a liquid, → flows properly, → doesn’t need to be applied onto both surfaces (it will only produce more squeeze).[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
 
@@ -93,20 +93,30 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 - [^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]The higher the gram strength, the stronger the glue.
   - Recommended:
     - 120–200[^https://en.wikipedia.org/wiki/Animal_glue#Hide_glue];
-      - 192 — most musical instruments, [StewMac](https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/stewmac-ground-hide-glue/?queryid=1781298a716ba6dd2f75497ebc683f02);
-    - 315 — preferred by M. E. Bruné because it is strong enough to pull together imperfect joints.
+      - **192** high clarity[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m] — most musical instruments, [StewMac](https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/stewmac-ground-hide-glue/?queryid=1781298a716ba6dd2f75497ebc683f02);
+    - **315** — super strong, enough to pull together imperfect joints.
+      - → M. E. Bruné's favorite.
+      - Everyday use.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+      - Overkill.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+
+<br>
+
+- [^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]Pyramid glue (?): 
+  - more grabby, → less open time;
+  - strong animal smell.
+- M. E. Bruné uses Milligan & Higgins.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 <br>
 
 - According to M. E. Bruné, it is the only glue luthiers must use.[^https://youtu.be/UK6wONlZjDo?si=w_NxIUA446pZHIEi]
-  - M. E. Bruné uses Milligan & Higgins.[^https://youtu.be/iYoLUvZ9SH8?si=I7ETT5Dd9800efH3]
-- Dan Erlewine’s, Gene’s favorite. Dan Erlewine uses it whenever its working time allows.
+- Dan Erlewine’s, Gene Inbody’s favorite. Dan Erlewine uses it whenever its working time allows.
 
 <br>
 
 - Heat extends the glue's proteins.[^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]
 - [^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]Operation t°F: 100–145.
-  - Above that, the proteins denature (= come apart).
+  - <140°F: proteins contract, → open time decreases.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+  - \>145°F: proteins denature (= come apart).
 - Hot water seals off the collagen preventing the glue from blooming.[^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]
 - Works by absorbing into the wood and, as its proteins contract, they pull the joint together (as opposed to PVA relying on its thickness, which makes it fallible to glue starvation).[^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]
 
@@ -116,22 +126,32 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 #### Usage[^https://youtu.be/Raq3pbGmmOg?si=x4FHZ6SLIzWLfYh8][^https://youtu.be/ER1T5zMKG-g?si=TsHSYwHjxESBmPWN]
 
+##### 0. Tools[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+1. **Chip brushes** (≤3" wide).
+2. **Artist spatulas**.
+   - For gluing tight spaces (e.g., braces): thin out one spatula almost like a blade.
+   - Warm up before picking up the glue.
+3. **Lure lock syringes**.
+   1. Snug, [modified](https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m) — for tight cracks.
+   2. Long-nose — for, e.g., braces.
+
 ##### 1. Preparation
 
 - For glueing narrow joints, you may make a thicker glue — for it not to run so much.[^https://youtu.be/XzlvPUTsWMY?si=Gcj3p_DKfSzjyxTi]
 
 ###### Bruné M. E.[^https://youtu.be/wHAOe-6vPO4?si=uoVaz-t1Sf3QF-Fn][^https://youtu.be/iYoLUvZ9SH8?si=RIdeXpLrUxZJAvjv]
 
-1. Glue:water: 1:1.25.
+1. Glue + *cold* tap water (visually): 1:1–1.25.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 2. Mix.
 3. Close the lid (to prevent spillage, evaporation). 
 4. Leave for 10–15 minutes.
+
 5. Put it in the baby bottle warmer.
-6. Add cold, room-temperature tap water up to the glue line.
-7. Heat it up at 140°–145°F (60°–62.7°C) for a few minutes until the glue liquifies.
+6. Add cold, room-temperature tap water up to / slightly above the glue line.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
+7. Heat it up at 140°–145°F (60°–62.7°C) for a few minutes until the glue liquifies and its drip beads up.
    - M. E. Bruné sets it at 142°–142.5°F[^https://youtube.com/shorts/u_IuTVtYOq8?si=fiGCmcaEkoGdgvNP] (= 61.1°–61.4°C) to account for the warmer’s swing of ±2.5°F. <br><br>
 8. Conserve the extra in refrigerator 
-9. Next usage: heat for 10–15 minutes.
+9.  Next usage: heat for 10–15 minutes.
    -  Reheatable ~4 times before losing strength.
 10. When the glue has run out, clean the jar.
 
@@ -177,8 +197,12 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 ##### 3. Cleaning
 
-1. Clean up with a hot-watered rag as much as possible right after joining the parts.
+1. Clean up with a hot-watered rag / paper towel[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m] as much as possible right after joining the parts.
 2. Chip off, clean up with a hot-watered rag the remains.
+
+<br>
+
+- Avoid vinegar.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 ### i.ii. Liquid[^https://www.stewmac.com/luthier-tools-and-supplies/supplies/glue-and-adhesive/glues/wood-glues/titebond-liquid-hide-glue]
 
@@ -193,12 +217,16 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 #### Undoing[^https://youtu.be/19v2oBBEz-4?si=D4DbquOnTpTlL2-l]
 
-- Undoable with heat and moisture.
+- Undoable with heat + moisture.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 <br>
 
 1. While unsettled, wipe with a hot-watered rag.
 2. When settled, sand / scrape / chisel.
+
+<br>
+
+- A heat gun dries out the surface, possibly moving the wood. → Never use a heat gun.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 ## i.ii. Fish
 
@@ -206,6 +234,8 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
   - → Lots of the same properties of the hide glue.
   - → Rejuvenates with hot water. → Bonds to itself and hide glue.
 - Longer open time than hide glue.
+- [^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]Non-reversible.
+  - As the sturgeon and rabbit glues.
 
 <br>
 
@@ -228,6 +258,10 @@ Sumarizar: [Luthier Tips du Jour Mailbag 9 -  Hide Glue](https://youtu.be/stpmQf
 
 - [^https://youtu.be/wHAOe-6vPO4?si=KFG1gLslC0hFiqe8]Relies on its thickness. → Fallible to starvation.
 - More cantankerous with its flowingness than hide glue. → Should be applied onto both surfaces.[^https://youtu.be/tWKU0nM2LPE?si=dlqtNrHxe0yvUARW]
+
+<br>
+
+- PVA softens at ~100°F = 37°C.[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]
 
 ### Titebond
 
@@ -446,6 +480,8 @@ Titebond Comparison Table
 
 
 <!-- Footnotes -->
+
+[^https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m]: [**Bruné M. E.**](https://youtu.be/ZqYU2tPkAGw?si=9FoWcb1Y-ViIkN_m)
 
 [^https://youtu.be/g7iK2OI2VE4?si=B8E7Xu6ai3jNePvB]: [**Bruné M. E.**](https://youtu.be/g7iK2OI2VE4?si=B8E7Xu6ai3jNePvB)
 
