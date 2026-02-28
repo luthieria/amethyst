@@ -300,7 +300,7 @@ bookYear: "1987, 1997"
 #### Hermann Hauser I
 
 - **Late 1920s** — beginning of the decline of lutherie in Spain: no great luthiers except Santos Hernández.
-- **1922** — Hauser made a template of Llobet's Torres FE 09.
+- Hauser didn't capture the true Spanish sound, but still produced remarkable guitars.
 
 <br>
 
@@ -311,7 +311,14 @@ bookYear: "1987, 1997"
 
 <br>
 
+- Extremely light guitars (like Torres).
+
+<br>
+
 - Was trying to open harmonic bars rather than using a tornavoz. But used tornavoz until 1933.
+- 1930 — a guitar with all 3 harmonic bars open.
+
+<br>
 
 - By 1940 — even more similarities to Torres:
   - symmetrical fan, converging in an apex at the fingerboard end;
@@ -463,6 +470,87 @@ Luthier, Product, Price, Stock
     {{< /tr >}}
 
 {{< /table >}}
+
+#### England
+
+- Mid-1950s — Hector Quine emerged.
+- 1961 — José Romanillos' 1st guitar (following the book "Make Your Own Spanish Guitar" by Sharpe A. P.).
+
+<br>
+
+#### ***
+
+- A heavily built guitar doesn't produce the sound's subtleties.
+
+#### Argentina
+
+- **Early XX c.** — Giménez Manjón's, Llobet's, Pujol's and Segovia's visits laid the foundation for the guitar development; → the guitar began to flourish.
+
+# PART II. Materials and Methods
+
+## 5. Tonewoods
+
+- ~ 1/5 of Torres' guitars have survived. → It's unknown whether he had any preference for a particular wood.
+- Woods for Torres' back and ribs by priority (based on the surviving guitars):
+  1. **Dalbergia nigra** — main;
+  2. **maple** — main;
+  3. **cypress** — main;
+  4. **mahogany**;
+  5. **walnut**;
+  6. **cherry**;
+  7. **locust** woods.
+
+### Dalbergia nigra
+
+- Dalbergia nigra (Brazilian rosewood) is different from Dalbergia latifolia (Indian rosewood) and Dalbergia cearensis (kingwood) in color, figure, smell, acoustics.
+
+<br>
+
+- **Shortly after 1492** — Dalbergia nigra must have been used for musical instruments.
+- **1566** — mention of "Brazil-wood" and guaiac-wood lutes and cornetti. But that "Brazil-wood" could be Caesalpinia echinata (Pernambuco) of leguminosae family (like the true rosewood) that used for obtaining textile dyes.
+  - Pernambuco was vastly imported into Sevilla (as Palobrasil).
+- **XVI c.** — Spain imported some rosewood from Santo Domingo.
+- **XVII c.** — Spain imported exotic woods through Portugal (then part of Spain).
+- ~4 XVI–XVII c.instruments survive. → The rosewood amount and type in luthiery is unknown.
+- **Mid-1600s** — the earliest attributed Spanish vihuela (made partly in kingwood).
+- **XVII–XIX c.** — veneering of rosewood onto other woods was common.
+  - Veneering of rosewood was cheaper and easier than ivory, ebony, tortoiseshell embellishments. → Rosewood was introduced into luthiery for its beauty and resemblance of ebony. Veneering didn't allow to know its acoustics.
+  - **XVII c.** — Joachim Tielke (Germany) used kingwood extensively for lutes and viols as veneers and solid strips.
+  - Pagés (Spain), Lacôte (France), Panormo (England) veneered guitar backs with it. → Rosewood was used rather for its looks than acoustics.
+- **1845** — England removed the import tax on rosewood. → The best guitars had solid rosewood back and ribs. → Much production time was saved. Veneering became redundant.
+
+<br>
+
+- **XVII–XVIII c.** — luthiers didn't care much for acoustics.
+  - Considered best:
+    - soundboard: spruce / fir, pine, (sometimes) cypress;
+    - back, ribs: almost any other wood and material (e.g., ivory, cane).
+- **XVIII c.** — rosewood, cedar, cypress, ebony, maple, walnut were used in guitars.
+- **Since mid-XIX c.** — Torres made rosewood universally accepted as the best wood for classical instruments.
+
+<br>
+
+- **Weakness**: easily splits.
+
+#### Back, ribs
+
+- Before Torres, maple had been used for centuries in musical instruments for its beauty and acoustics.
+
+<br>
+
+- Torres believed that the ==wood for back and ribs didn't affect the sound much, → chose wood for its aesthetic==.
+  - E.g., Ceratonia siliqua (locust wood) full of knots and short-grained fibers (SE 83), bird's-eye maple.
+  - Intricate mosaic decorations stand out better against the bright background. → Torres' most decorated guitars used maple.
+- Cypress isn't as beautiful as maple, → less popular. Torres used cypress only for cheap guitars, except when absolutely pressed.
+
+##### Dalbergia nigra
+
+- Out of 88 existing Torres guitars, 24 have rosewood back and ribs (17 from his 1st Sevilla epoch).
+- 
+
+#### Soundboard
+
+- The soundboard wood must be even-grained and thin for maximum resonance.
 
 <!-- Footnotes -->
 
