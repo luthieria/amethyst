@@ -339,10 +339,86 @@ body.home {
 }
 
 // ## 4.2. Menu ##
-.book-toc a {
-  font-family: var(--font-sans);
-  color: var(--gray);
-  font-weight: 500;
+.book-toc {
+  nav ul ul {
+    position: relative;
+    margin-left: 0;
+    padding-inline-start: 0.9rem;
+  }
+
+  nav ul ul::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0.5rem;
+    width: 1px;
+    background-color: color-mix(in srgb, var(--outlinegray) 25%, transparent);
+    pointer-events: none;
+  }
+
+  a {
+    font-family: var(--font-sans);
+    color: var(--gray);
+    font-weight: 500;
+    position: relative;
+    display: block;
+    padding: 0.08rem 0.25rem 0.08rem 0.9rem;
+    border-radius: 4px;
+    transition: color 120ms ease, background-color 120ms ease, font-weight 120ms ease;
+  }
+
+  a::before {
+    content: "\e5cc";
+    font-family: "Material Symbols Outlined";
+    position: absolute;
+    inset-inline-start: 0.08rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    font-size: 0.85em;
+    line-height: 1;
+    transition: opacity 120ms ease;
+  }
+
+  a:hover {
+    //background-color: color-mix(in srgb, currentColor 9%, transparent);
+    text-decoration: none;
+  }
+
+  a[data-heading-level="1"]:hover {
+    color: color-mix(in srgb, var(--h1) 72%, var(--gray));
+  }
+
+  a[data-heading-level="2"]:hover {
+    color: color-mix(in srgb, var(--h2) 72%, var(--gray));
+  }
+
+  a[data-heading-level="3"]:hover {
+    color: color-mix(in srgb, var(--h3) 72%, var(--gray));
+  }
+
+  a[data-heading-level="4"]:hover {
+    color: color-mix(in srgb, var(--h4) 72%, var(--gray));
+  }
+
+  a[data-heading-level="5"]:hover {
+    color: color-mix(in srgb, var(--h5) 72%, var(--gray));
+  }
+
+  a[data-heading-level="6"]:hover {
+    color: color-mix(in srgb, var(--h6) 72%, var(--gray));
+  }
+
+  a.is-current {
+    font-weight: 700;
+    color: var(--dark);
+    background-color: color-mix(in srgb, var(--dark) 7%, transparent);
+  }
+
+  a.is-current::before {
+    opacity: 0.82;
+  }
 }
 
 // # 6. LAYOUT: TABBED #

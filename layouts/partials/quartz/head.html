@@ -87,6 +87,9 @@ resources.Minify }}
 {{ $sidebarAutoHide := resources.Get "quartz/js/sidebar-autohide.js" | resources.Fingerprint "md5" | resources.Minify }}
 <script defer src="{{$sidebarAutoHide.Permalink}}"></script>
 
+{{ $tocEnhancer := resources.Get "quartz/js/toc-enhance.js" | resources.Fingerprint "md5" | resources.Minify }}
+<script defer src="{{$tocEnhancer.Permalink}}"></script>
+
 {{ $readingTracker := resources.Get "quartz/js/reading-tracker.js" | resources.Fingerprint "md5" | resources.Minify }}
 <script defer src="{{$readingTracker.Permalink}}"></script>
 
@@ -190,6 +193,10 @@ resources.Minify }}
 
   if (typeof window.initSidebarAutoHide === "function") {
     window.initSidebarAutoHide()
+  }
+
+  if (typeof window.initTocEnhancer === "function") {
+    window.initTocEnhancer()
   }
 
   if (typeof window.initReadingTracker === "function") {

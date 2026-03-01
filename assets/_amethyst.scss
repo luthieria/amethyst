@@ -439,7 +439,7 @@ input.toggle:checked+label::before {
 // ── Obsidian-style vertical tree lines ────────────────────────────────────────
 // Draw a subtle vertical line along the left edge of every nested collapsed or
 // expanded list.  We only want the vertical segment — no horizontal connectors.
-aside nav ul ul {
+.book-menu nav ul ul {
     position: relative;
     margin-left: 0;
 
