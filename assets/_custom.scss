@@ -360,12 +360,38 @@ body.home {
   a {
     font-family: var(--font-sans);
     color: var(--gray);
+    --toc-level-color: var(--gray);
     font-weight: 500;
     position: relative;
     display: block;
     padding: 0.08rem 0.25rem 0.08rem 0.9rem;
     border-radius: 4px;
-    transition: color 120ms ease, background-color 120ms ease, font-weight 120ms ease;
+    transition: color 120ms ease, font-weight 120ms ease;
+  }
+
+  // Fallback level mapping from TOC nesting depth.
+  nav > ul > li > a {
+    --toc-level-color: var(--h1);
+  }
+
+  nav > ul > li > ul > li > a {
+    --toc-level-color: var(--h2);
+  }
+
+  nav > ul > li > ul > li > ul > li > a {
+    --toc-level-color: var(--h3);
+  }
+
+  nav > ul > li > ul > li > ul > li > ul > li > a {
+    --toc-level-color: var(--h4);
+  }
+
+  nav > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+    --toc-level-color: var(--h5);
+  }
+
+  nav > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+    --toc-level-color: var(--h6);
   }
 
   // a::before {
@@ -382,38 +408,42 @@ body.home {
   // }
 
   a:hover {
-    //background-color: color-mix(in srgb, currentColor 9%, transparent);
+    background-color: transparent;
     text-decoration: none;
   }
 
-  a[data-heading-level="1"]:hover {
-    color: color-mix(in srgb, var(--h1) 72%, var(--gray));
+  a[data-heading-level="1"] {
+    --toc-level-color: var(--h1);
   }
 
-  a[data-heading-level="2"]:hover {
-    color: color-mix(in srgb, var(--h2) 72%, var(--gray));
+  a[data-heading-level="2"] {
+    --toc-level-color: var(--h2);
   }
 
-  a[data-heading-level="3"]:hover {
-    color: color-mix(in srgb, var(--h3) 72%, var(--gray));
+  a[data-heading-level="3"] {
+    --toc-level-color: var(--h3);
   }
 
-  a[data-heading-level="4"]:hover {
-    color: color-mix(in srgb, var(--h4) 72%, var(--gray));
+  a[data-heading-level="4"] {
+    --toc-level-color: var(--h4);
   }
 
-  a[data-heading-level="5"]:hover {
-    color: color-mix(in srgb, var(--h5) 72%, var(--gray));
+  a[data-heading-level="5"] {
+    --toc-level-color: var(--h5);
   }
 
-  a[data-heading-level="6"]:hover {
-    color: color-mix(in srgb, var(--h6) 72%, var(--gray));
+  a[data-heading-level="6"] {
+    --toc-level-color: var(--h6);
+  }
+
+  a:hover,
+  a.is-current {
+    color: var(--toc-level-color) !important;
+    background-color: transparent !important;
   }
 
   a.is-current {
     font-weight: 700;
-    color: var(--dark);
-    background-color: color-mix(in srgb, var(--dark) 7%, transparent);
   }
 
   a.is-current::before {

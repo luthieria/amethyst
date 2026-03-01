@@ -23,11 +23,27 @@
     const candidates = [fragment, decodeFragment(fragment)];
     for (const candidate of candidates) {
       if (!candidate) continue;
+      const byId = document.getElementById(candidate);
+      if (byId && markdownRoot.contains(byId)) return byId;
+
       const node = markdownRoot.querySelector("#" + escapeCssId(candidate));
       if (node) return node;
     }
 
     return null;
+  }
+
+  function inferHeadingLevelFromToc(link, tocNav) {
+    let depth = 0;
+    let node = link;
+
+    while (node && node !== tocNav) {
+      if (node.tagName === "UL") depth += 1;
+      node = node.parentElement;
+    }
+
+    // Top-level TOC entries map to level 1 by default.
+    return Math.max(1, Math.min(6, depth));
   }
 
   function initTocEnhancer(root = document) {
@@ -52,14 +68,17 @@
       const href = link.getAttribute("href") || "";
       const fragment = href.startsWith("#") ? href.slice(1) : "";
       const heading = findHeading(markdownRoot, fragment);
-      if (!heading || !heading.id) continue;
+      const fallbackLevel = inferHeadingLevelFromToc(link, tocNav);
+
+      if (!heading || !heading.id) {
+        link.dataset.headingLevel = String(fallbackLevel);
+        continue;
+      }
 
       const level = Number.parseInt(heading.tagName.slice(1), 10);
-      if (Number.isInteger(level) && level >= 1 && level <= 6) {
-        link.dataset.headingLevel = String(level);
-      } else {
-        delete link.dataset.headingLevel;
-      }
+      const effectiveLevel =
+        Number.isInteger(level) && level >= 1 && level <= 6 ? level : fallbackLevel;
+      link.dataset.headingLevel = String(effectiveLevel);
 
       const headingId = heading.id;
       if (!linkGroupsByHeadingId.has(headingId)) {
