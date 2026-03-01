@@ -24,10 +24,6 @@ bookYear: "1987, 1997"
 
 - Francisco Tárrega (1852–1909) brought the suitar into the romantic era. Without the Torres' design, Tárrega’s contribution to guitar technique would have been minimal.
 
-<!-- Footnotes -->
-[^Luthiers]: Pagés, Panormo, Lacôte.
-<!-- -->
-
 # PART I. Life and Times
 ## 2. Epoch 1. Sevilla
 
@@ -293,7 +289,7 @@ bookYear: "1987, 1997"
   - struts: reduced to 5 (like in his replica of the Torres flamenco guitar);
   - added a heavy under-bridge transverse bar.
 
-####
+#### ***
 
 - Arcas, Tárrega, Llobet, Pujol played Torres guitars, laying the foundation for Segovia to establish the guitar as an acceptable musical instrument.
 
@@ -535,7 +531,7 @@ Luthier, Product, Price, Stock
 - **1581** — the earliest known rosewood vihuela: Lisbon, by Belchior Dias.
 - **XVI c.** — Spain imported some rosewood from Santo Domingo.
 - **XVII c.** — Spain imported exotic woods through Portugal (then part of Spain).
-- ~4 XVI–XVII c.instruments survive. → The rosewood amount and type in luthiery is unknown.
+- ~4 XVI–XVII c. instruments survive. → The rosewood type and amount in luthiery is unknown.
 - **Mid-1600s** — the earliest attributed Spanish vihuela (made partly in kingwood).
 - **XVII–XIX c.** — veneering of rosewood onto other woods was common.
   - Veneering of rosewood was cheaper and easier than ivory, ebony, tortoiseshell embellishments. → Rosewood was introduced into luthiery for its beauty and resemblance of ebony. Veneering didn't allow to know its acoustics.
@@ -652,6 +648,8 @@ Luthier, Product, Price, Stock
 
 
 <!-- Footnotes -->
+
+[^Luthiers]: Pagés, Panormo, Lacôte.
 
 [^Guaiacum]: **Guaiacum** = **palosanto** — the wood of life. Introduced in Europe by 1508.
 
