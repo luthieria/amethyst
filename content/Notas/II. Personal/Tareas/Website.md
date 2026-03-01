@@ -2,14 +2,6 @@
 
 ---
 
-# Right sidebar
-
-- fix the placing of tree lines.
-- make the current section be subtly highlighted (e.g., bold / chevron / etc. — whatever looks best for our style)
-- make the items mirror their corresponding headings' colors
-
----
-
 - make breadcrumbs appear on all children pages by default, unless disabled in the front matter.
 
 ---

@@ -1,5 +1,7 @@
 ---
 title: I.II. Glue
+icon: join
+
 weight: 7
 ---
 

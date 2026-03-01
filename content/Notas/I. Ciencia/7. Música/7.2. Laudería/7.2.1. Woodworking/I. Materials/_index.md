@@ -1,5 +1,7 @@
 ---
 title: "I. Materials"
+icon: matter
+
 weight: 1
 
 type: tabbed

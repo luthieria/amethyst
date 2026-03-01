@@ -1,5 +1,7 @@
 ---
 title: I.I. Wood
+icon: forest
+
 weight: 6
 ---
 
