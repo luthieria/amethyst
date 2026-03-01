@@ -83,6 +83,10 @@ type = 'docs'
 # Set page weight to re-arrange items in file-tree menu (if BookMenuBundle not set)
 weight = 10
 
+# (Optional) For child pages in `layout = 'tabbed'` sections: assign tab to an explicit row.
+# Values > 0 are explicit rows; missing/invalid/<=0 values are auto-grouped after explicit rows.
+tabRow = 2
+
 # (Optional) Set to 'true' to mark page as flat section in file-tree menu (if BookMenuBundle not set)
 bookFlatSection = false
 

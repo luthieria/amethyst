@@ -1,14 +1,72 @@
 {{ if eq .Params.tabVariant "bookshelf" }}
 {{ partial "custom/bookshelf.html" . }}
 {{ else }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "entries" (slice) }}
+{{ range .Pages }}
+{{ $weightKey := add .Weight 1000000000 }}
+{{ $sortKey := printf "%010d|%s" $weightKey (lower .Title) }}
+{{ $scratch.Add "entries" (slice (dict "page" . "sortKey" $sortKey)) }}
+{{ end }}
+
+{{ $sortedEntries := sort ($scratch.Get "entries") "sortKey" }}
+{{ $scratch.Set "rowMap" (dict) }}
+{{ $scratch.Set "rowNumbers" (slice) }}
+{{ $scratch.Set "unassigned" (slice) }}
+
+{{ range $sortedEntries }}
+{{ $page := .page }}
+{{ $tabRow := 0 }}
+{{ with $page.Params.tabRow }}
+{{ $rowText := trim (printf "%v" .) " " }}
+{{ if gt (len (findRE "^[0-9]+$" $rowText)) 0 }}
+{{ $tabRow = int $rowText }}
+{{ end }}
+{{ end }}
+
+{{ if gt $tabRow 0 }}
+{{ $rowKey := printf "%d" $tabRow }}
+{{ $existingRow := index ($scratch.Get "rowMap") $rowKey }}
+{{ if $existingRow }}
+{{ $scratch.SetInMap "rowMap" $rowKey (append $existingRow $page) }}
+{{ else }}
+{{ $scratch.SetInMap "rowMap" $rowKey (slice $page) }}
+{{ $scratch.Add "rowNumbers" (slice $tabRow) }}
+{{ end }}
+{{ else }}
+{{ $scratch.Add "unassigned" (slice $page) }}
+{{ end }}
+{{ end }}
+
 <div class="tab-links-grid">
-    {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" class="tab-link">
-        <span class="material-symbols-outlined">
-            {{ default "description" .Params.icon }}
-        </span>
-        <span class="tab-link-title">{{ .Title }}</span>
-    </a>
+    {{ $sortedRowNumbers := sort ($scratch.Get "rowNumbers") }}
+    {{ range $rowNumber := $sortedRowNumbers }}
+    {{ $rowKey := printf "%d" $rowNumber }}
+    {{ $rowPages := index ($scratch.Get "rowMap") $rowKey }}
+    <div class="tab-links-row tab-links-row-explicit" style="--tab-count: {{ len $rowPages }};">
+        {{ range $rowPages }}
+        <a href="{{ .RelPermalink }}" class="tab-link">
+            <span class="material-symbols-outlined">
+                {{ default "description" .Params.icon }}
+            </span>
+            <span class="tab-link-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ $unassignedPages := $scratch.Get "unassigned" }}
+    {{ if gt (len $unassignedPages) 0 }}
+    <div class="tab-links-row tab-links-row-auto" style="--tab-count: {{ len $unassignedPages }};">
+        {{ range $unassignedPages }}
+        <a href="{{ .RelPermalink }}" class="tab-link">
+            <span class="material-symbols-outlined">
+                {{ default "description" .Params.icon }}
+            </span>
+            <span class="tab-link-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+    </div>
     {{ end }}
 </div>
 {{ end }}

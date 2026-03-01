@@ -475,23 +475,41 @@ body.home {
 
 // ## 6.2. Grid ##
 .tab-links-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  --tab-gap: 1rem;
+  --tab-min: 11rem;
+  --tab-max: 18rem;
   margin-top: 2rem;
   width: 100%;
-  align-items: center;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tab-gap);
+}
+
+.tab-links-row {
+  --tab-count-safe: max(1, var(--tab-count, 1));
+  --tab-basis: clamp(
+    var(--tab-min),
+    calc((100% - (var(--tab-gap) * (var(--tab-count-safe) - 1))) / var(--tab-count-safe)),
+    var(--tab-max)
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--tab-gap);
+  width: 100%;
 }
 
 // ## 6.3. Individual tabs ##
 .tab-link {
   display: flex;
   flex-direction: column;
+  flex: 0 1 var(--tab-basis);
+  min-width: var(--tab-min);
+  max-width: var(--tab-max);
 
   aspect-ratio: 1 / 1;
   padding: 2rem;
   background: var(--light);
-  // border: 1px solid var(--outlinegray);
   border-radius: 8px;
 
   text-decoration: none;
@@ -523,6 +541,18 @@ body.home {
   font-size: 1rem;
   font-weight: 400;
   color: var(--dark);
+}
+
+@media (max-width: 52rem) {
+  .tab-links-grid {
+    --tab-gap: 0.75rem;
+    --tab-min: 9rem;
+    --tab-max: 14rem;
+  }
+
+  .tab-link {
+    padding: 1.5rem;
+  }
 }
 
 // # 7. FOOTER #
