@@ -520,6 +520,7 @@ Luthier, Product, Price, Stock
 #### Dalbergia nigra
 
 - Dalbergia nigra (Brazilian rosewood) is different from Dalbergia latifolia (Indian rosewood) and Dalbergia cearensis (kingwood) in color, figure, smell, acoustics.
+  - Martin Guitars deem the nigra and latifolia equal in tone and quality.[^Longworth]
 
 <br>
 
@@ -529,8 +530,9 @@ Luthier, Product, Price, Stock
 
 ##### History
 - **Shortly after 1492** — Dalbergia nigra must have been used for musical instruments.
-- **1566** — mention of "Brazil-wood" and guaiac-wood lutes and cornetti. But that "Brazil-wood" could be Caesalpinia echinata (Pernambuco) of leguminosae family (like the true rosewood) that used for obtaining textile dyes.
+- **1566** — mention of "Brazil-wood" and guaiac(um)[^Guaiacum]-wood lutes and cornetti. But that "Brazil-wood" could be Caesalpinia echinata (Pernambuco) of leguminosae family (like the true rosewood) that used for obtaining textile dyes.
   - Pernambuco was vastly imported into Sevilla (as Palobrasil).
+- **1581** — the earliest known rosewood vihuela: Lisbon, by Belchior Dias.
 - **XVI c.** — Spain imported some rosewood from Santo Domingo.
 - **XVII c.** — Spain imported exotic woods through Portugal (then part of Spain).
 - ~4 XVI–XVII c.instruments survive. → The rosewood amount and type in luthiery is unknown.
@@ -620,14 +622,39 @@ Luthier, Product, Price, Stock
 
 - SE 71, SE 117.
 
-#### Spruce
-
-- 
-
 ### Soundboard
 
 - The soundboard wood must be even-grained and thin for maximum resonance.
 
+#### Spruce
+
+- The spruce (Picea) is visually indistinguishable from fir (Abies alba).
+
+<br>
+
+- SE 83, SE 117 soundboards are Picea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Footnotes -->
+
+[^Guaiacum]: **Guaiacum** = **palosanto** — the wood of life. Introduced in Europe by 1508.
+
+[^Longworth]: **Longworth Mike**. *Martin Guitars, A History* (1975), page 32
 
 [^Segovia]: **Segovia Andrés**
