@@ -139,6 +139,13 @@
     margin-top: 1em;
   }
 
+  // Add spacing before headings only when they follow paragraph/list content.
+  p + :is(h1, h2, h3, h4, h5, h6),
+  ul + :is(h1, h2, h3, h4, h5, h6),
+  ol + :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 1em;
+  }
+
   // ## Text indent
   >p {
     text-indent: 2em;
