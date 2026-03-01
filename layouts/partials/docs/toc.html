@@ -1,4 +1,7 @@
 {{ partial "docs/inject/toc-before" . }}
+{{- $toc := .TableOfContents -}}
+{{- if gt (len (findRE "<li" $toc)) 0 -}}
 <div class="toc-title">{{ partial "docs/title" . }}</div>
-{{ .TableOfContents }}
+{{ $toc }}
+{{- end -}}
 {{ partial "docs/inject/toc-after" . }}

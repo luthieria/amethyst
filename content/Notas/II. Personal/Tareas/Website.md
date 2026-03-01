@@ -27,7 +27,7 @@
 4. filter by value section: replace the up and down arrows with the same chevrons as above, and make them on the same level as text
 5. make the selected cell highlight of some fitting website color, not default blue.
 6. remove those white borders that appear on cell selection (see photo 2)
-7. If a table (both markdown and spreadsheet) is bigger than its container, make it expandable to full screen.
+7. If a table (both markdown and spreadsheet) is too big to fit on page than its container, make it expandable to full screen.
 
 ---
 

@@ -17,6 +17,7 @@
 {{- with .Params.bodyClass -}}
 {{- $bodyClasses = $bodyClasses | append . -}}
 {{- end -}}
+{{- $tocHasItems := gt (len (findRE "<li" .TableOfContents)) 0 -}}
 
 <body dir="{{ default " ltr" .Site.Language.LanguageDirection }}"{{ if gt (len $bodyClasses) 0 }}
     class="{{ delimit $bodyClasses " " }}" {{ end }}>
@@ -73,7 +74,7 @@
             <label for="menu-control" class="hidden book-menu-overlay"></label>
         </div>
 
-        {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+        {{ if and (default true (default .Site.Params.BookToC .Params.BookToC)) $tocHasItems }}
         <aside class="book-toc">
             <div class="book-toc-content">
                 {{ template "toc" . }} <!-- Table of Contents -->
@@ -94,7 +95,7 @@
 {{ define "header" }}
 {{ partial "docs/header" . }}
 
-{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+{{ if and (default true (default .Site.Params.BookToC .Params.BookToC)) (gt (len (findRE "<li" .TableOfContents)) 0) }}
 <aside class="hidden clearfix">
     {{ template "toc" . }}
 </aside>
