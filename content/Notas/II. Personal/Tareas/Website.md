@@ -2,8 +2,6 @@
 
 ---
 
-- make breadcrumbs appear on all children pages by default, unless disabled in the front matter.
-
 ---
 
 # tabbed layout
@@ -68,8 +66,11 @@
 
 ---
 
-- move the breadcrumbs to the very top of the page
+# Breadcrumbs
+
 - style the breadcrumbs expansion menu similar to the VS Code breadcrumbs (see screenshot). remove their chevrons. make them expand on click, and on second click open the corresponding page ![alt text]({2C9D4344-EADA-475B-B3A6-D03FC8A416D4}.png)
+- make the menu be only as wide as its content
+- make breadcrumbs appear on all children pages by default, unless disabled in the front matter.
 
 ---
 
