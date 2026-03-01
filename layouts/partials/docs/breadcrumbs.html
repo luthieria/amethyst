@@ -13,10 +13,31 @@
 {{ end }}
 
 {{ $enabled := $siteEnabled }}
+{{ $pageOverride := false }}
 {{ if isset .Params "bookbreadcrumbs" }}
   {{ $enabled = .Params.bookbreadcrumbs }}
+  {{ $pageOverride = true }}
 {{ else if isset .Params "BookBreadcrumbs" }}
   {{ $enabled = index .Params "BookBreadcrumbs" }}
+  {{ $pageOverride = true }}
+{{ end }}
+
+{{ if not $pageOverride }}
+  {{ $ancestorOverride := newScratch }}
+  {{ $ancestorOverride.Set "found" false }}
+  {{ $ancestorOverride.Set "value" $siteEnabled }}
+  {{ range .Ancestors.Reverse }}
+    {{ if isset .Params "bookbreadcrumbs" }}
+      {{ $ancestorOverride.Set "found" true }}
+      {{ $ancestorOverride.Set "value" .Params.bookbreadcrumbs }}
+    {{ else if isset .Params "BookBreadcrumbs" }}
+      {{ $ancestorOverride.Set "found" true }}
+      {{ $ancestorOverride.Set "value" (index .Params "BookBreadcrumbs") }}
+    {{ end }}
+  {{ end }}
+  {{ if $ancestorOverride.Get "found" }}
+    {{ $enabled = $ancestorOverride.Get "value" }}
+  {{ end }}
 {{ end }}
 
 {{ $inBookScope := and $bookRoot (or (eq . $bookRoot) ($bookRoot.IsAncestor .)) }}

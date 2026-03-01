@@ -37,11 +37,6 @@
 
 ---
 
-- make the tabbed layout flexible: make it scale tabs depending on their amount, and keep the tabs rows centered
-- give me an ability to deliberately put certain tabs in certain rows
-
----
-
 - create the following layout and put it on page "content\Notas\I. Ciencia\7. Música\7.2. Laudería\7.2.2. Cordófonos\Guitarra\La guitarra\III. Instruments":
   - 3 big SVGs of classical (preferably some Torres model), acoustic (preferably some classic Martin model), and electric (preferably Les Paul or Telecaster) guitars in a row.
   - under each SVG, the name of the .md files (III.I. Clásica, III.II. Acoustic, III.III. Electric)
