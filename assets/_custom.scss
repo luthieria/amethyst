@@ -368,18 +368,18 @@ body.home {
     transition: color 120ms ease, background-color 120ms ease, font-weight 120ms ease;
   }
 
-  a::before {
-    content: "\e5cc";
-    font-family: "Material Symbols Outlined";
-    position: absolute;
-    inset-inline-start: 0.08rem;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-    font-size: 0.85em;
-    line-height: 1;
-    transition: opacity 120ms ease;
-  }
+  // a::before {
+  //   content: "\e5cc";
+  //   font-family: "Material Symbols Outlined";
+  //   position: absolute;
+  //   inset-inline-start: 0.08rem;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   opacity: 0;
+  //   font-size: 0.85em;
+  //   line-height: 1;
+  //   transition: opacity 120ms ease;
+  // }
 
   a:hover {
     //background-color: color-mix(in srgb, currentColor 9%, transparent);
