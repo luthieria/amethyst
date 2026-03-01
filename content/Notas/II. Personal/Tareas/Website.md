@@ -6,6 +6,18 @@
 
 ---
 
+# tabbed layout
+
+- make the graph appear immediately after the last tab row.
+
+- remove the footer that cuts off the graph in the bottom of the page.
+
+- make the box that contains the tabs be blurred-transparent just like the left side bar is, so that the graph could be visible underneath it.
+
+- make the page unscrollable, removing the extra page space in the bottom that doesn't fit the screen.
+
+---
+
 # Tables
 
 ![alt text](download.jpg)

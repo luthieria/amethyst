@@ -29,7 +29,7 @@ bookYear: "1987, 1997"
 <!-- -->
 
 # PART I. Life and Times
-## 2. Sevilla
+## 2. Epoch 1. Sevilla
 
 - Torres "was a calm, serious-minded man. He spoke slowly and his penetrating eyes reflected his great intelligence. He was a poet whose compositions he read to us at intimate gatherings, compositions that aroused our admiration in which, although by then an old man (68 years), still revealed a youthful spirit. He was a fine musician and composer whose compositions he revealed to us with his Cítara, his favorite instrument which he had also made himself."
 
@@ -37,7 +37,7 @@ bookYear: "1987, 1997"
 
 - Torres: ==the secret to the sonority is only in the soundboard: the wood's condition, form, and the working of it==.
 - Torres: "...it is impossible for me to leave the secret behind for posterity <...> ...==it is the result of the feel of the tips of the thumb and forefinger communicating to my intellect whether the soundboard is properly worked out== to correspond with the guitar maker's concept and the sound required of the instrument.”
-- ==For the boxes (i.e., soundboard, ribs, and back) and necks he used the wood from very old pieces of furniture.==
+- Torres was willing to use wood from any source. ==For the boxes (i.e., soundboard, ribs, and back) and necks he used the wood from very old pieces of furniture.==
 
 ### Traditions
 #### Granada (José Pernas)
@@ -89,7 +89,7 @@ bookYear: "1987, 1997"
 - **1859** — the guitar for Miguel Llobet.
 - **1864** — the 1st guitar for Francisco Tárrega.
 
-## 3. The Return to Almeria
+## 3. Epoch 2. Almería
 
 - "From his workshop, with its large window looking out towards the Mediterranean, Torres must have heard, while working on his instruments, the faint sound of a sea that he could just make out between the rows of slender cypress trees standing guard over the vale of La Cañada—some of which would furnish Torres with the material he needed for his guitars. Torres must have heard, too, the voices of farmhands and day-laborers toiling in the adjacent fields; the same villagers who at times would gather to hear Torres try out his instruments."
 - "Torres was a practicing Christian who sought comfort in the Catholic faith..."
@@ -500,12 +500,34 @@ Luthier, Product, Price, Stock
   6. **cherry**;
   7. **locust** woods.
 
-### Dalbergia nigra
+### Back, ribs
+
+- Torres believed that the ==wood for back and ribs didn't affect the sound much, → chose wood for its aesthetic==.
+  - E.g., Ceratonia siliqua (locust wood) full of knots and short-grained fibers (SE 83), bird's-eye maple.
+  - Intricate mosaic decorations stand out better against the bright background. → Torres' most decorated guitars used maple.
+
+<br>
+
+- Torres thicknessed backs depending on the wood's density and elasticity.
+  - **Rosewood**: 2.5 mm (center) – 2 mm (perimeter).
+  - **Cypress**, **locust**: less dense, $\Rightarrow$ thicker.
+- Some might assume that these thickness variations are due to tuning of the back to a specific note (like violin backs are tuned to within a tone difference of that of the soundboard), but this contradicts the Torres' philosophy.
+
+<br>
+
+- Torres couldn't always obtain rosewood and maple (bird's-eye and flamed) in wide enough pieces, $\Rightarrow$ made many 3–4 piece backs, added inlays (30 mm wide (FE 17)) and wedge-shaped maple strips.
+
+#### Dalbergia nigra
 
 - Dalbergia nigra (Brazilian rosewood) is different from Dalbergia latifolia (Indian rosewood) and Dalbergia cearensis (kingwood) in color, figure, smell, acoustics.
 
 <br>
 
+- **Weakness**: easily splits.
+
+<br>
+
+##### History
 - **Shortly after 1492** — Dalbergia nigra must have been used for musical instruments.
 - **1566** — mention of "Brazil-wood" and guaiac-wood lutes and cornetti. But that "Brazil-wood" could be Caesalpinia echinata (Pernambuco) of leguminosae family (like the true rosewood) that used for obtaining textile dyes.
   - Pernambuco was vastly imported into Sevilla (as Palobrasil).
@@ -521,6 +543,21 @@ Luthier, Product, Price, Stock
 
 <br>
 
+##### Torres
+
+- Out of 88 existing Torres guitars, 24 have rosewood backs and ribs:
+  1. epoch 1: 17 (1/3 of all made in Sevilla) (1882 (1), 1884 (3), 1888 (2), 1892 (1));
+    - in some guitars: combined with maple — probably to make up the back's width;
+      - XVIII–XIX c. — making backs with different woods was common in Andalucía;
+  2. epoch 2: 7 (out of 49);
+     - $\Leftarrow$ Almería had fewer trading links abroad than Sevilla.
+
+<br>
+
+- Even some cheaper Torres guitars have rosewood fingerboards, bridges, bindings.
+
+<br>
+
 - **XVII–XVIII c.** — luthiers didn't care much for acoustics.
   - Considered best:
     - soundboard: spruce / fir, pine, (sometimes) cypress;
@@ -528,27 +565,66 @@ Luthier, Product, Price, Stock
 - **XVIII c.** — rosewood, cedar, cypress, ebony, maple, walnut were used in guitars.
 - **Since mid-XIX c.** — Torres made rosewood universally accepted as the best wood for classical instruments.
 
-<br>
+#### Maple
 
-- **Weakness**: easily splits.
-
-#### Back, ribs
-
-- Before Torres, maple had been used for centuries in musical instruments for its beauty and acoustics.
+- Before Torres, had been used for centuries in musical instruments for its beauty and acoustics.
 
 <br>
 
-- Torres believed that the ==wood for back and ribs didn't affect the sound much, → chose wood for its aesthetic==.
-  - E.g., Ceratonia siliqua (locust wood) full of knots and short-grained fibers (SE 83), bird's-eye maple.
-  - Intricate mosaic decorations stand out better against the bright background. → Torres' most decorated guitars used maple.
+- 17 maple guitars are known (as of 1995):
+  - 10 — epoch 1;
+  - 7 — epoch 2.
+- Maple types used by Torres:
+  1. **bird's-eye**;
+  2. **flamed** — 3 guitars (1864 (1), 1883 (2));
+     - Torres kept it for special commissions.
+
+#### Cypress
+
+- Introduced to Spain by Phonecians.
+- Abundant in Levant and Andalucía's Mediterranean coast.
+
+<br>
+
+- **Properties**:
+  1. light;
+  2. very elastic;
+  3. durable;
+  4. tough;
+  5. pungent, everlasting fragrance;
+     - $\rightarrow$ deters insects;
+     - $\rightarrow$ used for coffers, jewelry boxes, linen chests.
+
+<br>
+
+- Sacred in ancient times. The tree of death and darkness. 
+- → Was used for funeral pyres, coffins, law tablets. In Spain until now, planted around cemeteries.
+
+- Softwood, but very suitable for backs and ribs.
+
+<br>
+
+- At least since **XVI c.** — substantial for musical instruments:
+  - lutes: ribs;
+  - (Italy) harpsicords, spinets: soundboards;
+  - cases;
+  - **XVII c.** — cittern soundboards (Tielke);
+  - **XVIII c.** — staple for Andalucian guitars' backs and ribs (Francisco Pérez, Francisco Sanguino).
+
+<br>
+
+- Hasn't been very commercially exploited. → Torres likely obtained his cypress from a local felled tree. → Torres' cypress is low-quality (blemishes, knots, discolorations, distorted growth, often oblique (non-straight) fibers)
 - Cypress isn't as beautiful as maple, → less popular. Torres used cypress only for cheap guitars, except when absolutely pressed.
 
-##### Dalbergia nigra
+<br>
 
-- Out of 88 existing Torres guitars, 24 have rosewood back and ribs (17 from his 1st Sevilla epoch).
+- SE 71, SE 117.
+
+#### Spruce
+
 - 
 
-#### Soundboard
+### Soundboard
 
 - The soundboard wood must be even-grained and thin for maximum resonance.
 
