@@ -622,13 +622,51 @@ Luthier, Product, Price, Stock
 
 - The soundboard wood must be even-grained and thin for maximum resonance.
 
-#### Spruce
+<br>
 
-- The spruce (Picea) is visually indistinguishable from fir (Abies alba).
+- Torres soundboards (important when the thickness of some areas is ≤1.4 mm):
+  1. wood fibers parallel to the soundboard surface;
+  2. quartersawn (= growth rings perpendicular to the soundboard);
+  3. the closest growth rings in the soundboard's center.
 
 <br>
 
-- SE 83, SE 117 soundboards are Picea.
+- Torres' early experience in carpentry enabled him to produce outstanding-quality instruments even with substandard materials. His intellect enabled him to feel the wood.
+
+#### Spruce
+
+- The spruce (Picea) is visually indistinguishable from fir (Abies alba).
+  - Difference: spruce has resin ducts.
+
+<br>
+
+- Spain imported spruce from Norway, Sweden, Russia, Prussia
+- Abies pectinata grows in the Spanish Pyrenees.
+
+<br>
+
+- Torres regularly used spruce (except on SEU 01 (pine), SE 127, SE 139).
+  - SE 83, SE 117 soundboards are Picea.
+  - The spruce quality varies greatly between guitars and epochs.
+- Most of the spruce imported to Spain wasn't suitable for soundboards. $\Rightarrow$ 
+- To produce a soundboard with identical halves, Torres had to find suitable boards with fairly regular annual ring spacing. $\Rightarrow$ Very few Torres soundboards have book-matched halves.
+- Any deviation of the annual rings from the perpendicular changes the Young's Modulus, → spruce's stiffness.
+- $\Rightarrow$ To obtain quatersawn wood, Torres had to convert the boards so that the section of the annual ring would be perpendicular to the soundboard's surface.
+
+![alt text](<Imagenes/Quartersawn from plank.png>)
+
+- $\Rightarrow$ Of the surviving guitars: 
+  - 5 have 3- and 4-piece soundboards;
+  - 11 have the middle joint off the soundboard's center.
+- Constructionally, the joint in the center is better, $\leftarrow$ central fan strut binds the joint.
+
+
+
+<br>
+
+
+
+
 
 
 
