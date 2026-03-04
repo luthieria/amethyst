@@ -660,14 +660,52 @@ Luthier, Product, Price, Stock
   - 11 have the middle joint off the soundboard's center.
 - Constructionally, the joint in the center is better, $\leftarrow$ central fan strut binds the joint.
 
+<br>
 
+- On existing guitars, the annual rings aren't uniform.
+- Torres put the closest rings in the soundboard's center, except on SE 10, SE 99, which have the closest rings on the bass side.
 
 <br>
 
+- Torres' drying and seasoning of wood is largely unknown.
+- Even now, some ==Spanish luthiers expose the soundboards to the sun — to season and further dessicate== them. Torres probably did the same, taking the advantage of perpetual sunshine in Almería and even drier Sevilla, drying his wood on azotea (— a flat roof of a Spanish 1-story house)
+  - There's no evidence of sunshine improving the spruce's acoustics, but it likely conditions the wood.
+  - Water and resin (contained in spruce) are detrimental for the wood's acoustics.
 
+### Pine
 
+- Transverse bars in cheaper, and occasionally in expensive, guitars.
+- Apparently, Torres didn't much care about to the annual rings' direction in the transverse bars. Variations:
+  1. perpendicular to the back's surface;
+  2. parallel to the soundboard's face;
+  3. slanted.
 
+<br>
 
+- Continuous linings on cheaper guitars (sometimes of very bad quality and 3-piece).
+
+### Cedar
+
+- **Cedar** = **Cedrela spp** = **Cuban cedar** (then, in Spain).
+
+<br>
+
+- XVIII–XIX c. — widely imported into Spain for use in linen chests, tables, musical instruments.
+
+<br>
+
+- Available, light, stable, easily workable. $\rightarrow$ Favorite for necks.
+- Torres used cedar:
+  - invariably — for necks, 
+  - sometimes — for the back's transverse bars, linings, end block, supporting rib blocks.
+- Torres made some necks out of old funiture. $\rightarrow$ Some guitar necks have nail holes and painted surfaces.
+- FE 07's neck is an old neck from a double-course instrument with plugged peg-holes.
+  - Followed the Spanish tradition: spliced the guitar's head to the neck's shaft — an economical way of making the head as a separate part of the shaft ($\leftarrow$ for making the neck a shaft's integral part, a large piece of wood is needed)..
+- Veneers on head's face:
+  1. **walnut** — cheaper guitars;
+  2. **rosewood** — finer guitars.
+- Head sizes vary according to guitar sizes.
+- Some neck shafts are up to 6 pieces.
 
 
 
