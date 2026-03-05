@@ -83,10 +83,10 @@ This page demonstrates the usage of the new advanced table shortcodes that suppo
 This table is interactive! You can sort, filter, and resize columns.
 
 {{< handsontable height="300px" >}}
-ID, Product, Price, Stock
+ID, **Product**, Price, Stock
 1, Acoustic Guitar, 450, 12
 2, Electric Guitar, 800, 5
 3, Violin, 600, 8
 4, Piano, 2500, 2
-5, Flute, 150, 20
+5, **Flute**, 150, **20**
 {{< /handsontable >}}

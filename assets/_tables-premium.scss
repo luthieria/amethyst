@@ -135,27 +135,6 @@
     }
 }
 
-/* Toast Notification for Copy */
-#hot-toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: var(--secondary);
-    color: #000;
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    z-index: 10000;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &.show {
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
 /* Global Handsontable Menu Overrides */
 .htMenu,
 .htContextMenu,
@@ -399,3 +378,5 @@
         }
     }
 }
+.hot-dark td strong, .hot-dark th strong { font-weight: bold !important; }
+.hot-dark td em, .hot-dark th em { font-style: italic !important; }

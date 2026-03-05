@@ -22,8 +22,6 @@
   <div id="{{ $id }}" class="hot-container" style="width: 100%; min-height: 100px;"></div>
 </div>
 
-<div id="hot-toast">Data copied to clipboard!</div>
-
 {{ $inner := .Inner | plainify }}
 {{ $inner = trim $inner " \n\r\t" }}
 {{ $rowHeaders := true }}{{ if eq (.Get "rowHeaders") "false" }}{{ $rowHeaders = false }}{{ end }}
@@ -66,11 +64,28 @@
     headersVisible = false;
   }
 
+  function renderMarkdown(text) {
+    if (!text) return text;
+    return String(text)
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/__(.*?)__/g, '<strong>$1</strong>')
+      .replace(/_(.*?)_/g, '<em>$1</em>');
+  }
+
+  function markdownRenderer(instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments);
+    if (typeof value === 'string' && value) {
+      td.innerHTML = renderMarkdown(td.innerHTML);
+    }
+  }
+
   var hot;
   var config = {
     data: data,
     rowHeaders: headersVisible ? rowHeadersConfig : false,
     colHeaders: headersVisible ? colHeadersConfig : false,
+    renderer: markdownRenderer,
     width: '100%',
     height: 'auto',
     licenseKey: 'non-commercial-and-evaluation',
@@ -90,7 +105,17 @@
     autoRowSize: true,
     afterChange: function(changes, source) { if(source !== 'loadData' && hot) saveAll(); },
     afterRowMove: function() { if(hot) saveAll(); },
-    afterColMove: function() { if(hot) saveAll(); }
+    afterColMove: function() { if(hot) saveAll(); },
+    afterGetColHeader: function(col, TH) {
+      if (!headersVisible || col < 0) return;
+      var wrapper = TH.querySelector('.colHeader');
+      if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+    },
+    afterGetRowHeader: function(row, TH) {
+      if (!headersVisible || row < 0) return;
+      var wrapper = TH.querySelector('.rowHeader');
+      if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+    }
   };
 
   hot = new Handsontable(container, config);
@@ -177,10 +202,7 @@
     },
     copy: function() {
       var json = JSON.stringify(hot.getData(), null, 2);
-      navigator.clipboard.writeText(json).then(function() {
-        var t = document.getElementById('hot-toast');
-        t.classList.add('show'); setTimeout(function() { t.classList.remove('show'); }, 2000);
-      });
+      navigator.clipboard.writeText(json);
     },
     reset: function() {
       if (confirm("Reset to original data?")) { localStorage.removeItem(storageKey); window.location.reload(); }
