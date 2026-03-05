@@ -1,0 +1,3439 @@
+<!DOCTYPE html>
+<html lang="en" dir=" ltr">
+
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta property="og:url" content="http://localhost:1313/test-tables/">
+  <meta property="og:site_name" content="📓 Notas">
+  <meta property="og:title" content="Advanced Tables Demo">
+  <meta property="og:description" content="Advanced Tables Demonstration#This page demonstrates the usage of the new advanced table shortcodes that support merging cells and premium “Excel-like” styling.
+1. Merged Headers (Colspan)#Instrument GroupDetailsStringGuitarAcoustic or ElectricStringViolinClassical only2. Merged Rows (Rowspan)#CategoryItemValueHardwareProcessori9RAM64GBStorage2TB NVMe3. Complex Grid (Rowspan &#43; Colspan)#ServicePricing TierBasicProWeb Hosting$5/mo$15/moSupportIncluded in all plans4.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-02-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-27T16:04:46-04:00">
+<title>Advanced Tables Demo | 📓 Notas</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/%20favicon.png" type="image/x-icon"><link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+<link rel="stylesheet" href="/book.min.dc77b5c4bd4dc8aa3624d48b4dac46bcd58dfb8d2b6bb09d1549cbff8df4520f.css" integrity="sha256-3He1xL1NyKo2JNSLTaxGvNWN&#43;40ra7CdFUnL/430Ug8=" crossorigin="anonymous">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="description"
+  content="Advanced Tables Demonstration#This page demonstrates the usage of the new advanced table shortcodes that support merging cells and premium &ldquo;Excel-like&rdquo; styling.
+1. Merged Headers (Colspan)#Instrument GroupDetailsStringGuitarAcoustic or ElectricStringViolinClassical only2. Merged Rows (Rowspan)#CategoryItemValueHardwareProcessori9RAM64GBStorage2TB NVMe3. Complex Grid (Rowspan &#43; Colspan)#ServicePricing TierBasicProWeb Hosting$5/mo$15/moSupportIncluded in all plans4." />
+<title>
+  Advanced Tables Demo
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/png"  
+  href="http://localhost:1313//favicon.png" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="http://localhost:1313/styles.e126051058b28fd5720b788c12a0f6ce.min.css" rel="stylesheet" />
+
+
+<link href="http://localhost:1313/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css" rel="stylesheet" id="theme-link">
+
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+        integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+        crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js"
+        integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+<script src="http://localhost:1313/quartz/js/darkmode.8b2b0aa44c26ce50034d0f3ec9cb229c.min.js"></script>
+
+
+
+<script src="http://localhost:1313/quartz/js/util.e6844bcc6148c92f3b102d867c918e7c.min.js"></script>
+
+
+
+<script async src="https://unpkg.com/@floating-ui/core@0.7.3"></script>
+<script async src="https://unpkg.com/@floating-ui/dom@0.5.4"></script>
+
+<script src="http://localhost:1313/quartz/js/popover.d15bbb66588317f9fbee1a95e4750bea.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/code-title.d6525fa48597ed29631fab15192407e2.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/clipboard.3ce3710d38377077f1cee5228144b8a8.min.js"></script>
+
+
+
+
+<script defer src="http://localhost:1313/quartz/js/callouts.e83135249ba7df7bb9912c90a91a55c6.min.js"></script>
+
+
+
+<script defer src="http://localhost:1313/quartz/js/d3.5fa4aade6937f0a39534e52332561c1e.min.js"></script>
+
+
+<script defer src="http://localhost:1313/quartz/js/topojson-client.min.7561eb0097a869e4b554fad58a89be35.min.js"></script>
+
+
+<script defer src="http://localhost:1313/quartz/js/sidebar-autohide.dc4ee3b750efad32081d491e5484d8fa.min.js"></script>
+
+
+<script defer src="http://localhost:1313/quartz/js/toc-enhance.7e2343a6fc29afb545a9b4a816801ae5.min.js"></script>
+
+
+<script defer src="http://localhost:1313/quartz/js/reading-tracker.287aee734ef5caf7a7022f4827ece3aa.min.js"></script>
+
+
+
+<script defer src="http://localhost:1313/quartz/js/ethno-globe.f653375f9010780ee0d8a04406621a82.min.js"></script>
+
+
+
+
+<script>
+  const SEARCH_ENABLED =  false 
+  const LATEX_ENABLED =  true 
+  const PRODUCTION =  false 
+  const BASE_URL = "http://localhost:1313/"
+  const fetchData = Promise.all([
+    fetch("http:\/\/localhost:1313\/indices\/linkIndex.77cb519466f775540b94e58dd1ee6d4d.min.json")
+      .then(data => data.json())
+      .then(data => {
+        const rawIndex = data && typeof data.index === "object" ? data.index : {}
+        return {
+          index: {
+            links: rawIndex && typeof rawIndex.links === "object" ? rawIndex.links : {},
+            backlinks: rawIndex && typeof rawIndex.backlinks === "object" ? rawIndex.backlinks : {},
+          },
+          links: Array.isArray(data && data.links) ? data.links : [],
+        }
+      }),
+    fetch("http:\/\/localhost:1313\/indices\/contentIndex.66f2783a069b2a68db305b05752a869f.min.json")
+      .then(data => data.json())
+      .then(data => (data && typeof data === "object" ? data : {})),
+  ])
+    .then(([{ index, links }, content]) => ({
+      index,
+      links,
+      content,
+    }))
+
+  const render = () => {
+    
+    const siteBaseURL = new URL(BASE_URL);
+    const pathBase = siteBaseURL.pathname;
+    const pathWindow = window.location.pathname;
+    const isHome = pathBase == pathWindow;
+
+    addCopyButtons();
+    
+
+    
+
+    addCollapsibleCallouts();
+    
+
+    
+    initPopover(
+      "http://localhost:1313",
+     true 
+    )
+  
+
+  
+  const footer = document.getElementById("footer")
+  if (footer) {
+    const container = document.getElementById("graph-container")
+    
+    if (!container) return requestAnimationFrame(render)
+    
+    container.textContent = ""
+
+    const drawGlobal = isHome &&  true ;
+  drawGraph(
+    "http://localhost:1313",
+    drawGlobal,
+    [{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa":"#3f7f8a"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/1.-%C3%81frica-subsahariana":"#3f9a8f"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/2.-Oriente-Medio":"#c69a4b"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo":"#5b6ea6"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/Espa%C3%B1a":"#d17868"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/3.-Mediterr%C3%A1neo/Portugal":"#d99a63"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica":"#47b7ad"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina":"#58cdd8"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica":"#e3a65a"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba":"#f2a38c"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/M%C3%A9xico":"#f2c879"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Colombia":"#eec199"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Per%C3%BA":"#f29b86"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Ecuador":"#f3b38e"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Puerto-Rico":"#f0a7a3"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Santo-Domingo":"#f4b28a"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.2.-Brasil":"#6fd3b1"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.3.-Antilles-fran%C3%A7aises":"#d3bdf2"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America":"#8ab6e8"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa":"#5a6fd8"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Familia-del-viol%C3%ADn":"#7d79e6"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica/2.-Lauder%C3%ADa/Guitarra":"#9ec5f4"},{"/Notas/I.-Ciencia/1.-Filosofia":"#c279b5"},{"/Notas/I.-Ciencia/2.-Antropologia":"#7ea4d6"},{"/Notas/I.-Ciencia/3.-Economia":"#9a76d9"},{"/Notas/I.-Ciencia/4.-Hist%C3%B3ria":"#6ec2e4"},{"/Notas/I.-Ciencia/5.-L%C3%ADnguas":"#d9b86e"},{"/Notas/I.-Ciencia/6.-Religiones":"#8ebc7a"},{"/Notas/I.-Ciencia/7.-M%C3%BAsica":"#63b6da"},{"/Notas/I.-Ciencia/8.-Marxismo-pol%C3%ADtica":"#e08a6e"},{"/Notas/I.-Ciencia/9.-Computer-Science":"#7f86e6"},{"/Notas/II.-Personal/Tareas":"#e68e94"},{"/Notas/II.-Personal/Trabajo":"#7fb0a6"},{"/Notas/I.-Ciencia":"#4f6a82"},{"/Notas/II.-Personal":"#5f7f6c"}],
+    drawGlobal ? {"centerForce":2,"depth":-1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.65,"linkDistance":140,"opacityScale":3,"repelForce":3,"scale":1.1} : {"centerForce":1,"depth":1,"enableDrag":true,"enableLegend":false,"enableZoom":true,"fontSize":0.6,"linkDistance":1,"opacityScale":3,"repelForce":2,"scale":1.2}
+  );
+
+      }
+  
+
+  
+  var els = document.getElementsByClassName("mermaid");
+  if (els.length > 0) {
+    import('https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs').then(
+      (obj) => {
+        
+        
+        obj.default.init();
+      }
+    )
+  }
+  
+
+  if (typeof window.initEthnoWorldGlobe === "function") {
+    window.initEthnoWorldGlobe()
+  }
+
+  if (typeof window.initSidebarAutoHide === "function") {
+    window.initSidebarAutoHide()
+  }
+
+  if (typeof window.initTocEnhancer === "function") {
+    window.initTocEnhancer()
+  }
+
+  if (typeof window.initReadingTracker === "function") {
+    window.initReadingTracker()
+  }
+  }
+
+  const init = (doc = document) => {
+    
+    addCopyButtons();
+    
+
+    addTitleToCodeBlocks();
+    renderMathInElement(doc.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      macros: {
+        '’': "'"
+      },
+      throwOnError: false
+    });
+    
+  };
+</script>
+
+<script>
+  window.Million = {
+    navigate: (url) => (window.location.href = url),
+    prefetch: () => { },
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    init()
+    render()
+  })
+</script>
+
+
+</head>
+<div id="search-container">
+  <div id="search-space">
+    <input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search"
+      placeholder="Search for something..." dir="">
+    <div id="results-container">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"
+  integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin="anonymous" defer></script>
+
+<script defer src="http://localhost:1313/quartz/js/full-text-search.cc0284dc74ffd43585e5227c0138681e.min.js"></script>
+
+
+
+<body dir=" ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <main class="flex">
+    <div class="book-menu-hover-zone" aria-hidden="true"></div>
+    <aside class="book-menu">
+      <button type="button" class="book-menu-pin" aria-pressed="false" aria-label="Pin sidebar"
+        title="Pin sidebar"><span></span></button>
+      <div class="book-menu-content">
+        
+<nav>
+  <div class="sidebar-header">
+    <a class="book-home-link" href="http://localhost:1313/" aria-label="" title="">
+      <span class="book-home-icon material-symbols-outlined" aria-hidden="true">network_node</span>
+    </a>
+
+    <div class="menu-search">
+      <div id="search-icon" class="quartz-search">
+        <svg tabindex="0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+          <g class="search-path" fill="none">
+            <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+            <circle cx="8" cy="8" r="7" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-b9c44a370b0ae6cd0d1ef9bb37ecbea7" class="toggle" checked />
+<label for="section-b9c44a370b0ae6cd0d1ef9bb37ecbea7" class="flex">
+  <a href="/Notas/I.-Ciencia/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">globe_book</span>
+    Ciencias
+    <span class="book-menu-count">38</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6f520199f5d8308f7ab1ca813fa3d69d" class="toggle"  />
+<label for="section-6f520199f5d8308f7ab1ca813fa3d69d" class="flex">
+  <a href="/Notas/I.-Ciencia/1.-Filosof%C3%ADa/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">all_inclusive</span>
+    Filosofía
+    <span class="book-menu-count">3</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/1.-Filosof%C3%ADa/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%80%D0%BA%D1%81%D0%B8%D0%B7%D0%BC%D1%83/" class="">Заметки по марксизму
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/1.-Filosof%C3%ADa/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D0%B8/" class="">Заметки по философии
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/1.-Filosof%C3%ADa/%D0%9F%D0%BE%D0%BF%D0%BE%D0%B2-%D0%9C.-%D0%92/" class="">Попов М. В.
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-139fb55b557ca2a5238871d26e43ae88" class="toggle"  />
+<label for="section-139fb55b557ca2a5238871d26e43ae88" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">accessibility</span>
+    Antropología
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-086468328607e06cf8c1dc9b59bc1a4d" class="toggle"  />
+<label for="section-086468328607e06cf8c1dc9b59bc1a4d" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">factory</span>
+    Economía
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-94ffb5c917556f347f702f8c746660f2" class="toggle"  />
+<label for="section-94ffb5c917556f347f702f8c746660f2" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">mosque</span>
+    Historia
+    <span class="book-menu-count">9</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/%D0%97%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8/" class="">Заметки по истории
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-0fb43fc43fa9f519ec68ad8794962482" class="toggle"  />
+<label for="section-0fb43fc43fa9f519ec68ad8794962482" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    África
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/%D0%A6%D1%8B%D0%B3%D0%B0%D0%BD%D0%B5/" class="">Цыгане
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-40555cab0d98b815ff77e36b6acc31c6" class="toggle"  />
+<label for="section-40555cab0d98b815ff77e36b6acc31c6" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Oriente Medio, Magreb
+    <span class="book-menu-count">2</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.2.-Oriente-Medio-Magreb/Phoenicians/" class="">Phoenicians
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.2.-Oriente-Medio-Magreb/%D0%95%D0%B2%D1%80%D0%B5%D0%B8/" class="">Евреи
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-31f833e3140e053b8d8df18d87177526" class="toggle"  />
+<label for="section-31f833e3140e053b8d8df18d87177526" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Egipto
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-42db2709afc742bd8b9a48648c7ddfe1" class="toggle"  />
+<label for="section-42db2709afc742bd8b9a48648c7ddfe1" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Amaziges
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-882d32b5d474d85250049b3e8ef939ab" class="toggle"  />
+<label for="section-882d32b5d474d85250049b3e8ef939ab" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Nubia
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-99601480d2505c3e03b2af01feb7aa20" class="toggle"  />
+<label for="section-99601480d2505c3e03b2af01feb7aa20" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Europa
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.3.-Europa/%D0%A0%D0%B8%D0%BC%D1%81%D0%BA%D0%B0%D1%8F-%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D1%8F/" class="">Римская империя
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6353236df8293ffc3daa4c632af33c25" class="toggle"  />
+<label for="section-6353236df8293ffc3daa4c632af33c25" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    СССР
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-d7f1aa5228791584eec4ff8c3827b074" class="toggle"  />
+<label for="section-d7f1aa5228791584eec4ff8c3827b074" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    España
+    <span class="book-menu-count">1</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.3.-Europa/Espa%C3%B1a/Espa%C3%B1a/" class="">España
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-e1776f69084966e8f4867a1c9e536697" class="toggle"  />
+<label for="section-e1776f69084966e8f4867a1c9e536697" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Portugal
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.3.-Europa/France/" class="">France
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/4.3.-Europa/Germany/" class="">Germany
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3da4debe273b15df6adb572f6454baf5" class="toggle"  />
+<label for="section-3da4debe273b15df6adb572f6454baf5" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    América
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6756d110a8fa3da7bce1c5328eb461d3" class="toggle"  />
+<label for="section-6756d110a8fa3da7bce1c5328eb461d3" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    América Latina
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6de7c603677a85dbde811a59879581db" class="toggle"  />
+<label for="section-6de7c603677a85dbde811a59879581db" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Cuba
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-012b1966791389282052001bb57b50f6" class="toggle"  />
+<label for="section-012b1966791389282052001bb57b50f6" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Santo Domingo
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6005cce9012253d9fa9ca6ba18466041" class="toggle"  />
+<label for="section-6005cce9012253d9fa9ca6ba18466041" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Puerto Rico
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3ee2b1767122bbaf4fb0292522c01cce" class="toggle"  />
+<label for="section-3ee2b1767122bbaf4fb0292522c01cce" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Colombia
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-6d1066ce55c77b52fd2a7781a4904348" class="toggle"  />
+<label for="section-6d1066ce55c77b52fd2a7781a4904348" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    USA
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3f41da42edf93a01cde7d6354180419d" class="toggle"  />
+<label for="section-3f41da42edf93a01cde7d6354180419d" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Oceania
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/4.-Historia/%D0%9D%D0%B5%D1%81%D0%BC%D0%B8%D1%8F%D0%BD-%D0%90.-%D0%95.-%D0%AD%D1%80%D0%B0-%D0%B2%D0%BE%D0%B9%D0%BD-%D0%B8-%D0%BA%D0%B0%D1%82%D0%B0%D1%81%D1%82%D1%80%D0%BE%D1%84/" class="">Несмиян А. Е. Эра войн и катастроф
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-72ae738a0a8e3670dd1eae4fb6c4cc7a" class="toggle"  />
+<label for="section-72ae738a0a8e3670dd1eae4fb6c4cc7a" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">translate</span>
+    Lenguas
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-b278ecfa0a8cc3de898b324bcd76b3df" class="toggle"  />
+<label for="section-b278ecfa0a8cc3de898b324bcd76b3df" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">church</span>
+    Religiones
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3b690f202d997d9c6e921d6e50b6889c" class="toggle"  />
+<label for="section-3b690f202d997d9c6e921d6e50b6889c" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">music_note</span>
+    Música
+    <span class="book-menu-count">25</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3fd3e21118b3622987adbba49f671672" class="toggle"  />
+<label for="section-3fd3e21118b3622987adbba49f671672" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">globe</span>
+    Etnomusicología
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-f175bbf970fadf1b5c8ae53fec58c1c0" class="toggle"  />
+<label for="section-f175bbf970fadf1b5c8ae53fec58c1c0" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    África subsahariana
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-c30a0db9cae2a69034e8c84f1f17bcc8" class="toggle"  />
+<label for="section-c30a0db9cae2a69034e8c84f1f17bcc8" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Oriente Medio
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-721a68a5fbee6836ac6b9526b069dbf6" class="toggle"  />
+<label for="section-721a68a5fbee6836ac6b9526b069dbf6" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Árabe
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-4b7836f18f2e6255f606c2b289b7e687" class="toggle"  />
+<label for="section-4b7836f18f2e6255f606c2b289b7e687" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Irán
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-341ccf31d20a55d2d031e16bd18be973" class="toggle"  />
+<label for="section-341ccf31d20a55d2d031e16bd18be973" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Magreb
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-ab25190acb3d3ad43fd5afddeae48c00" class="toggle"  />
+<label for="section-ab25190acb3d3ad43fd5afddeae48c00" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/" 
+    class="book-collapse-toggle ">
+    América
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-7670f3b7a0d99fee42cbdad0c0b1f30f" class="toggle"  />
+<label for="section-7670f3b7a0d99fee42cbdad0c0b1f30f" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/" 
+    class="book-collapse-toggle ">
+    América Latina
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3d34d8998b3857c30397b58eb4d28c74" class="toggle"  />
+<label for="section-3d34d8998b3857c30397b58eb4d28c74" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/" 
+    class="book-collapse-toggle ">
+    Hispanoamérica
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">México
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Cuba/" class="">Cuba
+  <span class="book-menu-count">3</span>
+  
+</a>
+
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.1.-Am%C3%A9rica-Latina/4.1.1.-Hispanoam%C3%A9rica/Puerto-Rico/" class="">Puerto Rico
+  <span class="book-menu-count">1</span>
+  
+</a>
+
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Santo Domingo
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Colombia
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Ecuador
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Perú
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Brasil
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<span class="book-menu-title">Antilles françaises
+  <span class="book-menu-count">0</span>
+  
+</span>
+
+
+    
+    
+<ul>
+  
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-e5dee858fc94b8dfdbdcd939ee51204f" class="toggle"  />
+<label for="section-e5dee858fc94b8dfdbdcd939ee51204f" class="flex">
+  <a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.1.-Etnomusicolog%C3%ADa/4.-Am%C3%A9rica/4.2.-Anglo-America/" 
+    class="book-collapse-toggle ">
+    Anglo-America
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-49a4b9f1d0afa8e8e7d2cd25cd458495" class="toggle"  />
+<label for="section-49a4b9f1d0afa8e8e7d2cd25cd458495" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Mediterráneo
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-8f76fadbe176cf9a7bffb84f4f53da9d" class="toggle"  />
+<label for="section-8f76fadbe176cf9a7bffb84f4f53da9d" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    España
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-850b64ff2b6ab93f3a3d172dbdbc189b" class="toggle"  />
+<label for="section-850b64ff2b6ab93f3a3d172dbdbc189b" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    Portugal
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/7.-M%C3%BAsica/7.2.-Lauder%C3%ADa/" class="">Laudería
+  <span class="book-menu-count">21</span>
+  
+</a>
+
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-5e87c77a247d8e0f5297ca536e3c6eed" class="toggle"  />
+<label for="section-5e87c77a247d8e0f5297ca536e3c6eed" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">library_music</span>
+    Instrumentos
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-0736113c967888159a9fc67714b5884f" class="toggle"  />
+<label for="section-0736113c967888159a9fc67714b5884f" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">music_note_2</span>
+    Teoria musical
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-7e891bd182944eddb72cea9e23bfc042" class="toggle"  />
+<label for="section-7e891bd182944eddb72cea9e23bfc042" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">instant_mix</span>
+    Audio Engineering
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-9775a5d18b3f13714f2cbb83ded63949" class="toggle"  />
+<label for="section-9775a5d18b3f13714f2cbb83ded63949" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">code_blocks</span>
+    DSP
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-753161cb6ae223d796d48dace94c5d35" class="toggle"  />
+<label for="section-753161cb6ae223d796d48dace94c5d35" class="flex">
+  <a role="button" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">bomb</span>
+    Marxismo — política
+    <span class="book-menu-count">0</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-07b51f49d8358eca8f39c1cd9f5e25f2" class="toggle"  />
+<label for="section-07b51f49d8358eca8f39c1cd9f5e25f2" class="flex">
+  <a href="/Notas/I.-Ciencia/9.-Computer-Science/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">computer</span>
+    Computer Science
+    <span class="book-menu-count">1</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/I.-Ciencia/9.-Computer-Science/LaTeX/" class="">LaTeX
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-91353bafe610c530fa6f64e6629d00a4" class="toggle" checked />
+<label for="section-91353bafe610c530fa6f64e6629d00a4" class="flex">
+  <a href="/Notas/II.-Personal/" 
+    class="book-collapse-toggle ">
+    
+    <span class="material-symbols-outlined sidebar-icon">person_book</span>
+    Personal
+    <span class="book-menu-count">11</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-7346c27fcb3ad1618c10597af270b0f5" class="toggle"  />
+<label for="section-7346c27fcb3ad1618c10597af270b0f5" class="flex">
+  <a href="/Notas/II.-Personal/Tareas/" 
+    class="book-collapse-toggle ">
+    Tareas
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Tareas/Lutheria/" class="">Lutheria
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Tareas/Website/" class="">Website
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Tareas/Portfolio-ideas/" class="">Portfolio ideas
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Tareas/To-do/" class="">To do
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-06744eeb22015d05afd126890819e0d1" class="toggle"  />
+<label for="section-06744eeb22015d05afd126890819e0d1" class="flex">
+  <a href="/Notas/II.-Personal/Trabajo/" 
+    class="book-collapse-toggle ">
+    Trabajo
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-08cedc6b8bc272bc4096fcd20c0e5415" class="toggle"  />
+<label for="section-08cedc6b8bc272bc4096fcd20c0e5415" class="flex">
+  <a href="/Notas/II.-Personal/Trabajo/Technical-Writing/" 
+    class="book-collapse-toggle ">
+    Technical Writing
+    <span class="book-menu-count">4</span>
+    
+  </a>
+</label>
+
+
+    
+    
+<ul>
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Trabajo/Technical-Writing/1.-Signal-Flow-in-a-Digital-Audio-Production-System/" class="">1. Signal Flow in a Digital Audio Production System
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Trabajo/Technical-Writing/AI_Audio_Plugin_Dev_Guide/" class="">AI Audio Plugin Dev Guide
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Trabajo/Technical-Writing/Audio_Engineering_Standard_Operating_Procedures/" class="">Audio Engineering Standard Operating Procedures
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Trabajo/Technical-Writing/Generative-Form-and-Abstracted-Cross-Rhythm/" class="">Generative Form and Abstracted Cross Rhythm
+</a>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+<a href="/Notas/II.-Personal/Ideas/" class="">Ideas
+</a>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-3c6892f2a622fc4aeb11f170e0f03499" class="toggle"  />
+<label for="section-3c6892f2a622fc4aeb11f170e0f03499" class="flex">
+  <a href="/Notas/II.-Personal/Reading-analytics/" 
+    class="book-collapse-toggle ">
+    Reading analytics
+  </a>
+</label>
+
+
+  </li>
+  
+  
+  
+  <li>
+    
+
+
+
+
+
+
+
+
+<input type="checkbox" id="section-fd28fa0073a31e979d692f66e94118b6" class="toggle"  />
+<label for="section-fd28fa0073a31e979d692f66e94118b6" class="flex">
+  <a href="/Notas/II.-Personal/Reading-tracker/" 
+    class="book-collapse-toggle ">
+    Reading tracker
+  </a>
+</label>
+
+
+  </li>
+  
+  
+</ul>
+
+    
+  </li>
+  
+  
+</ul>
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+  <script>
+(function () {
+  function initSidebarAnim() {
+    var menu = document.querySelector('.book-menu');
+    if (!menu) return;
+
+    
+    menu.querySelectorAll('input.toggle').forEach(function (toggle) {
+      var ul = toggle.nextElementSibling && toggle.nextElementSibling.nextElementSibling;
+      if (!ul || ul.tagName !== 'UL') return;
+
+      
+      
+      if (toggle.checked) {
+        ul.style.height = ul.scrollHeight + 'px';
+        
+        requestAnimationFrame(function () { ul.style.height = 'auto'; });
+      }
+
+      toggle.addEventListener('change', function () {
+        
+        ul.style.transition = 'none';
+
+        if (this.checked) {
+          
+          
+          
+          ul.style.height = '0';
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              ul.style.transition = '';          
+              ul.style.height = ul.scrollHeight + 'px';
+
+              
+              ul.addEventListener('transitionend', function onEnd(e) {
+                if (e.propertyName !== 'height') return;
+                ul.style.height = 'auto';
+                ul.removeEventListener('transitionend', onEnd);
+              });
+            });
+          });
+
+        } else {
+          
+          
+          ul.style.height = ul.offsetHeight + 'px';
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              ul.style.transition = '';          
+              ul.style.height = '0';
+            });
+          });
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSidebarAnim);
+  } else {
+    initSidebarAnim();
+  }
+})();
+</script>
+
+</nav>
+
+
+
+
+<script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+    <div class="book-page container">
+      
+
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+      
+      <article class="markdown">
+        
+        <h1 class="page-title">Advanced Tables Demo</h1>
+        
+        
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="advanced-tables-demonstration">
+  Advanced Tables Demonstration
+  <a class="anchor" href="#advanced-tables-demonstration">#</a>
+</h1>
+<p>This page demonstrates the usage of the new advanced table shortcodes that support merging cells and premium &ldquo;Excel-like&rdquo; styling.</p>
+<h2 id="1-merged-headers-colspan">
+  1. Merged Headers (Colspan)
+  <a class="anchor" href="#1-merged-headers-colspan">#</a>
+</h2>
+<div class="premium-table-wrapper ">
+    <table  class="premium-table excel-theme">
+        
+  <tr >
+    
+    <th colspan="2"    >
+    Instrument Group
+</th>
+    <th    >
+    Details
+</th>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    String
+</td>
+    <td    >
+    Guitar
+</td>
+    <td    >
+    Acoustic or Electric
+</td>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    String
+</td>
+    <td    >
+    Violin
+</td>
+    <td    >
+    Classical only
+</td>
+  
+</tr>
+
+    </table>
+</div>
+<hr>
+<h2 id="2-merged-rows-rowspan">
+  2. Merged Rows (Rowspan)
+  <a class="anchor" href="#2-merged-rows-rowspan">#</a>
+</h2>
+<div class="premium-table-wrapper ">
+    <table  class="premium-table excel-theme">
+        
+  <tr >
+    
+    <th    >
+    Category
+</th>
+    <th    >
+    Item
+</th>
+    <th    >
+    Value
+</th>
+  
+</tr>
+  <tr >
+    
+    <td  rowspan="3"   style="text-align: center;" >
+    <strong>Hardware</strong>
+</td>
+    <td    >
+    Processor
+</td>
+    <td    >
+    i9
+</td>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    RAM
+</td>
+    <td    >
+    64GB
+</td>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    Storage
+</td>
+    <td    >
+    2TB NVMe
+</td>
+  
+</tr>
+
+    </table>
+</div>
+<hr>
+<h2 id="3-complex-grid-rowspan--colspan">
+  3. Complex Grid (Rowspan + Colspan)
+  <a class="anchor" href="#3-complex-grid-rowspan--colspan">#</a>
+</h2>
+<div class="premium-table-wrapper ">
+    <table  class="premium-table excel-theme">
+        
+  <tr >
+    
+    <th  rowspan="2"   >
+    Service
+</th>
+    <th colspan="2"    >
+    Pricing Tier
+</th>
+  
+</tr>
+  <tr >
+    
+    <th    >
+    Basic
+</th>
+    <th    >
+    Pro
+</th>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    Web Hosting
+</td>
+    <td    >
+    $5/mo
+</td>
+    <td    >
+    $15/mo
+</td>
+  
+</tr>
+  <tr >
+    
+    <td    >
+    Support
+</td>
+    <td colspan="2"    style="text-align: center;" >
+    <strong>Included in all plans</strong>
+</td>
+  
+</tr>
+
+    </table>
+</div>
+<hr>
+<h2 id="4-interactive-spreadsheet-handsontable">
+  4. Interactive Spreadsheet (Handsontable)
+  <a class="anchor" href="#4-interactive-spreadsheet-handsontable">#</a>
+</h2>
+<p>This table is interactive! You can sort, filter, and resize columns.</p>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="handsontable-container" style="margin: 2rem 0; clear: both; width: 100%; position: relative;">
+  <div class="hot-action-bar">
+    <button onclick="window['hotPersistence_3'].toggleHeaders()" class="hot-btn" title="Toggle Spreadsheet Grid">
+      <span class="material-symbols-outlined">grid_on</span> Grid
+    </button>
+    <button onclick="window['hotPersistence_3'].copy()" class="hot-btn" title="Copy Data for Markdown">
+      <span class="material-symbols-outlined">content_copy</span> Copy for .md
+    </button>
+    <button onclick="window['hotPersistence_3'].reset()" class="hot-btn hot-btn-danger" title="Reset to original Markdown source">
+      <span class="material-symbols-outlined">restart_alt</span> Reset
+    </button>
+  </div>
+  <div id="handsontable-3" class="hot-container" style="width: 100%; min-height: 100px;"></div>
+</div>
+
+<script type="text/javascript">
+(function() {
+  var container = document.getElementById('handsontable-3');
+  if (!container) return;
+
+   
+  var storageKey = 'hot_v4_' + window.location.pathname + '_3';
+
+   
+  function parseCSV(str) {
+    if (!str) return [[]];
+    return str.replace(/\r/g, '').split('\n')
+      .map(function(l) { return l.trim(); })
+      .filter(function(l) { return l.length > 0; })
+      .map(function(l) { return l.split(',').map(function(c) { return c.trim(); }); });
+  }
+
+   
+  var savedState = null;
+  try { savedState = JSON.parse(localStorage.getItem(storageKey)); } catch(e) {}
+
+   
+  var dataStr = "\"ID, **Product**, Price, Stock\\r\\n1, Acoustic Guitar, 450, 12\\r\\n2, Electric Guitar, 800, 5\\r\\n3, Violin, 600, 8\\r\\n4, Piano, 2500, 2\\r\\n5, **Flute**, 150, **20**\"";
+  var sourceData;
+  try {
+    sourceData = JSON.parse(dataStr);
+    if (!Array.isArray(sourceData)) sourceData = parseCSV(String(sourceData));
+  } catch(e) { sourceData = parseCSV(dataStr); }
+
+  var data             = (savedState && savedState.data) ? savedState.data : sourceData;
+  var colHeadersConfig = (savedState && savedState.headers && savedState.headers.col) ? savedState.headers.col :  true ;
+  var rowHeadersConfig = (savedState && savedState.headers && savedState.headers.row) ? savedState.headers.row :  true ;
+  var customBordersConfig = (savedState && savedState.customBorders) ? savedState.customBorders : true;
+
+   
+  var headersVisible = true;
+  if (savedState && savedState.config && typeof savedState.config.headersVisible !== 'undefined') {
+    headersVisible = savedState.config.headersVisible;
+  } else if ("" === "true") {
+    headersVisible = false;
+  }
+
+   
+  function renderMarkdown(text) {
+    if (!text) return text;
+    return String(text)
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/__(.*?)__/g, '<strong>$1</strong>')
+      .replace(/_(.*?)_/g, '<em>$1</em>');
+  }
+
+   
+  function markdownRenderer(instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments);
+    if (typeof value === 'string' && value) {
+      td.innerHTML = renderMarkdown(td.innerHTML);
+    }
+  }
+
+  var hot;
+  var config = {
+    data: data,
+    rowHeaders: headersVisible ? rowHeadersConfig : false,
+    colHeaders: headersVisible ? colHeadersConfig : false,
+    renderer: markdownRenderer,
+    width: '100%',
+    height: 'auto',
+    licenseKey: 'non-commercial-and-evaluation',
+    multiColumnSorting: headersVisible,
+    filters: headersVisible,
+    dropdownMenu: headersVisible,
+    contextMenu: ['row_above', 'row_below', 'remove_row', '---------', 'col_left', 'col_right', 'remove_col', '---------', 'undo', 'redo', '---------', 'alignment', 'borders'],
+    customBorders: customBordersConfig,
+    manualRowMove: headersVisible,
+    manualColumnMove: headersVisible,
+    manualRowResize: true,
+    manualColumnResize: true,
+    mergeCells:  true ,
+    readOnly:  false ,
+    stretchH: 'all',
+    renderAllRows: true,
+    autoColumnSize: true,
+    autoRowSize: true,
+    afterChange: function(changes, source) { if (source !== 'loadData' && hot) scheduleSave(); },
+    afterRowMove: function() { if (hot) scheduleSave(); },
+    afterColMove: function() { if (hot) scheduleSave(); },
+    afterContextMenuExecute: function() { if (hot) scheduleSave(); },
+    afterGetColHeader: function(col, TH) {
+      if (!headersVisible || col < 0) return;
+      var wrapper = TH.querySelector('.colHeader');
+      if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+    },
+    afterGetRowHeader: function(row, TH) {
+      if (!headersVisible || row < 0) return;
+      var wrapper = TH.querySelector('.rowHeader');
+      if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+    }
+  };
+
+  hot = new Handsontable(container, config);
+
+   
+  var saveTimeout;
+  function scheduleSave() {
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(saveAll, 500);
+  }
+
+   
+  function saveAll() {
+    if (!hot) return;
+    var bordersPlugin = hot.getPlugin('customBorders');
+    var currentBorders = (bordersPlugin && typeof bordersPlugin.getBorders === 'function')
+      ? bordersPlugin.getBorders()
+      : true;
+    var state = {
+      data: hot.getData(),
+      headers: { col: colHeadersConfig, row: rowHeadersConfig },
+      config: { headersVisible: headersVisible },
+      customBorders: currentBorders
+    };
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+   
+  container.addEventListener('dblclick', function(e) {
+    if (!headersVisible) return;
+    var th = e.target.closest('th');
+    if (!th) return;
+    var coords = hot.getCoords(th);
+    if (coords.row >= 0 && coords.col >= 0) return;
+
+    var isCol  = coords.row < 0;
+    var index  = isCol ? coords.col : coords.row;
+    var current = isCol ? hot.getColHeader(index) : hot.getRowHeader(index);
+
+     
+    var input = document.createElement('input');
+    input.value = typeof current === 'string' ? current.replace(/<[^>]+>/g, '') : current;
+    input.style.cssText = 'position:absolute;z-index:1000;border:1px solid var(--secondary);background:var(--main-background);color:var(--dark);text-align:center;font:inherit;';
+    var rect  = th.getBoundingClientRect();
+    var cRect = container.getBoundingClientRect();
+    Object.assign(input.style, {
+      top:    (rect.top  - cRect.top)  + 'px',
+      left:   (rect.left - cRect.left) + 'px',
+      width:  rect.width  + 'px',
+      height: rect.height + 'px'
+    });
+    container.appendChild(input);
+    input.focus();
+    input.select();
+
+    input.onblur = function() {
+      var val = input.value;
+      if (input.parentNode) container.removeChild(input);
+      if (isCol) {
+        var h = hot.getColHeader();
+        if (!Array.isArray(h)) h = Array.from({length: hot.countCols()}, function(_, i) { return hot.getColHeader(i); });
+        h[index] = val;
+        colHeadersConfig = h;
+        hot.updateSettings({ colHeaders: h });
+      } else {
+        var h = hot.getRowHeader();
+        if (!Array.isArray(h)) h = Array.from({length: hot.countRows()}, function(_, i) { return hot.getRowHeader(i); });
+        h[index] = val;
+        rowHeadersConfig = h;
+        hot.updateSettings({ rowHeaders: h });
+      }
+      saveAll();
+    };
+    input.onkeydown = function(ev) {
+      if (ev.key === 'Enter')  { input.onblur(); }
+      if (ev.key === 'Escape') { input.onblur = null; if (input.parentNode) container.removeChild(input); }
+    };
+  });
+
+   
+  window['hotPersistence_3'] = {
+    toggleHeaders: function() {
+      headersVisible = !headersVisible;
+      hot.updateSettings({
+        rowHeaders:         headersVisible ? rowHeadersConfig : false,
+        colHeaders:         headersVisible ? colHeadersConfig : false,
+        multiColumnSorting: headersVisible,
+        filters:            headersVisible,
+        dropdownMenu:       headersVisible,
+        manualRowMove:      headersVisible,
+        manualColumnMove:   headersVisible
+      });
+      saveAll();
+      var icon = container.closest('.handsontable-container').querySelector('.hot-action-bar button span');
+      if (icon) icon.innerText = headersVisible ? 'grid_on' : 'grid_off';
+    },
+    copy: function() {
+      var json = JSON.stringify(hot.getData(), null, 2);
+      navigator.clipboard.writeText(json);
+    },
+    reset: function() {
+      if (confirm('Reset to original data?')) { localStorage.removeItem(storageKey); window.location.reload(); }
+    }
+  };
+
+  container.classList.add('hot-dark');
+  setTimeout(function() { hot.render(); window.dispatchEvent(new Event('resize')); }, 200);
+})();
+</script>
+
+
+
+        
+        
+
+<hr/>
+
+
+<div class="page-end" id="footer">
+    <div class="backlinks-container">
+        <h3>Backlinks</h3>
+<ul class="backlinks">
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  
+  <li>
+    No backlinks found
+  </li>
+  
+</ul>
+
+    </div>
+    <div>
+        <script
+  src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"
+  integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI="
+  crossorigin="anonymous"
+></script>
+<h3>Interactive Graph</h3>
+<div id="graph-container"></div>
+<style>
+  :root {
+    --g-node: var(--secondary);
+    --g-node-active: var(--primary);
+    --g-node-inactive: var(--visited);
+    --g-link: var(--outlinegray);
+    --g-link-active: #5a7282;
+  }
+</style>
+
+<script src="http://localhost:1313/quartz/js/graph.a71ebab16f7b5ec60b4a886b7112febb.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="contact_buttons">
+    <footer>
+        
+        
+
+        <ul></ul>
+    </footer>
+</div>
+
+
+        
+        
+      </article>
+       
+      
+
+
+      
+
+<div class="book-comments">
+
+</div>
+
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

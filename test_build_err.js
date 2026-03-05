@@ -1,0 +1,232 @@
+﻿{{ if not (.Page.Scratch.Get "handsontable") }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+{{ .Page.Scratch.Set "handsontable" true }}
+{{ end }}
+
+{{ $index := .Ordinal | printf "%d" }}
+{{ $id := printf "handsontable-%s" $index }}
+
+<div class="handsontable-container" style="margin: 2rem 0; clear: both; width: 100%; position: relative;">
+  <div class="hot-action-bar">
+    <button onclick="window['hotPersistence_{{ $index }}'].toggleHeaders()" class="hot-btn"
+      title="Toggle Spreadsheet Grid">
+      <span class="material-symbols-outlined">{{ if eq (.Get "hideHeaders") "true" }}grid_off{{ else }}grid_on{{ end
+        }}</span> Grid
+    </button>
+    <button onclick="window['hotPersistence_{{ $index }}'].copy()" class="hot-btn" title="Copy Data for Markdown">
+      <span class="material-symbols-outlined">content_copy</span> Copy for .md
+    </button>
+    <button onclick="window['hotPersistence_{{ $index }}'].reset()" class="hot-btn hot-btn-danger"
+      title="Reset to original Markdown source">
+      <span class="material-symbols-outlined">restart_alt</span> Reset
+    </button>
+  </div>
+  <div id="{{ $id }}" class="hot-container" style="width: 100%; min-height: 100px;"></div>
+</div>
+
+{{ $inner := .Inner | plainify }}
+{{ $inner = trim $inner " \n\r\t" }}
+{{ $rowHeaders := true }}{{ if eq (.Get "rowHeaders") "false" }}{{ $rowHeaders = false }}{{ end }}
+{{ $colHeaders := true }}{{ if eq (.Get "colHeaders") "false" }}{{ $colHeaders = false }}{{ end }}
+{{ $mergeCells := true }}{{ if eq (.Get "mergeCells") "false" }}{{ $mergeCells = false }}{{ end }}
+{{ $readOnly := false }}{{ if eq (.Get "readOnly") "true" }}{{ $readOnly = true }}{{ end }}
+
+<script type="text/javascript">
+  (function () {
+    var container = document.getElementById('{{ $id }}');
+    if (!container) return;
+
+    var storageKey = 'hot_v4_' + window.location.pathname + '_{{ $index }}';
+
+    function parseCSV(str) {
+      if (!str) return [[]];
+      var lines = str.replace(/\r/g, '').split('\n');
+      return lines.map(function (l) { return l.trim(); }).filter(function (l) { return l.length > 0; }).map(function (l) { return l.split(',').map(function (c) { return c.trim(); }); });
+    }
+
+    var savedState = null;
+    try { savedState = JSON.parse(localStorage.getItem(storageKey)); } catch (e) { }
+
+    var dataStr = {{ $inner | jsonify
+  }};
+  var sourceData;
+  try {
+    sourceData = JSON.parse(dataStr);
+    if (!Array.isArray(sourceData)) sourceData = parseCSV(String(sourceData));
+  } catch (e) { sourceData = parseCSV(dataStr); }
+
+  var data = (savedState && savedState.data) ? savedState.data : sourceData;
+  var colHeadersConfig = (savedState && savedState.headers && savedState.headers.col) ? savedState.headers.col : {{ $colHeaders }};
+  var rowHeadersConfig = (savedState && savedState.headers && savedState.headers.row) ? savedState.headers.row : {{ $rowHeaders }};
+  var customBordersConfig = (savedState && savedState.customBorders) ? savedState.customBorders : true;
+
+  // Header visibility state
+  var headersVisible = true;
+  if (savedState && savedState.config && typeof savedState.config.headersVisible !== 'undefined') {
+    headersVisible = savedState.config.headersVisible;
+  } else if ({{ .Get "hideHeaders" }} === "true") {
+    headersVisible = false;
+  }
+
+  function renderMarkdown(text) {
+    if (!text) return text;
+    return String(text)
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/__(.*?)__/g, '<strong>$1</strong>')
+      .replace(/_(.*?)_/g, '<em>$1</em>');
+  }
+
+  function markdownRenderer(instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments);
+    if (typeof value === 'string' && value) {
+      td.innerHTML = renderMarkdown(td.innerHTML);
+    }
+  }
+
+  var hot;
+  var config = {
+    data: data,
+    rowHeaders: headersVisible ? rowHeadersConfig : false,
+    colHeaders: headersVisible ? colHeadersConfig : false,
+    renderer: markdownRenderer,
+    width: '100%',
+    height: 'auto',
+    licenseKey: 'non-commercial-and-evaluation',
+    multiColumnSorting: headersVisible,
+    filters: headersVisible,
+    dropdownMenu: headersVisible,
+    contextMenu: ['row_above', 'row_below', 'remove_row', '---------', 'col_left', 'col_right', 'remove_col', '---------', 'undo', 'redo', '---------', 'alignment', 'borders'],
+    customBorders: customBordersConfig,
+    manualRowMove: headersVisible,
+    manualColumnMove: headersVisible,
+    manualRowResize: true,
+    manualColumnResize: true,
+    mergeCells: {{ $mergeCells }},
+  readOnly: { { $readOnly } },
+  stretchH: 'all',
+    renderAllRows: true,
+      autoColumnSize: true,
+        autoRowSize: true,
+          afterChange: function(changes, source) { if (source !== 'loadData' && hot) scheduleSave(); },
+  afterRowMove: function() { if (hot) scheduleSave(); },
+  afterColMove: function() { if (hot) scheduleSave(); },
+  afterContextMenuExecute: function() { if (hot) scheduleSave(); },
+  afterGetColHeader: function(col, TH) {
+    if (!headersVisible || col < 0) return;
+    var wrapper = TH.querySelector('.colHeader');
+    if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+  },
+  afterGetRowHeader: function(row, TH) {
+    if (!headersVisible || row < 0) return;
+    var wrapper = TH.querySelector('.rowHeader');
+    if (wrapper) wrapper.innerHTML = renderMarkdown(wrapper.innerHTML);
+  }
+  };
+
+  hot = new Handsontable(container, config);
+
+  var saveTimeout;
+  function scheduleSave() {
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(saveAll, 500);
+  }
+
+  function saveAll() {
+    if (!hot) return;
+    var bordersPlugin = hot.getPlugin('customBorders');
+    var currentBorders = bordersPlugin && typeof bordersPlugin.getBorders === 'function' ? bordersPlugin.getBorders() : true;
+
+    var state = {
+      data: hot.getData(),
+      headers: {
+        col: colHeadersConfig,
+        row: rowHeadersConfig
+      },
+      config: {
+        headersVisible: headersVisible
+      },
+      customBorders: currentBorders
+    };
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+  container.addEventListener('dblclick', function (e) {
+    if (!headersVisible) return;
+    var th = e.target.closest('th');
+    if (!th) return;
+    var coords = hot.getCoords(th);
+    if (coords.row >= 0 && coords.col >= 0) return;
+
+    var isCol = coords.row < 0;
+    var index = isCol ? coords.col : coords.row;
+    var current = isCol ? hot.getColHeader(index) : hot.getRowHeader(index);
+
+    var input = document.createElement('input');
+    input.value = current;
+    input.style.cssText = 'position:absolute;z-index:1000;border:1px solid var(--secondary);background:var(--main-background);color:var(--dark);text-align:center;font:inherit;';
+    var rect = th.getBoundingClientRect();
+    var cRect = container.getBoundingClientRect();
+    Object.assign(input.style, { top: (rect.top - cRect.top) + "px", left: (rect.left - cRect.left) + "px", width: rect.width + "px", height: rect.height + "px" });
+
+    container.appendChild(input);
+    input.focus(); input.select();
+
+    input.onblur = function () {
+      var val = input.value;
+      if (input.parentNode) container.removeChild(input);
+      if (isCol) {
+        var h = hot.getColHeader(); if (!Array.isArray(h)) h = Array.from({ length: hot.countCols() }, function (_, i) { return hot.getColHeader(i); });
+        h[index] = val;
+        colHeadersConfig = h;
+        hot.updateSettings({ colHeaders: h });
+      } else {
+        var h = hot.getRowHeader(); if (!Array.isArray(h)) h = Array.from({ length: hot.countRows() }, function (_, i) { return hot.getRowHeader(i); });
+        h[index] = val;
+        rowHeadersConfig = h;
+        hot.updateSettings({ rowHeaders: h });
+      }
+      saveAll();
+    };
+    input.onkeydown = function (ev) {
+      if (ev.key === 'Enter') {
+        input.onblur();
+      }
+      if (ev.key === 'Escape') {
+        input.onblur = null;
+        if (input.parentNode) container.removeChild(input);
+      }
+    };
+  });
+
+  window['hotPersistence_{{ $index }}'] = {
+    toggleHeaders: function () {
+      headersVisible = !headersVisible;
+      hot.updateSettings({
+        rowHeaders: headersVisible ? rowHeadersConfig : false,
+        colHeaders: headersVisible ? colHeadersConfig : false,
+        multiColumnSorting: headersVisible,
+        filters: headersVisible,
+        dropdownMenu: headersVisible,
+        manualRowMove: headersVisible,
+        manualColumnMove: headersVisible
+      });
+      saveAll();
+
+      var icon = container.closest('.handsontable-container').querySelector('.hot-action-bar button span');
+      if (icon) icon.innerText = headersVisible ? 'grid_on' : 'grid_off';
+    },
+    copy: function () {
+      var json = JSON.stringify(hot.getData(), null, 2);
+      navigator.clipboard.writeText(json);
+    },
+    reset: function () {
+      if (confirm("Reset to original data?")) { localStorage.removeItem(storageKey); window.location.reload(); }
+    }
+  };
+
+  container.classList.add('hot-dark');
+  setTimeout(function () { hot.render(); window.dispatchEvent(new Event('resize')); }, 200);
+}) ();
+</script>
