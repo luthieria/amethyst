@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <!-- Handsontable Dependencies (Loaded first) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+
+    <style>
+        :root {
+            --main-background: #131314;
+            --sidebar-background: #181818;
+            --dark: #e3e3e3;
+            --secondary: #d9ca9a;
+            --outlinegray: #43484c;
+        }
+
+        body {
+            background-color: var(--main-background);
+            margin: 0;
+        }
+
+        /* Hide the loading screen behind our theme */
+        #nc-root {
+            background-color: var(--main-background);
+        }
+
+        /* Handsontable Dark Theme Overrides */
+        .handsontable .htCore {
+            background-color: var(--main-background);
+            color: var(--dark);
+        }
+
+        .handsontable th {
+            background-color: var(--sidebar-background) !important;
+            color: var(--secondary) !important;
+            border-color: var(--outlinegray) !important;
+        }
+
+        .handsontable td {
+            background-color: var(--main-background) !important;
+            color: var(--dark) !important;
+            border-color: var(--outlinegray) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+        // Custom Handsontable Widget
+        (function init() {
+            // CMS in v3 can be window.CMS or window.NetlifyCMS
+            const CMS = window.CMS || window.NetlifyCMS;
+
+            if (!CMS) {
+                console.log("Waiting for CMS...");
+                setTimeout(init, 100);
+                return;
+            }
+
+            console.log("CMS found, registering widget...");
+            const React = CMS.React;
+            const h = React.createElement;
+
+            class HandsontableControl extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.containerRef = React.createRef();
+                    this.hot = null;
+                }
+                componentDidMount() {
+                    let data = [["", ""], ["", ""]];
+                    if (this.props.value) {
+                        try {
+                            data = JSON.parse(this.props.value);
+                        } catch (e) {
+                            data = this.props.value.split('\n').map(r => r.split(','));
+                        }
+                    }
+                    this.hot = new Handsontable(this.containerRef.current, {
+                        data: data,
+                        rowHeaders: true,
+                        colHeaders: true,
+                        contextMenu: true,
+                        mergeCells: true,
+                        height: '400px',
+                        width: '100%',
+                        stretchH: 'all',
+                        licenseKey: 'non-commercial-and-evaluation',
+                        afterChange: () => this.updateValue(),
+                        afterMergeCells: () => this.updateValue(),
+                        afterRemoveRow: () => this.updateValue(),
+                        afterRemoveCol: () => this.updateValue(),
+                    });
+                }
+                updateValue() {
+                    if (this.hot) {
+                        this.props.onChange(JSON.stringify(this.hot.getData()));
+                    }
+                }
+                render() {
+                    return h('div', { style: { border: '1px solid #444', borderRadius: '4px', overflow: 'hidden' } },
+                        h('div', { ref: this.containerRef })
+                    );
+                }
+            }
+
+            CMS.registerWidget('handsontable', HandsontableControl);
+
+            CMS.registerEditorComponent({
+                id: "handsontable",
+                label: "Handsontable Spreadsheet",
+                fields: [
+                    { name: "data", label: "Table Data", widget: "handsontable", default: "[[\"\", \"\"], [\"\", \"\"]]" },
+                    { name: "height", label: "Height", widget: "string", default: "400px" }
+                ],
+                pattern: /^\{\{< handsontable\s*(?:height="([^"]*)")?\s*>\}\}\s*([\s\S]*?)\s*\{\{< \/handsontable >\}\}/m,
+                fromBlock: (match) => ({ height: match[1], data: match[2] }),
+                toBlock: (obj) => `{{< handsontable height="${obj.height || "400px"}" >}}\n${obj.data}\n{{< /handsontable >}}`,
+                toPreview: (obj) => h('div', null, `📊 Handsontable Spreadsheet (${obj.data ? obj.data.length : 0} bytes)`)
+            });
+        })();
+    </script>
+</body>
+
+</html>

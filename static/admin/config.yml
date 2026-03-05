@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: luthieria/amethyst
+  branch: main
+  base_url: https://amethyst-oauth.netlify.app
+  auth_endpoint: /.netlify/functions/oauth
+
+local_backend: true
+
+site_url: https://luthieria.github.io/amethyst
+display_url: https://luthieria.github.io/amethyst
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "notas"
+    label: "📓 Notas"
+    folder: "content/Notas"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    nested:
+      depth: 10
+    path: "{{slug}}"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }

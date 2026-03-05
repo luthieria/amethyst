@@ -48,11 +48,15 @@
 
   if (!Array.isArray(data) || data.length === 0) data = [[]];
 
+  // Initialize Header Labels
+  var customColHeaders = null;
+  var customRowHeaders = null;
+
   var hot = new Handsontable(container, {
     data: data,
     rowHeaders: {{ $rowHeaders }},
     colHeaders: {{ $colHeaders }},
-    height: 'auto', // Force Handsontable to expand to its content height
+    height: 'auto',
     width: '100%',
     licenseKey: 'non-commercial-and-evaluation',
     multiColumnSorting: true,
@@ -66,9 +70,80 @@
     mergeCells: {{ $mergeCells }},
     readOnly: {{ $readOnly }},
     stretchH: 'all',
-    renderAllRows: true, // Render everything at once for full height
+    renderAllRows: true,
     autoColumnSize: true,
     autoRowSize: true
+  });
+
+  // --- Editable Headers Logic ---
+  container.addEventListener('dblclick', function(event) {
+    var th = event.target.closest('th');
+    if (!th) return;
+
+    var coords = hot.getCoords(th);
+    var isColHeader = coords.row < 0;
+    var isRowHeader = coords.col < 0;
+
+    if (!isColHeader && !isRowHeader) return;
+
+    var index = isColHeader ? coords.col : coords.row;
+    var currentValue = isColHeader ? hot.getColHeader(index) : hot.getRowHeader(index);
+
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.value = currentValue;
+    input.className = 'hot-header-input';
+    input.style.position = 'absolute';
+    input.style.zIndex = '1000';
+    input.style.fontFamily = 'inherit';
+    input.style.fontSize = 'inherit';
+    input.style.textAlign = 'center';
+    input.style.border = 'none';
+    input.style.outline = '1px solid var(--secondary)';
+    input.style.backgroundColor = 'var(--main-background)';
+    input.style.color = 'var(--dark)';
+
+    var rect = th.getBoundingClientRect();
+    var containerRect = container.getBoundingClientRect();
+    input.style.top = (rect.top - containerRect.top) + 'px';
+    input.style.left = (rect.left - containerRect.left) + 'px';
+    input.style.width = rect.width + 'px';
+    input.style.height = rect.height + 'px';
+
+    container.appendChild(input);
+    input.focus();
+    input.select();
+
+    function commit() {
+      if (!input.parentNode) return;
+      var newValue = input.value;
+      container.removeChild(input);
+
+      if (isColHeader) {
+        if (!customColHeaders) {
+          customColHeaders = [];
+          for (var i = 0; i < hot.countCols(); i++) customColHeaders.push(hot.getColHeader(i));
+        }
+        customColHeaders[index] = newValue;
+        hot.updateSettings({ colHeaders: customColHeaders });
+      } else {
+        if (!customRowHeaders) {
+          customRowHeaders = [];
+          for (var i = 0; i < hot.countRows(); i++) customRowHeaders.push(hot.getRowHeader(i));
+        }
+        customRowHeaders[index] = newValue;
+        hot.updateSettings({ rowHeaders: customRowHeaders });
+      }
+    }
+
+    input.addEventListener('blur', commit);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') commit();
+      if (e.key === 'Escape') {
+        input.removeEventListener('blur', commit);
+        if (input.parentNode) container.removeChild(input);
+      }
+    });
   });
 
   container.classList.add('hot-dark');
