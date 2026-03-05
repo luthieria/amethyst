@@ -4,15 +4,18 @@
   {{ .Page.Scratch.Set "handsontable" true }}
 {{ end }}
 
-{{ $index := .Ordinal }}
-{{ $id := printf "handsontable-%d" $index }}
+{{ $index := .Ordinal | printf "%d" }}
+{{ $id := printf "handsontable-%s" $index }}
 
 <div class="handsontable-container" style="margin: 2rem 0; clear: both; width: 100%; position: relative;">
   <div class="hot-action-bar">
-    <button onclick="window.hotPersistence_{{ $index }}.copy()" class="hot-btn" title="Copy Data for Markdown">
+    <button onclick="window['hotPersistence_{{ $index }}'].toggleHeaders()" class="hot-btn" title="Toggle Spreadsheet Grid">
+      <span class="material-symbols-outlined">{{ if eq (.Get "hideHeaders") "true" }}grid_off{{ else }}grid_on{{ end }}</span> Grid
+    </button>
+    <button onclick="window['hotPersistence_{{ $index }}'].copy()" class="hot-btn" title="Copy Data for Markdown">
       <span class="material-symbols-outlined">content_copy</span> Copy for .md
     </button>
-    <button onclick="window.hotPersistence_{{ $index }}.reset()" class="hot-btn hot-btn-danger" title="Reset to original Markdown source">
+    <button onclick="window['hotPersistence_{{ $index }}'].reset()" class="hot-btn hot-btn-danger" title="Reset to original Markdown source">
       <span class="material-symbols-outlined">restart_alt</span> Reset
     </button>
   </div>
@@ -33,7 +36,7 @@
   var container = document.getElementById('{{ $id }}');
   if (!container) return;
 
-  var storageKey = 'hot_v2_' + window.location.pathname + '_{{ $index }}';
+  var storageKey = 'hot_v4_' + window.location.pathname + '_{{ $index }}';
   
   function parseCSV(str) {
     if (!str) return [[]];
@@ -52,23 +55,31 @@
   } catch (e) { sourceData = parseCSV(dataStr); }
 
   var data = (savedState && savedState.data) ? savedState.data : sourceData;
-  var colHeaders = (savedState && savedState.headers && savedState.headers.col) ? savedState.headers.col : {{ $colHeaders }};
-  var rowHeaders = (savedState && savedState.headers && savedState.headers.row) ? savedState.headers.row : {{ $rowHeaders }};
+  var colHeadersConfig = (savedState && savedState.headers && savedState.headers.col) ? savedState.headers.col : {{ $colHeaders }};
+  var rowHeadersConfig = (savedState && savedState.headers && savedState.headers.row) ? savedState.headers.row : {{ $rowHeaders }};
+  
+  // Header visibility state
+  var headersVisible = true;
+  if (savedState && savedState.config && typeof savedState.config.headersVisible !== 'undefined') {
+    headersVisible = savedState.config.headersVisible;
+  } else if ({{ .Get "hideHeaders" }} === "true") {
+    headersVisible = false;
+  }
 
   var hot;
   var config = {
     data: data,
-    rowHeaders: rowHeaders,
-    colHeaders: colHeaders,
+    rowHeaders: headersVisible ? rowHeadersConfig : false,
+    colHeaders: headersVisible ? colHeadersConfig : false,
     width: '100%',
     height: 'auto',
     licenseKey: 'non-commercial-and-evaluation',
-    multiColumnSorting: true,
-    filters: true,
-    dropdownMenu: true,
+    multiColumnSorting: headersVisible,
+    filters: headersVisible,
+    dropdownMenu: headersVisible,
     contextMenu: true,
-    manualRowMove: true,
-    manualColumnMove: true,
+    manualRowMove: headersVisible,
+    manualColumnMove: headersVisible,
     manualRowResize: true,
     manualColumnResize: true,
     mergeCells: {{ $mergeCells }},
@@ -88,12 +99,19 @@
     if(!hot) return;
     var state = {
       data: hot.getData(),
-      headers: { col: hot.getColHeader(), row: hot.getRowHeader() }
+      headers: { 
+        col: colHeadersConfig, 
+        row: rowHeadersConfig 
+      },
+      config: {
+        headersVisible: headersVisible
+      }
     };
     localStorage.setItem(storageKey, JSON.stringify(state));
   }
 
   container.addEventListener('dblclick', function(e) {
+    if (!headersVisible) return;
     var th = e.target.closest('th');
     if (!th) return;
     var coords = hot.getCoords(th);
@@ -118,10 +136,14 @@
       if (input.parentNode) container.removeChild(input);
       if (isCol) {
         var h = hot.getColHeader(); if(!Array.isArray(h)) h = Array.from({length:hot.countCols()}, function(_,i){ return hot.getColHeader(i); });
-        h[index] = val; hot.updateSettings({ colHeaders: h });
+        h[index] = val; 
+        colHeadersConfig = h;
+        hot.updateSettings({ colHeaders: h });
       } else {
         var h = hot.getRowHeader(); if(!Array.isArray(h)) h = Array.from({length:hot.countRows()}, function(_,i){ return hot.getRowHeader(i); });
-        h[index] = val; hot.updateSettings({ rowHeaders: h });
+        h[index] = val; 
+        rowHeadersConfig = h;
+        hot.updateSettings({ rowHeaders: h });
       }
       saveAll();
     };
@@ -136,7 +158,23 @@
     };
   });
 
-  window['hotPersistence_' + {{ $index }}] = {
+  window['hotPersistence_{{ $index }}'] = {
+    toggleHeaders: function() {
+      headersVisible = !headersVisible;
+      hot.updateSettings({
+        rowHeaders: headersVisible ? rowHeadersConfig : false,
+        colHeaders: headersVisible ? colHeadersConfig : false,
+        multiColumnSorting: headersVisible,
+        filters: headersVisible,
+        dropdownMenu: headersVisible,
+        manualRowMove: headersVisible,
+        manualColumnMove: headersVisible
+      });
+      saveAll();
+      
+      var icon = container.closest('.handsontable-container').querySelector('.hot-action-bar button span');
+      if (icon) icon.innerText = headersVisible ? 'grid_on' : 'grid_off';
+    },
     copy: function() {
       var json = JSON.stringify(hot.getData(), null, 2);
       navigator.clipboard.writeText(json).then(function() {
