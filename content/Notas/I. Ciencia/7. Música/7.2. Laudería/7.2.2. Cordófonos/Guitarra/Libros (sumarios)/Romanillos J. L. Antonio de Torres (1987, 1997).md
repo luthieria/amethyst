@@ -707,9 +707,98 @@ Luthier, Product, Price, Stock
 - Head sizes vary according to guitar sizes.
 - Some neck shafts are up to 6 pieces.
 
+{{< table >}}
+
+{{< tr >}}
+  {{< th colspan="6" >}}**Soundboards**{{< /th >}}
+{{< /tr >}}
+
+  {{< tr >}}
+    {{< td colspan="2" rowspan="2" >}}{{< /td >}}
+    {{< td colspan="4" >}}**Amount per epoch**{{< /td >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td >}}**1 (1852–1869)**{{< /td >}}
+    {{< td >}}**2 (1875–1892)**{{< /td >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td rowspan="4" >}}**Halves**{{< /td >}}
+  {{< /tr >}}
+  {{< tr >}}
+    {{< td >}}**Matched**{{< /td >}}
+    {{< td >}}9{{< /td >}}
+    {{< td >}}6{{< /td >}}
+  {{< /tr>}}
+  {{< tr >}}
+    {{< td >}}**Unmatched**{{< /td >}}
+    {{< td >}}20{{< /td >}}
+    {{< td >}}31{{< /td >}}
+  {{< /tr>}}
+  {{< tr >}}
+    {{< td >}}**Unknown**{{< /td >}}
+    {{< td >}}10{{< /td >}}
+    {{< td >}}12{{< /td >}}
+  {{< /tr>}}
+
+  {{< tr >}}
+    {{< td rowspan="4">}}**Pieces**{{< /td >}}
+  {{< /tr >}} 
+
+  {{< tr >}}
+    {{< td >}}**2**{{< /td >}}
+    {{< td >}}29{{< /td >}}
+    {{< td >}}31{{< /td >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td >}}**3**{{< /td >}}
+    {{< td >}}3{{< /td >}}
+    {{< td >}}10{{< /td >}}
+  {{< /tr >}}
+
+  {{< tr >}}
+    {{< td >}}**4**{{< /td >}}
+    {{< td >}}1{{< /td >}}
+    {{< td >}}2{{< /td >}}
+  {{< /tr >}}
+
+{{< tr >}}
+  {{< td rowspan="3" >}}**Guitar Amount**{{< /td >}}
+{{< /tr >}}
+
+{{< tr >}}
+  {{< td >}}**Unknown**{{< /td >}}
+  {{< td colspan="2" >}}6{{< /td >}}
+{{< /tr >}}
+
+{{< tr >}}
+  {{< td >}}**Total**{{< /td >}}
+  {{< td >}}39{{< /td >}}
+  {{< td >}}49{{< /td >}}
+{{< /tr >}}
+
+{{< /table >}}
 
 
 
+
+<!-- 
+{{< table >}}
+
+  {{< tr >}}
+    {{< th >}}Backs{{< /th >}}
+    {{< td >}}{{< /td >}}
+    {{< td >}}{{< /td >}}
+    {{< td >}}{{< /td >}}
+    {{< td >}}{{< /td >}}
+    {{< td >}}{{< /td >}}
+  {{< /tr >}} -->
+
+
+
+## 6. Soundboard Patterns
 
 
 
