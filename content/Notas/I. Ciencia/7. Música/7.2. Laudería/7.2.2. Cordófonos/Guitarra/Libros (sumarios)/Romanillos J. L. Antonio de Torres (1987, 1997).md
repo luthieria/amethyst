@@ -784,19 +784,6 @@ Luthier, Product, Price, Stock
 
 
 
-<!-- 
-{{< table >}}
-
-  {{< tr >}}
-    {{< th >}}Backs{{< /th >}}
-    {{< td >}}{{< /td >}}
-    {{< td >}}{{< /td >}}
-    {{< td >}}{{< /td >}}
-    {{< td >}}{{< /td >}}
-    {{< td >}}{{< /td >}}
-  {{< /tr >}} -->
-
-
 
 ## 6. Soundboard Patterns
 
