@@ -87,39 +87,94 @@
    Handsontable Modern Premium Theme (Dark Mode)
    ========================================================================== */
 
-/* ==========================================================================
-   Global Handsontable Menu Overrides (Context Menu & Dropdown)
-   These apply even when menus are rendered as direct children of <body>
-   ========================================================================== */
+/* Handsontable Action Bar (Save/Reset/Copy) */
+.hot-action-bar {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+    padding: 0 4px;
+
+    .hot-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: var(--dark);
+        font-family: var(--font-sans), sans-serif;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+
+        .material-symbols-outlined {
+            font-size: 18px;
+            opacity: 0.7;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary);
+            color: var(--secondary);
+
+            .material-symbols-outlined {
+                opacity: 1;
+            }
+        }
+
+        &.hot-btn-danger {
+            &:hover {
+                border-color: #ff4444;
+                color: #ff4444;
+            }
+        }
+    }
+}
+
+/* Toast Notification for Copy */
+#hot-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--secondary);
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 10000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &.show {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Global Handsontable Menu Overrides */
 .htMenu,
 .htContextMenu,
 .htDropdownMenu {
-    /* TYPOGRAPHY: Strict enforcement of sans-serif for a modern look */
     font-family: var(--font-sans), sans-serif !important;
-
-    /* LAYOUT: Wider menu for better readability and touch-friendliness */
     min-width: fit-content !important;
     max-width: 320px !important;
-
-    /* AESTHETICS: Glassmorphism effect consistent with the main UI */
     background-color: rgba(24, 24, 24, 0.95) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
-
-    /* BORDERS & SHADOWS: Minimalist borderless look with depth */
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 12px !important;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7) !important;
-
     color: var(--dark) !important;
     padding: 8px !important;
     overflow: hidden !important;
-
-    /* ANIMATION: Subtle fade and slide-in effect when appearing */
     animation: hotMenuFadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: top center;
 
-    /* Menu Core Table Styling: High specificity to kill default white backgrounds */
     &.handsontable .htCore,
     table.htCore,
     .htCore {
@@ -127,7 +182,6 @@
         border: none !important;
         width: 100% !important;
 
-        /* Forced Transparency for all rows and cells in menus */
         tr,
         tr.ht__row_odd,
         tr.ht__row_even,
@@ -136,9 +190,7 @@
             border: none !important;
         }
 
-        /* Individual Menu Cells Styling */
         tr td {
-            /* Text Color: Premium off-white for readability */
             color: var(--dark) !important;
             padding: 8px 10px !important;
             border-radius: 8px !important;
@@ -148,7 +200,6 @@
             font-family: var(--font-sans), sans-serif !important;
             text-align: left;
 
-            /* HOVER STATE: Subtle highlight using white opacity */
             &.current,
             &.highlight,
             &:hover {
@@ -156,19 +207,10 @@
                 color: var(--secondary) !important;
             }
 
-            /* Menu Separator Line */
             &.htSeparator {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-                height: 1px !important;
-                padding: 0 !important;
-                margin: 6px 0 !important;
-                border-radius: 0 !important;
-                background-color: transparent !important;
-
                 display: none;
             }
 
-            /* DISABLED ITEMS: Professional faded state */
             &.htDisabled {
                 opacity: 0.3 !important;
                 cursor: not-allowed !important;
@@ -180,43 +222,31 @@
         }
     }
 
-    /* SELECTION LINKS: "Select all", "Clear" etc. in dropdown menus */
     .htUISelectionControls {
         padding: 8px 12px !important;
-        font-family: var(--font-sans), sans-serif !important;
 
         a {
             color: var(--secondary) !important;
             text-decoration: none !important;
             font-size: 0.85rem;
             font-weight: 500;
-            margin-right: 12px;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
 
             &:hover {
-                opacity: 1;
                 text-decoration: underline !important;
             }
         }
     }
 
-    /* SUBMENU INDICATOR: The small arrow for nested menus */
-    .htSubmenu {
-        position: relative;
-
-        &:after {
-            content: '›';
-            position: absolute;
-            right: 12px;
-            font-size: 1.2rem;
-            color: var(--gray);
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .htSubmenu:after {
+        content: '›';
+        position: absolute;
+        right: 12px;
+        font-size: 1.2rem;
+        color: var(--gray);
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    /* FORM ELEMENTS: Inputs and selects inside the filter menu */
     .htUISelect,
     .htUIInput,
     .htUIMultipleSelect {
@@ -224,7 +254,6 @@
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
         color: var(--dark) !important;
         border-radius: 8px !important;
-        font-family: var(--font-sans), sans-serif !important;
         margin: 6px 0 !important;
 
         .htUISelectCaption,
@@ -232,17 +261,10 @@
             background-color: transparent !important;
             color: var(--dark) !important;
             border: none !important;
-            font-family: var(--font-sans), sans-serif !important;
             padding: 10px 14px !important;
-        }
-
-        .htUISelectArrow {
-            color: var(--gray) !important;
-            right: 12px !important;
         }
     }
 
-    /* Action Buttons (OK / Cancel) */
     .htFiltersMenuActionBar {
         padding: 16px 12px !important;
         border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -254,39 +276,23 @@
             padding: 10px !important;
             border-radius: 8px !important;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
             text-align: center;
             border: none !important;
-            font-family: var(--font-sans), sans-serif !important;
             font-size: 0.9rem;
 
             &.htUIButtonOK {
                 background-color: var(--secondary) !important;
                 color: #000 !important;
-
-                &:hover {
-                    filter: brightness(1.1);
-                }
             }
 
             &.htUIButtonCancel {
                 background-color: rgba(255, 255, 255, 0.05) !important;
                 color: var(--gray) !important;
-
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.1) !important;
-                }
             }
         }
     }
-
-    .htUIMultipleSelectSearch input::placeholder {
-        color: rgba(255, 255, 255, 0.3) !important;
-    }
 }
 
-/* KEYFRAMES: Animation for menu entry */
 @keyframes hotMenuFadeIn {
     from {
         opacity: 0;
@@ -299,10 +305,6 @@
     }
 }
 
-/* 
-   Handsontable Layout: Force Full Page Expansion
-   Hides scrollbars and allows the table to show all rows.
-*/
 .handsontable-container,
 .hot-container {
     height: auto !important;
@@ -310,9 +312,6 @@
     overflow: visible !important;
 }
 
-/* 
-   Handsontable Internal Containers: Kill fixed heights
-*/
 .wtHolder,
 .wtHider {
     height: auto !important;
@@ -321,9 +320,6 @@
     min-height: 50px;
 }
 
-/* 
-   The main Handsontable Dark Theme wrapper
-*/
 .hot-dark {
     --hot-primary: var(--secondary);
     --hot-selection-bg: rgba(var(--secondary-rgb, 217, 202, 154), 0.15);
@@ -335,7 +331,6 @@
         font-family: var(--font-sans), sans-serif !important;
         display: table !important;
 
-        /* All Borders Hidden */
         tr,
         th,
         td {
@@ -344,22 +339,16 @@
             border: none !important;
             padding: 12px 16px !important;
             vertical-align: middle;
-            font-family: var(--font-sans), sans-serif !important;
-            /* INCREASED FONT SIZE: Better readability for professional use */
             font-size: 1.15rem !important;
         }
 
-        /* Header Styling */
         th {
             background-color: var(--sidebar-background) !important;
             color: var(--secondary) !important;
             font-weight: 600;
             text-transform: uppercase;
-            /* HEADER FONT SIZE: Match cell size for consistency */
-            font-size: 1.15rem !important;
             letter-spacing: 0.05em;
-            
-            /* Align header content vertically */
+
             .relative {
                 display: flex;
                 align-items: center;
@@ -369,54 +358,44 @@
             }
         }
 
-        /* Zebra Striping */
         tr:nth-child(even) td {
             background-color: rgba(255, 255, 255, 0.02) !important;
         }
 
-        /* Row/Cell Selection */
-        .area {
+        .area,
+        .current {
             background-color: var(--hot-selection-bg) !important;
         }
 
         .current {
-            background-color: var(--hot-selection-bg) !important;
             outline: 1px solid var(--hot-primary) !important;
-            border: none !important;
         }
     }
 
-    /* Column Sort/Filter Indicators Settings: Replace arrows with chevrons */
     .changeType {
         color: var(--gray) !important;
+        background-color: transparent !important;
         background: transparent !important;
         border: none !important;
+        box-shadow: none !important;
         font-family: 'Material Symbols Outlined' !important;
-        font-size: 1.4rem !important;
-        line-height: 1;
-        cursor: pointer;
+        font-size: 0 !important;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.2s ease;
         visibility: visible !important;
-        
-        /* Hide original arrow and show chevron */
-        font-size: 0; // Hide original text content
-        
+
         &:before {
-            content: "\e5cc" !important; // chevron_right
+            content: "\e5cc" !important;
             font-size: 1.4rem !important;
-            transform: rotate(90deg); // Make it a down chevron
+            transform: rotate(90deg);
             display: block;
             opacity: 0.6;
         }
 
-        &:hover {
+        &:hover:before {
             color: var(--secondary) !important;
-            &:before {
-                opacity: 1;
-            }
+            opacity: 1;
         }
     }
 }
