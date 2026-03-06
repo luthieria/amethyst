@@ -781,13 +781,9 @@ Luthier, Product, Price, Stock
 
 {{< /table >}}
 
-
-
-
-
 ## 6. Soundboard Patterns
 
-
+- 
 
 
 

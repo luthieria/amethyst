@@ -1,6 +1,8 @@
 ---
 title: "Libros (sumarios)"
-weight: 7
+icon: book
+
+weight: 9
 
 bookHideChildren: true
 

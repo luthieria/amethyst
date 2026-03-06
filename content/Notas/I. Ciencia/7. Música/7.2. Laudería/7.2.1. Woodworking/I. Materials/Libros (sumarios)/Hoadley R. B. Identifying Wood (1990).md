@@ -2,7 +2,6 @@
 title: "Identifying Wood"
 author: "R. Bruce Hoadley"
 year: 1990
-
 ---
 
 # Introduction
@@ -48,3 +47,46 @@ year: 1990
       - E.g., 
         - red oak: the smaller pores are solitary (— don't touch other pores) and thick-walled;
         - white oak: small pores are grouped in ≥2 and thin-walled.
+
+## Microscope
+
+- Identification is easier and more reliable with a microscope than with a hand lens.
+
+# I. The Classification and Naming of Woods
+
+- **Taxonomy** — the practice of classifying living things.
+
+<br>
+
+1. **Kingdom**
+2. **Division** = **phylum**
+3. **Subdivision** = **class**
+4. **Order**
+5. **Family**
+6. **Genus**
+7. **Species**
+
+## Spermatophytes
+
+1. **Spermatophytes** (phylum) — all seed plants.
+   1. **Gymnosperms** — exposed seeds.
+      1. **Conifers** — softwood lumber.
+         - E.g.: pine, fir.
+   2. **Angiosperms** — encapsulated seeds.
+      1. **Dicotyledons** — hardwood lumber.
+         - E.g.: maple, mahogany.
+      2. **Monocotyledons** — woody monocots.
+         - E.g.: bamboo, palm.
+
+<br>
+
+## Stem Forms
+
+1. **Evergreen conifers** — excurrent.
+2. **Decidious hardwoods** — branching.
+
+![alt text](<Imagenes/Stem forms.png>)
+
+## Gymnosperms, Angiosperms 
+
+- 
