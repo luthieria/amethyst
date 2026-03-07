@@ -783,8 +783,31 @@ Luthier, Product, Price, Stock
 
 ## 6. Soundboard Patterns
 
-- 
+- Arab lute makers attached great importance to numerical harmony in the instrument's proportions.
+- Pablo Nassarre advocated a precise series of proportions for the vihuela.
 
+### Size
+
+- Compared to the early XIX-c. guitars, Torres increased the vibratory area (= body size) by ~1/5. Although guitars of that size had existed before, but were not standard until Torres.
+
+### Bout Ratio
+
+- Stradivari conclusively established the 4:5 upper:lower bout ratio for the violin. Also used by some XVIII-c. guitar luthiers (e.g., Joseph Benedid, José Pagés), Pablo Nassarre.
+
+<br>
+
+- Torres' descendants believe that he modelled his plantilla on the torso of a beautiful sevillana.
+- Apollo chased and caught a wonderfully beautiful nymph. But she invoked the aid of her semi-divine father who changed her into a graceful laurel-tree; so Apollo made the guitar out of this tree, "by reason of which the curves of the guitar allude to its feminine parentage, and, not only the curves, but the spirit, too, is highly feminine, for ==the guitar is the most unpredictable and least reliable musical instrument in existence — and also the sweetest, the warmest, the most delicate, whose melancholic voice awakes in our soul exquisite reveries==." (Andrés Segovia)[^GuitarNews]
+- Torres:
+  1. bout ratio: ~ 10:13;
+  2. retained the traditional location of the waist at ~ 2/5 of the body's length correstponding with the lower radius of the soundhole.
+
+### Bridge
+
+- Torres relocated the bridge to roughly the lower bout's (diaphragm's) center (from ~ 1/5 of the soundboard's length to ~ 1/3) — arguably ==the most significant move in attaining the modern sonority== (as opposed to the lute-like resonances of smaller guitars).
+  - Before, Juan Moreno (1830) and Luis Reig (1840) have done that as an experiment.
+- $\rightarrow$ The domed soundboard gained a true diaphragmatic motion (rather than a lop-sided one).$\rightarrow$ The stresses upon the soundboard distributed more evenly.
+- $\rightarrow$ The resonance improved: particularly, the low notes' depth. $\rightarrow$ The guitar became less percussive, attained more sustain.
 
 
 
@@ -796,6 +819,8 @@ Luthier, Product, Price, Stock
 
 
 <!-- Footnotes -->
+
+[^GuitarNews]: [*Guitar News*, June/August 1969, No. 104, page 6](https://www.digitalguitararchive.com/wp-content/uploads/2019/12/104-1969-Guitar-News.pdf)
 
 [^Luthiers]: Pagés, Panormo, Lacôte.
 

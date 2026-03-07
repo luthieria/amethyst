@@ -58,35 +58,94 @@ year: 1990
 
 <br>
 
-1. **Kingdom**
-2. **Division** = **phylum**
-3. **Subdivision** = **class**
-4. **Order**
-5. **Family**
-6. **Genus**
-7. **Species**
-
-## Spermatophytes
-
-1. **Spermatophytes** (phylum) — all seed plants.
-   1. **Gymnosperms** — exposed seeds.
-      1. **Conifers** — softwood lumber.
-         - E.g.: pine, fir.
-   2. **Angiosperms** — encapsulated seeds.
-      1. **Dicotyledons** — hardwood lumber.
-         - E.g.: maple, mahogany.
-      2. **Monocotyledons** — woody monocots.
-         - E.g.: bamboo, palm.
+1. **Kingdom**.
+2. **Division** = **phylum**.
+3. **Subdivision** = **class**.
+4. **Order**.
+5. **Family**.
+6. **Genus**.
+7. **Species** — individual organisms similar in structure and form that can interbreed to produce fertile offspring.
 
 <br>
 
-## Stem Forms
+1. **Spermatophytes** (phylum) — all seed plants.
+   1. **Gymnosperms** — exposed seeds.
+      1. **Conifers** — softwood.
+   2. **Angiosperms** — encapsulated seeds.
+      1. **Monocotyledons**.
+      2. **Dicotyledons** — hardwood.
 
-1. **Evergreen conifers** — excurrent.
-2. **Decidious hardwoods** — branching.
+## Gymnosperms
 
 ![alt text](<Imagenes/Stem forms.png>)
 
-## Gymnosperms, Angiosperms 
+### Coniferales
 
-- 
+- **Coniferales** = **conifers**.
+
+<br>
+
+1. **Stem**: excurrent (— a main stem with side branches).
+2. **Foliage**:
+   1. needle-like / scale-like;
+   2. (usually) evergreen.
+
+<br>
+
+- E.g.:
+  - pine;
+    - bristlecone pine — the oldest plant;
+  - fir;
+  - spruce;
+  - cedar;
+  - hemlock;
+  - sequoia — the largest plant.
+
+## Angiosperms
+
+- Classified by the amount of initial seed leaves.
+
+### Monocotyledons
+
+- **Monocotyledons** = **monocots** — 1 initial seed leaf.
+
+<br>
+
+- The cell size and arrangement are distinct from those of softwoods and hardwoods.
+
+<br>
+
+- E.g.:
+  - temperate climate:
+    - grasses;
+    - corn;
+  - warm climate — can be large and have woody stems in vine / tree form:
+    - bamboo;
+    - palm;
+    - rattan.
+
+### Dicotyledons
+
+- **Dicotyledons** = **dicots** — 2 initial seed leaves.
+
+<br>
+
+1. **Stem**: (typically) dendritic = deliquescent (— a branching main stem).
+2. **Foliage**: 
+   1. broad-leafed;
+   2. (in temperate climate, usually) deciduous (— losing foliage during winter dormancy).
+
+<br>
+
+- E.g.:
+  - hardwood;
+    - oak;
+    - birch;
+    - maple;
+    - mahogany;
+  - string bean;
+  - rose.
+
+
+
+
