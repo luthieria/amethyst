@@ -1,5 +1,5 @@
 ---
-title: "USA"
-weight: 8
+title: "North America"
+weight: 1
 bookCollapseSection: true
 ---

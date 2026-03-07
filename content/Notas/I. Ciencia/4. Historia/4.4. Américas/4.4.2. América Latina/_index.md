@@ -1,5 +1,5 @@
 ---
 title: "América Latina"
-weight: 7
+weight: 2
 bookCollapseSection: true
 ---
