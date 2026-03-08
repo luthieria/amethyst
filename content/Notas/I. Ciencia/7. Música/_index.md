@@ -10,7 +10,7 @@ type: tabbed
 layout: tabbed
 ---
 
-[[7.1. Etnomusicología]]
+<!-- [[7.1. Etnomusicología]]
 
 [[7.2. Laudería]]
 
@@ -20,4 +20,4 @@ layout: tabbed
 
 [[7.5. Audio Engineering]]
 
-[[7.6. DSP]]
+[[7.6. DSP]] -->

@@ -146,6 +146,33 @@ year: 1990
   - string bean;
   - rose.
 
+## Names
 
+- Names:
+  1. scientific;
+  2. common;
+  3. trade.
 
+<br>
 
+- Common and trade names are often inappropriate / misleading.
+- One common name can denote several species.
+
+### Scientific
+
+- Carl Linnaeus (1707-1778) adopted a system of binomial nomenclature that is used until now:
+  1. **genus** — generic;
+     - begins with a capital letter;
+     - abbreviated where clearly understood (e.g.: *Pinus strobus* = *P. strobus*);
+  2. **species** — specific;
+     - refers to the author / another person / discovery location / distinguishing feature;
+     - begins with a lowercase letter.
+- Generally, the names are proposed by botanists and then adopted by the scientific community. $\rightarrow$ The complete name (used in hightly technical writing) includes the author's name. The names of well-known authors are abbreviated (e.g.: *Pinus strobus* Linnaeus = *Pinus strobus* L.).
+
+<br>
+
+- Sometimes new scientific evidence calls for a name change. $\rightarrow$ The confusion is avoided by including the former / proposed name in the parenthesis with an "=" sign after / beneath the current name: e.g., Betula alleghaniensis (= B. lutea)
+
+### Common
+
+- 
