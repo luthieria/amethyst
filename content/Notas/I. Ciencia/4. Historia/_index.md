@@ -1,5 +1,5 @@
 ---
-title: "Historia"
+title: Historia
 icon: "mosque"
 
 weight: 5
