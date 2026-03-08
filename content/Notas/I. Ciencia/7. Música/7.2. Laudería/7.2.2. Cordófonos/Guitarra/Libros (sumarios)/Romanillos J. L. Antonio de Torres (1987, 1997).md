@@ -802,6 +802,10 @@ Luthier, Product, Price, Stock
   1. bout ratio: ~ 10:13;
   2. retained the traditional location of the waist at ~ 2/5 of the body's length correstponding with the lower radius of the soundhole.
 
+<br>
+
+- The rib curvature makes the guitar body rigid.
+
 ### Bridge
 
 - Torres relocated the bridge to roughly the lower bout's (diaphragm's) center (from ~ 1/5 of the soundboard's length to ~ 1/3) — arguably ==the most significant move in attaining the modern sonority== (as opposed to the lute-like resonances of smaller guitars).
@@ -809,7 +813,33 @@ Luthier, Product, Price, Stock
 - $\rightarrow$ The domed soundboard gained a true diaphragmatic motion (rather than a lop-sided one).$\rightarrow$ The stresses upon the soundboard distributed more evenly.
 - $\rightarrow$ The resonance improved: particularly, the low notes' depth. $\rightarrow$ The guitar became less percussive, attained more sustain.
 
+### Cheap Guitars
 
+- SE 103, SE 117 are smaller because of wood's deficit.
+
+<br>
+
+- In Torres' time, commissioned instruments were rather an exception for luthiers; → luthiers had to make cheap guitars to make a living.
+- Cheap Torres guitars:
+  - low-quality materials;
+  - no reinforcing strips over joints;
+  - paper instead of wood;
+  - back's transverse bars: 2 instead of 3;
+  - modest ornamentation in rosetas, purflings, bindings.
+- Unlike his contemporaries, Torres always made necks of cedar (not pinewood), and didn't used crude techniques (e.g., he kerfed, not plied, the linings). $\rightarrow$ Cheap Torres guitars were better-sounding than the majority of those of his contemporaries.
+
+#### Flamenco
+
+- **≤ 1/2 XIX c.** — the guitar in flamenco was used to accompany the singer. $\rightarrow$ There were few guitarists and their playing was limited.
+  - Even Patiño (— the originator of modern flamenco guitar techniques) believed that the guitar was "made only to accompany" the singer.
+- **Late XIX c.** — emergence of the solo guitar in the flamenco: Paco el Barbero — the first flamencero to use the guitar as a solo instrument.
+
+<br>
+
+- The guitarra flamenca developed out of Torres' cheap guitars and of the the concert ones (guitarras finas).
+- The Madrid school (Manuel Ramírez, Santos Hernández, Domingo Esteso, Marcelo Barbero) established the flamenco guitar lutherie.
+
+### 
 
 
 
